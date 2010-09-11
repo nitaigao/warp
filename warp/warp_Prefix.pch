@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'warp' target in the 'warp' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif

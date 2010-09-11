@@ -1,2 +1,0 @@
-/Users/nk/Development/warp/iwarp/../warp/Client.cpp: In member function 'void Client::send_left_double_click()':
-/Users/nk/Development/warp/iwarp/../warp/Client.cpp:63: error: 'LEFT_DOUBLE_CLICK' was not declared in this scope

@@ -1,515 +1,0 @@
-Twarp
-v7
-r0
-t305890010.260000
-cCheck dependencies
-cProcessInfoPlistFile /Users/nk/Development/warp/warp/build/Debug/warp.app/Contents/Info.plist warp-Info.plist
-cCopyStringsFile /Users/nk/Development/warp/warp/build/Debug/warp.app/Contents/Resources/English.lproj/InfoPlist.strings English.lproj/InfoPlist.strings
-cCompileXIB /Users/nk/Development/warp/warp/English.lproj/MainMenu.xib
-cProcessPCH++ /var/folders/sw/swXd1n80Gsam9g8UalfMhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/warp_Prefix-hjwnwpevubgrtxesroeqnoihajsz/warp_Prefix.pch.gch warp_Prefix.pch normal i386 objective-c++ com.apple.compilers.gcc.4_2
-cProcessPCH++ /var/folders/sw/swXd1n80Gsam9g8UalfMhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/warp_Prefix-gnqntfmrexnywsguonlvfrkivyqn/warp_Prefix.pch.gch warp_Prefix.pch normal i386 c++ com.apple.compilers.gcc.4_2
-cCompileC build/warp.build/Debug/warp.build/Objects-normal/i386/main.o /Users/nk/Development/warp/warp/main.mm normal i386 objective-c++ com.apple.compilers.gcc.4_2
-cCompileC build/warp.build/Debug/warp.build/Objects-normal/i386/warpAppDelegate.o /Users/nk/Development/warp/warp/warpAppDelegate.mm normal i386 objective-c++ com.apple.compilers.gcc.4_2
-cCompileC build/warp.build/Debug/warp.build/Objects-normal/i386/MainView.o /Users/nk/Development/warp/warp/MainView.mm normal i386 objective-c++ com.apple.compilers.gcc.4_2
-cCompileC build/warp.build/Debug/warp.build/Objects-normal/i386/Client.o /Users/nk/Development/warp/warp/Client.cpp normal i386 c++ com.apple.compilers.gcc.4_2
-cLd /Users/nk/Development/warp/warp/build/Debug/warp.app/Contents/MacOS/warp normal i386
-cTouch /Users/nk/Development/warp/warp/build/Debug/warp.app
-
-N/Developer/SDKs/MacOSX10.6.sdk
-c000000004BF4701900000000000000EE
-t1274310681
-s238
-
-N/Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/ApplicationServices.framework/Headers/ApplicationServices.h
-c000000004AC6B3050000000000000477
-t1254535941
-s1143
-
-N/Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Cocoa.framework/Headers/Cocoa.h
-c0000000040C4AA6800000000000001E5
-t1086630504
-s485
-
-N/Developer/SDKs/MacOSX10.6.sdk/usr/include/netdb.h
-c000000004AC598B10000000000003057
-t1254463665
-s12375
-
-N/Developer/SDKs/MacOSX10.6.sdk/usr/include/netinet/in.h
-c000000004B90BBA5000000000000539D
-t1267776421
-s21405
-
-N/Developer/SDKs/MacOSX10.6.sdk/usr/include/sys/socket.h
-c000000004B90BBAA00000000000059BC
-t1267776426
-s22972
-
-N/Developer/SDKs/MacOSX10.6.sdk/usr/include/sys/types.h
-c000000004B90BBAB0000000000002905
-t1267776427
-s10501
-
-N/System/Library/Frameworks/Cocoa.framework/Cocoa
-c000000004A1F2D63000000000000A5E0
-t1243557219
-s42464
-
-N/Users/nk/Development/warp/warp/Client.cpp
-c000000004C8B49CA00000000000006C6
-t1284196810
-s1734
-i"Client.h"
-i<iostream>
-i<sys/types.h>
-i<sys/socket.h>
-i<netinet/in.h>
-i<netdb.h>
-
-N/Users/nk/Development/warp/warp/Client.h
-c000000004C8B49D40000000000000233
-t1284196820
-s563
-
-N/Users/nk/Development/warp/warp/English.lproj/InfoPlist.strings
-c000000004C8B3AEF000000000000002D
-t1284193007
-s45
-
-N/Users/nk/Development/warp/warp/English.lproj/MainMenu.xib
-c000000004C8B44C8000000000002CF9F
-t1284195528
-s184223
-
-N/Users/nk/Development/warp/warp/MainView.h
-c000000004C8B44A20000000000000100
-t1284195490
-s256
-i<Cocoa/Cocoa.h>
-i"Client.h"
-
-N/Users/nk/Development/warp/warp/MainView.m
-c000000004C8B40CC0000000000000271
-t1284194508
-s625
-i"MainView.h"
-
-N/Users/nk/Development/warp/warp/MainView.mm
-c000000004C8B49A300000000000002EB
-t1284196771
-s747
-i"MainView.h"
-
-N/Users/nk/Development/warp/warp/build/Debug/warp.app
-t1284197210
-s102
-
-N/Users/nk/Development/warp/warp/build/Debug/warp.app/Contents/Info.plist
-t1284197206
-s877
-
-N/Users/nk/Development/warp/warp/build/Debug/warp.app/Contents/MacOS/warp
-t1284197210
-s26920
-
-N/Users/nk/Development/warp/warp/build/Debug/warp.app/Contents/PkgInfo
-t1284197206
-s8
-
-N/Users/nk/Development/warp/warp/build/Debug/warp.app/Contents/Resources/English.lproj/InfoPlist.strings
-t1284197206
-s92
-
-N/Users/nk/Development/warp/warp/build/Debug/warp.app/Contents/Resources/English.lproj/MainMenu.nib
-t1284197206
-s34577
-
-N/Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/Objects-normal/i386/Client.o
-t1284197210
-s71500
-
-N/Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/Objects-normal/i386/MainView.o
-t1284197209
-s16712
-
-N/Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/Objects-normal/i386/main.o
-t1284197209
-s5288
-
-N/Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/Objects-normal/i386/warp.LinkFileList
-c000000004C8B4B560000000000000185
-t1284197206
-s389
-
-N/Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/Objects-normal/i386/warpAppDelegate.o
-t1284197209
-s20120
-
-N/Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/Objects-normal/x86_64/Client.o
-t1284197192
-s72400
-
-N/Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/Objects-normal/x86_64/MainView.o
-t1284197191
-s19060
-
-N/Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/Objects-normal/x86_64/main.o
-t1284197191
-s5164
-
-N/Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/Objects-normal/x86_64/main_view.o
-t2
-s0
-
-N/Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/Objects-normal/x86_64/warp.LinkFileList
-c000000004C8B4B44000000000000018D
-t1284197188
-s397
-
-N/Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/Objects-normal/x86_64/warpAppDelegate.o
-t1284197191
-s26880
-
-N/Users/nk/Development/warp/warp/main.m
-c000000004C8B3AF00000000000000103
-t1284193008
-s259
-i<Cocoa/Cocoa.h>
-
-N/Users/nk/Development/warp/warp/main.mm
-c000000004C8B3AF00000000000000103
-t1284193008
-s259
-i<Cocoa/Cocoa.h>
-
-N/Users/nk/Development/warp/warp/main_view.h
-c000000004C8B3C6D00000000000000D2
-t1284193389
-s210
-i<Cocoa/Cocoa.h>
-
-N/Users/nk/Development/warp/warp/main_view.m
-c000000004C8B3C6D00000000000001A4
-t1284193389
-s420
-i"main_view.h"
-
-N/Users/nk/Development/warp/warp/warpAppDelegate.h
-c000000004C8B3ECE0000000000000170
-t1284193998
-s368
-i<Cocoa/Cocoa.h>
-i<ApplicationServices/ApplicationServices.h>
-
-N/Users/nk/Development/warp/warp/warpAppDelegate.m
-c000000004C8B416600000000000003A1
-t1284194662
-s929
-i"warpAppDelegate.h"
-
-N/Users/nk/Development/warp/warp/warpAppDelegate.mm
-c000000004C8B497300000000000003A0
-t1284196723
-s928
-i"warpAppDelegate.h"
-
-N/Users/nk/Development/warp/warp/warp_Prefix.pch
-c000000004C8B3AF0000000000000008B
-t1284193008
-s139
-i<Cocoa/Cocoa.h>
-
-N/var/folders/sw/swXd1n80Gsam9g8UalfMhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/warp_Prefix-dboprnrononfgkddijijnbqkbujv/warp_Prefix.pch.gch
-t1284197191
-s58615440
-
-N/var/folders/sw/swXd1n80Gsam9g8UalfMhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/warp_Prefix-fcodlmiekpmtvsdaxqkxoqezntjm/warp_Prefix.pch.gch
-t1284197188
-s2523504
-
-N/var/folders/sw/swXd1n80Gsam9g8UalfMhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/warp_Prefix-gnqntfmrexnywsguonlvfrkivyqn/warp_Prefix.pch.gch
-t1284197206
-s2515312
-
-N/var/folders/sw/swXd1n80Gsam9g8UalfMhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/warp_Prefix-hhknbraqxpvgqyhkhuswomxklskx/warp_Prefix.pch.gch
-t1284193014
-s54265616
-
-N/var/folders/sw/swXd1n80Gsam9g8UalfMhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/warp_Prefix-hjwnwpevubgrtxesroeqnoihajsz/warp_Prefix.pch.gch
-t1284197209
-s61896368
-
-Nwarp-Info.plist
-c000000004C8B3AF000000000000003EA
-t1284193008
-s1002
-
-CCheck dependencies
-r0
-lSLF07#2@18"Check dependencies305890006#305890006#0(0"0(0#1#0"8624500192#0"0#
-
-CCompileC build/warp.build/Debug/warp.build/Objects-normal/i386/Client.o /Users/nk/Development/warp/warp/Client.cpp normal i386 c++ com.apple.compilers.gcc.4_2
-s305890009.765841
-e305890010.098145
-r1
-xCompileC
-xbuild/warp.build/Debug/warp.build/Objects-normal/i386/Client.o
-x/Users/nk/Development/warp/warp/Client.cpp
-xnormal
-xi386
-xc++
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@50"Compile /Users/nk/Development/warp/warp/Client.cpp305890009#305890010#0(0"0(0#0#42"/Users/nk/Development/warp/warp/Client.cpp8624050816#1322"    cd /Users/nk/Development/warp/warp    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/warp-generated-files.hmap -I/Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/warp-own-target-headers.hmap -I/Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/warp-all-target-headers.hmap -iquote /Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/warp-project-headers.hmap -F/Users/nk/Development/warp/warp/build/Debug -I/Users/nk/Development/warp/warp/build/Debug/include -I/Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/DerivedSources/i386 -I/Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/DerivedSources -include /var/folders/sw/swXd1n80Gsam9g8UalfMhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/warp_Prefix-gnqntfmrexnywsguonlvfrkivyqn/warp_Prefix.pch -c /Users/nk/Development/warp/warp/Client.cpp -o /Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/Objects-normal/i386/Client.o0#
-
-CCompileC build/warp.build/Debug/warp.build/Objects-normal/i386/MainView.o /Users/nk/Development/warp/warp/MainView.mm normal i386 objective-c++ com.apple.compilers.gcc.4_2
-s305890009.765050
-e305890009.852249
-r1
-xCompileC
-xbuild/warp.build/Debug/warp.build/Objects-normal/i386/MainView.o
-x/Users/nk/Development/warp/warp/MainView.mm
-xnormal
-xi386
-xobjective-c++
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@51"Compile /Users/nk/Development/warp/warp/MainView.mm305890009#305890009#0(0"0(0#0#43"/Users/nk/Development/warp/warp/MainView.mm8611903136#1335"    cd /Users/nk/Development/warp/warp    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/warp-generated-files.hmap -I/Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/warp-own-target-headers.hmap -I/Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/warp-all-target-headers.hmap -iquote /Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/warp-project-headers.hmap -F/Users/nk/Development/warp/warp/build/Debug -I/Users/nk/Development/warp/warp/build/Debug/include -I/Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/DerivedSources/i386 -I/Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/DerivedSources -include /var/folders/sw/swXd1n80Gsam9g8UalfMhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/warp_Prefix-hjwnwpevubgrtxesroeqnoihajsz/warp_Prefix.pch -c /Users/nk/Development/warp/warp/MainView.mm -o /Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/Objects-normal/i386/MainView.o0#
-
-CCompileC build/warp.build/Debug/warp.build/Objects-normal/i386/main.o /Users/nk/Development/warp/warp/main.mm normal i386 objective-c++ com.apple.compilers.gcc.4_2
-s305890009.763346
-e305890009.849276
-r1
-xCompileC
-xbuild/warp.build/Debug/warp.build/Objects-normal/i386/main.o
-x/Users/nk/Development/warp/warp/main.mm
-xnormal
-xi386
-xobjective-c++
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@47"Compile /Users/nk/Development/warp/warp/main.mm305890009#305890009#0(0"0(0#0#39"/Users/nk/Development/warp/warp/main.mm8614253696#1327"    cd /Users/nk/Development/warp/warp    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/warp-generated-files.hmap -I/Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/warp-own-target-headers.hmap -I/Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/warp-all-target-headers.hmap -iquote /Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/warp-project-headers.hmap -F/Users/nk/Development/warp/warp/build/Debug -I/Users/nk/Development/warp/warp/build/Debug/include -I/Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/DerivedSources/i386 -I/Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/DerivedSources -include /var/folders/sw/swXd1n80Gsam9g8UalfMhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/warp_Prefix-hjwnwpevubgrtxesroeqnoihajsz/warp_Prefix.pch -c /Users/nk/Development/warp/warp/main.mm -o /Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/Objects-normal/i386/main.o0#
-
-CCompileC build/warp.build/Debug/warp.build/Objects-normal/i386/warpAppDelegate.o /Users/nk/Development/warp/warp/warpAppDelegate.mm normal i386 objective-c++ com.apple.compilers.gcc.4_2
-s305890009.764221
-e305890009.862445
-r1
-xCompileC
-xbuild/warp.build/Debug/warp.build/Objects-normal/i386/warpAppDelegate.o
-x/Users/nk/Development/warp/warp/warpAppDelegate.mm
-xnormal
-xi386
-xobjective-c++
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@58"Compile /Users/nk/Development/warp/warp/warpAppDelegate.mm305890009#305890009#0(0"0(0#0#50"/Users/nk/Development/warp/warp/warpAppDelegate.mm8623921216#1349"    cd /Users/nk/Development/warp/warp    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/warp-generated-files.hmap -I/Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/warp-own-target-headers.hmap -I/Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/warp-all-target-headers.hmap -iquote /Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/warp-project-headers.hmap -F/Users/nk/Development/warp/warp/build/Debug -I/Users/nk/Development/warp/warp/build/Debug/include -I/Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/DerivedSources/i386 -I/Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/DerivedSources -include /var/folders/sw/swXd1n80Gsam9g8UalfMhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/warp_Prefix-hjwnwpevubgrtxesroeqnoihajsz/warp_Prefix.pch -c /Users/nk/Development/warp/warp/warpAppDelegate.mm -o /Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/Objects-normal/i386/warpAppDelegate.o0#
-
-CCompileC build/warp.build/Debug/warp.build/Objects-normal/x86_64/Client.o /Users/nk/Development/warp/warp/Client.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
-s305889991.885651
-e305889992.189141
-r1
-xCompileC
-xbuild/warp.build/Debug/warp.build/Objects-normal/x86_64/Client.o
-x/Users/nk/Development/warp/warp/Client.cpp
-xnormal
-xx86_64
-xc++
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@50"Compile /Users/nk/Development/warp/warp/Client.cpp305889991#305889992#0(0"0(0#0#42"/Users/nk/Development/warp/warp/Client.cpp8604605952#1328"    cd /Users/nk/Development/warp/warp    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/warp-generated-files.hmap -I/Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/warp-own-target-headers.hmap -I/Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/warp-all-target-headers.hmap -iquote /Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/warp-project-headers.hmap -F/Users/nk/Development/warp/warp/build/Debug -I/Users/nk/Development/warp/warp/build/Debug/include -I/Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/DerivedSources/x86_64 -I/Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/DerivedSources -include /var/folders/sw/swXd1n80Gsam9g8UalfMhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/warp_Prefix-fcodlmiekpmtvsdaxqkxoqezntjm/warp_Prefix.pch -c /Users/nk/Development/warp/warp/Client.cpp -o /Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/Objects-normal/x86_64/Client.o0#
-
-CCompileC build/warp.build/Debug/warp.build/Objects-normal/x86_64/MainView.o /Users/nk/Development/warp/warp/MainView.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
-s305887308.580009
-e305887308.836029
-r1
-xCompileC
-xbuild/warp.build/Debug/warp.build/Objects-normal/x86_64/MainView.o
-x/Users/nk/Development/warp/warp/MainView.m
-xnormal
-xx86_64
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@50"Compile /Users/nk/Development/warp/warp/MainView.m305887308#305887308#0(0"0(0#0#42"/Users/nk/Development/warp/warp/MainView.m8608382112#1321"    cd /Users/nk/Development/warp/warp    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/warp-generated-files.hmap -I/Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/warp-own-target-headers.hmap -I/Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/warp-all-target-headers.hmap -iquote /Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/warp-project-headers.hmap -F/Users/nk/Development/warp/warp/build/Debug -I/Users/nk/Development/warp/warp/build/Debug/include -I/Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/DerivedSources/x86_64 -I/Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/DerivedSources -include /var/folders/sw/swXd1n80Gsam9g8UalfMhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/warp_Prefix-hhknbraqxpvgqyhkhuswomxklskx/warp_Prefix.pch -c /Users/nk/Development/warp/warp/MainView.m -o /Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/Objects-normal/x86_64/MainView.o0#
-
-CCompileC build/warp.build/Debug/warp.build/Objects-normal/x86_64/MainView.o /Users/nk/Development/warp/warp/MainView.mm normal x86_64 objective-c++ com.apple.compilers.gcc.4_2
-s305889991.884859
-e305889991.967489
-r1
-xCompileC
-xbuild/warp.build/Debug/warp.build/Objects-normal/x86_64/MainView.o
-x/Users/nk/Development/warp/warp/MainView.mm
-xnormal
-xx86_64
-xobjective-c++
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@51"Compile /Users/nk/Development/warp/warp/MainView.mm305889991#305889991#0(0"0(0#0#43"/Users/nk/Development/warp/warp/MainView.mm8623768128#1341"    cd /Users/nk/Development/warp/warp    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/warp-generated-files.hmap -I/Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/warp-own-target-headers.hmap -I/Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/warp-all-target-headers.hmap -iquote /Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/warp-project-headers.hmap -F/Users/nk/Development/warp/warp/build/Debug -I/Users/nk/Development/warp/warp/build/Debug/include -I/Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/DerivedSources/x86_64 -I/Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/DerivedSources -include /var/folders/sw/swXd1n80Gsam9g8UalfMhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/warp_Prefix-dboprnrononfgkddijijnbqkbujv/warp_Prefix.pch -c /Users/nk/Development/warp/warp/MainView.mm -o /Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/Objects-normal/x86_64/MainView.o0#
-
-CCompileC build/warp.build/Debug/warp.build/Objects-normal/x86_64/main.o /Users/nk/Development/warp/warp/main.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
-s305885814.550011
-e305885814.707371
-r1
-xCompileC
-xbuild/warp.build/Debug/warp.build/Objects-normal/x86_64/main.o
-x/Users/nk/Development/warp/warp/main.m
-xnormal
-xx86_64
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@46"Compile /Users/nk/Development/warp/warp/main.m305885814#305885814#0(0"0(0#0#38"/Users/nk/Development/warp/warp/main.m8607177344#1313"    cd /Users/nk/Development/warp/warp    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/warp-generated-files.hmap -I/Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/warp-own-target-headers.hmap -I/Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/warp-all-target-headers.hmap -iquote /Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/warp-project-headers.hmap -F/Users/nk/Development/warp/warp/build/Debug -I/Users/nk/Development/warp/warp/build/Debug/include -I/Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/DerivedSources/x86_64 -I/Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/DerivedSources -include /var/folders/sw/swXd1n80Gsam9g8UalfMhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/warp_Prefix-hhknbraqxpvgqyhkhuswomxklskx/warp_Prefix.pch -c /Users/nk/Development/warp/warp/main.m -o /Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/Objects-normal/x86_64/main.o0#
-
-CCompileC build/warp.build/Debug/warp.build/Objects-normal/x86_64/main.o /Users/nk/Development/warp/warp/main.mm normal x86_64 objective-c++ com.apple.compilers.gcc.4_2
-s305889991.883133
-e305889991.956636
-r1
-xCompileC
-xbuild/warp.build/Debug/warp.build/Objects-normal/x86_64/main.o
-x/Users/nk/Development/warp/warp/main.mm
-xnormal
-xx86_64
-xobjective-c++
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@47"Compile /Users/nk/Development/warp/warp/main.mm305889991#305889991#0(0"0(0#0#39"/Users/nk/Development/warp/warp/main.mm8616675040#1333"    cd /Users/nk/Development/warp/warp    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/warp-generated-files.hmap -I/Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/warp-own-target-headers.hmap -I/Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/warp-all-target-headers.hmap -iquote /Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/warp-project-headers.hmap -F/Users/nk/Development/warp/warp/build/Debug -I/Users/nk/Development/warp/warp/build/Debug/include -I/Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/DerivedSources/x86_64 -I/Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/DerivedSources -include /var/folders/sw/swXd1n80Gsam9g8UalfMhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/warp_Prefix-dboprnrononfgkddijijnbqkbujv/warp_Prefix.pch -c /Users/nk/Development/warp/warp/main.mm -o /Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/Objects-normal/x86_64/main.o0#
-
-CCompileC build/warp.build/Debug/warp.build/Objects-normal/x86_64/main_view.o /Users/nk/Development/warp/warp/main_view.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
-r0
-
-CCompileC build/warp.build/Debug/warp.build/Objects-normal/x86_64/warpAppDelegate.o /Users/nk/Development/warp/warp/warpAppDelegate.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
-s305887462.320337
-e305887462.611795
-r1
-xCompileC
-xbuild/warp.build/Debug/warp.build/Objects-normal/x86_64/warpAppDelegate.o
-x/Users/nk/Development/warp/warp/warpAppDelegate.m
-xnormal
-xx86_64
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@57"Compile /Users/nk/Development/warp/warp/warpAppDelegate.m305887462#305887462#0(0"0(0#0#49"/Users/nk/Development/warp/warp/warpAppDelegate.m8607230208#1335"    cd /Users/nk/Development/warp/warp    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/warp-generated-files.hmap -I/Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/warp-own-target-headers.hmap -I/Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/warp-all-target-headers.hmap -iquote /Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/warp-project-headers.hmap -F/Users/nk/Development/warp/warp/build/Debug -I/Users/nk/Development/warp/warp/build/Debug/include -I/Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/DerivedSources/x86_64 -I/Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/DerivedSources -include /var/folders/sw/swXd1n80Gsam9g8UalfMhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/warp_Prefix-hhknbraqxpvgqyhkhuswomxklskx/warp_Prefix.pch -c /Users/nk/Development/warp/warp/warpAppDelegate.m -o /Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/Objects-normal/x86_64/warpAppDelegate.o0#
-
-CCompileC build/warp.build/Debug/warp.build/Objects-normal/x86_64/warpAppDelegate.o /Users/nk/Development/warp/warp/warpAppDelegate.mm normal x86_64 objective-c++ com.apple.compilers.gcc.4_2
-s305889991.884025
-e305889991.980294
-r1
-xCompileC
-xbuild/warp.build/Debug/warp.build/Objects-normal/x86_64/warpAppDelegate.o
-x/Users/nk/Development/warp/warp/warpAppDelegate.mm
-xnormal
-xx86_64
-xobjective-c++
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@58"Compile /Users/nk/Development/warp/warp/warpAppDelegate.mm305889991#305889991#0(0"0(0#0#50"/Users/nk/Development/warp/warp/warpAppDelegate.mm8626450176#1355"    cd /Users/nk/Development/warp/warp    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/warp-generated-files.hmap -I/Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/warp-own-target-headers.hmap -I/Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/warp-all-target-headers.hmap -iquote /Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/warp-project-headers.hmap -F/Users/nk/Development/warp/warp/build/Debug -I/Users/nk/Development/warp/warp/build/Debug/include -I/Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/DerivedSources/x86_64 -I/Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/DerivedSources -include /var/folders/sw/swXd1n80Gsam9g8UalfMhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/warp_Prefix-dboprnrononfgkddijijnbqkbujv/warp_Prefix.pch -c /Users/nk/Development/warp/warp/warpAppDelegate.mm -o /Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/Objects-normal/x86_64/warpAppDelegate.o0#
-
-CCompileXIB /Users/nk/Development/warp/warp/English.lproj/MainMenu.xib
-s305890006.344028
-e305890006.578252
-r1
-xCompileXIB
-x/Users/nk/Development/warp/warp/English.lproj/MainMenu.xib
-lSLF07#2@37"CompileXIB English.lproj/MainMenu.xib305890006#305890006#0(0"0(0#0#58"/Users/nk/Development/warp/warp/English.lproj/MainMenu.xib8623854784#340"    cd /Users/nk/Development/warp/warp    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/nk/Development/warp/warp/build/Debug/warp.app/Contents/Resources/English.lproj/MainMenu.nib /Users/nk/Development/warp/warp/English.lproj/MainMenu.xib --sdk /Developer/SDKs/MacOSX10.6.sdk0#
-
-CCopyStringsFile /Users/nk/Development/warp/warp/build/Debug/warp.app/Contents/Resources/English.lproj/InfoPlist.strings English.lproj/InfoPlist.strings
-s305890006.343275
-e305890006.368049
-r1
-xCopyStringsFile
-x/Users/nk/Development/warp/warp/build/Debug/warp.app/Contents/Resources/English.lproj/InfoPlist.strings
-xEnglish.lproj/InfoPlist.strings
-lSLF07#2@36"Copy English.lproj/InfoPlist.strings305890006#305890006#0(0"0(0#0#63"/Users/nk/Development/warp/warp/English.lproj/InfoPlist.strings8623864512#348"    cd /Users/nk/Development/warp/warp    setenv ICONV /usr/bin/iconv    /Developer/Library/Xcode/Plug-ins/CoreBuildTasks.xcplugin/Contents/Resources/copystrings --validate --inputencoding utf-8 --outputencoding UTF-16 English.lproj/InfoPlist.strings --outdir /Users/nk/Development/warp/warp/build/Debug/warp.app/Contents/Resources/English.lproj0#
-
-CLd /Users/nk/Development/warp/warp/build/Debug/warp.app/Contents/MacOS/warp normal i386
-s305890010.098229
-e305890010.257548
-r1
-xLd
-x/Users/nk/Development/warp/warp/build/Debug/warp.app/Contents/MacOS/warp
-xnormal
-xi386
-lSLF07#2@77"Link /Users/nk/Development/warp/warp/build/Debug/warp.app/Contents/MacOS/warp305890010#305890010#0(0"0(0#0#0"8632018208#488"    cd /Users/nk/Development/warp/warp    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Developer/usr/bin/g++-4.2 -arch i386 -isysroot /Developer/SDKs/MacOSX10.6.sdk -L/Users/nk/Development/warp/warp/build/Debug -F/Users/nk/Development/warp/warp/build/Debug -filelist /Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/Objects-normal/i386/warp.LinkFileList -mmacosx-version-min=10.6 -framework Cocoa -o /Users/nk/Development/warp/warp/build/Debug/warp.app/Contents/MacOS/warp0#
-
-CLd /Users/nk/Development/warp/warp/build/Debug/warp.app/Contents/MacOS/warp normal x86_64
-s305889992.189225
-e305889992.220956
-r1
-xLd
-x/Users/nk/Development/warp/warp/build/Debug/warp.app/Contents/MacOS/warp
-xnormal
-xx86_64
-lSLF07#2@77"Link /Users/nk/Development/warp/warp/build/Debug/warp.app/Contents/MacOS/warp305889992#305889992#0(0"0(0#0#0"8614848992#492"    cd /Users/nk/Development/warp/warp    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Developer/usr/bin/g++-4.2 -arch x86_64 -isysroot /Developer/SDKs/MacOSX10.6.sdk -L/Users/nk/Development/warp/warp/build/Debug -F/Users/nk/Development/warp/warp/build/Debug -filelist /Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/Objects-normal/x86_64/warp.LinkFileList -mmacosx-version-min=10.6 -framework Cocoa -o /Users/nk/Development/warp/warp/build/Debug/warp.app/Contents/MacOS/warp0#
-
-CProcessInfoPlistFile /Users/nk/Development/warp/warp/build/Debug/warp.app/Contents/Info.plist warp-Info.plist
-s305890006.339558
-e305890006.343201
-r1
-xProcessInfoPlistFile
-x/Users/nk/Development/warp/warp/build/Debug/warp.app/Contents/Info.plist
-xwarp-Info.plist
-lSLF07#2@23"Process warp-Info.plist305890006#305890006#0(0"0(0#0#47"/Users/nk/Development/warp/warp/warp-Info.plist8623910016#280"    cd /Users/nk/Development/warp/warp    builtin-infoPlistUtility warp-Info.plist -genpkginfo /Users/nk/Development/warp/warp/build/Debug/warp.app/Contents/PkgInfo -expandbuildsettings -platform macosx -o /Users/nk/Development/warp/warp/build/Debug/warp.app/Contents/Info.plist0#
-
-CProcessPCH /var/folders/sw/swXd1n80Gsam9g8UalfMhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/warp_Prefix-hhknbraqxpvgqyhkhuswomxklskx/warp_Prefix.pch.gch warp_Prefix.pch normal x86_64 objective-c com.apple.compilers.gcc.4_2
-s305885811.700465
-e305885814.549804
-r1
-xProcessPCH
-x/var/folders/sw/swXd1n80Gsam9g8UalfMhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/warp_Prefix-hhknbraqxpvgqyhkhuswomxklskx/warp_Prefix.pch.gch
-xwarp_Prefix.pch
-xnormal
-xx86_64
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@26"Precompile warp_Prefix.pch305885811#305885814#0(0"0(0#0#47"/Users/nk/Development/warp/warp/warp_Prefix.pch8606082400#1229"    cd /Users/nk/Development/warp/warp    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c-header -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/warp-generated-files.hmap -I/Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/warp-own-target-headers.hmap -I/Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/warp-all-target-headers.hmap -iquote /Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/warp-project-headers.hmap -F/Users/nk/Development/warp/warp/build/Debug -I/Users/nk/Development/warp/warp/build/Debug/include -I/Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/DerivedSources/x86_64 -I/Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/DerivedSources -c /Users/nk/Development/warp/warp/warp_Prefix.pch -o /var/folders/sw/swXd1n80Gsam9g8UalfMhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/warp_Prefix-hhknbraqxpvgqyhkhuswomxklskx/warp_Prefix.pch.gch0#
-
-CProcessPCH++ /var/folders/sw/swXd1n80Gsam9g8UalfMhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/warp_Prefix-dboprnrononfgkddijijnbqkbujv/warp_Prefix.pch.gch warp_Prefix.pch normal x86_64 objective-c++ com.apple.compilers.gcc.4_2
-s305889988.768799
-e305889991.882914
-r1
-xProcessPCH++
-x/var/folders/sw/swXd1n80Gsam9g8UalfMhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/warp_Prefix-dboprnrononfgkddijijnbqkbujv/warp_Prefix.pch.gch
-xwarp_Prefix.pch
-xnormal
-xx86_64
-xobjective-c++
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@26"Precompile warp_Prefix.pch305889988#305889991#0(0"0(0#0#47"/Users/nk/Development/warp/warp/warp_Prefix.pch8623949760#1248"    cd /Users/nk/Development/warp/warp    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c++-header -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/warp-generated-files.hmap -I/Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/warp-own-target-headers.hmap -I/Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/warp-all-target-headers.hmap -iquote /Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/warp-project-headers.hmap -F/Users/nk/Development/warp/warp/build/Debug -I/Users/nk/Development/warp/warp/build/Debug/include -I/Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/DerivedSources/x86_64 -I/Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/DerivedSources -c /Users/nk/Development/warp/warp/warp_Prefix.pch -o /var/folders/sw/swXd1n80Gsam9g8UalfMhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/warp_Prefix-dboprnrononfgkddijijnbqkbujv/warp_Prefix.pch.gch0#
-
-CProcessPCH++ /var/folders/sw/swXd1n80Gsam9g8UalfMhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/warp_Prefix-fcodlmiekpmtvsdaxqkxoqezntjm/warp_Prefix.pch.gch warp_Prefix.pch normal x86_64 c++ com.apple.compilers.gcc.4_2
-s305889988.769607
-e305889988.944208
-r1
-xProcessPCH++
-x/var/folders/sw/swXd1n80Gsam9g8UalfMhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/warp_Prefix-fcodlmiekpmtvsdaxqkxoqezntjm/warp_Prefix.pch.gch
-xwarp_Prefix.pch
-xnormal
-xx86_64
-xc++
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@26"Precompile warp_Prefix.pch305889988#305889988#0(0"0(0#0#47"/Users/nk/Development/warp/warp/warp_Prefix.pch8613321760#1238"    cd /Users/nk/Development/warp/warp    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++-header -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/warp-generated-files.hmap -I/Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/warp-own-target-headers.hmap -I/Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/warp-all-target-headers.hmap -iquote /Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/warp-project-headers.hmap -F/Users/nk/Development/warp/warp/build/Debug -I/Users/nk/Development/warp/warp/build/Debug/include -I/Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/DerivedSources/x86_64 -I/Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/DerivedSources -c /Users/nk/Development/warp/warp/warp_Prefix.pch -o /var/folders/sw/swXd1n80Gsam9g8UalfMhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/warp_Prefix-fcodlmiekpmtvsdaxqkxoqezntjm/warp_Prefix.pch.gch0#
-
-CProcessPCH++ /var/folders/sw/swXd1n80Gsam9g8UalfMhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/warp_Prefix-gnqntfmrexnywsguonlvfrkivyqn/warp_Prefix.pch.gch warp_Prefix.pch normal i386 c++ com.apple.compilers.gcc.4_2
-s305890006.579240
-e305890006.643662
-r1
-xProcessPCH++
-x/var/folders/sw/swXd1n80Gsam9g8UalfMhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/warp_Prefix-gnqntfmrexnywsguonlvfrkivyqn/warp_Prefix.pch.gch
-xwarp_Prefix.pch
-xnormal
-xi386
-xc++
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@26"Precompile warp_Prefix.pch305890006#305890006#0(0"0(0#0#47"/Users/nk/Development/warp/warp/warp_Prefix.pch8632768672#1234"    cd /Users/nk/Development/warp/warp    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++-header -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/warp-generated-files.hmap -I/Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/warp-own-target-headers.hmap -I/Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/warp-all-target-headers.hmap -iquote /Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/warp-project-headers.hmap -F/Users/nk/Development/warp/warp/build/Debug -I/Users/nk/Development/warp/warp/build/Debug/include -I/Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/DerivedSources/i386 -I/Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/DerivedSources -c /Users/nk/Development/warp/warp/warp_Prefix.pch -o /var/folders/sw/swXd1n80Gsam9g8UalfMhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/warp_Prefix-gnqntfmrexnywsguonlvfrkivyqn/warp_Prefix.pch.gch0#
-
-CProcessPCH++ /var/folders/sw/swXd1n80Gsam9g8UalfMhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/warp_Prefix-hjwnwpevubgrtxesroeqnoihajsz/warp_Prefix.pch.gch warp_Prefix.pch normal i386 objective-c++ com.apple.compilers.gcc.4_2
-s305890006.578447
-e305890009.763215
-r1
-xProcessPCH++
-x/var/folders/sw/swXd1n80Gsam9g8UalfMhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/warp_Prefix-hjwnwpevubgrtxesroeqnoihajsz/warp_Prefix.pch.gch
-xwarp_Prefix.pch
-xnormal
-xi386
-xobjective-c++
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@26"Precompile warp_Prefix.pch305890006#305890009#0(0"0(0#0#47"/Users/nk/Development/warp/warp/warp_Prefix.pch8634805568#1244"    cd /Users/nk/Development/warp/warp    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c++-header -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/warp-generated-files.hmap -I/Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/warp-own-target-headers.hmap -I/Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/warp-all-target-headers.hmap -iquote /Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/warp-project-headers.hmap -F/Users/nk/Development/warp/warp/build/Debug -I/Users/nk/Development/warp/warp/build/Debug/include -I/Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/DerivedSources/i386 -I/Users/nk/Development/warp/warp/build/warp.build/Debug/warp.build/DerivedSources -c /Users/nk/Development/warp/warp/warp_Prefix.pch -o /var/folders/sw/swXd1n80Gsam9g8UalfMhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/warp_Prefix-hjwnwpevubgrtxesroeqnoihajsz/warp_Prefix.pch.gch0#
-
-CTouch /Users/nk/Development/warp/warp/build/Debug/warp.app
-s305890010.257644
-e305890010.259961
-r1
-xTouch
-x/Users/nk/Development/warp/warp/build/Debug/warp.app
-lSLF07#2@58"Touch /Users/nk/Development/warp/warp/build/Debug/warp.app305890010#305890010#0(0"0(0#0#0"8623984576#114"    cd /Users/nk/Development/warp/warp    /usr/bin/touch -c /Users/nk/Development/warp/warp/build/Debug/warp.app0#
-

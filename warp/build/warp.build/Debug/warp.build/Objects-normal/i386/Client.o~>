@@ -1,2 +1,0 @@
-/Users/nk/Development/warp/warp/Client.cpp: In member function 'void Client::send_scroll_wheel(int, int)':
-/Users/nk/Development/warp/warp/Client.cpp:135: error: 'SCROLL_WHEEL' was not declared in this scope

@@ -1,2 +1,0 @@
-/Users/nk/Development/warp/warp/MainView.mm: In function 'void -[MainView scrollWheel:](MainView*, objc_selector*, NSEvent*)':
-/Users/nk/Development/warp/warp/MainView.mm:51: error: 'class Client' has no member named 'send_scroll_wheel'

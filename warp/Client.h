@@ -18,7 +18,8 @@ enum MessageTypes
 	LEFT_DRAGGED = 6,
 	RIGHT_DRAGGED = 7,
 	FLAGS_CHANGED = 8,
-	SCROLL_WHEEL = 9
+	SCROLL_WHEEL = 9,
+	LEFT_DOUBLE_CLICK = 10
 };
 
 struct Message 
@@ -58,6 +59,8 @@ public:
 	void send_flags(int key_code, unsigned int flags);
 	
 	void send_scroll_wheel(int x, int y);
+	
+	void send_left_double_click();
 	
 private:
 	

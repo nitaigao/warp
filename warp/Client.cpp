@@ -57,6 +57,13 @@ void Client::send_message(const Message& message)
   }
 }
 
+void Client::send_left_double_click()
+{
+	Message message;
+	message.type = LEFT_DOUBLE_CLICK;
+	send_message(message);
+}
+
 void Client::send_left_down()
 {
 	Message message;

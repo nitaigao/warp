@@ -22,7 +22,8 @@ enum MessageTypes
 	LEFT_DRAGGED = 6,
 	RIGHT_DRAGGED = 7,
 	FLAGS_CHANGED = 8,
-	SCROLL_WHEEL = 9
+	SCROLL_WHEEL = 9,
+  LEFT_DOUBLE_CLICK = 10
 };
 
 struct Message 
@@ -34,10 +35,11 @@ struct Message
 	unsigned int flags;
 };
 
-void PostMouseEvent(CGMouseButton button, CGEventType type, const CGPoint point) 
+void PostMouseEvent(CGMouseButton button, CGEventType type, const CGPoint point, int click_count = 1) 
 {
   static int eventNumber = 0;
   CGEventRef theEvent = CGEventCreateMouseEvent(NULL, type, point, button);
+  CGEventSetIntegerValueField(theEvent, kCGMouseEventClickState, click_count) ;
   CGEventSetIntegerValueField(theEvent, kCGMouseEventNumber, ++eventNumber); 
   CGEventSetType(theEvent, type);
   CGEventPost(kCGHIDEventTap, theEvent);
@@ -136,6 +138,23 @@ void scroll_wheel(int x, int y)
   CFRelease(e);
 }
 
+void left_double_click()
+{
+  CGEventRef ourEvent = CGEventCreate(NULL);
+  CGPoint point = CGEventGetLocation(ourEvent);
+  
+  CGEventRef theEvent = CGEventCreateMouseEvent(NULL, kCGEventLeftMouseDown, point, kCGMouseButtonLeft);  
+  CGEventSetIntegerValueField(theEvent, kCGMouseEventClickState, 2); 
+  CGEventPost(kCGHIDEventTap, theEvent);  
+  CGEventSetType(theEvent, kCGEventLeftMouseUp);  
+  CGEventPost(kCGHIDEventTap, theEvent);  
+  CGEventSetType(theEvent, kCGEventLeftMouseDown);  
+  CGEventPost(kCGHIDEventTap, theEvent);  
+  CGEventSetType(theEvent, kCGEventLeftMouseUp); 
+  CGEventPost(kCGHIDEventTap, theEvent); 
+  CFRelease(theEvent); 
+}
+
 void process_message(const Message& message)
 {
   switch(message.type)
@@ -207,6 +226,13 @@ void process_message(const Message& message)
     {
       std::clog << "scroll wheel x: " << message.x << " y: " << message.y << std::endl;
       scroll_wheel(message.x, message.y);        
+      break;
+    }
+
+    case LEFT_DOUBLE_CLICK:
+    {
+      std::clog << "left double click" << std::endl;
+      left_double_click();
       break;
     }
     

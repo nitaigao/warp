@@ -1,0 +1,396 @@
+Tiwarp
+v7
+r0
+t305919241.128015
+cCheck dependencies
+cProcessInfoPlistFile /Users/nk/Development/warp/iwarp/build/Debug-iphonesimulator/iwarp.app/Info.plist iwarp-Info.plist
+cCompileXIB /Users/nk/Development/warp/iwarp/MainWindow.xib
+cProcessPCH++ /var/folders/sw/swXd1n80Gsam9g8UalfMhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/iwarp_Prefix-eutddvqgrsjnnghivbceclhmqije/iwarp_Prefix.pch.gch iwarp_Prefix.pch normal i386 objective-c++ com.apple.compilers.gcc.4_2
+cProcessPCH++ /var/folders/sw/swXd1n80Gsam9g8UalfMhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/iwarp_Prefix-chbprlxmlgybvrfavxrsaifdipkp/iwarp_Prefix.pch.gch iwarp_Prefix.pch normal i386 c++ com.apple.compilers.gcc.4_2
+cCompileC build/iwarp.build/Debug-iphonesimulator/iwarp.build/Objects-normal/i386/main.o /Users/nk/Development/warp/iwarp/main.mm normal i386 objective-c++ com.apple.compilers.gcc.4_2
+cCompileC build/iwarp.build/Debug-iphonesimulator/iwarp.build/Objects-normal/i386/iwarpAppDelegate.o /Users/nk/Development/warp/iwarp/Classes/iwarpAppDelegate.mm normal i386 objective-c++ com.apple.compilers.gcc.4_2
+cCompileC build/iwarp.build/Debug-iphonesimulator/iwarp.build/Objects-normal/i386/MainView.o /Users/nk/Development/warp/iwarp/Classes/MainView.mm normal i386 objective-c++ com.apple.compilers.gcc.4_2
+cCompileC build/iwarp.build/Debug-iphonesimulator/iwarp.build/Objects-normal/i386/Client.o /Users/nk/Development/warp/iwarp/Classes/Client.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+cLd /Users/nk/Development/warp/iwarp/build/Debug-iphonesimulator/iwarp.app/iwarp normal i386
+cGenerateDSYMFile /Users/nk/Development/warp/iwarp/build/Debug-iphonesimulator/iwarp.app.dSYM /Users/nk/Development/warp/iwarp/build/Debug-iphonesimulator/iwarp.app/iwarp
+cTouch /Users/nk/Development/warp/iwarp/build/Debug-iphonesimulator/iwarp.app
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk
+c000000004C6BDE700000000000000132
+t1282137712
+s306
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c000000004BFDFE39000000000027C7D0
+t1274936889
+s2607056
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c000000004BFDFE7C000000000029D5D0
+t1274936956
+s2741712
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c000000004BFDFE6E0000000000001466
+t1274936942
+s5222
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
+c000000004C0470BB00000000000009CD
+t1275359419
+s2509
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c000000004C0471620000000001D47210
+t1275359586
+s30700048
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/usr/include/netdb.h
+c000000004A4181220000000000003057
+t1245806882
+s12375
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/usr/include/netinet/in.h
+c000000004A73D64C000000000000539D
+t1249105484
+s21405
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/usr/include/sys/socket.h
+c000000004A73D65400000000000059BC
+t1249105492
+s22972
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/usr/include/sys/types.h
+c000000004A73D6550000000000002905
+t1249105493
+s10501
+
+N/Users/nk/Development/warp/iwarp/Classes/Client.cpp
+c000000004C8B74440000000000000A55
+t1284207684
+s2645
+i"Client.h"
+i<iostream>
+i<sstream>
+i<sys/types.h>
+i<sys/socket.h>
+i<netinet/in.h>
+i<netdb.h>
+
+N/Users/nk/Development/warp/iwarp/Classes/Client.h
+c000000004C8B744B0000000000000393
+t1284207691
+s915
+
+N/Users/nk/Development/warp/iwarp/Classes/MainView.h
+c000000004C8BB9BF00000000000000F8
+t1284225471
+s248
+i<UIKit/UIKit.h>
+i"Client.h"
+
+N/Users/nk/Development/warp/iwarp/Classes/MainView.m
+c000000004C8BB9C400000000000002F6
+t1284225476
+s758
+i"MainView.h"
+
+N/Users/nk/Development/warp/iwarp/Classes/MainView.mm
+c000000004C8BBD87000000000000037B
+t1284226439
+s891
+i"MainView.h"
+
+N/Users/nk/Development/warp/iwarp/Classes/iwarpAppDelegate.h
+c000000004C8BB87B000000000000014A
+t1284225147
+s330
+i<UIKit/UIKit.h>
+
+N/Users/nk/Development/warp/iwarp/Classes/iwarpAppDelegate.m
+c000000004C8BB87B00000000000009C1
+t1284225147
+s2497
+i"iwarpAppDelegate.h"
+
+N/Users/nk/Development/warp/iwarp/Classes/iwarpAppDelegate.mm
+c000000004C8BB87B00000000000009C1
+t1284225147
+s2497
+i"iwarpAppDelegate.h"
+
+N/Users/nk/Development/warp/iwarp/MainWindow.xib
+c000000004C8BB8E200000000000049EC
+t1284225250
+s18924
+
+N/Users/nk/Development/warp/iwarp/build/Debug-iphonesimulator/iwarp.app
+t1284226439
+s204
+
+N/Users/nk/Development/warp/iwarp/build/Debug-iphonesimulator/iwarp.app.dSYM
+t1284226439
+s102
+
+N/Users/nk/Development/warp/iwarp/build/Debug-iphonesimulator/iwarp.app/Info.plist
+t1284225150
+s583
+
+N/Users/nk/Development/warp/iwarp/build/Debug-iphonesimulator/iwarp.app/MainWindow.nib
+t1284225357
+s1158
+
+N/Users/nk/Development/warp/iwarp/build/Debug-iphonesimulator/iwarp.app/PkgInfo
+t1284225150
+s8
+
+N/Users/nk/Development/warp/iwarp/build/Debug-iphonesimulator/iwarp.app/iwarp
+t1284226439
+s25052
+
+N/Users/nk/Development/warp/iwarp/build/iwarp.build/Debug-iphonesimulator/iwarp.build/Objects-normal/i386/Client.o
+t1284225477
+s75268
+
+N/Users/nk/Development/warp/iwarp/build/iwarp.build/Debug-iphonesimulator/iwarp.build/Objects-normal/i386/MainView.o
+t1284226439
+s40952
+
+N/Users/nk/Development/warp/iwarp/build/iwarp.build/Debug-iphonesimulator/iwarp.build/Objects-normal/i386/iwarp.LinkFileList
+c000000004C8BB9C400000000000001D2
+t1284225476
+s466
+
+N/Users/nk/Development/warp/iwarp/build/iwarp.build/Debug-iphonesimulator/iwarp.build/Objects-normal/i386/iwarpAppDelegate.o
+t1284225495
+s45884
+
+N/Users/nk/Development/warp/iwarp/build/iwarp.build/Debug-iphonesimulator/iwarp.build/Objects-normal/i386/main.o
+t1284225495
+s6516
+
+N/Users/nk/Development/warp/iwarp/iwarp_Prefix.pch
+c000000004C8BB87B00000000000000B3
+t1284225147
+s179
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/nk/Development/warp/iwarp/main.m
+c000000004C8BB87B0000000000000170
+t1284225147
+s368
+i<UIKit/UIKit.h>
+
+N/Users/nk/Development/warp/iwarp/main.mm
+c000000004C8BB87B0000000000000170
+t1284225147
+s368
+i<UIKit/UIKit.h>
+
+N/var/folders/sw/swXd1n80Gsam9g8UalfMhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/iwarp_Prefix-akpibcuedlhzvsgafvamjydcneeo/iwarp_Prefix.pch.gch
+t1284225152
+s15232016
+
+N/var/folders/sw/swXd1n80Gsam9g8UalfMhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/iwarp_Prefix-chbprlxmlgybvrfavxrsaifdipkp/iwarp_Prefix.pch.gch
+t1284225476
+s2515312
+
+N/var/folders/sw/swXd1n80Gsam9g8UalfMhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/iwarp_Prefix-eutddvqgrsjnnghivbceclhmqije/iwarp_Prefix.pch.gch
+t1284225494
+s16247696
+
+Niwarp-Info.plist
+c000000004C8BB87B000000000000038D
+t1284225147
+s909
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies305919241#305919241#0(0"0(0#1#0"8616234912#0"0#
+
+CCompileC build/iwarp.build/Debug-iphonesimulator/iwarp.build/Objects-normal/i386/Client.o /Users/nk/Development/warp/iwarp/Classes/Client.cpp normal i386 c++ com.apple.compilers.gcc.4_2
+s305918277.022228
+e305918277.758661
+r1
+xCompileC
+xbuild/iwarp.build/Debug-iphonesimulator/iwarp.build/Objects-normal/i386/Client.o
+x/Users/nk/Development/warp/iwarp/Classes/Client.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@59"Compile /Users/nk/Development/warp/iwarp/Classes/Client.cpp305918277#305918277#0(0"0(0#0#51"/Users/nk/Development/warp/iwarp/Classes/Client.cpp8613526272#1776"    cd /Users/nk/Development/warp/iwarp    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk -fvisibility=hidden -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/nk/Development/warp/iwarp/build/iwarp.build/Debug-iphonesimulator/iwarp.build/iwarp-generated-files.hmap -I/Users/nk/Development/warp/iwarp/build/iwarp.build/Debug-iphonesimulator/iwarp.build/iwarp-own-target-headers.hmap -I/Users/nk/Development/warp/iwarp/build/iwarp.build/Debug-iphonesimulator/iwarp.build/iwarp-all-target-headers.hmap -iquote /Users/nk/Development/warp/iwarp/build/iwarp.build/Debug-iphonesimulator/iwarp.build/iwarp-project-headers.hmap -F/Users/nk/Development/warp/iwarp/build/Debug-iphonesimulator -I/Users/nk/Development/warp/iwarp/build/Debug-iphonesimulator/include -I/Users/nk/Development/warp/iwarp/build/iwarp.build/Debug-iphonesimulator/iwarp.build/DerivedSources/i386 -I/Users/nk/Development/warp/iwarp/build/iwarp.build/Debug-iphonesimulator/iwarp.build/DerivedSources -include /var/folders/sw/swXd1n80Gsam9g8UalfMhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/iwarp_Prefix-chbprlxmlgybvrfavxrsaifdipkp/iwarp_Prefix.pch -c /Users/nk/Development/warp/iwarp/Classes/Client.cpp -o /Users/nk/Development/warp/iwarp/build/iwarp.build/Debug-iphonesimulator/iwarp.build/Objects-normal/i386/Client.o0#
+
+CCompileC build/iwarp.build/Debug-iphonesimulator/iwarp.build/Objects-normal/i386/MainView.o /Users/nk/Development/warp/iwarp/Classes/MainView.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s305918276.981431
+e305918277.298338
+r0
+xCompileC
+xbuild/iwarp.build/Debug-iphonesimulator/iwarp.build/Objects-normal/i386/MainView.o
+x/Users/nk/Development/warp/iwarp/Classes/MainView.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+oIn file included from /Users/nk/Development/warp/iwarp/Classes/MainView.h:10,
+o                 from /Users/nk/Development/warp/iwarp/Classes/MainView.m:9:
+o/Users/nk/Development/warp/iwarp/Classes/Client.h:33: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'Client'
+oIn file included from /Users/nk/Development/warp/iwarp/Classes/MainView.m:9:
+o/Users/nk/Development/warp/iwarp/Classes/MainView.h:15: error: expected specifier-qualifier-list before 'Client'
+o/Users/nk/Development/warp/iwarp/Classes/MainView.m: In function '-[MainView acceptsFirstResponder]':
+o/Users/nk/Development/warp/iwarp/Classes/MainView.m:37: error: 'client' undeclared (first use in this function)
+o/Users/nk/Development/warp/iwarp/Classes/MainView.m:37: error: (Each undeclared identifier is reported only once
+o/Users/nk/Development/warp/iwarp/Classes/MainView.m:37: error: for each function it appears in.)
+o/Users/nk/Development/warp/iwarp/Classes/MainView.m:37: error: 'new' undeclared (first use in this function)
+o/Users/nk/Development/warp/iwarp/Classes/MainView.m:37: error: expected ';' before 'Client'
+lSLF07#2@59"Compile /Users/nk/Development/warp/iwarp/Classes/MainView.m305918276#305918277#0(1096"In file included from /Users/nk/Development/warp/iwarp/Classes/MainView.h:10,                 from /Users/nk/Development/warp/iwarp/Classes/MainView.m:9:/Users/nk/Development/warp/iwarp/Classes/Client.h:33: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'Client'In file included from /Users/nk/Development/warp/iwarp/Classes/MainView.m:9:/Users/nk/Development/warp/iwarp/Classes/MainView.h:15: error: expected specifier-qualifier-list before 'Client'/Users/nk/Development/warp/iwarp/Classes/MainView.m: In function '-[MainView acceptsFirstResponder]':/Users/nk/Development/warp/iwarp/Classes/MainView.m:37: error: 'client' undeclared (first use in this function)/Users/nk/Development/warp/iwarp/Classes/MainView.m:37: error: (Each undeclared identifier is reported only once/Users/nk/Development/warp/iwarp/Classes/MainView.m:37: error: for each function it appears in.)/Users/nk/Development/warp/iwarp/Classes/MainView.m:37: error: 'new' undeclared (first use in this function)/Users/nk/Development/warp/iwarp/Classes/MainView.m:37: error: expected ';' before 'Client'5(4@64"Expected '=', ',', ';', 'asm' or '__attribute__' before 'Client'305918277#155#126#3(7@73"In file included from /Users/nk/Development/warp/iwarp/Classes/MainView.m305918277#18446744073709551615#0#0(6@51"/Users/nk/Development/warp/iwarp/Classes/MainView.m305918276#9#0#9#0#0"0(7@73"In file included from /Users/nk/Development/warp/iwarp/Classes/MainView.h305918277#18446744073709551615#0#0(6@51"/Users/nk/Development/warp/iwarp/Classes/MainView.h305918271#10#0#10#0#0"0(13@117"Expected '=', ',', ';', 'asm' or '__attribute__' before 'Client' in /Users/nk/Development/warp/iwarp/Classes/Client.h305918277#18446744073709551615#0#0(6@49"/Users/nk/Development/warp/iwarp/Classes/Client.h305900491#33#0#33#0#0"0(6@49"/Users/nk/Development/warp/iwarp/Classes/Client.h305900491#33#0#33#0#19"expected * before *0(4@49"Expected specifier-qualifier-list before 'Client'305918277#358#113#2(7@73"In file included from /Users/nk/Development/warp/iwarp/Classes/MainView.m305918277#18446744073709551615#0#0(6@51"/Users/nk/Development/warp/iwarp/Classes/MainView.m305918276#9#0#9#0#0"0(13@104"Expected specifier-qualifier-list before 'Client' in /Users/nk/Development/warp/iwarp/Classes/MainView.h305918277#18446744073709551615#0#0(6@51"/Users/nk/Development/warp/iwarp/Classes/MainView.h305918271#15#0#15#0#0"0(6@51"/Users/nk/Development/warp/iwarp/Classes/MainView.h305918271#15#0#15#0#19"expected * before *0(4@48"'client' undeclared (first use in this function)305918277#573#112#0(6@51"/Users/nk/Development/warp/iwarp/Classes/MainView.m305918276#37#0#37#0#43"'*' undeclared (first use in this function)0(4@45"'new' undeclared (first use in this function)305918277#895#109#0(6@51"/Users/nk/Development/warp/iwarp/Classes/MainView.m305918276#37#0#37#0#43"'*' undeclared (first use in this function)0(4@28"Expected ';' before 'Client'305918277#1004#92#0(6@51"/Users/nk/Development/warp/iwarp/Classes/MainView.m305918276#37#0#37#0#19"expected * before *0(0#0#51"/Users/nk/Development/warp/iwarp/Classes/MainView.m8612471136#1811"    cd /Users/nk/Development/warp/iwarp    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote /Users/nk/Development/warp/iwarp/build/iwarp.build/Debug-iphonesimulator/iwarp.build/iwarp-generated-files.hmap -I/Users/nk/Development/warp/iwarp/build/iwarp.build/Debug-iphonesimulator/iwarp.build/iwarp-own-target-headers.hmap -I/Users/nk/Development/warp/iwarp/build/iwarp.build/Debug-iphonesimulator/iwarp.build/iwarp-all-target-headers.hmap -iquote /Users/nk/Development/warp/iwarp/build/iwarp.build/Debug-iphonesimulator/iwarp.build/iwarp-project-headers.hmap -F/Users/nk/Development/warp/iwarp/build/Debug-iphonesimulator -I/Users/nk/Development/warp/iwarp/build/Debug-iphonesimulator/include -I/Users/nk/Development/warp/iwarp/build/iwarp.build/Debug-iphonesimulator/iwarp.build/DerivedSources/i386 -I/Users/nk/Development/warp/iwarp/build/iwarp.build/Debug-iphonesimulator/iwarp.build/DerivedSources -include /var/folders/sw/swXd1n80Gsam9g8UalfMhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/iwarp_Prefix-akpibcuedlhzvsgafvamjydcneeo/iwarp_Prefix.pch -c /Users/nk/Development/warp/iwarp/Classes/MainView.m -o /Users/nk/Development/warp/iwarp/build/iwarp.build/Debug-iphonesimulator/iwarp.build/Objects-normal/i386/MainView.o1#
+
+CCompileC build/iwarp.build/Debug-iphonesimulator/iwarp.build/Objects-normal/i386/MainView.o /Users/nk/Development/warp/iwarp/Classes/MainView.mm normal i386 objective-c++ com.apple.compilers.gcc.4_2
+s305919239.639622
+e305919239.748123
+r1
+xCompileC
+xbuild/iwarp.build/Debug-iphonesimulator/iwarp.build/Objects-normal/i386/MainView.o
+x/Users/nk/Development/warp/iwarp/Classes/MainView.mm
+xnormal
+xi386
+xobjective-c++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@60"Compile /Users/nk/Development/warp/iwarp/Classes/MainView.mm305919239#305919239#0(0"0(0#0#52"/Users/nk/Development/warp/iwarp/Classes/MainView.mm8612205504#1833"    cd /Users/nk/Development/warp/iwarp    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk -fvisibility=hidden -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote /Users/nk/Development/warp/iwarp/build/iwarp.build/Debug-iphonesimulator/iwarp.build/iwarp-generated-files.hmap -I/Users/nk/Development/warp/iwarp/build/iwarp.build/Debug-iphonesimulator/iwarp.build/iwarp-own-target-headers.hmap -I/Users/nk/Development/warp/iwarp/build/iwarp.build/Debug-iphonesimulator/iwarp.build/iwarp-all-target-headers.hmap -iquote /Users/nk/Development/warp/iwarp/build/iwarp.build/Debug-iphonesimulator/iwarp.build/iwarp-project-headers.hmap -F/Users/nk/Development/warp/iwarp/build/Debug-iphonesimulator -I/Users/nk/Development/warp/iwarp/build/Debug-iphonesimulator/include -I/Users/nk/Development/warp/iwarp/build/iwarp.build/Debug-iphonesimulator/iwarp.build/DerivedSources/i386 -I/Users/nk/Development/warp/iwarp/build/iwarp.build/Debug-iphonesimulator/iwarp.build/DerivedSources -include /var/folders/sw/swXd1n80Gsam9g8UalfMhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/iwarp_Prefix-eutddvqgrsjnnghivbceclhmqije/iwarp_Prefix.pch -c /Users/nk/Development/warp/iwarp/Classes/MainView.mm -o /Users/nk/Development/warp/iwarp/build/iwarp.build/Debug-iphonesimulator/iwarp.build/Objects-normal/i386/MainView.o0#
+
+CCompileC build/iwarp.build/Debug-iphonesimulator/iwarp.build/Objects-normal/i386/iwarpAppDelegate.o /Users/nk/Development/warp/iwarp/Classes/iwarpAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s305917952.314525
+e305917952.588103
+r1
+xCompileC
+xbuild/iwarp.build/Debug-iphonesimulator/iwarp.build/Objects-normal/i386/iwarpAppDelegate.o
+x/Users/nk/Development/warp/iwarp/Classes/iwarpAppDelegate.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@67"Compile /Users/nk/Development/warp/iwarp/Classes/iwarpAppDelegate.m305917952#305917952#0(0"0(0#0#59"/Users/nk/Development/warp/iwarp/Classes/iwarpAppDelegate.m8599473248#1827"    cd /Users/nk/Development/warp/iwarp    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote /Users/nk/Development/warp/iwarp/build/iwarp.build/Debug-iphonesimulator/iwarp.build/iwarp-generated-files.hmap -I/Users/nk/Development/warp/iwarp/build/iwarp.build/Debug-iphonesimulator/iwarp.build/iwarp-own-target-headers.hmap -I/Users/nk/Development/warp/iwarp/build/iwarp.build/Debug-iphonesimulator/iwarp.build/iwarp-all-target-headers.hmap -iquote /Users/nk/Development/warp/iwarp/build/iwarp.build/Debug-iphonesimulator/iwarp.build/iwarp-project-headers.hmap -F/Users/nk/Development/warp/iwarp/build/Debug-iphonesimulator -I/Users/nk/Development/warp/iwarp/build/Debug-iphonesimulator/include -I/Users/nk/Development/warp/iwarp/build/iwarp.build/Debug-iphonesimulator/iwarp.build/DerivedSources/i386 -I/Users/nk/Development/warp/iwarp/build/iwarp.build/Debug-iphonesimulator/iwarp.build/DerivedSources -include /var/folders/sw/swXd1n80Gsam9g8UalfMhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/iwarp_Prefix-akpibcuedlhzvsgafvamjydcneeo/iwarp_Prefix.pch -c /Users/nk/Development/warp/iwarp/Classes/iwarpAppDelegate.m -o /Users/nk/Development/warp/iwarp/build/iwarp.build/Debug-iphonesimulator/iwarp.build/Objects-normal/i386/iwarpAppDelegate.o0#
+
+CCompileC build/iwarp.build/Debug-iphonesimulator/iwarp.build/Objects-normal/i386/iwarpAppDelegate.o /Users/nk/Development/warp/iwarp/Classes/iwarpAppDelegate.mm normal i386 objective-c++ com.apple.compilers.gcc.4_2
+s305918294.795393
+e305918295.083454
+r1
+xCompileC
+xbuild/iwarp.build/Debug-iphonesimulator/iwarp.build/Objects-normal/i386/iwarpAppDelegate.o
+x/Users/nk/Development/warp/iwarp/Classes/iwarpAppDelegate.mm
+xnormal
+xi386
+xobjective-c++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@68"Compile /Users/nk/Development/warp/iwarp/Classes/iwarpAppDelegate.mm305918294#305918295#0(0"0(0#0#60"/Users/nk/Development/warp/iwarp/Classes/iwarpAppDelegate.mm8612552960#1849"    cd /Users/nk/Development/warp/iwarp    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk -fvisibility=hidden -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote /Users/nk/Development/warp/iwarp/build/iwarp.build/Debug-iphonesimulator/iwarp.build/iwarp-generated-files.hmap -I/Users/nk/Development/warp/iwarp/build/iwarp.build/Debug-iphonesimulator/iwarp.build/iwarp-own-target-headers.hmap -I/Users/nk/Development/warp/iwarp/build/iwarp.build/Debug-iphonesimulator/iwarp.build/iwarp-all-target-headers.hmap -iquote /Users/nk/Development/warp/iwarp/build/iwarp.build/Debug-iphonesimulator/iwarp.build/iwarp-project-headers.hmap -F/Users/nk/Development/warp/iwarp/build/Debug-iphonesimulator -I/Users/nk/Development/warp/iwarp/build/Debug-iphonesimulator/include -I/Users/nk/Development/warp/iwarp/build/iwarp.build/Debug-iphonesimulator/iwarp.build/DerivedSources/i386 -I/Users/nk/Development/warp/iwarp/build/iwarp.build/Debug-iphonesimulator/iwarp.build/DerivedSources -include /var/folders/sw/swXd1n80Gsam9g8UalfMhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/iwarp_Prefix-eutddvqgrsjnnghivbceclhmqije/iwarp_Prefix.pch -c /Users/nk/Development/warp/iwarp/Classes/iwarpAppDelegate.mm -o /Users/nk/Development/warp/iwarp/build/iwarp.build/Debug-iphonesimulator/iwarp.build/Objects-normal/i386/iwarpAppDelegate.o0#
+
+CCompileC build/iwarp.build/Debug-iphonesimulator/iwarp.build/Objects-normal/i386/main.o /Users/nk/Development/warp/iwarp/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s305917952.313622
+e305917952.573106
+r1
+xCompileC
+xbuild/iwarp.build/Debug-iphonesimulator/iwarp.build/Objects-normal/i386/main.o
+x/Users/nk/Development/warp/iwarp/main.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@47"Compile /Users/nk/Development/warp/iwarp/main.m305917952#305917952#0(0"0(0#0#39"/Users/nk/Development/warp/iwarp/main.m8599419904#1795"    cd /Users/nk/Development/warp/iwarp    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote /Users/nk/Development/warp/iwarp/build/iwarp.build/Debug-iphonesimulator/iwarp.build/iwarp-generated-files.hmap -I/Users/nk/Development/warp/iwarp/build/iwarp.build/Debug-iphonesimulator/iwarp.build/iwarp-own-target-headers.hmap -I/Users/nk/Development/warp/iwarp/build/iwarp.build/Debug-iphonesimulator/iwarp.build/iwarp-all-target-headers.hmap -iquote /Users/nk/Development/warp/iwarp/build/iwarp.build/Debug-iphonesimulator/iwarp.build/iwarp-project-headers.hmap -F/Users/nk/Development/warp/iwarp/build/Debug-iphonesimulator -I/Users/nk/Development/warp/iwarp/build/Debug-iphonesimulator/include -I/Users/nk/Development/warp/iwarp/build/iwarp.build/Debug-iphonesimulator/iwarp.build/DerivedSources/i386 -I/Users/nk/Development/warp/iwarp/build/iwarp.build/Debug-iphonesimulator/iwarp.build/DerivedSources -include /var/folders/sw/swXd1n80Gsam9g8UalfMhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/iwarp_Prefix-akpibcuedlhzvsgafvamjydcneeo/iwarp_Prefix.pch -c /Users/nk/Development/warp/iwarp/main.m -o /Users/nk/Development/warp/iwarp/build/iwarp.build/Debug-iphonesimulator/iwarp.build/Objects-normal/i386/main.o0#
+
+CCompileC build/iwarp.build/Debug-iphonesimulator/iwarp.build/Objects-normal/i386/main.o /Users/nk/Development/warp/iwarp/main.mm normal i386 objective-c++ com.apple.compilers.gcc.4_2
+s305918294.794452
+e305918295.067131
+r1
+xCompileC
+xbuild/iwarp.build/Debug-iphonesimulator/iwarp.build/Objects-normal/i386/main.o
+x/Users/nk/Development/warp/iwarp/main.mm
+xnormal
+xi386
+xobjective-c++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@48"Compile /Users/nk/Development/warp/iwarp/main.mm305918294#305918295#0(0"0(0#0#40"/Users/nk/Development/warp/iwarp/main.mm8590251360#1817"    cd /Users/nk/Development/warp/iwarp    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk -fvisibility=hidden -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote /Users/nk/Development/warp/iwarp/build/iwarp.build/Debug-iphonesimulator/iwarp.build/iwarp-generated-files.hmap -I/Users/nk/Development/warp/iwarp/build/iwarp.build/Debug-iphonesimulator/iwarp.build/iwarp-own-target-headers.hmap -I/Users/nk/Development/warp/iwarp/build/iwarp.build/Debug-iphonesimulator/iwarp.build/iwarp-all-target-headers.hmap -iquote /Users/nk/Development/warp/iwarp/build/iwarp.build/Debug-iphonesimulator/iwarp.build/iwarp-project-headers.hmap -F/Users/nk/Development/warp/iwarp/build/Debug-iphonesimulator -I/Users/nk/Development/warp/iwarp/build/Debug-iphonesimulator/include -I/Users/nk/Development/warp/iwarp/build/iwarp.build/Debug-iphonesimulator/iwarp.build/DerivedSources/i386 -I/Users/nk/Development/warp/iwarp/build/iwarp.build/Debug-iphonesimulator/iwarp.build/DerivedSources -include /var/folders/sw/swXd1n80Gsam9g8UalfMhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/iwarp_Prefix-eutddvqgrsjnnghivbceclhmqije/iwarp_Prefix.pch -c /Users/nk/Development/warp/iwarp/main.mm -o /Users/nk/Development/warp/iwarp/build/iwarp.build/Debug-iphonesimulator/iwarp.build/Objects-normal/i386/main.o0#
+
+CCompileXIB /Users/nk/Development/warp/iwarp/MainWindow.xib
+s305918156.543080
+e305918157.172989
+r1
+xCompileXIB
+x/Users/nk/Development/warp/iwarp/MainWindow.xib
+lSLF07#2@25"CompileXIB MainWindow.xib305918156#305918157#0(0"0(0#0#47"/Users/nk/Development/warp/iwarp/MainWindow.xib8613202816#550"    cd /Users/nk/Development/warp/iwarp    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.0    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/nk/Development/warp/iwarp/build/Debug-iphonesimulator/iwarp.app/MainWindow.nib /Users/nk/Development/warp/iwarp/MainWindow.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk0#
+
+CGenerateDSYMFile /Users/nk/Development/warp/iwarp/build/Debug-iphonesimulator/iwarp.app.dSYM /Users/nk/Development/warp/iwarp/build/Debug-iphonesimulator/iwarp.app/iwarp
+s305919239.769611
+e305919239.785799
+r1
+xGenerateDSYMFile
+x/Users/nk/Development/warp/iwarp/build/Debug-iphonesimulator/iwarp.app.dSYM
+x/Users/nk/Development/warp/iwarp/build/Debug-iphonesimulator/iwarp.app/iwarp
+lSLF07#2@103"GenerateDSYMFile build/Debug-iphonesimulator/iwarp.app.dSYM build/Debug-iphonesimulator/iwarp.app/iwarp305919239#305919239#0(0"0(0#0#76"/Users/nk/Development/warp/iwarp/build/Debug-iphonesimulator/iwarp.app/iwarp8614746720#359"    cd /Users/nk/Development/warp/iwarp    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/nk/Development/warp/iwarp/build/Debug-iphonesimulator/iwarp.app/iwarp -o /Users/nk/Development/warp/iwarp/build/Debug-iphonesimulator/iwarp.app.dSYM0#
+
+CLd /Users/nk/Development/warp/iwarp/build/Debug-iphonesimulator/iwarp.app/iwarp normal i386
+s305919239.748201
+e305919239.769515
+r1
+xLd
+x/Users/nk/Development/warp/iwarp/build/Debug-iphonesimulator/iwarp.app/iwarp
+xnormal
+xi386
+lSLF07#2@81"Link /Users/nk/Development/warp/iwarp/build/Debug-iphonesimulator/iwarp.app/iwarp305919239#305919239#0(0"0(0#0#0"8616416256#860"    cd /Users/nk/Development/warp/iwarp    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/g++-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk -L/Users/nk/Development/warp/iwarp/build/Debug-iphonesimulator -F/Users/nk/Development/warp/iwarp/build/Debug-iphonesimulator -filelist /Users/nk/Development/warp/iwarp/build/iwarp.build/Debug-iphonesimulator/iwarp.build/Objects-normal/i386/iwarp.LinkFileList -mmacosx-version-min=10.6 -Xlinker -objc_abi_version -Xlinker 2 -framework Foundation -framework UIKit -framework CoreGraphics -o /Users/nk/Development/warp/iwarp/build/Debug-iphonesimulator/iwarp.app/iwarp0#
+
+CProcessInfoPlistFile /Users/nk/Development/warp/iwarp/build/Debug-iphonesimulator/iwarp.app/Info.plist iwarp-Info.plist
+s305917950.699695
+e305917950.710115
+r1
+xProcessInfoPlistFile
+x/Users/nk/Development/warp/iwarp/build/Debug-iphonesimulator/iwarp.app/Info.plist
+xiwarp-Info.plist
+lSLF07#2@24"Process iwarp-Info.plist305917950#305917950#0(0"0(0#0#49"/Users/nk/Development/warp/iwarp/iwarp-Info.plist33495973203214448#455"    cd /Users/nk/Development/warp/iwarp    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility iwarp-Info.plist -genpkginfo /Users/nk/Development/warp/iwarp/build/Debug-iphonesimulator/iwarp.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/nk/Development/warp/iwarp/build/Debug-iphonesimulator/iwarp.app/Info.plist0#
+
+CProcessPCH /var/folders/sw/swXd1n80Gsam9g8UalfMhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/iwarp_Prefix-akpibcuedlhzvsgafvamjydcneeo/iwarp_Prefix.pch.gch iwarp_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+s305917951.720428
+e305917952.313414
+r1
+xProcessPCH
+x/var/folders/sw/swXd1n80Gsam9g8UalfMhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/iwarp_Prefix-akpibcuedlhzvsgafvamjydcneeo/iwarp_Prefix.pch.gch
+xiwarp_Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@27"Precompile iwarp_Prefix.pch305917951#305917952#0(0"0(0#0#49"/Users/nk/Development/warp/iwarp/iwarp_Prefix.pch8603037792#1695"    cd /Users/nk/Development/warp/iwarp    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote /Users/nk/Development/warp/iwarp/build/iwarp.build/Debug-iphonesimulator/iwarp.build/iwarp-generated-files.hmap -I/Users/nk/Development/warp/iwarp/build/iwarp.build/Debug-iphonesimulator/iwarp.build/iwarp-own-target-headers.hmap -I/Users/nk/Development/warp/iwarp/build/iwarp.build/Debug-iphonesimulator/iwarp.build/iwarp-all-target-headers.hmap -iquote /Users/nk/Development/warp/iwarp/build/iwarp.build/Debug-iphonesimulator/iwarp.build/iwarp-project-headers.hmap -F/Users/nk/Development/warp/iwarp/build/Debug-iphonesimulator -I/Users/nk/Development/warp/iwarp/build/Debug-iphonesimulator/include -I/Users/nk/Development/warp/iwarp/build/iwarp.build/Debug-iphonesimulator/iwarp.build/DerivedSources/i386 -I/Users/nk/Development/warp/iwarp/build/iwarp.build/Debug-iphonesimulator/iwarp.build/DerivedSources -c /Users/nk/Development/warp/iwarp/iwarp_Prefix.pch -o /var/folders/sw/swXd1n80Gsam9g8UalfMhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/iwarp_Prefix-akpibcuedlhzvsgafvamjydcneeo/iwarp_Prefix.pch.gch0#
+
+CProcessPCH++ /var/folders/sw/swXd1n80Gsam9g8UalfMhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/iwarp_Prefix-chbprlxmlgybvrfavxrsaifdipkp/iwarp_Prefix.pch.gch iwarp_Prefix.pch normal i386 c++ com.apple.compilers.gcc.4_2
+s305918276.904906
+e305918276.981190
+r1
+xProcessPCH++
+x/var/folders/sw/swXd1n80Gsam9g8UalfMhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/iwarp_Prefix-chbprlxmlgybvrfavxrsaifdipkp/iwarp_Prefix.pch.gch
+xiwarp_Prefix.pch
+xnormal
+xi386
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@27"Precompile iwarp_Prefix.pch305918276#305918276#0(0"0(0#0#49"/Users/nk/Development/warp/iwarp/iwarp_Prefix.pch8604432928#1662"    cd /Users/nk/Development/warp/iwarp    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x c++-header -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk -fvisibility=hidden -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/nk/Development/warp/iwarp/build/iwarp.build/Debug-iphonesimulator/iwarp.build/iwarp-generated-files.hmap -I/Users/nk/Development/warp/iwarp/build/iwarp.build/Debug-iphonesimulator/iwarp.build/iwarp-own-target-headers.hmap -I/Users/nk/Development/warp/iwarp/build/iwarp.build/Debug-iphonesimulator/iwarp.build/iwarp-all-target-headers.hmap -iquote /Users/nk/Development/warp/iwarp/build/iwarp.build/Debug-iphonesimulator/iwarp.build/iwarp-project-headers.hmap -F/Users/nk/Development/warp/iwarp/build/Debug-iphonesimulator -I/Users/nk/Development/warp/iwarp/build/Debug-iphonesimulator/include -I/Users/nk/Development/warp/iwarp/build/iwarp.build/Debug-iphonesimulator/iwarp.build/DerivedSources/i386 -I/Users/nk/Development/warp/iwarp/build/iwarp.build/Debug-iphonesimulator/iwarp.build/DerivedSources -c /Users/nk/Development/warp/iwarp/iwarp_Prefix.pch -o /var/folders/sw/swXd1n80Gsam9g8UalfMhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/iwarp_Prefix-chbprlxmlgybvrfavxrsaifdipkp/iwarp_Prefix.pch.gch0#
+
+CProcessPCH++ /var/folders/sw/swXd1n80Gsam9g8UalfMhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/iwarp_Prefix-eutddvqgrsjnnghivbceclhmqije/iwarp_Prefix.pch.gch iwarp_Prefix.pch normal i386 objective-c++ com.apple.compilers.gcc.4_2
+s305918294.134445
+e305918294.794357
+r1
+xProcessPCH++
+x/var/folders/sw/swXd1n80Gsam9g8UalfMhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/iwarp_Prefix-eutddvqgrsjnnghivbceclhmqije/iwarp_Prefix.pch.gch
+xiwarp_Prefix.pch
+xnormal
+xi386
+xobjective-c++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@27"Precompile iwarp_Prefix.pch305918294#305918294#0(0"0(0#0#49"/Users/nk/Development/warp/iwarp/iwarp_Prefix.pch8613488000#1716"    cd /Users/nk/Development/warp/iwarp    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c++-header -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk -fvisibility=hidden -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote /Users/nk/Development/warp/iwarp/build/iwarp.build/Debug-iphonesimulator/iwarp.build/iwarp-generated-files.hmap -I/Users/nk/Development/warp/iwarp/build/iwarp.build/Debug-iphonesimulator/iwarp.build/iwarp-own-target-headers.hmap -I/Users/nk/Development/warp/iwarp/build/iwarp.build/Debug-iphonesimulator/iwarp.build/iwarp-all-target-headers.hmap -iquote /Users/nk/Development/warp/iwarp/build/iwarp.build/Debug-iphonesimulator/iwarp.build/iwarp-project-headers.hmap -F/Users/nk/Development/warp/iwarp/build/Debug-iphonesimulator -I/Users/nk/Development/warp/iwarp/build/Debug-iphonesimulator/include -I/Users/nk/Development/warp/iwarp/build/iwarp.build/Debug-iphonesimulator/iwarp.build/DerivedSources/i386 -I/Users/nk/Development/warp/iwarp/build/iwarp.build/Debug-iphonesimulator/iwarp.build/DerivedSources -c /Users/nk/Development/warp/iwarp/iwarp_Prefix.pch -o /var/folders/sw/swXd1n80Gsam9g8UalfMhU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/iwarp_Prefix-eutddvqgrsjnnghivbceclhmqije/iwarp_Prefix.pch.gch0#
+
+CTouch /Users/nk/Development/warp/iwarp/build/Debug-iphonesimulator/iwarp.app
+s305919239.785875
+e305919239.788147
+r1
+xTouch
+x/Users/nk/Development/warp/iwarp/build/Debug-iphonesimulator/iwarp.app
+lSLF07#2@76"Touch /Users/nk/Development/warp/iwarp/build/Debug-iphonesimulator/iwarp.app305919239#305919239#0(0"0(0#0#0"8613797696#264"    cd /Users/nk/Development/warp/iwarp    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/nk/Development/warp/iwarp/build/Debug-iphonesimulator/iwarp.app0#
+

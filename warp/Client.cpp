@@ -19,6 +19,8 @@
 
 void Client::attach()
 {	
+	std::clog << "connecting" << std::endl;
+	
 	struct hostent *server = gethostbyname("192.168.0.106");
 	
   if (server == NULL)
@@ -44,6 +46,8 @@ void Client::attach()
   { 
     std::cerr << "ERROR, can't connect to host" << std::endl;
   }
+	
+	std::clog << "connected" << std::endl;
 }
 
 void Client::send_message(const Message& message)

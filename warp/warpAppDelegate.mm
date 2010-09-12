@@ -22,14 +22,38 @@
 	
 	CGWarpMouseCursorPosition(center_screen);
   CGAssociateMouseAndMouseCursorPosition(false);
-  //CGDisplayHideCursor(kCGDirectMainDisplay);
+  CGDisplayHideCursor(kCGDirectMainDisplay);
+}
+
+- (void)ensureFocus {
+	[[NSApplication sharedApplication] activateIgnoringOtherApps : YES];
+	
+	CGEventRef event = CGEventCreate(NULL);
+  CGPoint point = CGEventGetLocation(event); 
+  
+  CGEventRef theEvent = CGEventCreateMouseEvent(NULL, kCGEventLeftMouseDown, point, kCGMouseButtonLeft);
+  CGEventSetType(theEvent, kCGEventLeftMouseDown);
+  CGEventPost(kCGHIDEventTap, theEvent);
+  CFRelease(theEvent);
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
 	[window setAcceptsMouseMovedEvents:YES];
-	//[window setStyleMask:NSBorderlessWindowMask];
+	
+	NSMenu		*menu;
+	NSStatusItem* statusItem = [[[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength] retain];
+	
+	[statusItem setImage:[NSImage imageNamed:@"test"]];
+	[statusItem setHighlightMode:YES];
+	
+	menu = [[NSMenu alloc] initWithTitle:@""];
+	[menu addItemWithTitle:@"Hi" action:NULL keyEquivalent:@""];
+	[statusItem setMenu:menu];
+	[menu release];
+	
+	[window setStyleMask:NSBorderlessWindowMask];
 	
 	[self lockMouse];
-	[[NSApplication sharedApplication] activateIgnoringOtherApps : YES];
+	[self ensureFocus];
 }
 @end

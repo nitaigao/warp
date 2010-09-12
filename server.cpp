@@ -243,23 +243,225 @@ void process_message(const Message& message)
   }
 }
 
+class Server
+{
+  int max_socket_;
+  int listen_sock_;
+  fd_set read_sockets_;
+  
+public:
+
+  void start_listening(unsigned int port)
+  {  
+    listen_sock_ = create_socket(port);
+    std::clog << listen_sock_ << std::endl;
+    max_socket_ = listen_sock_;
+    FD_SET(listen_sock_, &read_sockets_);
+    
+    listen(listen_sock_, 5);
+    std::clog << "waiting for connections" << std::endl;
+  };
+  
+  bool receive() 
+  { 
+    struct timeval timeout;
+    timeout.tv_sec = 1;
+    timeout.tv_usec = 0;
+    
+    fd_set working_socks;
+    FD_ZERO(&working_socks);
+    memcpy(&working_socks, &read_sockets_, sizeof(read_sockets_));
+
+    int readsocks = select(max_socket_ + 1, &working_socks, NULL, NULL, &timeout);
+
+    if (readsocks < 0)
+    { 
+      std::cerr << "ERROR on accept" << std::endl;
+    }
+
+    if (readsocks == 0)
+    {
+      std::clog << "nothing to process" << std::endl;
+    }
+
+    if (readsocks > 0)
+    {      
+      for (int i = 0; i < max_socket_ + 1; i++)
+      {      
+        if (FD_ISSET(i, &working_socks))
+        {
+          if (i == listen_sock_)
+          {
+            std::clog << "new incoming connection" << std::endl;
+
+            int incoming_socket = accept(listen_sock_, NULL, NULL);
+
+            if (incoming_socket < 0)
+            {
+              std::cerr << "ERROR accepting incoming connection" << std::endl;
+            }
+
+            FD_SET(incoming_socket, &read_sockets_);
+            max_socket_ = incoming_socket;
+          }
+          else
+          {  
+            std::clog << "data transfer" << std::endl;
+      
+            char buffer[256];
+            bzero(buffer, 256);
+          
+            int result = read(i, buffer, sizeof(buffer));
+      
+            if (result < 0)
+            { 
+              std::cerr << "ERROR reading from socket" << std::endl;
+            }
+            
+            if (result == 0)
+            {
+              std::clog << "no data" << std::endl;
+              std::clog << "closing connection" << std::endl;
+              
+              shutdown (i, 2);
+              FD_CLR(i, &read_sockets_);
+            }
+          
+            if (result > 0)
+            {
+              Message message;
+              memcpy(&message, &buffer, sizeof(Message));    
+              process_message(message);
+            }
+          }
+        }
+      }
+    }
+    
+    return true;
+  };
+
+  Message data() { return Message(); };
+  
+private:
+  
+  void set_non_blocking(int sock)
+  {
+    int flags;  
+    if ((flags = fcntl(sock, F_GETFL, 0)) < 0) 
+    {
+      std::cerr << "ERROR, couldn't get socket flags" << std::endl;
+    }
+
+    if (fcntl(sock, F_SETFL, flags | O_NONBLOCK) < 0) 
+    { 
+      std::cerr << "ERROR, couldn't set socket flags" << std::endl;
+    }
+  }
+  
+  int create_socket(unsigned int port)
+  {
+    struct sockaddr_in serv_addr;
+    serv_addr.sin_family = AF_INET;
+    serv_addr.sin_addr.s_addr = INADDR_ANY;
+    serv_addr.sin_port = htons(port);
+    
+    int sock = socket(AF_INET, SOCK_STREAM, 0);
+
+    if (sock < 0)
+    {
+      std::cerr << "ERROR opening socket" << std::endl;
+    }
+    
+    set_non_blocking(sock);  
+    
+    if (bind(sock, (struct sockaddr *) &serv_addr, sizeof(serv_addr)) < 0)
+    {
+      std::cerr << "ERROR on binding" << std::endl;
+    }
+    
+    return sock;    
+  }
+  
+  int accept_connections(int listening_socket)
+  {
+    
+    int new_socket = 0;
+    
+    listen(listening_socket, 5);
+    
+    
+    /*struct sockaddr_in cli_addr;
+    
+    listen(listening_socket, 5);
+    socklen_t socklen = sizeof(cli_addr);
+    
+    int new_socket = EWOULDBLOCK;
+    
+    while(new_socket == EWOULDBLOCK)
+    {
+      new_socket = accept(listening_socket, (struct sockaddr *) &cli_addr, &socklen);
+      
+      std::clog << EWOULDBLOCK << " " << new_socket << std::endl;
+
+      if (new_socket < 0)
+      { 
+        std::cerr << "ERROR on accept" << std::endl;
+      }
+    
+      if (new_socket == EAGAIN)
+      {
+        std::clog << "waiting for connection" << std::endl;
+      }
+      
+      if (new_socket > 0)
+      {
+        std::clog << "client connected" << std::endl;
+      }
+    }*/
+    
+    return new_socket;
+  }
+    
+};
+
 int main(int argc, char *argv[])
 {
-  int sockfd, newsockfd, portno;
+  if (argc < 2) 
+  {
+    std::cerr << "ERROR, no port provided" << std::endl;
+    exit(1);
+  }
+  
+  Server server;
+  server.start_listening(atoi(argv[1]));
+  
+  while(true)
+  {    
+    if(server.receive())
+    {
+      //Message message = server.data();
+      //process_message(message);      
+    }
+  }
+}
+  /*
+  
+  int sock, newsock, portno;
   char buffer[256];
+  struct timeval timeout;
+  timeout.tv_sec = 1;
+  timeout.tv_usec = 0;
+  
+  fd_set readset;
   
   struct sockaddr_in serv_addr, cli_addr;
   
   int n;
 
-  if (argc < 2) {
-    fprintf(stderr,"ERROR, no port provided\n");
-    exit(1);
-  }
+  sock = socket(AF_INET, SOCK_STREAM, 0);
 
-  sockfd = socket(AF_INET, SOCK_STREAM, 0);
-
-  if (sockfd < 0)
+  if (sock < 0)
   {
     std::cerr << "ERROR opening socket" << std::endl;
   }
@@ -271,34 +473,78 @@ int main(int argc, char *argv[])
   serv_addr.sin_addr.s_addr = INADDR_ANY;
   serv_addr.sin_port = htons(portno);
   
-  if (bind(sockfd, (struct sockaddr *) &serv_addr, sizeof(serv_addr)) < 0)
+  if (bind(sock, (struct sockaddr *) &serv_addr, sizeof(serv_addr)) < 0)
   {
-    //error("ERROR on binding");
+    std::cerr << "ERROR on binding" << std::endl;
   }
   
-  listen(sockfd,5);
+  listen(sock,5);
   socklen_t socklen = sizeof(cli_addr);
-  newsockfd = accept(sockfd, (struct sockaddr *) &cli_addr,&socklen);
   
-  if (newsockfd < 0)
+  std::clog << "waiting for connections" << std::endl;
+   
+  newsock = accept(sock, (struct sockaddr *) &cli_addr,&socklen);
+  
+  if (newsock < 0)
   { 
     std::cerr << "ERROR on accept" << std::endl;
   }
   
-  while(1)
+  std::clog << "client connected" << std::endl;
+  
+  int flags;  
+  if ((flags = fcntl(newsock, F_GETFL, 0)) < 0) 
   {
-    bzero(buffer,256);
-    n = read(newsockfd,buffer,255);
-    if (n < 0)
-    { 
-      std::cerr << "ERROR reading from socket" << std::endl;
-    }
-    
-    Message message;
-    memcpy(&message, &buffer, sizeof(Message));
-    
-    process_message(message);
+    std::cerr << "ERROR, couldn't get socket flags" << std::endl;
   }
 
+  if (fcntl(newsock, F_SETFL, flags | O_NONBLOCK) < 0) 
+  { 
+    std::cerr << "ERROR, couldn't set socket flags" << std::endl;
+  }
+  
+  while(1)
+  {
+    fd_set socks;
+    FD_ZERO(&socks);
+    FD_SET(newsock, &socks);
+    
+    int readsocks = select(newsock + 1, &socks, NULL, NULL, &timeout);
+    
+    if (readsocks < 0)
+    { 
+      std::clog << "ERROR on accept" << std::endl;
+    }
+  
+    if (readsocks == 0)
+    {
+      std::clog << "Nothing to process" << std::endl;
+      std::clog << "PING" << std::endl;
+      
+      if (!write(sock, data, sizeof(Message)))
+      {
+    		std::clog << "ERROR writing to socket" << std::endl;
+      }
+    }
+  
+    if (readsocks > 0)
+    {
+      std::clog << "received data" << std::endl;
+      
+      bzero(buffer,256);
+      n = read(newsock,buffer,255);
+      
+      if (n < 0)
+      { 
+        std::cerr << "ERROR reading from socket" << std::endl;
+      }
+
+      Message message;
+      memcpy(&message, &buffer, sizeof(Message));
+
+      process_message(message);
+    }
+  }
+  
   return 0; 
-}
+}*/

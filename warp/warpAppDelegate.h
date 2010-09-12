@@ -8,11 +8,17 @@
 
 #import <Cocoa/Cocoa.h>
 #include <ApplicationServices/ApplicationServices.h>
+#import "MainView.h"
+#import "Server.h"
 
-@interface warpAppDelegate : NSObject <NSApplicationDelegate> {
-    NSWindow *window;
+@interface warpAppDelegate : NSObject<NSApplicationDelegate> {
+	NSWindow *window;
+	IBOutlet NSMenu *menu;
+	Server* server;
 }
 
 @property (assign) IBOutlet NSWindow *window;
+
+- (IBAction)connect:(id)sender;
 
 @end

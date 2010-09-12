@@ -13,7 +13,10 @@
 @interface MainView : NSView {
 	
 	Client* client;
+	bool input_allowed;
 
 }
+
+- (void)allow_input:(bool)allowed;
 
 @end

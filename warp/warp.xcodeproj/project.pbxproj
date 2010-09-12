@@ -9,9 +9,14 @@
 /* Begin PBXBuildFile section */
 		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
 		256AC3DA0F4B6AC300CF3369 /* warpAppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 256AC3D90F4B6AC300CF3369 /* warpAppDelegate.mm */; };
+		4C12914B123D0D4A0080D294 /* MainApplication.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4C12914A123D0D4A0080D294 /* MainApplication.mm */; };
+		4C12929B123D1ED80080D294 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C12929A123D1ED80080D294 /* Carbon.framework */; };
+		4C131D2D123D6628003B8BB1 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C131D2C123D6628003B8BB1 /* icon.png */; };
+		4C6EAD6B123D692E001DB8F2 /* Server.h in Sources */ = {isa = PBXBuildFile; fileRef = 4C6EAD6A123D692E001DB8F2 /* Server.h */; };
 		4C98CCE8123B740200F0F544 /* MainView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4C98CCE7123B740200F0F544 /* MainView.mm */; };
 		4C98CD33123B79A000F0F544 /* Client.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C98CD32123B799F00F0F544 /* Client.cpp */; };
-		4CF612FA123CEA330033CC5F /* test.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 4CF612F9123CEA330033CC5F /* test.tiff */; };
+		4CCF9540123CF1DC00EE0530 /* bezel.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CCF953F123CF1DC00EE0530 /* bezel.png */; };
+		4CCF956B123CF3C800EE0530 /* BezelWindow.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4CCF956A123CF3C800EE0530 /* BezelWindow.mm */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.mm */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
@@ -28,11 +33,19 @@
 		29B97316FDCFA39411CA2CEA /* main.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		4C129149123D0D4A0080D294 /* MainApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainApplication.h; sourceTree = "<group>"; };
+		4C12914A123D0D4A0080D294 /* MainApplication.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MainApplication.mm; sourceTree = "<group>"; };
+		4C12929A123D1ED80080D294 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
+		4C131D2C123D6628003B8BB1 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		4C6EAD6A123D692E001DB8F2 /* Server.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Server.h; sourceTree = "<group>"; };
+		4C6EADBD123D6C43001DB8F2 /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
 		4C98CCE6123B740200F0F544 /* MainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainView.h; sourceTree = "<group>"; };
 		4C98CCE7123B740200F0F544 /* MainView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MainView.mm; sourceTree = "<group>"; };
 		4C98CD31123B799F00F0F544 /* Client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Client.h; sourceTree = "<group>"; };
 		4C98CD32123B799F00F0F544 /* Client.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Client.cpp; sourceTree = "<group>"; };
-		4CF612F9123CEA330033CC5F /* test.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = test.tiff; path = ../../../Downloads/StatusItemTester/test.tiff; sourceTree = SOURCE_ROOT; };
+		4CCF953F123CF1DC00EE0530 /* bezel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bezel.png; sourceTree = "<group>"; };
+		4CCF9569123CF3C800EE0530 /* BezelWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BezelWindow.h; sourceTree = "<group>"; };
+		4CCF956A123CF3C800EE0530 /* BezelWindow.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BezelWindow.mm; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* warp-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "warp-Info.plist"; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* warp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = warp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -43,6 +56,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				4C12929B123D1ED80080D294 /* Carbon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,12 +66,18 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				4C6EAD6A123D692E001DB8F2 /* Server.h */,
 				256AC3D80F4B6AC300CF3369 /* warpAppDelegate.h */,
 				256AC3D90F4B6AC300CF3369 /* warpAppDelegate.mm */,
 				4C98CCE6123B740200F0F544 /* MainView.h */,
 				4C98CCE7123B740200F0F544 /* MainView.mm */,
 				4C98CD31123B799F00F0F544 /* Client.h */,
 				4C98CD32123B799F00F0F544 /* Client.cpp */,
+				4CCF9569123CF3C800EE0530 /* BezelWindow.h */,
+				4CCF956A123CF3C800EE0530 /* BezelWindow.mm */,
+				4C129149123D0D4A0080D294 /* MainApplication.h */,
+				4C12914A123D0D4A0080D294 /* MainApplication.mm */,
+				4C6EADBD123D6C43001DB8F2 /* Message.h */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -66,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+				4C12929A123D1ED80080D294 /* Carbon.framework */,
 			);
 			name = "Linked Frameworks";
 			sourceTree = "<group>";
@@ -112,7 +133,8 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				4CF612F9123CEA330033CC5F /* test.tiff */,
+				4C131D2C123D6628003B8BB1 /* icon.png */,
+				4CCF953F123CF1DC00EE0530 /* bezel.png */,
 				8D1107310486CEB800E47090 /* warp-Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
@@ -174,7 +196,8 @@
 			files = (
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
-				4CF612FA123CEA330033CC5F /* test.tiff in Resources */,
+				4CCF9540123CF1DC00EE0530 /* bezel.png in Resources */,
+				4C131D2D123D6628003B8BB1 /* icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,6 +212,9 @@
 				256AC3DA0F4B6AC300CF3369 /* warpAppDelegate.mm in Sources */,
 				4C98CCE8123B740200F0F544 /* MainView.mm in Sources */,
 				4C98CD33123B79A000F0F544 /* Client.cpp in Sources */,
+				4CCF956B123CF3C800EE0530 /* BezelWindow.mm in Sources */,
+				4C12914B123D0D4A0080D294 /* MainApplication.mm in Sources */,
+				4C6EAD6B123D692E001DB8F2 /* Server.h in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

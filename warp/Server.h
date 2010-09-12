@@ -11,29 +11,15 @@
 
 #include <ApplicationServices/ApplicationServices.h>
 
-enum MessageTypes
-{
-	LEFT_DOWN = 0,
-	RIGHT_DOWN = 1,
-	LEFT_UP = 2,
-	RIGHT_UP = 3,
-	KEY_DOWN = 4,
-	MOUSE_MOVED = 5,
-	LEFT_DRAGGED = 6,
-	RIGHT_DRAGGED = 7,
-	FLAGS_CHANGED = 8,
-	SCROLL_WHEEL = 9,
-  LEFT_DOUBLE_CLICK = 10
-};
+#include "Message.h"
 
-struct Message 
+class Server
 {
-	int type;
-	int x;
-	int y;
-	int key_code;
-	unsigned int flags;
-};
+  int max_socket_;
+  int listen_sock_;
+  fd_set read_sockets_;
+  
+public:
 
 void PostMouseEvent(CGMouseButton button, CGEventType type, const CGPoint point, int click_count = 1) 
 {
@@ -153,7 +139,7 @@ void left_double_click()
   CGEventSetType(theEvent, kCGEventLeftMouseUp); 
   CGEventPost(kCGHIDEventTap, theEvent); 
   CFRelease(theEvent); 
-}
+};
 
 void process_message(const Message& message)
 {
@@ -242,14 +228,6 @@ void process_message(const Message& message)
     } 
   }
 }
-
-class Server
-{
-  int max_socket_;
-  int listen_sock_;
-  fd_set read_sockets_;
-  
-public:
 
   void start_listening(unsigned int port)
   {  
@@ -382,50 +360,10 @@ private:
     
     return sock;    
   }
-  
-  int accept_connections(int listening_socket)
-  {
-    
-    int new_socket = 0;
-    
-    listen(listening_socket, 5);
-    
-    
-    /*struct sockaddr_in cli_addr;
-    
-    listen(listening_socket, 5);
-    socklen_t socklen = sizeof(cli_addr);
-    
-    int new_socket = EWOULDBLOCK;
-    
-    while(new_socket == EWOULDBLOCK)
-    {
-      new_socket = accept(listening_socket, (struct sockaddr *) &cli_addr, &socklen);
-      
-      std::clog << EWOULDBLOCK << " " << new_socket << std::endl;
-
-      if (new_socket < 0)
-      { 
-        std::cerr << "ERROR on accept" << std::endl;
-      }
-    
-      if (new_socket == EAGAIN)
-      {
-        std::clog << "waiting for connection" << std::endl;
-      }
-      
-      if (new_socket > 0)
-      {
-        std::clog << "client connected" << std::endl;
-      }
-    }*/
-    
-    return new_socket;
-  }
     
 };
 
-int main(int argc, char *argv[])
+/*int main(int argc, char *argv[])
 {
   if (argc < 2) 
   {
@@ -436,115 +374,7 @@ int main(int argc, char *argv[])
   Server server;
   server.start_listening(atoi(argv[1]));
   
-  while(true)
-  {    
-    if(server.receive())
-    {
-      //Message message = server.data();
-      //process_message(message);      
-    }
-  }
-}
-  /*
-  
-  int sock, newsock, portno;
-  char buffer[256];
-  struct timeval timeout;
-  timeout.tv_sec = 1;
-  timeout.tv_usec = 0;
-  
-  fd_set readset;
-  
-  struct sockaddr_in serv_addr, cli_addr;
-  
-  int n;
-
-  sock = socket(AF_INET, SOCK_STREAM, 0);
-
-  if (sock < 0)
-  {
-    std::cerr << "ERROR opening socket" << std::endl;
-  }
-  
-  bzero((char*)&serv_addr, sizeof(serv_addr));
-  
-  portno = atoi(argv[1]);
-  serv_addr.sin_family = AF_INET;
-  serv_addr.sin_addr.s_addr = INADDR_ANY;
-  serv_addr.sin_port = htons(portno);
-  
-  if (bind(sock, (struct sockaddr *) &serv_addr, sizeof(serv_addr)) < 0)
-  {
-    std::cerr << "ERROR on binding" << std::endl;
-  }
-  
-  listen(sock,5);
-  socklen_t socklen = sizeof(cli_addr);
-  
-  std::clog << "waiting for connections" << std::endl;
-   
-  newsock = accept(sock, (struct sockaddr *) &cli_addr,&socklen);
-  
-  if (newsock < 0)
-  { 
-    std::cerr << "ERROR on accept" << std::endl;
-  }
-  
-  std::clog << "client connected" << std::endl;
-  
-  int flags;  
-  if ((flags = fcntl(newsock, F_GETFL, 0)) < 0) 
-  {
-    std::cerr << "ERROR, couldn't get socket flags" << std::endl;
-  }
-
-  if (fcntl(newsock, F_SETFL, flags | O_NONBLOCK) < 0) 
-  { 
-    std::cerr << "ERROR, couldn't set socket flags" << std::endl;
-  }
-  
-  while(1)
-  {
-    fd_set socks;
-    FD_ZERO(&socks);
-    FD_SET(newsock, &socks);
-    
-    int readsocks = select(newsock + 1, &socks, NULL, NULL, &timeout);
-    
-    if (readsocks < 0)
-    { 
-      std::clog << "ERROR on accept" << std::endl;
-    }
-  
-    if (readsocks == 0)
-    {
-      std::clog << "Nothing to process" << std::endl;
-      std::clog << "PING" << std::endl;
-      
-      if (!write(sock, data, sizeof(Message)))
-      {
-    		std::clog << "ERROR writing to socket" << std::endl;
-      }
-    }
-  
-    if (readsocks > 0)
-    {
-      std::clog << "received data" << std::endl;
-      
-      bzero(buffer,256);
-      n = read(newsock,buffer,255);
-      
-      if (n < 0)
-      { 
-        std::cerr << "ERROR reading from socket" << std::endl;
-      }
-
-      Message message;
-      memcpy(&message, &buffer, sizeof(Message));
-
-      process_message(message);
-    }
-  }
-  
-  return 0; 
+  while(server.receive());
+	
+	return 0;
 }*/

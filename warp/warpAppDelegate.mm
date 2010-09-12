@@ -7,53 +7,38 @@
 //
 
 #import "warpAppDelegate.h"
+#import <Carbon/Carbon.h>
 
 @implementation warpAppDelegate
 
 @synthesize window;
 
-- (void) lockMouse {
-	CGRect mainMonitor = CGDisplayBounds(CGMainDisplayID());
-  CGFloat monitorHeight = CGRectGetHeight(mainMonitor);
-  CGFloat monitorWidth = CGRectGetWidth(mainMonitor);
-  CGPoint center_screen;
-  center_screen.x = monitorWidth / 2;
-  center_screen.y = monitorHeight / 2;
-	
-	CGWarpMouseCursorPosition(center_screen);
-  CGAssociateMouseAndMouseCursorPosition(false);
-  CGDisplayHideCursor(kCGDirectMainDisplay);
+- (void)update {
+	while (server->receive());
 }
 
-- (void)ensureFocus {
-	[[NSApplication sharedApplication] activateIgnoringOtherApps : YES];
-	
-	CGEventRef event = CGEventCreate(NULL);
-  CGPoint point = CGEventGetLocation(event); 
-  
-  CGEventRef theEvent = CGEventCreateMouseEvent(NULL, kCGEventLeftMouseDown, point, kCGMouseButtonLeft);
-  CGEventSetType(theEvent, kCGEventLeftMouseDown);
-  CGEventPost(kCGHIDEventTap, theEvent);
-  CFRelease(theEvent);
+- (IBAction)connect:(id)sender {
+	SetSystemUIMode(kUIModeContentHidden, kUIOptionDisableProcessSwitch	| kUIOptionDisableForceQuit);
+	[window orderFront:self];
 }
 
-- (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-	[window setAcceptsMouseMovedEvents:YES];
+- (void)applicationDidFinishLaunching:(NSNotification *)aNotification {	
+	server = new Server();
+	server->start_listening(12345);
 	
-	NSMenu		*menu;
+	[NSThread detachNewThreadSelector:@selector(update) toTarget:self withObject:nil];
+	
+	[window setAcceptsMouseMovedEvents:YES];	
+	
 	NSStatusItem* statusItem = [[[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength] retain];
-	
-	[statusItem setImage:[NSImage imageNamed:@"test"]];
+	[statusItem setImage:[NSImage imageNamed:@"icon"]];
 	[statusItem setHighlightMode:YES];
-	
-	menu = [[NSMenu alloc] initWithTitle:@""];
-	[menu addItemWithTitle:@"Hi" action:NULL keyEquivalent:@""];
+	[statusItem setEnabled:YES];
 	[statusItem setMenu:menu];
-	[menu release];
 	
-	[window setStyleMask:NSBorderlessWindowMask];
-	
-	[self lockMouse];
-	[self ensureFocus];
+	[NSEvent addGlobalMonitorForEventsMatchingMask:NSKeyDownMask handler:^(NSEvent*){
+		
+	}];
 }
+
 @end

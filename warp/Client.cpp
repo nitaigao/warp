@@ -21,7 +21,7 @@ void Client::attach()
 {	
 	std::clog << "connecting" << std::endl;
 	
-	struct hostent *server = gethostbyname("192.168.0.106");
+	struct hostent *server = gethostbyname("192.168.0.100");
 	
   if (server == NULL)
   {

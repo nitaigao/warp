@@ -20,5 +20,6 @@
 @property (assign) IBOutlet NSWindow *window;
 
 - (IBAction)connect:(id)sender;
+- (IBAction)quit:(id)sender;
 
 @end

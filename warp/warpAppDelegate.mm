@@ -22,6 +22,15 @@
 	[window orderFront:self];
 }
 
+- (IBAction)quit:(id)sender {
+	[NSApp replyToApplicationShouldTerminate: YES]; 
+	exit(0);
+}
+
+- (NSApplicationTerminateReply)applicationShouldTerminate:(NSApplication *)app {
+	return NSTerminateNow;
+}
+
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {	
 	server = new Server();
 	server->start_listening(12345);

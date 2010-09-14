@@ -14,12 +14,27 @@
 @synthesize window;
 
 - (void)update {
+	
 	while (server->receive());
 }
 
+- (IBAction)show_connect:(id)sender {
+	[connect_window makeKeyAndOrderFront:self]; 
+}
+
 - (IBAction)connect:(id)sender {
-	SetSystemUIMode(kUIModeContentHidden, kUIOptionDisableProcessSwitch	| kUIOptionDisableForceQuit);
-	[window orderFront:self];
+	[connect_window orderOut:self];
+	
+	if (client->attach([[address stringValue] cStringUsingEncoding:NSASCIIStringEncoding], 12345))
+	{
+		black_hole->send_input();
+		//SetSystemUIMode(kUIModeContentHidden, kUIOptionDisableProcessSwitch	| kUIOptionDisableForceQuit);
+		//[window orderFront:self];
+	}
+	else {
+		[connect_window makeKeyAndOrderFront:self]; 
+	}
+
 }
 
 - (IBAction)quit:(id)sender {
@@ -27,13 +42,15 @@
 	exit(0);
 }
 
-- (NSApplicationTerminateReply)applicationShouldTerminate:(NSApplication *)app {
-	return NSTerminateNow;
-}
-
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {	
 	server = new Server();
 	server->start_listening(12345);
+	
+	client = new Client();
+	[input_view set_client:client];
+	
+	black_hole = new BlackHole(client);
+	black_hole->attach();
 	
 	[NSThread detachNewThreadSelector:@selector(update) toTarget:self withObject:nil];
 	
@@ -49,5 +66,7 @@
 		
 	}];
 }
+
+
 
 @end

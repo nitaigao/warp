@@ -17,37 +17,43 @@
 #include <netinet/in.h>
 #include <netdb.h>
 
-void Client::attach()
+#include <ApplicationServices/ApplicationServices.h>
+
+bool Client::attach(const std::string& host, unsigned int port)
 {	
 	std::clog << "connecting" << std::endl;
 	
-	struct hostent *server = gethostbyname("192.168.0.100");
+	struct hostent *server = gethostbyname(host.c_str());
 	
   if (server == NULL)
   {
     std::cerr << "ERROR, no such host" << std::endl;
-    exit(0);
+		return false;
   }
 	
 	struct sockaddr_in server_address;
 	bzero((char *) &server_address, sizeof(server_address));
 	server_address.sin_family = AF_INET;
 	bcopy((char *)server->h_addr, (char *)&server_address.sin_addr.s_addr, server->h_length);
-  server_address.sin_port = htons(12345);
+  server_address.sin_port = htons(port);
 
 	sock = socket(AF_INET, SOCK_STREAM, 0);
 	
 	if (sock < 0)
   {
     std::cerr << "ERROR, unable to create socket" << std::endl;
+		return false;
   }
 	
 	if (connect(sock, (struct sockaddr*)&server_address, sizeof(server_address)) < 0) 
   { 
     std::cerr << "ERROR, can't connect to host" << std::endl;
+		return false;
   }
 	
 	std::clog << "connected" << std::endl;
+	
+	return true;
 }
 
 void Client::send_message(const Message& message)

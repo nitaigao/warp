@@ -1,5 +1,13 @@
 // !$*UTF8*$!
 {
+	1D3623250D0F684500981E51 /* iwarpAppDelegate.mm */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1965, 1027}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 2151}";
+			sepNavWindowFrame = "{{19, 0}, {1223, 878}}";
+		};
+	};
 	1D6058900D05DD3D006BFB54 /* iwarp */ = {
 		activeExec = 0;
 		executables = (
@@ -15,21 +23,15 @@
 			1D6058900D05DD3D006BFB54 /* iwarp */,
 		);
 		breakpoints = (
+			4C8F3670123E4A19003457C2 /* MainView.mm:23 */,
 		);
 		codeSenseManager = 4CA047B3123BF0000002A0AF /* Code sense */;
 		executables = (
 			4CA0479F123BEFFC0002A0AF /* iwarp */,
 		);
 		perUserDictionary = {
-			PBXPerProjectTemplateStateSaveDate = 305996287;
-			PBXWorkspaceStateSaveDate = 305996287;
-		};
-		perUserProjectItems = {
-			4C1292E3123D22020080D294 /* PBXBookmark */ = 4C1292E3123D22020080D294 /* PBXBookmark */;
-			4C129300123D41F00080D294 /* PBXTextBookmark */ = 4C129300123D41F00080D294 /* PBXTextBookmark */;
-			4C129301123D41F00080D294 /* PBXTextBookmark */ = 4C129301123D41F00080D294 /* PBXTextBookmark */;
-			4CA0488C123C09310002A0AF /* PBXTextBookmark */ = 4CA0488C123C09310002A0AF /* PBXTextBookmark */;
-			4CA0488E123C09310002A0AF /* PBXTextBookmark */ = 4CA0488E123C09310002A0AF /* PBXTextBookmark */;
+			PBXPerProjectTemplateStateSaveDate = 306071927;
+			PBXWorkspaceStateSaveDate = 306071927;
 		};
 		sourceControlManager = 4CA047B2123BF0000002A0AF /* Source Control */;
 		userBuildSettings = {
@@ -43,29 +45,23 @@
 			sepNavWindowFrame = "{{42, 640}, {1223, 912}}";
 		};
 	};
-	4C1292E3123D22020080D294 /* PBXBookmark */ = {
-		isa = PBXBookmark;
-		fRef = 4CA04881123C053F0002A0AF /* Client.cpp */;
-	};
-	4C129300123D41F00080D294 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 4CA04881123C053F0002A0AF /* Client.cpp */;
-		name = "Client.cpp: 24";
-		rLen = 0;
-		rLoc = 420;
-		rType = 0;
-		vrLen = 1410;
-		vrLoc = 79;
-	};
-	4C129301123D41F00080D294 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 4CA047B7123BF0520002A0AF /* MainView.mm */;
-		name = "MainView.mm: 23";
-		rLen = 0;
-		rLoc = 382;
-		rType = 0;
-		vrLen = 1276;
-		vrLoc = 80;
+	4C8F3670123E4A19003457C2 /* MainView.mm:23 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 4CA047B7123BF0520002A0AF /* MainView.mm */;
+		functionName = "-touchesBegan:withEvent:";
+		hitCount = 1;
+		ignoreCount = 0;
+		lineNumber = 23;
+		location = iwarp;
+		modificationTime = 306072240.733133;
+		originalNumberOfMultipleMatches = 1;
+		state = 1;
 	};
 	4CA0479F123BEFFC0002A0AF /* iwarp */ = {
 		isa = PBXExecutable;
@@ -122,18 +118,18 @@
 	};
 	4CA047B7123BF0520002A0AF /* MainView.mm */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1164, 923}}";
-			sepNavSelRange = "{382, 0}";
-			sepNavVisRange = "{80, 1276}";
-			sepNavWindowFrame = "{{814, 382}, {1223, 912}}";
+			sepNavIntBoundsRect = "{{0, 0}, {656, 884}}";
+			sepNavSelRange = "{364, 0}";
+			sepNavVisRange = "{245, 234}";
+			sepNavWindowFrame = "{{132, 0}, {1223, 878}}";
 		};
 	};
 	4CA04881123C053F0002A0AF /* Client.cpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1164, 1846}}";
-			sepNavSelRange = "{420, 0}";
-			sepNavVisRange = "{79, 1410}";
-			sepNavWindowFrame = "{{318, 388}, {1223, 912}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1164, 1872}}";
+			sepNavSelRange = "{365, 0}";
+			sepNavVisRange = "{207, 1382}";
+			sepNavWindowFrame = "{{52, 0}, {1223, 878}}";
 		};
 	};
 	4CA04882123C053F0002A0AF /* Client.h */ = {
@@ -143,25 +139,5 @@
 			sepNavVisRange = "{0, 913}";
 			sepNavWindowFrame = "{{88, 598}, {1223, 912}}";
 		};
-	};
-	4CA0488C123C09310002A0AF /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 4CA047B6123BF0520002A0AF /* MainView.h */;
-		name = "MainView.h: 16";
-		rLen = 0;
-		rLoc = 250;
-		rType = 0;
-		vrLen = 261;
-		vrLoc = 0;
-	};
-	4CA0488E123C09310002A0AF /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 4CA047B7123BF0520002A0AF /* MainView.mm */;
-		name = "MainView.mm: 23";
-		rLen = 0;
-		rLoc = 382;
-		rType = 0;
-		vrLen = 1276;
-		vrLoc = 80;
 	};
 }

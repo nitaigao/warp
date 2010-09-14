@@ -7,15 +7,18 @@
  *
  */
 #include "Message.h"
+#include <string>
 
 class Client
 {
 	
 public:
 	
-	Client() { };
+	Client() : allowed_to_send_(false) { };
 	
-	void attach();
+	void send_input() { allowed_to_send_ = true; };
+	
+	bool attach(const std::string& host, unsigned int port);
 	
 	void send_left_up();
 	
@@ -44,4 +47,6 @@ private:
 	void send_message(const Message& message);
 	
 	int sock;
+	
+	bool allowed_to_send_;
 };

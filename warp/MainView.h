@@ -18,5 +18,6 @@
 }
 
 - (void)allow_input:(bool)allowed;
+- (void)set_client:(Client*) the_client;
 
 @end

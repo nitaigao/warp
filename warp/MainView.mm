@@ -11,6 +11,10 @@
 
 @implementation MainView
 
+- (void)set_client:(Client*) the_client {
+	client = the_client;
+}
+
 - (void)allow_input:(bool)allowed {
 	input_allowed = allowed;
 }
@@ -110,8 +114,6 @@
 }
 
 - (BOOL)acceptsFirstResponder {
-	client = new Client();
-	client->attach();
 	return YES;
 }
 

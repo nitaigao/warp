@@ -20,6 +20,8 @@ public:
 	
 	bool attach(const std::string& host, unsigned int port);
 	
+	void disconnect();
+	
 	void send_left_up();
 	
 	void send_right_up();

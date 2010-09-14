@@ -13,8 +13,9 @@
 
 @synthesize window;
 
+int port = 5900;
+
 - (void)update {
-	
 	while (server->receive());
 }
 
@@ -25,16 +26,14 @@
 - (IBAction)connect:(id)sender {
 	[connect_window orderOut:self];
 	
-	if (client->attach([[address stringValue] cStringUsingEncoding:NSASCIIStringEncoding], 12345))
+	if (client->attach([[address stringValue] cStringUsingEncoding:NSASCIIStringEncoding], port))
 	{
+		black_hole->attach();
 		black_hole->send_input();
-		//SetSystemUIMode(kUIModeContentHidden, kUIOptionDisableProcessSwitch	| kUIOptionDisableForceQuit);
-		//[window orderFront:self];
 	}
 	else {
 		[connect_window makeKeyAndOrderFront:self]; 
 	}
-
 }
 
 - (IBAction)quit:(id)sender {
@@ -44,13 +43,12 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {	
 	server = new Server();
-	server->start_listening(12345);
+	server->start_listening(port);
 	
 	client = new Client();
 	[input_view set_client:client];
 	
 	black_hole = new BlackHole(client);
-	black_hole->attach();
 	
 	[NSThread detachNewThreadSelector:@selector(update) toTarget:self withObject:nil];
 	

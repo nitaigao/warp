@@ -16,7 +16,7 @@
 }
 
 - (void)allow_input:(bool)allowed {
-	input_allowed = allowed;
+//	input_allowed = allowed;
 }
 
 -(void)drawRect:(NSRect)rect

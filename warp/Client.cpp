@@ -56,15 +56,24 @@ bool Client::attach(const std::string& host, unsigned int port)
 	return true;
 }
 
+void Client::disconnect()
+{
+	allowed_to_send_ = false;
+	shutdown(sock, 2);
+}
+
 void Client::send_message(const Message& message)
 {	
-	char* data = new char[sizeof(Message)];
-	memcpy(data, &message, sizeof(Message));
-	
-  if (!write(sock, data, sizeof(Message)))
-  {
-		std::clog << "ERROR writing to socket" << std::endl;
-  }
+	if (allowed_to_send_)
+	{
+		char* data = new char[sizeof(Message)];
+		memcpy(data, &message, sizeof(Message));
+		
+		if (!write(sock, data, sizeof(Message)))
+		{
+			std::clog << "ERROR writing to socket" << std::endl;
+		}
+	}
 }
 
 void Client::send_left_double_click()

@@ -20,7 +20,6 @@
 	IBOutlet NSTextField *address;
 	IBOutlet MainView *input_view;
 	
-	
 	BlackHole* black_hole;	
 	Client *client;
 	Server* server;

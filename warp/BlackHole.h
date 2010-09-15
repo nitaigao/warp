@@ -16,7 +16,7 @@ class BlackHole
 	
 public:
 	
-	BlackHole(Client* client) : client_(client) { };
+	BlackHole(Client* client, NSWindow* window) : client_(client), window_(window) { };
 	
 	void send_input() 
 	{ 
@@ -31,6 +31,7 @@ public:
 		CGAssociateMouseAndMouseCursorPosition(true);
 		CGEventTapEnable(event_tap_, false);
 		client_->disconnect();
+		[window_ orderOut:nil];
 	}
 	
 	Client* client() { return client_; };
@@ -69,15 +70,8 @@ private:
 	
 	Client* client_;
 	CFMachPortRef event_tap_;
-	
-	static CGPoint mouse_delta(CGPoint input)
-	{
-		static CGPoint last_mouse_position_ = input;
-		float x = input.x - last_mouse_position_.x;
-		float y = input.y - last_mouse_position_.y;
-		last_mouse_position_ = input;	
-		return CGPointMake(x, y);
-	}
+	NSWindow* window_;
+	float last_click_;
 	
 	static CGEventRef eventcallback(CGEventTapProxy proxy, CGEventType type, CGEventRef event, void *refcon)
 	{
@@ -88,12 +82,13 @@ private:
 				
 			case kCGEventKeyDown:
 			{
-				std::clog << "key down" << std::endl;
 				CGEventFlags flags = CGEventGetFlags(event);
 				
 				CGKeyCode keycode = (CGKeyCode)CGEventGetIntegerValueField(event, kCGKeyboardEventKeycode);
 				
-				if (flags & kCGEventFlagMaskCommand && keycode == 0)
+				std::clog << "key down" << keycode << std::endl;
+				
+				if ((flags & kCGEventFlagMaskShift) && (flags & kCGEventFlagMaskCommand) && keycode == 14)
 				{
 					black_hole->disable();
 				}

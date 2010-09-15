@@ -13,7 +13,7 @@
 
 @synthesize window;
 
-int port = 5900;
+int port = 6345;
 
 - (void)update {
 	while (server->receive());
@@ -30,6 +30,7 @@ int port = 5900;
 	{
 		black_hole->attach();
 		black_hole->send_input();
+		[window makeKeyAndOrderFront:self];
 	}
 	else {
 		[connect_window makeKeyAndOrderFront:self]; 
@@ -48,21 +49,17 @@ int port = 5900;
 	client = new Client();
 	[input_view set_client:client];
 	
-	black_hole = new BlackHole(client);
+	black_hole = new BlackHole(client, window);
 	
 	[NSThread detachNewThreadSelector:@selector(update) toTarget:self withObject:nil];
 	
 	[window setAcceptsMouseMovedEvents:YES];	
 	
 	NSStatusItem* statusItem = [[[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength] retain];
-	[statusItem setImage:[NSImage imageNamed:@"icon"]];
+	[statusItem setImage:[NSImage imageNamed:@"menu"]];
 	[statusItem setHighlightMode:YES];
 	[statusItem setEnabled:YES];
 	[statusItem setMenu:menu];
-	
-	[NSEvent addGlobalMonitorForEventsMatchingMask:NSKeyDownMask handler:^(NSEvent*){
-		
-	}];
 }
 
 

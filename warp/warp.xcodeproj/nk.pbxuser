@@ -11,16 +11,16 @@
 	256AC3D80F4B6AC300CF3369 /* warpAppDelegate.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1164, 806}}";
-			sepNavSelRange = "{389, 1}";
-			sepNavVisRange = "{0, 731}";
-			sepNavWindowFrame = "{{217, 0}, {1223, 878}}";
+			sepNavSelRange = "{338, 0}";
+			sepNavVisRange = "{0, 729}";
+			sepNavWindowFrame = "{{145, 0}, {1223, 878}}";
 		};
 	};
 	256AC3D90F4B6AC300CF3369 /* warpAppDelegate.mm */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1164, 923}}";
-			sepNavSelRange = "{975, 0}";
-			sepNavVisRange = "{177, 1337}";
+			sepNavIntBoundsRect = "{{0, 0}, {1164, 884}}";
+			sepNavSelRange = "{600, 0}";
+			sepNavVisRange = "{3, 1456}";
 			sepNavWindowFrame = "{{145, 0}, {1223, 878}}";
 		};
 	};
@@ -30,6 +30,7 @@
 		activeExecutable = 4C98CCBB123B727000F0F544 /* warp */;
 		activeTarget = 8D1107260486CEB800E47090 /* warp */;
 		addToTargets = (
+			8D1107260486CEB800E47090 /* warp */,
 		);
 		breakpoints = (
 		);
@@ -38,8 +39,8 @@
 			4C98CCBB123B727000F0F544 /* warp */,
 		);
 		perUserDictionary = {
-			PBXPerProjectTemplateStateSaveDate = 306230472;
-			PBXWorkspaceStateSaveDate = 306230472;
+			PBXPerProjectTemplateStateSaveDate = 306251048;
+			PBXWorkspaceStateSaveDate = 306251048;
 		};
 		sourceControlManager = 4C98CCD1123B727700F0F544 /* Source Control */;
 		userBuildSettings = {
@@ -55,9 +56,9 @@
 	};
 	4C6EAD6A123D692E001DB8F2 /* Server.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1164, 2236}}";
-			sepNavSelRange = "{344, 1}";
-			sepNavVisRange = "{0, 1574}";
+			sepNavIntBoundsRect = "{{0, 0}, {656, 2288}}";
+			sepNavSelRange = "{3286, 0}";
+			sepNavVisRange = "{3126, 277}";
 			sepNavWindowFrame = "{{177, 0}, {1223, 878}}";
 		};
 	};
@@ -76,7 +77,7 @@
 		argumentStrings = (
 		);
 		autoAttachOnCrash = 1;
-		breakpointsEnabled = 1;
+		breakpointsEnabled = 0;
 		configStateDict = {
 		};
 		customDataFormattersEnabled = 1;
@@ -134,7 +135,7 @@
 	4C98CD31123B799F00F0F544 /* Client.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1164, 806}}";
-			sepNavSelRange = "{383, 0}";
+			sepNavSelRange = "{407, 0}";
 			sepNavVisRange = "{0, 949}";
 			sepNavWindowFrame = "{{53, 0}, {1223, 878}}";
 		};
@@ -142,17 +143,17 @@
 	4C98CD32123B799F00F0F544 /* Client.cpp */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1164, 2275}}";
-			sepNavSelRange = "{2635, 0}";
-			sepNavVisRange = "{2252, 1080}";
+			sepNavSelRange = "{2773, 0}";
+			sepNavVisRange = "{2250, 1081}";
 			sepNavWindowFrame = "{{53, 0}, {1223, 878}}";
 		};
 	};
 	4CB7DD8D123F5D56009E454C /* BlackHole.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1164, 2639}}";
-			sepNavSelRange = "{655, 0}";
-			sepNavVisRange = "{0, 1369}";
-			sepNavWindowFrame = "{{114, 0}, {1223, 878}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1164, 2587}}";
+			sepNavSelRange = "{714, 0}";
+			sepNavVisRange = "{0, 1423}";
+			sepNavWindowFrame = "{{156, 0}, {1223, 878}}";
 		};
 	};
 	4CB8872D1240AC61004FB87E /* IServerCommand.h */ = {
@@ -187,7 +188,7 @@
 	};
 	8D1107310486CEB800E47090 /* warp-Info.plist */ = {
 		uiCtxt = {
-			sepNavWindowFrame = "{{42, 640}, {1223, 912}}";
+			sepNavWindowFrame = "{{42, 0}, {1223, 878}}";
 		};
 	};
 }

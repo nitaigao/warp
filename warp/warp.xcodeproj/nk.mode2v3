@@ -197,48 +197,7 @@
 	<key>Notifications</key>
 	<array/>
 	<key>OpenEditors</key>
-	<array>
-		<dict>
-			<key>Content</key>
-			<dict>
-				<key>PBXProjectModuleGUID</key>
-				<string>4CB887481240AE3A004FB87E</string>
-				<key>PBXProjectModuleLabel</key>
-				<string>IServerCommand.h</string>
-				<key>PBXSplitModuleInNavigatorKey</key>
-				<dict>
-					<key>Split0</key>
-					<dict>
-						<key>PBXProjectModuleGUID</key>
-						<string>4CB887491240AE3A004FB87E</string>
-						<key>PBXProjectModuleLabel</key>
-						<string>IServerCommand.h</string>
-						<key>_historyCapacity</key>
-						<integer>0</integer>
-						<key>bookmark</key>
-						<string>4CB8874A1240AE3A004FB87E</string>
-						<key>history</key>
-						<array>
-							<string>4CB887471240AE29004FB87E</string>
-						</array>
-					</dict>
-					<key>SplitCount</key>
-					<string>1</string>
-				</dict>
-				<key>StatusBarVisibility</key>
-				<true/>
-			</dict>
-			<key>Geometry</key>
-			<dict>
-				<key>Frame</key>
-				<string>{{0, 20}, {1223, 837}}</string>
-				<key>PBXModuleWindowStatusBarHidden2</key>
-				<false/>
-				<key>RubberWindowFrame</key>
-				<string>19 0 1223 878 0 0 1440 878 </string>
-			</dict>
-		</dict>
-	</array>
+	<array/>
 	<key>PerspectiveWidths</key>
 	<array>
 		<integer>-1</integer>
@@ -486,8 +445,8 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>4CB886AA1240A3E2004FB87E</string>
-				<string>4CB886AB1240A3E2004FB87E</string>
+				<string>4C9649331240BEDE00ECBE19</string>
+				<string>4C9649341240BEDE00ECBE19</string>
 				<string>1C9437FD063B20B00039CFAC</string>
 				<string>1C9437FE063B20B00039CFAC</string>
 				<string>1C9437FF063B20B00039CFAC</string>
@@ -524,13 +483,12 @@
 	<integer>0</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>4CB887071240A96B004FB87E</string>
-		<string>4CB887081240A96B004FB87E</string>
+		<string>4C9649351240BEDE00ECBE19</string>
+		<string>4C9649361240BEDE00ECBE19</string>
 		<string>1C530D5B069F1CE1000CFCEE</string>
 		<string>1C530D54069F1CE1000CFCEE</string>
 		<string>1C530D52069F1CE1000CFCEE</string>
 		<string>/Users/nk/Development/warp/warp/warp.xcodeproj</string>
-		<string>4CB887481240AE3A004FB87E</string>
 	</array>
 	<key>WindowString</key>
 	<string>978 103 462 741 0 0 1440 878 </string>
@@ -691,7 +649,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>Server.h</string>
+								<string></string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -708,8 +666,6 @@
 							<string>191pt</string>
 						</dict>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -749,7 +705,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C530D52069F1CE1000CFCEE</string>
-				<string>4CB886AF1240A3E2004FB87E</string>
+				<string>4C96490F1240B66D00ECBE19</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
@@ -871,13 +827,13 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C530D54069F1CE1000CFCEE</string>
-				<string>4CB886FF1240A96B004FB87E</string>
+				<string>4C9649101240B66D00ECBE19</string>
 				<string>1C162984064C10D400B95A72</string>
-				<string>4CB887001240A96B004FB87E</string>
-				<string>4CB887011240A96B004FB87E</string>
-				<string>4CB887021240A96B004FB87E</string>
-				<string>4CB887031240A96B004FB87E</string>
-				<string>4CB887041240A96B004FB87E</string>
+				<string>4C9649111240B66D00ECBE19</string>
+				<string>4C9649121240B66D00ECBE19</string>
+				<string>4C9649131240B66D00ECBE19</string>
+				<string>4C9649141240B66D00ECBE19</string>
+				<string>4C9649151240B66D00ECBE19</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.debugV3</string>
@@ -1004,6 +960,8 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -1039,7 +997,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C530D5B069F1CE1000CFCEE</string>
-				<string>4CB887051240A96B004FB87E</string>
+				<string>4C9649161240B66D00ECBE19</string>
 				<string>1C78EAAC065D492600B07095</string>
 			</array>
 			<key>ToolbarConfiguration</key>

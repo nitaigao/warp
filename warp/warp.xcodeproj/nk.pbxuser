@@ -38,12 +38,8 @@
 			4C98CCBB123B727000F0F544 /* warp */,
 		);
 		perUserDictionary = {
-			PBXPerProjectTemplateStateSaveDate = 306226005;
-			PBXWorkspaceStateSaveDate = 306226005;
-		};
-		perUserProjectItems = {
-			4CB887471240AE29004FB87E /* PBXBookmark */ = 4CB887471240AE29004FB87E /* PBXBookmark */;
-			4CB8874A1240AE3A004FB87E /* PBXTextBookmark */ = 4CB8874A1240AE3A004FB87E /* PBXTextBookmark */;
+			PBXPerProjectTemplateStateSaveDate = 306230472;
+			PBXWorkspaceStateSaveDate = 306230472;
 		};
 		sourceControlManager = 4C98CCD1123B727700F0F544 /* Source Control */;
 		userBuildSettings = {
@@ -59,9 +55,9 @@
 	};
 	4C6EAD6A123D692E001DB8F2 /* Server.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1015, 2392}}";
-			sepNavSelRange = "{268, 0}";
-			sepNavVisRange = "{475, 325}";
+			sepNavIntBoundsRect = "{{0, 0}, {1164, 2236}}";
+			sepNavSelRange = "{344, 1}";
+			sepNavVisRange = "{0, 1574}";
 			sepNavWindowFrame = "{{177, 0}, {1223, 878}}";
 		};
 	};
@@ -138,7 +134,7 @@
 	4C98CD31123B799F00F0F544 /* Client.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1164, 806}}";
-			sepNavSelRange = "{436, 0}";
+			sepNavSelRange = "{383, 0}";
 			sepNavVisRange = "{0, 949}";
 			sepNavWindowFrame = "{{53, 0}, {1223, 878}}";
 		};
@@ -146,8 +142,8 @@
 	4C98CD32123B799F00F0F544 /* Client.cpp */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1164, 2275}}";
-			sepNavSelRange = "{2675, 0}";
-			sepNavVisRange = "{2252, 1079}";
+			sepNavSelRange = "{2635, 0}";
+			sepNavVisRange = "{2252, 1080}";
 			sepNavWindowFrame = "{{53, 0}, {1223, 878}}";
 		};
 	};
@@ -161,25 +157,11 @@
 	};
 	4CB8872D1240AC61004FB87E /* IServerCommand.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1164, 3679}}";
-			sepNavSelRange = "{6383, 0}";
-			sepNavVisRange = "{0, 1418}";
+			sepNavIntBoundsRect = "{{0, 0}, {1164, 3783}}";
+			sepNavSelRange = "{2393, 52}";
+			sepNavVisRange = "{1613, 1275}";
 			sepNavWindowFrame = "{{19, 0}, {1223, 878}}";
 		};
-	};
-	4CB887471240AE29004FB87E /* PBXBookmark */ = {
-		isa = PBXBookmark;
-		fRef = 4CB8872D1240AC61004FB87E /* IServerCommand.h */;
-	};
-	4CB8874A1240AE3A004FB87E /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 4CB8872D1240AC61004FB87E /* IServerCommand.h */;
-		name = "IServerCommand.h: 283";
-		rLen = 0;
-		rLoc = 6383;
-		rType = 0;
-		vrLen = 1418;
-		vrLoc = 0;
 	};
 	4CCF9569123CF3C800EE0530 /* BezelWindow.h */ = {
 		uiCtxt = {
@@ -192,7 +174,7 @@
 	4CCF956A123CF3C800EE0530 /* BezelWindow.mm */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1164, 858}}";
-			sepNavSelRange = "{640, 0}";
+			sepNavSelRange = "{698, 0}";
 			sepNavVisRange = "{30, 1663}";
 			sepNavWindowFrame = "{{125, 0}, {1223, 878}}";
 		};

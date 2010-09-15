@@ -110,7 +110,7 @@ public:
 	{
 		std::clog << "key up" << std::endl;
 		
-		CGEventRef e = CGEventCreateKeyboardEvent (NULL, message.key_code, true);
+		CGEventRef e = CGEventCreateKeyboardEvent (NULL, message.key_code, false);
 		CGEventSetFlags(e, (CGEventFlags)message.flags);
 		CGEventPost(kCGSessionEventTap, e);
 		CFRelease(e);

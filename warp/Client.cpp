@@ -90,6 +90,24 @@ void Client::send_left_down()
 	send_message(message);
 }
 
+void Client::send_key_down(unsigned int flags, int key_code)
+{
+	Message message;
+	message.type = KEY_DOWN;
+	message.key_code = key_code;
+	message.flags = flags;
+	send_message(message);
+}
+
+void Client::send_key_up(unsigned int flags, int key_code)
+{
+	Message message;
+	message.type = KEY_UP;
+	message.key_code = key_code;
+	message.flags = flags;
+	send_message(message);
+}
+
 void Client::send_right_down()
 {
 	Message message;
@@ -135,14 +153,6 @@ void Client::send_right_dragged(int x, int y)
 	message.type = RIGHT_DRAGGED;
 	message.x = x;
 	message.y = y;
-	send_message(message);
-}
-
-void Client::send_key_down(int key_code)
-{
-	Message message;
-	message.type = KEY_DOWN;
-	message.key_code = key_code;
 	send_message(message);
 }
 

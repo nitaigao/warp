@@ -1,5 +1,3 @@
-//gcc -o server server.c -lsdl -lsmain -framework Foundation -framework Cocoa && ./client
-   
 #include <iostream>
 #include <sstream>
 #include <string>
@@ -11,228 +9,43 @@
 
 #include <ApplicationServices/ApplicationServices.h>
 
+#include <map>
+
 #include "Message.h"
+#include "IServerCommand.h"
+
 
 class Server
 {
+	typedef std::map<int, IServerCommand*> MessageTypeList;
+	
   int max_socket_;
   int listen_sock_;
   fd_set read_sockets_;
+	
+	MessageTypeList message_types_;
   
 public:
-
-	void PostMouseEvent(CGMouseButton button, CGEventType type, const CGPoint point, int click_count = 1) 
-	{
-		static int eventNumber = 0;
-		CGEventRef theEvent = CGEventCreateMouseEvent(NULL, type, point, button);
-		CGEventSetIntegerValueField(theEvent, kCGMouseEventClickState, click_count) ;
-		CGEventSetIntegerValueField(theEvent, kCGMouseEventNumber, ++eventNumber); 
-		CGEventSetType(theEvent, type);
-		CGEventPost(kCGHIDEventTap, theEvent);
-		CFRelease(theEvent);
-	}
-
-	void left_down() {   
-		CGEventRef event = CGEventCreate(NULL);
-		CGPoint point = CGEventGetLocation(event); 
-		PostMouseEvent(kCGMouseButtonLeft, kCGEventLeftMouseDown, point);
-	}
-
-	void left_up() { 
-		CGEventRef event = CGEventCreate(NULL);
-		CGPoint point = CGEventGetLocation(event); 
-		PostMouseEvent(kCGMouseButtonLeft, kCGEventLeftMouseUp, point);
-	}
-
-	void left_drag(int x, int y)
-	{
-		CGEventRef ourEvent = CGEventCreate(NULL);
-		CGPoint epoint = CGEventGetLocation(ourEvent);
-
-		CGPoint point;
-		point.x = epoint.x + x;
-		point.y = epoint.y + y;
-		PostMouseEvent(kCGMouseButtonLeft, kCGEventLeftMouseDragged, point);
-	}
-
-	void right_down() {
-		CGEventRef event = CGEventCreate(NULL);
-		CGPoint point = CGEventGetLocation(event); 
-		PostMouseEvent(kCGMouseButtonRight, kCGEventRightMouseDown, point);
-	}
-
-	void right_up() { 
-		CGEventRef event = CGEventCreate(NULL);
-		CGPoint point = CGEventGetLocation(event); 
-		PostMouseEvent(kCGMouseButtonRight, kCGEventRightMouseUp, point);
-	}
-
-	void right_drag(int x, int y)
-	{
-		CGEventRef ourEvent = CGEventCreate(NULL);
-		CGPoint epoint = CGEventGetLocation(ourEvent);
-
-		CGPoint point;
-		point.x = epoint.x + x;
-		point.y = epoint.y + y;
-		PostMouseEvent(kCGMouseButtonRight, kCGEventRightMouseDragged, point);
-	}
-
-	void type_key(int key_code)
-	{
-		CGEventRef e = CGEventCreateKeyboardEvent (NULL, key_code, true);
-		CGEventPost(kCGSessionEventTap, e);
-		CFRelease(e);
-	}
-
-	void move_mouse(int x, int y)
-	{
-		CGEventRef ourEvent = CGEventCreate(NULL);
-		CGPoint epoint = CGEventGetLocation(ourEvent);
-		
-		CGDisplayModeRef mode = CGDisplayCopyDisplayMode(kCGDirectMainDisplay);
-		int width = CGDisplayModeGetWidth(mode);
-		int height = CGDisplayModeGetHeight(mode);
-
-		CGPoint point;
-		point.x = epoint.x + x;
-		point.y = epoint.y + y;
-		
-		point.x = (point.x < 0) ? 0 : (point.x > width) ? width - 1 : point.x;
-		point.y = (point.y < 0) ? 0 : (point.y > height) ? height - 2 : point.y;
-		PostMouseEvent(kCGMouseButtonCenter, kCGEventMouseMoved, point);
-	}
-
-	void change_flags(int key_code, unsigned int flags)
-	{
-		CGEventRef e = CGEventCreateKeyboardEvent (NULL, key_code, true);
-		CGEventSetFlags(e, (CGEventFlags)flags);
-		CGEventPost(kCGSessionEventTap, e);
-		CFRelease(e);
-	}
-
-	void scroll_wheel(int x, int y)
-	{
-		CGEventRef ourEvent = CGEventCreate(NULL);
-		CGPoint point = CGEventGetLocation(ourEvent);
-		
-		CGEventRef e = CGEventCreateScrollWheelEvent(NULL, kCGScrollEventUnitPixel, 1, 2);
-		
-		CGEventSetType(e, kCGEventScrollWheel);
-		CGEventSetIntegerValueField(e, kCGScrollWheelEventDeltaAxis1, y);
-		CGEventPost(kCGSessionEventTap, e);
-		CFRelease(e);
-	}
-
-	void left_double_click()
-	{
-		CGEventRef ourEvent = CGEventCreate(NULL);
-		CGPoint point = CGEventGetLocation(ourEvent);
-		
-		CGEventRef theEvent = CGEventCreateMouseEvent(NULL, kCGEventLeftMouseDown, point, kCGMouseButtonLeft);  
-		CGEventSetIntegerValueField(theEvent, kCGMouseEventClickState, 2); 
-		CGEventPost(kCGHIDEventTap, theEvent);  
-		CGEventSetType(theEvent, kCGEventLeftMouseUp);  
-		CGEventPost(kCGHIDEventTap, theEvent);  
-		CGEventSetType(theEvent, kCGEventLeftMouseDown);  
-		CGEventPost(kCGHIDEventTap, theEvent);  
-		CGEventSetType(theEvent, kCGEventLeftMouseUp); 
-		CGEventPost(kCGHIDEventTap, theEvent); 
-		CFRelease(theEvent); 
-	};
-
-	void process_message(const Message& message)
-	{
-		switch(message.type)
-		{
-			case LEFT_DOWN:
-			{
-				std::clog << "left down" << std::endl;
-				left_down();
-				break;
-			}
-			
-			case LEFT_UP:
-			{
-				std::clog << "left up" << std::endl;
-				left_up();
-				break;
-			}
-			
-			case RIGHT_DOWN:
-			{
-				std::clog << "right down" << std::endl;
-				right_down();
-				break;
-			}
-			
-			case RIGHT_UP:
-			{
-				std::clog << "right up" << std::endl;
-				right_up();
-				break;
-			}
-			
-			case KEY_DOWN:
-			{
-				std::clog << "key down " << message.key_code << std::endl;    
-				type_key(message.key_code);    
-				break;
-			}
-			
-			case MOUSE_MOVED:
-			{
-				std::clog << "mouse moved x: " << message.x << " y: " << message.y << std::endl;
-				move_mouse(message.x, message.y);        
-				break;
-			}
-			
-			case LEFT_DRAGGED:
-			{
-				std::clog << "left dragged x: " << message.x << " y: " << message.y << std::endl;
-				left_drag(message.x, message.y);        
-				break;
-			}
-			
-			case RIGHT_DRAGGED:
-			{
-				std::clog << "right dragged x: " << message.x << " y: " << message.y << std::endl;
-				right_drag(message.x, message.y);
-				break;
-			}
-			
-			case FLAGS_CHANGED:
-			{
-				std::clog << "flags changed " << message.flags << std::endl;
-				change_flags(message.key_code, message.flags);
-				break;
-			}
-			
-			case SCROLL_WHEEL:
-			{
-				std::clog << "scroll wheel x: " << message.x << " y: " << message.y << std::endl;
-				scroll_wheel(message.x, message.y);        
-				break;
-			}
-
-			case LEFT_DOUBLE_CLICK:
-			{
-				std::clog << "left double click" << std::endl;
-				left_double_click();
-				break;
-			}
-			
-			default:
-			{
-				std::clog << "unrecognized input received" << std::endl;
-			} 
-		}
+	
+	Server()
+	{		
+		message_types_[LEFT_UP]						= new LeftUpCommand();
+		message_types_[LEFT_DOWN]					= new LeftDownCommand();
+		message_types_[RIGHT_UP]					= new RightUpCommand();
+		message_types_[RIGHT_DOWN]				= new RightDownCommand();
+		message_types_[KEY_UP]						= new KeyUpCommand();
+		message_types_[KEY_DOWN]					= new KeyDownCommand();
+		message_types_[MOUSE_MOVED]				= new MouseMovedCommand();
+		message_types_[LEFT_DRAGGED]			= new LeftDraggedCommand();
+		message_types_[RIGHT_DRAGGED]			= new RightDraggedCommand();
+		message_types_[FLAGS_CHANGED]			= new FlagsChangedCommand();
+		message_types_[SCROLL_WHEEL]			= new ScrollWheelCommand();
+		message_types_[LEFT_DOUBLE_CLICK]	= new LeftDoubleClickCommand();
 	}
 
   void start_listening(unsigned int port)
   {  
     listen_sock_ = create_socket(port);
-    std::clog << listen_sock_ << std::endl;
     max_socket_ = listen_sock_;
     FD_SET(listen_sock_, &read_sockets_);
     
@@ -309,7 +122,7 @@ public:
             {
               Message message;
               memcpy(&message, &buffer, sizeof(Message));    
-              process_message(message);
+              message_types_[message.type]->Execute(message);
             }
           }
         }
@@ -318,8 +131,6 @@ public:
     
     return true;
   };
-
-  Message data() { return Message(); };
   
 private:
   
@@ -362,19 +173,3 @@ private:
   }
     
 };
-
-/*int main(int argc, char *argv[])
-{
-  if (argc < 2) 
-  {
-    std::cerr << "ERROR, no port provided" << std::endl;
-    exit(1);
-  }
-  
-  Server server;
-  server.start_listening(atoi(argv[1]));
-  
-  while(server.receive());
-	
-	return 0;
-}*/

@@ -98,7 +98,7 @@
 	[self setNextResponder:nil];
 	if(input_allowed) {
 		int keycode = [theEvent keyCode];
-		client->send_key_down(keycode);
+		client->send_key_down(0, keycode);
 		NSLog(@"key down %d", keycode);
 	}
 }

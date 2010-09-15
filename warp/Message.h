@@ -22,7 +22,9 @@ enum MessageTypes
 	RIGHT_DRAGGED = 7,
 	FLAGS_CHANGED = 8,
 	SCROLL_WHEEL = 9,
-	LEFT_DOUBLE_CLICK = 10
+	LEFT_DOUBLE_CLICK = 10,
+	KEY_UP = 11,
+	MESSAGETYPE_MAX = 12
 };
 
 struct Message 

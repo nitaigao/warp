@@ -36,7 +36,9 @@ public:
 	
 	void send_mouse_moved(int x, int y);
 	
-	void send_key_down(int key_code);
+	void send_key_down(unsigned int flags, int key_code);
+	
+	void send_key_up(unsigned int flags, int key_code);
 	
 	void send_flags(int key_code, unsigned int flags);
 	

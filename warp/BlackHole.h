@@ -89,14 +89,16 @@ private:
 			case kCGEventKeyDown:
 			{
 				std::clog << "key down" << std::endl;
+				CGEventFlags flags = CGEventGetFlags(event);
+				
 				CGKeyCode keycode = (CGKeyCode)CGEventGetIntegerValueField(event, kCGKeyboardEventKeycode);
 				
-				if (keycode == 0)
+				if (flags & kCGEventFlagMaskCommand && keycode == 0)
 				{
 					black_hole->disable();
 				}
 				
-				client->send_key_down(keycode);
+				client->send_key_down(flags, keycode);
 				NSLog(@"key down %d", keycode);
 				return NULL;
 				break;
@@ -105,6 +107,9 @@ private:
 			case kCGEventKeyUp:
 			{
 				std::clog << "key up" << std::endl;
+				CGEventFlags flags = CGEventGetFlags(event);
+				CGKeyCode keycode = (CGKeyCode)CGEventGetIntegerValueField(event, kCGKeyboardEventKeycode);
+				client->send_key_up(flags, keycode);
 				return NULL;
 				break;
 			}
@@ -112,9 +117,9 @@ private:
 			case kCGEventFlagsChanged:
 			{
 				std::clog << "flags changed" << std::endl;
-//				CGEventFlags flags = CGEventGetFlags(event);
-				//unsigned int flags = [theEvent modifierFlags];
-				//client->send_flags(keycode, flags);
+				CGEventFlags flags = CGEventGetFlags(event);
+				CGKeyCode keycode = (CGKeyCode)CGEventGetIntegerValueField(event, kCGKeyboardEventKeycode);
+				client->send_flags(keycode, flags);
 				return NULL;
 				break;
 			}
@@ -185,9 +190,9 @@ private:
 			case kCGEventScrollWheel:
 			{
 				std::clog << "scroll wheel" << std::endl;
-				/*float x = [theEvent deltaX];
-				float y = [theEvent deltaY];
-				client->send_scroll_wheel(x, y);*/
+				int x = CGEventGetIntegerValueField(event, kCGScrollWheelEventDeltaAxis2);
+				int y = CGEventGetIntegerValueField(event, kCGScrollWheelEventDeltaAxis1);
+				client->send_scroll_wheel(x, y);
 				return NULL;
 				break;
 			}

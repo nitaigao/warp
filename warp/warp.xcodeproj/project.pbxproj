@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
 		256AC3DA0F4B6AC300CF3369 /* warpAppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 256AC3D90F4B6AC300CF3369 /* warpAppDelegate.mm */; };
-		4C12914B123D0D4A0080D294 /* MainApplication.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4C12914A123D0D4A0080D294 /* MainApplication.mm */; };
 		4C12929B123D1ED80080D294 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C12929A123D1ED80080D294 /* Carbon.framework */; };
 		4C131D2D123D6628003B8BB1 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C131D2C123D6628003B8BB1 /* icon.png */; };
 		4C6EAD6B123D692E001DB8F2 /* Server.h in Sources */ = {isa = PBXBuildFile; fileRef = 4C6EAD6A123D692E001DB8F2 /* Server.h */; };
@@ -33,8 +32,6 @@
 		29B97316FDCFA39411CA2CEA /* main.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
-		4C129149123D0D4A0080D294 /* MainApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainApplication.h; sourceTree = "<group>"; };
-		4C12914A123D0D4A0080D294 /* MainApplication.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MainApplication.mm; sourceTree = "<group>"; };
 		4C12929A123D1ED80080D294 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
 		4C131D2C123D6628003B8BB1 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		4C6EAD6A123D692E001DB8F2 /* Server.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Server.h; sourceTree = "<group>"; };
@@ -44,6 +41,7 @@
 		4C98CD31123B799F00F0F544 /* Client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Client.h; sourceTree = "<group>"; };
 		4C98CD32123B799F00F0F544 /* Client.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Client.cpp; sourceTree = "<group>"; };
 		4CB7DD8D123F5D56009E454C /* BlackHole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlackHole.h; sourceTree = "<group>"; };
+		4CB8872D1240AC61004FB87E /* IServerCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IServerCommand.h; sourceTree = "<group>"; };
 		4CCF953F123CF1DC00EE0530 /* bezel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bezel.png; sourceTree = "<group>"; };
 		4CCF9569123CF3C800EE0530 /* BezelWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BezelWindow.h; sourceTree = "<group>"; };
 		4CCF956A123CF3C800EE0530 /* BezelWindow.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BezelWindow.mm; sourceTree = "<group>"; };
@@ -67,19 +65,11 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				4C6EAD6A123D692E001DB8F2 /* Server.h */,
+				4CB886D51240A557004FB87E /* Common */,
+				4CB886D41240A54E004FB87E /* Server */,
+				4CB886D31240A542004FB87E /* Client */,
 				256AC3D80F4B6AC300CF3369 /* warpAppDelegate.h */,
 				256AC3D90F4B6AC300CF3369 /* warpAppDelegate.mm */,
-				4C98CCE6123B740200F0F544 /* MainView.h */,
-				4C98CCE7123B740200F0F544 /* MainView.mm */,
-				4C98CD31123B799F00F0F544 /* Client.h */,
-				4C98CD32123B799F00F0F544 /* Client.cpp */,
-				4CCF9569123CF3C800EE0530 /* BezelWindow.h */,
-				4CCF956A123CF3C800EE0530 /* BezelWindow.mm */,
-				4C129149123D0D4A0080D294 /* MainApplication.h */,
-				4C12914A123D0D4A0080D294 /* MainApplication.mm */,
-				4C6EADBD123D6C43001DB8F2 /* Message.h */,
-				4CB7DD8D123F5D56009E454C /* BlackHole.h */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -153,6 +143,37 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		4CB886D31240A542004FB87E /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				4CB7DD8D123F5D56009E454C /* BlackHole.h */,
+				4C98CD31123B799F00F0F544 /* Client.h */,
+				4C98CD32123B799F00F0F544 /* Client.cpp */,
+				4C98CCE6123B740200F0F544 /* MainView.h */,
+				4C98CCE7123B740200F0F544 /* MainView.mm */,
+				4CCF9569123CF3C800EE0530 /* BezelWindow.h */,
+				4CCF956A123CF3C800EE0530 /* BezelWindow.mm */,
+			);
+			name = Client;
+			sourceTree = "<group>";
+		};
+		4CB886D41240A54E004FB87E /* Server */ = {
+			isa = PBXGroup;
+			children = (
+				4C6EAD6A123D692E001DB8F2 /* Server.h */,
+				4CB8872D1240AC61004FB87E /* IServerCommand.h */,
+			);
+			name = Server;
+			sourceTree = "<group>";
+		};
+		4CB886D51240A557004FB87E /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				4C6EADBD123D6C43001DB8F2 /* Message.h */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -215,7 +236,6 @@
 				4C98CCE8123B740200F0F544 /* MainView.mm in Sources */,
 				4C98CD33123B79A000F0F544 /* Client.cpp in Sources */,
 				4CCF956B123CF3C800EE0530 /* BezelWindow.mm in Sources */,
-				4C12914B123D0D4A0080D294 /* MainApplication.mm in Sources */,
 				4C6EAD6B123D692E001DB8F2 /* Server.h in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

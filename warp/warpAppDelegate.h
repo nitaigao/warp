@@ -13,10 +13,11 @@
 #import "Client.h"
 #import "BlackHole.h"
 
-@interface warpAppDelegate : NSObject<NSApplicationDelegate> {
+@interface WarpAppDelegate : NSObject<NSApplicationDelegate> {
 	NSWindow *window;
 	IBOutlet NSWindow *connect_window;
 	IBOutlet NSMenu *menu;
+	IBOutlet NSMenuItem *recent_menu;
 	IBOutlet NSTextField *address;
 	IBOutlet MainView *input_view;
 	

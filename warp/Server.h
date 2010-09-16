@@ -121,8 +121,12 @@ public:
             if (result > 0)
             {
               Message message;
-              memcpy(&message, &buffer, sizeof(Message));    
-              message_types_[message.type]->Execute(message);
+              memcpy(&message, &buffer, sizeof(Message));
+							
+							if (message_types_.find(message.type) != message_types_.end())
+							{							
+								message_types_[message.type]->Execute(message);
+							}
             }
           }
         }

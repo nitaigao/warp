@@ -19,7 +19,7 @@
 
 #include <ApplicationServices/ApplicationServices.h>
 
-bool Client::attach(const std::string& host, unsigned int port)
+bool Client::connec(const std::string& host, unsigned int port)
 {	
 	std::clog << "connecting" << std::endl;
 	
@@ -44,7 +44,7 @@ bool Client::attach(const std::string& host, unsigned int port)
     std::cerr << "ERROR, unable to create socket" << std::endl;
 		return false;
   }
-	
+
 	if (connect(sock, (struct sockaddr*)&server_address, sizeof(server_address)) < 0) 
   { 
     std::cerr << "ERROR, can't connect to host" << std::endl;
@@ -53,18 +53,25 @@ bool Client::attach(const std::string& host, unsigned int port)
 	
 	std::clog << "connected" << std::endl;
 	
-	return true;
+	last_host_ = host;
+	connected_ = true;
+	return connected_;
+}
+
+void Client::reconnect()
+{
+	this->connec(last_host_, 6345);
 }
 
 void Client::disconnect()
 {
-	allowed_to_send_ = false;
+	connected_ = false;
 	shutdown(sock, 2);
 }
 
 void Client::send_message(const Message& message)
 {	
-	if (allowed_to_send_)
+	if (connected_)
 	{
 		char* data = new char[sizeof(Message)];
 		memcpy(data, &message, sizeof(Message));

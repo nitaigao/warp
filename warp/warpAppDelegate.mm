@@ -9,7 +9,7 @@
 #import "warpAppDelegate.h"
 #import <Carbon/Carbon.h>
 
-@implementation warpAppDelegate
+@implementation WarpAppDelegate
 
 @synthesize window;
 
@@ -22,15 +22,42 @@ int port = 6345;
 - (IBAction)show_connect:(id)sender {
 	[connect_window makeKeyAndOrderFront:self]; 
 }
-
-- (IBAction)connect:(id)sender {
-	[connect_window orderOut:self];
+- (void)recent:(id)sender {
+	NSMenuItem* menu_item = sender;
 	
-	if (client->attach([[address stringValue] cStringUsingEncoding:NSASCIIStringEncoding], port))
+	[[recent_menu submenu]removeItem:menu_item];
+	[[recent_menu submenu]addItem:menu_item];
+	
+	if (client->connec([[menu_item title] cStringUsingEncoding:NSASCIIStringEncoding], port))
 	{
 		black_hole->attach();
 		black_hole->send_input();
 		[window makeKeyAndOrderFront:self];
+	}
+}
+
+- (IBAction)connect:(id)sender {
+	[connect_window orderOut:self];
+	
+	if (client->connec([[address stringValue] cStringUsingEncoding:NSASCIIStringEncoding], port))
+	{
+		black_hole->attach();
+		black_hole->send_input();
+		[window makeKeyAndOrderFront:self];
+		
+		NSMenuItem *empty_item = [[recent_menu submenu] itemWithTitle:@"Empty"];
+		
+		if (empty_item)
+		{
+			[[recent_menu submenu] removeItem:empty_item];
+		}
+		
+		[[recent_menu submenu] addItemWithTitle:[address stringValue] action:@selector(recent:) keyEquivalent:@""];
+		
+		if ([menu numberOfItems] > 5)
+		{
+			[menu removeItemAtIndex:0];
+		}
 	}
 	else {
 		[connect_window makeKeyAndOrderFront:self]; 
@@ -43,6 +70,7 @@ int port = 6345;
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {	
+	
 	server = new Server();
 	server->start_listening(port);
 	
@@ -53,15 +81,12 @@ int port = 6345;
 	
 	[NSThread detachNewThreadSelector:@selector(update) toTarget:self withObject:nil];
 	
-	[window setAcceptsMouseMovedEvents:YES];	
-	
 	NSStatusItem* statusItem = [[[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength] retain];
 	[statusItem setImage:[NSImage imageNamed:@"menu"]];
 	[statusItem setHighlightMode:YES];
 	[statusItem setEnabled:YES];
 	[statusItem setMenu:menu];
 }
-
 
 
 @end

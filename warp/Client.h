@@ -14,11 +14,15 @@ class Client
 	
 public:
 	
-	Client() : allowed_to_send_(false) { };
+	Client() : connected_(false) { };
 	
-	void send_input() { allowed_to_send_ = true; };
+	void send_input() { connected_ = true; };
 	
-	bool attach(const std::string& host, unsigned int port);
+	bool connected() { return connected_; };
+	
+	bool connec(const std::string& host, unsigned int port);
+	
+	void reconnect();
 	
 	void disconnect();
 	
@@ -52,5 +56,7 @@ private:
 	
 	int sock;
 	
-	bool allowed_to_send_;
+	std::string last_host_;
+	
+	bool connected_;
 };

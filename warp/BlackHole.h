@@ -21,7 +21,7 @@ public:
 	
 	BlackHole(Client* client, NSWindow* window) : client_(client), window_(window)
 	{
-		//client_commands_[kCGEventKeyDown]						= new KeyDownClientCommand();
+		client_commands_[kCGEventKeyDown]						= new KeyDownClientCommand();
 		client_commands_[kCGEventKeyUp]							= new KeyUpClientCommand();
 		client_commands_[kCGEventFlagsChanged]			= new FlagsChangedClientCommand();
 		client_commands_[kCGEventLeftMouseUp]				= new LeftMouseUpClientCommand();

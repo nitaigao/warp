@@ -15,41 +15,49 @@
 
 int port = 6345;
 
-- (void)update {
+- (void)server_update {
 	while (server->receive());
 }
 
-- (IBAction)show_connect:(id)sender {
-	[connect_window makeKeyAndOrderFront:self]; 
+-(bool)connect_to:(NSString*)host port:(unsigned int)port {
+	if (client->connec([[address stringValue] cStringUsingEncoding:NSASCIIStringEncoding], port))
+	{
+		[window makeKeyAndOrderFront:self];
+		black_hole->attach();
+		black_hole->send_input();
+		[[NSApplication sharedApplication] activateIgnoringOtherApps : YES];
+		
+		return true;
+	}	
+	return false;
 }
+
 - (void)recent:(id)sender {
 	NSMenuItem* menu_item = sender;
 	
 	[[recent_menu submenu]removeItem:menu_item];
 	[[recent_menu submenu]addItem:menu_item];
 	
-	if (client->connec([[menu_item title] cStringUsingEncoding:NSASCIIStringEncoding], port))
-	{
-		black_hole->attach();
-		black_hole->send_input();
-		[window makeKeyAndOrderFront:self];
-	}
+	[self connect_to:[address stringValue] port:port];
 }
 
 - (IBAction)connect:(id)sender {
 	[connect_window orderOut:self];
 	
-	if (client->connec([[address stringValue] cStringUsingEncoding:NSASCIIStringEncoding], port))
-	{
-		black_hole->attach();
-		black_hole->send_input();
-		[window makeKeyAndOrderFront:self];
-		
+	if ([self connect_to:[address stringValue] port:port])
+	{	
 		NSMenuItem *empty_item = [[recent_menu submenu] itemWithTitle:@"Empty"];
 		
 		if (empty_item)
 		{
 			[[recent_menu submenu] removeItem:empty_item];
+		}
+		
+		NSMenuItem *old_item = [[recent_menu submenu] itemWithTitle:[address stringValue]];
+		
+		if (old_item)
+		{
+			[[recent_menu submenu] removeItem:old_item];
 		}
 		
 		[[recent_menu submenu] addItemWithTitle:[address stringValue] action:@selector(recent:) keyEquivalent:@""];
@@ -59,13 +67,13 @@ int port = 6345;
 			[menu removeItemAtIndex:0];
 		}
 	}
-	else {
+	else 
+	{
 		[connect_window makeKeyAndOrderFront:self]; 
 	}
 }
 
 - (IBAction)quit:(id)sender {
-	[NSApp replyToApplicationShouldTerminate: YES]; 
 	exit(0);
 }
 
@@ -79,7 +87,7 @@ int port = 6345;
 	
 	black_hole = new BlackHole(client, window);
 	
-	[NSThread detachNewThreadSelector:@selector(update) toTarget:self withObject:nil];
+	[NSThread detachNewThreadSelector:@selector(server_update) toTarget:self withObject:nil];
 	
 	NSStatusItem* statusItem = [[[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength] retain];
 	[statusItem setImage:[NSImage imageNamed:@"menu"]];
@@ -87,6 +95,5 @@ int port = 6345;
 	[statusItem setEnabled:YES];
 	[statusItem setMenu:menu];
 }
-
 
 @end

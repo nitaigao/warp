@@ -18,10 +18,10 @@
 	};
 	256AC3D90F4B6AC300CF3369 /* WarpAppDelegate.mm */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1015, 1300}}";
-			sepNavSelRange = "{2241, 0}";
-			sepNavVisRange = "{1914, 286}";
-			sepNavWindowFrame = "{{191, 0}, {1211, 878}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1152, 1300}}";
+			sepNavSelRange = "{1534, 0}";
+			sepNavVisRange = "{145, 1352}";
+			sepNavWindowFrame = "{{1125, 700}, {1211, 878}}";
 		};
 	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
@@ -39,12 +39,12 @@
 			4C98CCBB123B727000F0F544 /* warp */,
 		);
 		perUserDictionary = {
-			PBXPerProjectTemplateStateSaveDate = 306395175;
-			PBXWorkspaceStateSaveDate = 306395175;
+			PBXPerProjectTemplateStateSaveDate = 306612614;
+			PBXWorkspaceStateSaveDate = 306612614;
 		};
 		perUserProjectItems = {
-			4CB7146A12433EBC008744C8 /* PBXBookmark */ = 4CB7146A12433EBC008744C8 /* PBXBookmark */;
-			4CB7147612433ED9008744C8 /* PBXTextBookmark */ = 4CB7147612433ED9008744C8 /* PBXTextBookmark */;
+			4CB7146A12433EBC008744C8 = 4CB7146A12433EBC008744C8 /* PBXBookmark */;
+			4CB7147612433ED9008744C8 = 4CB7147612433ED9008744C8 /* PBXTextBookmark */;
 		};
 		sourceControlManager = 4C98CCD1123B727700F0F544 /* Source Control */;
 		userBuildSettings = {
@@ -146,9 +146,9 @@
 	};
 	4C98CD32123B799F00F0F544 /* Client.cpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1164, 2301}}";
-			sepNavSelRange = "{927, 0}";
-			sepNavVisRange = "{230, 1288}";
+			sepNavIntBoundsRect = "{{0, 0}, {1164, 2262}}";
+			sepNavSelRange = "{461, 0}";
+			sepNavVisRange = "{230, 1285}";
 			sepNavWindowFrame = "{{217, 0}, {1223, 878}}";
 		};
 	};

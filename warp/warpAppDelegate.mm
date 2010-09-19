@@ -19,6 +19,10 @@ int port = 6345;
 	while (server->receive());
 }
 
+- (IBAction)show_connect:(id)sender {
+	[connect_window makeKeyAndOrderFront:self]; 
+}
+
 -(bool)connect_to:(NSString*)host port:(unsigned int)port {
 	if (client->connec([[address stringValue] cStringUsingEncoding:NSASCIIStringEncoding], port))
 	{
@@ -77,6 +81,10 @@ int port = 6345;
 	exit(0);
 }
 
+- (void)screenIsLocked {
+	black_hole->disable();
+}
+
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {	
 	
 	server = new Server();
@@ -94,6 +102,9 @@ int port = 6345;
 	[statusItem setHighlightMode:YES];
 	[statusItem setEnabled:YES];
 	[statusItem setMenu:menu];
+	
+	NSDistributedNotificationCenter * center = [NSDistributedNotificationCenter defaultCenter];	
+	[center addObserver:self selector:@selector(screenIsLocked) name:@"com.apple.screenIsLocked" object:nil];
 }
 
 @end

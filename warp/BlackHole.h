@@ -21,7 +21,7 @@ public:
 	
 	BlackHole(Client* client, NSWindow* window) : client_(client), window_(window)
 	{
-		client_commands_[kCGEventKeyDown]						= new KeyDownClientCommand();
+		client_commands_[kCGEventKeyDown]						= new KeyDownClientCommand(window);
 		client_commands_[kCGEventKeyUp]							= new KeyUpClientCommand();
 		client_commands_[kCGEventFlagsChanged]			= new FlagsChangedClientCommand();
 		client_commands_[kCGEventLeftMouseUp]				= new LeftMouseUpClientCommand();
@@ -34,22 +34,34 @@ public:
 		client_commands_[kCGEventScrollWheel]				= new ScrollWheelClientCommand();
 	};
 	
+	bool send_to(const std::string& host, unsigned int port)
+	{
+		if (client_->connec(host, port))
+		{
+			send_input();		
+			return true;
+		}	
+		
+		return false;		
+	}
+	
 	void send_input() 
 	{ 
 		CGAssociateMouseAndMouseCursorPosition(false);
 		CGDisplayHideCursor(kCGDirectMainDisplay);
+		[window_ makeKeyAndOrderFront:nil];
+		[[NSApplication sharedApplication] activateIgnoringOtherApps : YES];
 	};
 	
 	void disable()
 	{
 		CGDisplayShowCursor(kCGDirectMainDisplay);
 		CGAssociateMouseAndMouseCursorPosition(true);
-		CGEventTapEnable(event_tap_, false);
-		client_->disconnect();
 		[window_ orderOut:nil];
+		client_->disconnect();
 	}
 	
-	void attach()
+	void init()
 	{		
 		CGEventType eventType = 
 		(1 << kCGEventMouseMoved) | 
@@ -93,25 +105,29 @@ private:
 	
 	CGEventRef on_event(CGEventType type, CGEventRef event)
 	{		
-		switch (type) {
-				
-			case kCGEventKeyDown:
+		if (type == kCGEventKeyDown) 
+		{
+			CGEventFlags flags = CGEventGetFlags(event);
+			CGKeyCode keycode = (CGKeyCode)CGEventGetIntegerValueField(event, kCGKeyboardEventKeycode);
+			
+			if ((flags & kCGEventFlagMaskShift) && (flags & kCGEventFlagMaskCommand) && keycode == 14) // cmd-shift-e
 			{
-				CGEventFlags flags = CGEventGetFlags(event);
-				CGKeyCode keycode = (CGKeyCode)CGEventGetIntegerValueField(event, kCGKeyboardEventKeycode);
-				
-				if ((flags & kCGEventFlagMaskShift) && (flags & kCGEventFlagMaskCommand) && keycode == 14) // cmd-shift-e
+				if (client_->connected()) 
 				{
 					disable();
+					return NULL;
 				}
 				
-				std::clog << "key down" << keycode << std::endl;
-				client_->send_key_down(flags, keycode);
-				return NULL;
+				if (!client_->connected())
+				{				
+					send_input();
+					client_->reconnect();				
+					return NULL;
+				}
 			}
 		}
-		
-		if (client_commands_.find(type) != client_commands_.end())
+				
+		if (client_->connected() && client_commands_.find(type) != client_commands_.end())
 		{
 			return client_commands_[type]->Execute(event, client_);
 		}

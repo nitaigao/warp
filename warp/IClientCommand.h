@@ -24,20 +24,21 @@ class KeyDownClientCommand : public IClientCommand
 	
 public:
 	
+	KeyDownClientCommand(NSWindow* window) : window_(window) { };
+	
 	CGEventRef Execute(CGEventRef event, Client* client)
 	{
 		CGEventFlags flags = CGEventGetFlags(event);
 		CGKeyCode keycode = (CGKeyCode)CGEventGetIntegerValueField(event, kCGKeyboardEventKeycode);
 		
-		if ((flags & kCGEventFlagMaskShift) && (flags & kCGEventFlagMaskCommand) && keycode == 14) // cmd-shift-e
-		{
-			//disable();
-		}
-		
 		std::clog << "key down" << keycode << std::endl;
 		client->send_key_down(flags, keycode);
 		return NULL;
 	}
+	
+private:
+	
+	NSWindow* window_;
 };
 
 class KeyUpClientCommand : public IClientCommand

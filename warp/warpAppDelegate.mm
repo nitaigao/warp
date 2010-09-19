@@ -20,20 +20,8 @@ int port = 6345;
 }
 
 - (IBAction)show_connect:(id)sender {
+	[[NSApplication sharedApplication] activateIgnoringOtherApps : YES];
 	[connect_window makeKeyAndOrderFront:self]; 
-}
-
--(bool)connect_to:(NSString*)host port:(unsigned int)port {
-	if (client->connec([[address stringValue] cStringUsingEncoding:NSASCIIStringEncoding], port))
-	{
-		[window makeKeyAndOrderFront:self];
-		black_hole->attach();
-		black_hole->send_input();
-		[[NSApplication sharedApplication] activateIgnoringOtherApps : YES];
-		
-		return true;
-	}	
-	return false;
 }
 
 - (void)recent:(id)sender {
@@ -42,13 +30,13 @@ int port = 6345;
 	[[recent_menu submenu]removeItem:menu_item];
 	[[recent_menu submenu]addItem:menu_item];
 	
-	[self connect_to:[address stringValue] port:port];
+	black_hole->send_to([[address stringValue] cStringUsingEncoding:NSASCIIStringEncoding], port);
 }
 
 - (IBAction)connect:(id)sender {
 	[connect_window orderOut:self];
 	
-	if ([self connect_to:[address stringValue] port:port])
+	if (black_hole->send_to([[address stringValue] cStringUsingEncoding:NSASCIIStringEncoding], port))
 	{	
 		NSMenuItem *empty_item = [[recent_menu submenu] itemWithTitle:@"Empty"];
 		
@@ -94,6 +82,7 @@ int port = 6345;
 	[input_view set_client:client];
 	
 	black_hole = new BlackHole(client, window);
+	black_hole->init();
 	
 	[NSThread detachNewThreadSelector:@selector(server_update) toTarget:self withObject:nil];
 	

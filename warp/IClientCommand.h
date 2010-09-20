@@ -10,6 +10,8 @@
 #include <ApplicationServices/ApplicationServices.h>
 #include <Carbon/Carbon.h>
 
+#include "Time.h"
+
 class IClientCommand
 {
 	
@@ -89,12 +91,38 @@ class LeftMouseDownClientCommand : public IClientCommand
 	
 public:
 	
+	LeftMouseDownClientCommand()
+	{
+		last_click_ = timeGetTime();
+	}
+	
 	CGEventRef Execute(CGEventRef event, Client* client)
 	{
 		std::clog << "left mouse down" << std::endl;
-		client->send_left_down();
+	
+		unsigned int time_now = timeGetTime();
+		unsigned int delta = time_now - last_click_;
+		
+		std::clog << delta << std::endl;
+				
+		if (delta < 300)
+		{
+			std::clog << "detected double click" << std::endl;
+			client->send_left_double_click();
+		}
+		else 
+		{
+			client->send_left_down();
+		}
+		
+		last_click_ = time_now;
+
 		return NULL;
 	}
+	
+private:
+	
+	unsigned int last_click_;
 };
 
 class LeftMouseDraggedClientCommand : public IClientCommand

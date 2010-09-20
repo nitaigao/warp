@@ -26,33 +26,33 @@ public:
 	
 	void disconnect();
 	
-	void send_left_up();
+	int send_left_up();
 	
-	void send_right_up();
+	int send_right_up();
 	
-	void send_left_down();
+	int send_left_down();
 	
-	void send_left_dragged(int x, int y);
+	int send_left_dragged(int x, int y);
 	
-	void send_right_dragged(int x, int y);
+	int send_right_dragged(int x, int y);
 	
-	void send_right_down();	
+	int send_right_down();	
 	
-	void send_mouse_moved(int x, int y);
+	int send_mouse_moved(int x, int y);
 	
-	void send_key_down(unsigned int flags, int key_code);
+	int send_key_down(unsigned int flags, int key_code);
 	
-	void send_key_up(unsigned int flags, int key_code);
+	int send_key_up(unsigned int flags, int key_code);
 	
-	void send_flags(int key_code, unsigned int flags);
+	int send_flags(int key_code, unsigned int flags);
 	
-	void send_scroll_wheel(int x, int y);
+	int send_scroll_wheel(int x, int y);
 	
-	void send_left_double_click();
+	int send_left_double_click();
 	
 private:
 	
-	void send_message(const Message& message);
+	int send_message(const Message& message);
 	
 	int sock;
 	

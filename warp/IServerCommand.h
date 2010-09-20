@@ -36,8 +36,6 @@ public:
 	
 	void Execute(const Message& message) 
 	{ 
-		std::clog << "left up" << std::endl;
-		
 		CGEventRef event = CGEventCreate(NULL);
 		CGPoint point = CGEventGetLocation(event); 
 		PostMouseEvent(kCGMouseButtonLeft, kCGEventLeftMouseUp, point);
@@ -54,8 +52,6 @@ public:
 	
 	void Execute(const Message& message) 
 	{ 
-		std::clog << "left down" << std::endl;
-		
 		CGEventRef event = CGEventCreate(NULL);
 		CGPoint point = CGEventGetLocation(event); 
 		PostMouseEvent(kCGMouseButtonLeft, kCGEventLeftMouseDown, point);
@@ -73,8 +69,6 @@ public:
 	
 	void Execute(const Message& message) 
 	{ 
-		std::clog << "right up" << std::endl;
-		
 		CGEventRef event = CGEventCreate(NULL);
 		CGPoint point = CGEventGetLocation(event); 
 		PostMouseEvent(kCGMouseButtonRight, kCGEventRightMouseUp, point);
@@ -91,8 +85,6 @@ public:
 	
 	void Execute(const Message& message)
 	{
-		std::clog << "right down" << std::endl;
-		
 		CGEventRef event = CGEventCreate(NULL);
 		CGPoint point = CGEventGetLocation(event); 
 		PostMouseEvent(kCGMouseButtonRight, kCGEventRightMouseDown, point);
@@ -108,8 +100,6 @@ public:
 	
 	void Execute(const Message& message)
 	{
-		std::clog << "key up" << std::endl;
-		
 		CGEventRef e = CGEventCreateKeyboardEvent (NULL, message.key_code, false);
 		CGEventSetFlags(e, (CGEventFlags)message.flags);
 		CGEventPost(kCGSessionEventTap, e);
@@ -128,8 +118,6 @@ public:
 	
 	void Execute(const Message& message)
 	{
-		std::clog << "key down" << std::endl;
-		
 		CGEventRef e = CGEventCreateKeyboardEvent (NULL, message.key_code, true);
 		CGEventSetFlags(e, (CGEventFlags)message.flags);
 		CGEventPost(kCGSessionEventTap, e);
@@ -147,8 +135,6 @@ public:
 	
 	void Execute(const Message& message)
 	{
-		std::clog << "mouse moved" << std::endl;
-		
 		CGEventRef ourEvent = CGEventCreate(NULL);
 		CGPoint epoint = CGEventGetLocation(ourEvent);
 		
@@ -176,8 +162,6 @@ public:
 	
 	void Execute(const Message& message) 
 	{
-		std::clog << "left dragged" << std::endl;
-		
 		CGEventRef ourEvent = CGEventCreate(NULL);
 		CGPoint epoint = CGEventGetLocation(ourEvent);
 		
@@ -198,8 +182,6 @@ public:
 	
 	void Execute(const Message& message)
 	{
-		std::clog << "right dragged" << std::endl;
-		
 		CGEventRef ourEvent = CGEventCreate(NULL);
 		CGPoint epoint = CGEventGetLocation(ourEvent);
 		
@@ -220,8 +202,6 @@ public:
 	
 	void Execute(const Message& message)
 	{
-		std::clog << "flags changed" << std::endl;
-		
 		CGEventRef e = CGEventCreateKeyboardEvent (NULL, message.key_code, true);
 		CGEventSetFlags(e, (CGEventFlags)message.flags);
 		CGEventPost(kCGSessionEventTap, e);
@@ -239,8 +219,6 @@ public:
 	
 	void Execute(const Message& message)
 	{
-		std::clog << "scroll wheel" << std::endl;
-		
 		CGEventRef ourEvent = CGEventCreate(NULL);
 		CGPoint point = CGEventGetLocation(ourEvent);
 		
@@ -263,8 +241,6 @@ public:
 	
 	void Execute(const Message& message)
 	{
-		std::clog << "left double click" << std::endl;
-		
 		CGEventRef ourEvent = CGEventCreate(NULL);
 		CGPoint point = CGEventGetLocation(ourEvent);
 		

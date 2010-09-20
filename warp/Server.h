@@ -50,7 +50,6 @@ public:
     FD_SET(listen_sock_, &read_sockets_);
     
     listen(listen_sock_, 5);
-    std::clog << "waiting for connections" << std::endl;
   };
   
   bool receive() 
@@ -70,11 +69,6 @@ public:
       std::cerr << "ERROR on accept" << std::endl;
     }
 
-    if (readsocks == 0)
-    {
-      std::clog << "nothing to process" << std::endl;
-    }
-
     if (readsocks > 0)
     {      
       for (int i = 0; i < max_socket_ + 1; i++)
@@ -83,8 +77,6 @@ public:
         {
           if (i == listen_sock_)
           {
-            std::clog << "new incoming connection" << std::endl;
-
             int incoming_socket = accept(listen_sock_, NULL, NULL);
 
             if (incoming_socket < 0)
@@ -96,9 +88,7 @@ public:
             max_socket_ = incoming_socket;
           }
           else
-          {  
-            std::clog << "data transfer" << std::endl;
-      
+          {       
             char buffer[256];
             bzero(buffer, 256);
           
@@ -111,9 +101,6 @@ public:
             
             if (result == 0)
             {
-              std::clog << "no data" << std::endl;
-              std::clog << "closing connection" << std::endl;
-              
               shutdown (i, 2);
               FD_CLR(i, &read_sockets_);
             }

@@ -21,6 +21,7 @@
 	IBOutlet NSTextField *address;
 	IBOutlet MainView *input_view;
 	
+	NSMutableArray* recent_list;	
 	BlackHole* black_hole;	
 	Client *client;
 	Server* server;

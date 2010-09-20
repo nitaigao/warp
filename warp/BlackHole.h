@@ -36,13 +36,14 @@ public:
 	
 	bool send_to(const std::string& host, unsigned int port)
 	{
-		if (client_->connec(host, port))
+		bool result = client_->connec(host, port);
+		
+		if (result)
 		{
 			send_input();		
-			return true;
-		}	
+		}
 		
-		return false;		
+		return result;
 	}
 	
 	void send_input() 
@@ -104,7 +105,7 @@ private:
 	}
 	
 	CGEventRef on_event(CGEventType type, CGEventRef event)
-	{		
+	{			
 		if (type == kCGEventKeyDown) 
 		{
 			CGEventFlags flags = CGEventGetFlags(event);
@@ -129,7 +130,14 @@ private:
 				
 		if (client_->connected() && client_commands_.find(type) != client_commands_.end())
 		{
-			return client_commands_[type]->Execute(event, client_);
+			int result = client_commands_[type]->Execute(event, client_);
+			
+			if (result < 0)
+			{
+				disable();
+			}
+			
+			return NULL;
 		}
 		
 		return event;		

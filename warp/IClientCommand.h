@@ -17,7 +17,7 @@ class IClientCommand
 	
 public:
 	
-	virtual CGEventRef Execute(CGEventRef event, Client* client) = 0;
+	virtual int Execute(CGEventRef event, Client* client) = 0;
 		
 };
 
@@ -28,14 +28,11 @@ public:
 	
 	KeyDownClientCommand(NSWindow* window) : window_(window) { };
 	
-	CGEventRef Execute(CGEventRef event, Client* client)
+	int Execute(CGEventRef event, Client* client)
 	{
 		CGEventFlags flags = CGEventGetFlags(event);
 		CGKeyCode keycode = (CGKeyCode)CGEventGetIntegerValueField(event, kCGKeyboardEventKeycode);
-		
-		std::clog << "key down" << keycode << std::endl;
-		client->send_key_down(flags, keycode);
-		return NULL;
+		return client->send_key_down(flags, keycode);
 	}
 	
 private:
@@ -48,13 +45,11 @@ class KeyUpClientCommand : public IClientCommand
 	
 public:
 	
-	CGEventRef Execute(CGEventRef event, Client* client)
+	int Execute(CGEventRef event, Client* client)
 	{
-		std::clog << "key up" << std::endl;
 		CGEventFlags flags = CGEventGetFlags(event);
 		CGKeyCode keycode = (CGKeyCode)CGEventGetIntegerValueField(event, kCGKeyboardEventKeycode);
-		client->send_key_up(flags, keycode);
-		return NULL;
+		return client->send_key_up(flags, keycode);
 	}
 };
 
@@ -63,13 +58,11 @@ class FlagsChangedClientCommand : public IClientCommand
 	
 public:
 	
-	CGEventRef Execute(CGEventRef event, Client* client)
+	int Execute(CGEventRef event, Client* client)
 	{
-		std::clog << "flags changed" << std::endl;
 		CGEventFlags flags = CGEventGetFlags(event);
 		CGKeyCode keycode = (CGKeyCode)CGEventGetIntegerValueField(event, kCGKeyboardEventKeycode);
-		client->send_flags(keycode, flags);
-		return NULL;
+		return client->send_flags(keycode, flags);
 	}
 };
 
@@ -78,11 +71,9 @@ class LeftMouseUpClientCommand : public IClientCommand
 	
 public:
 	
-	CGEventRef Execute(CGEventRef event, Client* client)
+	int Execute(CGEventRef event, Client* client)
 	{
-		std::clog << "left mouse up" << std::endl;
-		client->send_left_up();
-		return NULL;
+		return client->send_left_up();
 	}
 };
 
@@ -96,28 +87,21 @@ public:
 		last_click_ = timeGetTime();
 	}
 	
-	CGEventRef Execute(CGEventRef event, Client* client)
-	{
-		std::clog << "left mouse down" << std::endl;
-	
+	int Execute(CGEventRef event, Client* client)
+	{	
 		unsigned int time_now = timeGetTime();
 		unsigned int delta = time_now - last_click_;
-		
-		std::clog << delta << std::endl;
 				
+		last_click_ = time_now;
+		
 		if (delta < 300)
 		{
-			std::clog << "detected double click" << std::endl;
-			client->send_left_double_click();
+			return client->send_left_double_click();
 		}
 		else 
 		{
-			client->send_left_down();
+			return client->send_left_down();
 		}
-		
-		last_click_ = time_now;
-
-		return NULL;
 	}
 	
 private:
@@ -130,13 +114,11 @@ class LeftMouseDraggedClientCommand : public IClientCommand
 	
 public:
 	
-	CGEventRef Execute(CGEventRef event, Client* client)
+	int Execute(CGEventRef event, Client* client)
 	{
-		std::clog << "left mouse dragged" << std::endl;
 		int x = CGEventGetIntegerValueField(event, kCGMouseEventDeltaX);
 		int y = CGEventGetIntegerValueField(event, kCGMouseEventDeltaY);
-		client->send_left_dragged(x, y);
-		return NULL;
+		return client->send_left_dragged(x, y);
 	}
 };
 
@@ -145,11 +127,9 @@ class RightMouseUpClientCommand : public IClientCommand
 	
 public:
 	
-	CGEventRef Execute(CGEventRef event, Client* client)
+	int Execute(CGEventRef event, Client* client)
 	{
-		std::clog << "right mouse up" << std::endl;
-		client->send_right_up();
-		return NULL;
+		return client->send_right_up();
 	}
 };
 
@@ -158,11 +138,9 @@ class RightMouseDownClientCommand : public IClientCommand
 	
 public:
 	
-	CGEventRef Execute(CGEventRef event, Client* client)
+	int Execute(CGEventRef event, Client* client)
 	{
-		std::clog << "right mouse down" << std::endl;
-		client->send_right_down();
-		return NULL;
+		return client->send_right_down();
 	}
 };
 
@@ -171,13 +149,11 @@ class RightMouseDraggedClientCommand : public IClientCommand
 	
 public:
 	
-	CGEventRef Execute(CGEventRef event, Client* client)
+	int Execute(CGEventRef event, Client* client)
 	{
-		std::clog << "right mouse dragged" << std::endl;
 		int x = CGEventGetIntegerValueField(event, kCGMouseEventDeltaX);
 		int y = CGEventGetIntegerValueField(event, kCGMouseEventDeltaY);
-		client->send_right_dragged(x, y);
-		return NULL;
+		return client->send_right_dragged(x, y);
 	}
 };
 
@@ -186,15 +162,11 @@ class MouseMovedClientCommand : public IClientCommand
 	
 public:
 	
-	CGEventRef Execute(CGEventRef event, Client* client)
-	{
-		std::clog << "mouse moved" << std::endl;				
+	int Execute(CGEventRef event, Client* client)
+	{			
 		int x = CGEventGetIntegerValueField(event, kCGMouseEventDeltaX);
 		int y = CGEventGetIntegerValueField(event, kCGMouseEventDeltaY);
-		client->send_mouse_moved(x, y);
-		std::clog << x << std::endl;
-		return NULL;
-		
+		return client->send_mouse_moved(x, y);
 	}
 };
 
@@ -203,12 +175,10 @@ class ScrollWheelClientCommand : public IClientCommand
 	
 public:
 	
-	CGEventRef Execute(CGEventRef event, Client* client)
+	int Execute(CGEventRef event, Client* client)
 	{
-		std::clog << "scroll wheel" << std::endl;
 		int x = CGEventGetIntegerValueField(event, kCGScrollWheelEventDeltaAxis2);
 		int y = CGEventGetIntegerValueField(event, kCGScrollWheelEventDeltaAxis1);
-		client->send_scroll_wheel(x, y);
-		return NULL;
+		return client->send_scroll_wheel(x, y);
 	}
 };

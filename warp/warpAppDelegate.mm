@@ -9,11 +9,11 @@
 #import "warpAppDelegate.h"
 #import <Carbon/Carbon.h>
 
+#include "Constants.hpp"
+
 @implementation WarpAppDelegate
 
 @synthesize window;
-
-int port = 6745;
 
 - (NSString*)recent_path {
 	NSString* path = [[NSString alloc] initWithFormat:@"%@/Contents/Resources/recent.plist", [[NSBundle mainBundle] bundlePath]];
@@ -38,13 +38,13 @@ int port = 6745;
 	[[recent_menu submenu]removeItem:menu_item];
 	[[recent_menu submenu]addItem:menu_item];
 	
-	black_hole->send_to([[menu_item title] cStringUsingEncoding:NSASCIIStringEncoding], port);
+	black_hole->send_to([[menu_item title] cStringUsingEncoding:NSASCIIStringEncoding], SERVER_PORT);
 }
 
 - (IBAction)connect:(id)sender {
 	[connect_window orderOut:self];
 	
-	if (black_hole->send_to([[address stringValue] cStringUsingEncoding:NSASCIIStringEncoding], port))
+	if (black_hole->send_to([[address stringValue] cStringUsingEncoding:NSASCIIStringEncoding], SERVER_PORT))
 	{	
 		NSMenuItem *empty_item = [[recent_menu submenu] itemWithTitle:@"Empty"];
 		
@@ -86,7 +86,7 @@ int port = 6745;
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {	
 	
 	server = new Server();
-	server->start_listening(port);
+	server->start_listening(SERVER_PORT);
 	
 	client = new Client();
 	[input_view set_client:client];

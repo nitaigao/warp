@@ -19,6 +19,8 @@
 
 #include <ApplicationServices/ApplicationServices.h>
 
+#include "Constants.hpp"
+
 void set_non_blocking(int sock)
 {
 	int flags;  
@@ -97,7 +99,7 @@ bool Client::connec(const std::string& host, unsigned int port)
 
 void Client::reconnect()
 {
-	this->connec(last_host_, 6345);
+	this->connec(last_host_, SERVER_PORT);
 }
 
 void Client::disconnect()

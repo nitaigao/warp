@@ -11,6 +11,7 @@
 		256AC3DA0F4B6AC300CF3369 /* WarpAppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 256AC3D90F4B6AC300CF3369 /* WarpAppDelegate.mm */; };
 		4C12929B123D1ED80080D294 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C12929A123D1ED80080D294 /* Carbon.framework */; };
 		4C131D2D123D6628003B8BB1 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C131D2C123D6628003B8BB1 /* menu.png */; };
+		4C2E715A124893D000A214C8 /* StatusMenu.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4C2E7159124893D000A214C8 /* StatusMenu.mm */; };
 		4C98CCE8123B740200F0F544 /* MainView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4C98CCE7123B740200F0F544 /* MainView.mm */; };
 		4C98CD33123B79A000F0F544 /* Client.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C98CD32123B799F00F0F544 /* Client.cpp */; };
 		4CBAFA70124207D300C5C338 /* Server.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CBAFA6F124207D300C5C338 /* Server.cpp */; };
@@ -38,6 +39,8 @@
 		4C0581DE12480B3D007B874A /* Constants.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Constants.hpp; sourceTree = "<group>"; };
 		4C12929A123D1ED80080D294 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
 		4C131D2C123D6628003B8BB1 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
+		4C2E7158124893D000A214C8 /* StatusMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusMenu.h; sourceTree = "<group>"; };
+		4C2E7159124893D000A214C8 /* StatusMenu.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = StatusMenu.mm; sourceTree = "<group>"; };
 		4C6EADBD123D6C43001DB8F2 /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
 		4C98CCE6123B740200F0F544 /* MainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainView.h; sourceTree = "<group>"; };
 		4C98CCE7123B740200F0F544 /* MainView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MainView.mm; sourceTree = "<group>"; };
@@ -195,6 +198,8 @@
 				4C98CCE7123B740200F0F544 /* MainView.mm */,
 				4CCF9569123CF3C800EE0530 /* BezelWindow.h */,
 				4CCF956A123CF3C800EE0530 /* BezelWindow.mm */,
+				4C2E7158124893D000A214C8 /* StatusMenu.h */,
+				4C2E7159124893D000A214C8 /* StatusMenu.mm */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -282,6 +287,7 @@
 				4C98CD33123B79A000F0F544 /* Client.cpp in Sources */,
 				4CCF956B123CF3C800EE0530 /* BezelWindow.mm in Sources */,
 				4CBAFA70124207D300C5C338 /* Server.cpp in Sources */,
+				4C2E715A124893D000A214C8 /* StatusMenu.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

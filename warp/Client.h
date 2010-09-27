@@ -22,7 +22,7 @@ public:
 	
 	bool connec(const std::string& host, unsigned int port);
 	
-	void reconnect();
+	bool reconnect();
 	
 	void disconnect();
 	

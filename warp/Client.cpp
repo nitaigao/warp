@@ -97,9 +97,9 @@ bool Client::connec(const std::string& host, unsigned int port)
 	return connected_;
 }
 
-void Client::reconnect()
+bool Client::reconnect()
 {
-	this->connec(last_host_, SERVER_PORT);
+	return this->connec(last_host_, SERVER_PORT);
 }
 
 void Client::disconnect()

@@ -8,26 +8,28 @@
 
 #import <Cocoa/Cocoa.h>
 #include <ApplicationServices/ApplicationServices.h>
+
 #import "MainView.h"
+#import "StatusMenu.h"
+
+
 #import "Server.h"
 #import "Client.h"
 #import "BlackHole.h"
 
 @interface WarpAppDelegate : NSObject<NSApplicationDelegate> {
-	NSWindow *window;
+	IBOutlet NSWindow *connected_window;
 	IBOutlet NSWindow *connect_window;
-	IBOutlet NSMenu *menu;
-	IBOutlet NSMenuItem *recent_menu;
-	IBOutlet NSTextField *address;
-	IBOutlet MainView *input_view;
 	
-	NSMutableArray* recent_list;	
+	IBOutlet NSTextField *address;
+
+	IBOutlet MainView *input_view;
+	IBOutlet StatusMenu* status_menu; 
+		
 	BlackHole* black_hole;	
 	Client *client;
 	Server* server;
 }
-
-@property (assign) IBOutlet NSWindow *window;
 
 - (IBAction)show_connect:(id)sender;
 - (IBAction)connect:(id)sender;

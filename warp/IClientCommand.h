@@ -11,6 +11,7 @@
 #include <Carbon/Carbon.h>
 
 #include "Time.h"
+#include "Constants.hpp"
 
 class IClientCommand
 {
@@ -94,7 +95,7 @@ public:
 				
 		last_click_ = time_now;
 		
-		if (delta < 300)
+		if (delta < DOUBLE_CLICK_THRESHOLD)
 		{
 			return client->send_left_double_click();
 		}

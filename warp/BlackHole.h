@@ -40,19 +40,38 @@ public:
 		
 		if (result)
 		{
-			send_input();		
+			enable();		
 		}
 		
 		return result;
 	}
 	
-	void send_input() 
-	{ 
-		CGAssociateMouseAndMouseCursorPosition(false);
-		CGDisplayHideCursor(kCGDirectMainDisplay);
-		[window_ makeKeyAndOrderFront:nil];
-		[[NSApplication sharedApplication] activateIgnoringOtherApps : YES];
-	};
+	void init()
+	{		
+		CGEventType eventType = 
+			(1 << kCGEventMouseMoved) | 
+			(1 << kCGEventKeyDown) | 
+			(1 << kCGEventKeyUp) |
+			(1 << kCGEventFlagsChanged) | 
+			(1 << kCGEventLeftMouseUp) | 
+			(1 << kCGEventLeftMouseDown) | 
+			(1 << kCGEventLeftMouseDragged) |
+			(1 << kCGEventRightMouseUp) | 
+			(1 << kCGEventRightMouseDown) |
+			(1 << kCGEventRightMouseDragged) |
+			(1 << kCGEventScrollWheel);
+		
+		event_tap_ = CGEventTapCreate(kCGSessionEventTap,  kCGHeadInsertEventTap,  0, eventType, BlackHole::event_tap, this);
+		
+		if(!event_tap_)
+		{
+			std::cerr << "failed to create event tap" << std::endl;
+		}
+		
+		CFRunLoopSourceRef runLoopSource = CFMachPortCreateRunLoopSource(kCFAllocatorDefault, event_tap_, 0);
+		CFRunLoopAddSource(CFRunLoopGetCurrent(), runLoopSource, kCFRunLoopCommonModes);
+		CGEventTapEnable(event_tap_, true);
+	}
 	
 	void disable()
 	{
@@ -60,34 +79,6 @@ public:
 		CGAssociateMouseAndMouseCursorPosition(true);
 		[window_ orderOut:nil];
 		client_->disconnect();
-	}
-	
-	void init()
-	{		
-		CGEventType eventType = 
-		(1 << kCGEventMouseMoved) | 
-		(1 << kCGEventKeyDown) | 
-		(1 << kCGEventKeyUp) |
-		(1 << kCGEventFlagsChanged) | 
-		(1 << kCGEventLeftMouseUp) | 
-		(1 << kCGEventLeftMouseDown) | 
-		(1 << kCGEventLeftMouseDragged) |
-		(1 << kCGEventRightMouseUp) | 
-		(1 << kCGEventRightMouseDown) |
-		(1 << kCGEventRightMouseDragged) |
-		(1 << kCGEventScrollWheel);
-		
-		event_tap_ = CGEventTapCreate(kCGSessionEventTap,  kCGHeadInsertEventTap,  0, eventType, BlackHole::event_tap, this);
-		
-		if(!event_tap_)
-		{
-			std::cerr << "failed to create event tap" << std::endl;
-			exit(1);
-		}
-		
-		CFRunLoopSourceRef runLoopSource = CFMachPortCreateRunLoopSource(kCFAllocatorDefault, event_tap_, 0);
-		CFRunLoopAddSource(CFRunLoopGetCurrent(), runLoopSource, kCFRunLoopCommonModes);
-		CGEventTapEnable(event_tap_, true);
 	}
 	
 private:
@@ -104,8 +95,16 @@ private:
 		return black_hole->on_event(type, event);
 	}
 	
-	CGEventRef on_event(CGEventType type, CGEventRef event)
-	{			
+	void enable() 
+	{ 
+		CGAssociateMouseAndMouseCursorPosition(false);
+		CGDisplayHideCursor(kCGDirectMainDisplay);
+		[window_ makeKeyAndOrderFront:nil];
+		[[NSApplication sharedApplication] activateIgnoringOtherApps : YES];
+	};
+	
+	void scan_reconnect(CGEventType type, CGEventRef event)
+	{
 		if (type == kCGEventKeyDown) 
 		{
 			CGEventFlags flags = CGEventGetFlags(event);
@@ -116,23 +115,22 @@ private:
 				if (client_->connected()) 
 				{
 					disable();
-					return NULL;
 				}
-				
-				if (!client_->connected())
+				else if (!client_->connected() && client_->reconnect())
 				{				
-					send_input();
-					client_->reconnect();				
-					return NULL;
+					enable();
 				}
 			}
 		}
+	}
+	
+	CGEventRef on_event(CGEventType type, CGEventRef event)
+	{			
+		scan_reconnect(type, event);
 				
 		if (client_->connected() && client_commands_.find(type) != client_commands_.end())
 		{
-			int result = client_commands_[type]->Execute(event, client_);
-			
-			if (result < 0)
+			if (client_commands_[type]->Execute(event, client_) < 0)
 			{
 				disable();
 			}

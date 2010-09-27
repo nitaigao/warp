@@ -230,6 +230,8 @@
 					<key>Tabs</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXBottomSmartGroupGIDs</key>
@@ -481,8 +483,6 @@
 	<key>WindowOrderList</key>
 	<array>
 		<string>1C530D52069F1CE1000CFCEE</string>
-		<string>4C2E72DB12489DE400A214C8</string>
-		<string>4C2E72E012489DE400A214C8</string>
 		<string>/Users/nk/Development/warp/warp/warp.xcodeproj</string>
 	</array>
 	<key>WindowString</key>

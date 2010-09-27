@@ -16,8 +16,7 @@
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <netdb.h>
-
-#include <ApplicationServices/ApplicationServices.h>
+#include <fcntl.h>
 
 #include "Constants.hpp"
 

@@ -2,15 +2,17 @@
 //  iwarpAppDelegate.m
 //  iwarp
 //
-//  Created by Nicholas Kostelnik on 11/09/2010.
+//  Created by Nicholas Kostelnik on 27/09/2010.
 //  Copyright __MyCompanyName__ 2010. All rights reserved.
 //
 
 #import "iwarpAppDelegate.h"
+#import "iwarpViewController.h"
 
 @implementation iwarpAppDelegate
 
 @synthesize window;
+@synthesize viewController;
 
 
 #pragma mark -
@@ -19,10 +21,12 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
     
     // Override point for customization after application launch.
-	
+
+    // Add the view controller's view to the window and display.
+    [window addSubview:viewController.view];
     [window makeKeyAndVisible];
-	
-	return YES;
+
+    return YES;
 }
 
 
@@ -75,6 +79,7 @@
 
 
 - (void)dealloc {
+    [viewController release];
     [window release];
     [super dealloc];
 }

@@ -42,14 +42,6 @@
 			PBXPerProjectTemplateStateSaveDate = 307312861;
 			PBXWorkspaceStateSaveDate = 307312861;
 		};
-		perUserProjectItems = {
-			4C2E72DD12489DE400A214C8 = 4C2E72DD12489DE400A214C8 /* PBXTextBookmark */;
-			4C2E72DE12489DE400A214C8 = 4C2E72DE12489DE400A214C8 /* PBXTextBookmark */;
-			4C2E72E212489DE400A214C8 = 4C2E72E212489DE400A214C8 /* PBXTextBookmark */;
-			4C2E72E312489DE400A214C8 = 4C2E72E312489DE400A214C8 /* PBXTextBookmark */;
-			4C2E72E612489DE600A214C8 = 4C2E72E612489DE600A214C8 /* PBXTextBookmark */;
-			4C2E72E712489DE600A214C8 = 4C2E72E712489DE600A214C8 /* PBXTextBookmark */;
-		};
 		sourceControlManager = 4C98CCD1123B727700F0F544 /* Source Control */;
 		userBuildSettings = {
 		};
@@ -85,63 +77,6 @@
 			sepNavVisRange = "{150, 525}";
 			sepNavWindowFrame = "{{542, 162}, {1207, 1334}}";
 		};
-	};
-	4C2E72DD12489DE400A214C8 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 256AC3D80F4B6AC300CF3369 /* WarpAppDelegate.h */;
-		name = "WarpAppDelegate.h: 32";
-		rLen = 0;
-		rLoc = 637;
-		rType = 0;
-		vrLen = 743;
-		vrLoc = 0;
-	};
-	4C2E72DE12489DE400A214C8 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 256AC3D90F4B6AC300CF3369 /* WarpAppDelegate.mm */;
-		name = "WarpAppDelegate.mm: 16";
-		rLen = 0;
-		rLoc = 261;
-		rType = 0;
-		vrLen = 1659;
-		vrLoc = 0;
-	};
-	4C2E72E212489DE400A214C8 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 256AC3D90F4B6AC300CF3369 /* WarpAppDelegate.mm */;
-		name = "WarpAppDelegate.mm: 14";
-		rLen = 0;
-		rLoc = 261;
-		rType = 0;
-		vrLen = 1659;
-		vrLoc = 0;
-	};
-	4C2E72E312489DE400A214C8 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 256AC3D80F4B6AC300CF3369 /* WarpAppDelegate.h */;
-		rLen = 0;
-		rLoc = 743;
-		rType = 0;
-	};
-	4C2E72E612489DE600A214C8 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 256AC3D90F4B6AC300CF3369 /* WarpAppDelegate.mm */;
-		name = "WarpAppDelegate.mm: 43";
-		rLen = 0;
-		rLoc = 987;
-		rType = 0;
-		vrLen = 1659;
-		vrLoc = 0;
-	};
-	4C2E72E712489DE600A214C8 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 256AC3D80F4B6AC300CF3369 /* WarpAppDelegate.h */;
-		name = "WarpAppDelegate.h: 29";
-		rLen = 0;
-		rLoc = 597;
-		rType = 0;
-		vrLen = 743;
-		vrLoc = 0;
 	};
 	4C6EADBD123D6C43001DB8F2 /* Message.h */ = {
 		uiCtxt = {

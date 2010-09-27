@@ -11,10 +11,13 @@
 		1D60589B0D05DD56006BFB54 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.mm */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
-		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
+		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
+		2899E5220DE3E06400AC0155 /* iwarpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E5210DE3E06400AC0155 /* iwarpViewController.xib */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
-		4CA047B8123BF0520002A0AF /* MainView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4CA047B7123BF0520002A0AF /* MainView.mm */; };
-		4CA04883123C053F0002A0AF /* Client.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CA04881123C053F0002A0AF /* Client.cpp */; };
+		28D7ACF80DDB3853001CB0EB /* iwarpViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* iwarpViewController.mm */; };
+		4C5024AC125148B800CD78DA /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C5024AB125148B800CD78DA /* background.png */; };
+		4CBB6A6912514D2A00EACDA3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CBB6A6812514D2A00EACDA3 /* QuartzCore.framework */; };
+		4CBB6AFF125154BF00EACDA3 /* Client.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB6AFD125154BF00EACDA3 /* Client.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,14 +26,18 @@
 		1D3623250D0F684500981E51 /* iwarpAppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = iwarpAppDelegate.mm; sourceTree = "<group>"; };
 		1D6058910D05DD3D006BFB54 /* iwarp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iwarp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		288765FC0DF74451002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		2899E5210DE3E06400AC0155 /* iwarpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = iwarpViewController.xib; sourceTree = "<group>"; };
 		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		28D7ACF60DDB3853001CB0EB /* iwarpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iwarpViewController.h; sourceTree = "<group>"; };
+		28D7ACF70DDB3853001CB0EB /* iwarpViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = iwarpViewController.mm; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* iwarp_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iwarp_Prefix.pch; sourceTree = "<group>"; };
-		4CA047B6123BF0520002A0AF /* MainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainView.h; sourceTree = "<group>"; };
-		4CA047B7123BF0520002A0AF /* MainView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MainView.mm; sourceTree = "<group>"; };
-		4CA04881123C053F0002A0AF /* Client.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Client.cpp; path = ../warp/Client.cpp; sourceTree = SOURCE_ROOT; };
-		4CA04882123C053F0002A0AF /* Client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Client.h; path = ../warp/Client.h; sourceTree = SOURCE_ROOT; };
+		4C5024AB125148B800CD78DA /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		4CBB6A6812514D2A00EACDA3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		4CBB6AFD125154BF00EACDA3 /* Client.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Client.cpp; path = ../warp/Client.cpp; sourceTree = SOURCE_ROOT; };
+		4CBB6AFE125154BF00EACDA3 /* Client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Client.h; path = ../warp/Client.h; sourceTree = SOURCE_ROOT; };
+		4CBB6B39125156AE00EACDA3 /* Constants.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Constants.hpp; path = ../warp/Constants.hpp; sourceTree = SOURCE_ROOT; };
 		8D1107310486CEB800E47090 /* iwarp-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "iwarp-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -41,7 +48,8 @@
 			files = (
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
-				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
+				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
+				4CBB6A6912514D2A00EACDA3 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,12 +59,13 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				4CA04881123C053F0002A0AF /* Client.cpp */,
-				4CA04882123C053F0002A0AF /* Client.h */,
+				4CBB6B39125156AE00EACDA3 /* Constants.hpp */,
+				4CBB6AFD125154BF00EACDA3 /* Client.cpp */,
+				4CBB6AFE125154BF00EACDA3 /* Client.h */,
 				1D3623240D0F684500981E51 /* iwarpAppDelegate.h */,
 				1D3623250D0F684500981E51 /* iwarpAppDelegate.mm */,
-				4CA047B6123BF0520002A0AF /* MainView.h */,
-				4CA047B7123BF0520002A0AF /* MainView.mm */,
+				28D7ACF60DDB3853001CB0EB /* iwarpViewController.h */,
+				28D7ACF70DDB3853001CB0EB /* iwarpViewController.mm */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -93,6 +102,8 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				4C5024AB125148B800CD78DA /* background.png */,
+				2899E5210DE3E06400AC0155 /* iwarpViewController.xib */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* iwarp-Info.plist */,
 			);
@@ -104,7 +115,8 @@
 			children = (
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
-				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
+				288765A40DF7441C002DB57D /* CoreGraphics.framework */,
+				4CBB6A6812514D2A00EACDA3 /* QuartzCore.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -152,6 +164,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
+				2899E5220DE3E06400AC0155 /* iwarpViewController.xib in Resources */,
+				4C5024AC125148B800CD78DA /* background.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,8 +178,8 @@
 			files = (
 				1D60589B0D05DD56006BFB54 /* main.mm in Sources */,
 				1D3623260D0F684500981E51 /* iwarpAppDelegate.mm in Sources */,
-				4CA047B8123BF0520002A0AF /* MainView.mm in Sources */,
-				4CA04883123C053F0002A0AF /* Client.cpp in Sources */,
+				28D7ACF80DDB3853001CB0EB /* iwarpViewController.mm in Sources */,
+				4CBB6AFF125154BF00EACDA3 /* Client.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

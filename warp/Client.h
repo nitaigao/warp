@@ -1,62 +1,73 @@
-/*
- *  Client.h
- *  warp
- *
- *  Created by Nicholas Kostelnik on 11/09/2010.
- *  Copyright 2010 __MyCompanyName__. All rights reserved.
- *
- */
-#include "Message.h"
-#include <string>
+#ifndef CLIENT_H
+#define CLIENT_H
 
-class Client
-{
-	
-public:
-	
-	Client() : connected_(false) { };
-	
-	void send_input() { connected_ = true; };
-	
-	bool connected() { return connected_; };
-	
-	bool connec(const std::string& host, unsigned int port);
-	
-	bool reconnect();
-	
-	void disconnect();
-	
-	int send_left_up();
-	
-	int send_right_up();
-	
-	int send_left_down();
-	
-	int send_left_dragged(int x, int y);
-	
-	int send_right_dragged(int x, int y);
-	
-	int send_right_down();	
-	
-	int send_mouse_moved(int x, int y);
-	
-	int send_key_down(unsigned int flags, int key_code);
-	
-	int send_key_up(unsigned int flags, int key_code);
-	
-	int send_flags(int key_code, unsigned int flags);
-	
-	int send_scroll_wheel(int x, int y);
-	
-	int send_left_double_click();
-	
-private:
-	
-	int send_message(const Message& message);
-	
-	int sock;
-	
-	std::string last_host_;
-	
-	bool connected_;
-};
+	/*
+	 *  Client.h
+	 *  warp
+	 *
+	 *  Created by Nicholas Kostelnik on 11/09/2010.
+	 *  Copyright 2010 __MyCompanyName__. All rights reserved.
+	 *
+	 */
+	#include "Message.h"
+	#include <string>
+
+	#include "Socket.h"
+
+	class Client
+	{
+		
+	public:
+		
+		Client() : connected_(false), timeout_(0), socket_(new Socket()), last_host_("") { };
+		
+		bool connected() { return connected_; };
+		
+		bool connect_to(const std::string& host, unsigned int port);
+		
+		void update(float delta);
+		
+		bool reconnect();
+		
+		void disconnect();
+		
+		void send_left_up();
+		
+		void send_right_up();
+		
+		void send_left_down();
+		
+		void send_left_dragged(int x, int y);
+		
+		void send_right_dragged(int x, int y);
+		
+		void send_right_down();	
+		
+		void send_mouse_moved(int x, int y);
+		
+		void send_key_down(unsigned int flags, int key_code);
+		
+		void send_key_up(unsigned int flags, int key_code);
+		
+		void send_flags(int key_code, unsigned int flags);
+		
+		void send_scroll_wheel(int x, int y);
+		
+		void send_left_double_click();
+		
+	private:
+		
+		bool can_reconnect();
+		
+		void send_message(const Message& message);
+		
+		Socket* socket_;
+		
+		std::string last_host_;
+		
+		float timeout_;
+		
+		bool connected_;
+	};
+
+#endif

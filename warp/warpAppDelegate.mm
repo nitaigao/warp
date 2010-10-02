@@ -14,7 +14,10 @@
 @implementation WarpAppDelegate
 
 - (void)server_update {
-	while (server->receive());
+	while (!quit) {
+    server->receive();
+    client->update(1000);
+	}
 }
 
 - (IBAction)show_connect:(id)sender {
@@ -31,17 +34,17 @@
 - (IBAction)connect:(id)sender {
 	[connect_window orderOut:self];
 	
-	if (black_hole->send_to([[address stringValue] cStringUsingEncoding:NSASCIIStringEncoding], SERVER_PORT))
-	{	
+	if (black_hole->send_to([[address stringValue] cStringUsingEncoding:NSASCIIStringEncoding], SERVER_PORT)) {	
 		[status_menu add_recent_item:[address stringValue]];
 	}
-	else 
-	{
+	else {
 		[connect_window makeKeyAndOrderFront:self]; 
 	}
 }
 
 - (IBAction)quit:(id)sender {
+  black_hole->disable();
+	quit = true;
 	exit(0);
 }
 
@@ -57,7 +60,7 @@
 	[input_view set_client:client];
 	
 	black_hole = new BlackHole(client, connected_window);
-	black_hole->init();
+	black_hole->tap();
 	
 	[NSThread detachNewThreadSelector:@selector(server_update) toTarget:self withObject:nil];
 	

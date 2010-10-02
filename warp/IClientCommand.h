@@ -1,185 +1,191 @@
-/*
- *  IClientCommand.h
- *  warp
- *
- *  Created by Nicholas Kostelnik on 16/09/2010.
- *  Copyright 2010 __MyCompanyName__. All rights reserved.
- *
- */
+#ifndef ICLIENTCOMMAND_HPP
+#define ICLIENTCOMMAND_HPP
 
-#include <ApplicationServices/ApplicationServices.h>
-#include <Carbon/Carbon.h>
+	/*
+	 *  IClientCommand.h
+	 *  warp
+	 *
+	 *  Created by Nicholas Kostelnik on 16/09/2010.
+	 *  Copyright 2010 __MyCompanyName__. All rights reserved.
+	 *
+	 */
 
-#include "Time.h"
-#include "Constants.hpp"
+	#include <ApplicationServices/ApplicationServices.h>
+	#include <Carbon/Carbon.h>
 
-class IClientCommand
-{
-	
-public:
-	
-	virtual int Execute(CGEventRef event, Client* client) = 0;
+	#include "Time.h"
+	#include "Constants.hpp"
+	#include "Client.h"
+
+	class IClientCommand
+	{
 		
-};
-
-class KeyDownClientCommand : public IClientCommand
-{
-	
-public:
-	
-	KeyDownClientCommand(NSWindow* window) : window_(window) { };
-	
-	int Execute(CGEventRef event, Client* client)
-	{
-		CGEventFlags flags = CGEventGetFlags(event);
-		CGKeyCode keycode = (CGKeyCode)CGEventGetIntegerValueField(event, kCGKeyboardEventKeycode);
-		return client->send_key_down(flags, keycode);
-	}
-	
-private:
-	
-	NSWindow* window_;
-};
-
-class KeyUpClientCommand : public IClientCommand
-{
-	
-public:
-	
-	int Execute(CGEventRef event, Client* client)
-	{
-		CGEventFlags flags = CGEventGetFlags(event);
-		CGKeyCode keycode = (CGKeyCode)CGEventGetIntegerValueField(event, kCGKeyboardEventKeycode);
-		return client->send_key_up(flags, keycode);
-	}
-};
-
-class FlagsChangedClientCommand : public IClientCommand
-{
-	
-public:
-	
-	int Execute(CGEventRef event, Client* client)
-	{
-		CGEventFlags flags = CGEventGetFlags(event);
-		CGKeyCode keycode = (CGKeyCode)CGEventGetIntegerValueField(event, kCGKeyboardEventKeycode);
-		return client->send_flags(keycode, flags);
-	}
-};
-
-class LeftMouseUpClientCommand : public IClientCommand
-{
-	
-public:
-	
-	int Execute(CGEventRef event, Client* client)
-	{
-		return client->send_left_up();
-	}
-};
-
-class LeftMouseDownClientCommand : public IClientCommand
-{
-	
-public:
-	
-	LeftMouseDownClientCommand()
-	{
-		last_click_ = timeGetTime();
-	}
-	
-	int Execute(CGEventRef event, Client* client)
-	{	
-		unsigned int time_now = timeGetTime();
-		unsigned int delta = time_now - last_click_;
-				
-		last_click_ = time_now;
+	public:
 		
-		if (delta < DOUBLE_CLICK_THRESHOLD)
+		virtual void Execute(CGEventRef event, Client* client) = 0;
+			
+	};
+
+	class KeyDownClientCommand : public IClientCommand
+	{
+		
+	public:
+		
+		KeyDownClientCommand(NSWindow* window) : window_(window) { };
+		
+		void Execute(CGEventRef event, Client* client)
 		{
-			return client->send_left_double_click();
+			CGEventFlags flags = CGEventGetFlags(event);
+			CGKeyCode keycode = (CGKeyCode)CGEventGetIntegerValueField(event, kCGKeyboardEventKeycode);
+			client->send_key_down(flags, keycode);
 		}
-		else 
+		
+	private:
+		
+		NSWindow* window_;
+	};
+
+	class KeyUpClientCommand : public IClientCommand
+	{
+		
+	public:
+		
+		void Execute(CGEventRef event, Client* client)
 		{
-			return client->send_left_down();
+			CGEventFlags flags = CGEventGetFlags(event);
+			CGKeyCode keycode = (CGKeyCode)CGEventGetIntegerValueField(event, kCGKeyboardEventKeycode);
+			client->send_key_up(flags, keycode);
 		}
-	}
-	
-private:
-	
-	unsigned int last_click_;
-};
+	};
 
-class LeftMouseDraggedClientCommand : public IClientCommand
-{
-	
-public:
-	
-	int Execute(CGEventRef event, Client* client)
+	class FlagsChangedClientCommand : public IClientCommand
 	{
-		int x = CGEventGetIntegerValueField(event, kCGMouseEventDeltaX);
-		int y = CGEventGetIntegerValueField(event, kCGMouseEventDeltaY);
-		return client->send_left_dragged(x, y);
-	}
-};
+		
+	public:
+		
+		void Execute(CGEventRef event, Client* client)
+		{
+			CGEventFlags flags = CGEventGetFlags(event);
+			CGKeyCode keycode = (CGKeyCode)CGEventGetIntegerValueField(event, kCGKeyboardEventKeycode);
+			client->send_flags(keycode, flags);
+		}
+	};
 
-class RightMouseUpClientCommand : public IClientCommand
-{
-	
-public:
-	
-	int Execute(CGEventRef event, Client* client)
+	class LeftMouseUpClientCommand : public IClientCommand
 	{
-		return client->send_right_up();
-	}
-};
+		
+	public:
+		
+		void Execute(CGEventRef event, Client* client)
+		{
+			client->send_left_up();
+		}
+	};
 
-class RightMouseDownClientCommand : public IClientCommand
-{
-	
-public:
-	
-	int Execute(CGEventRef event, Client* client)
+	class LeftMouseDownClientCommand : public IClientCommand
 	{
-		return client->send_right_down();
-	}
-};
+		
+	public:
+		
+		LeftMouseDownClientCommand()
+		{
+			last_click_ = Time::get();
+		}
+		
+		void Execute(CGEventRef event, Client* client)
+		{	
+			unsigned int time_now = Time::get();
+			unsigned int delta = time_now - last_click_;
+					
+			last_click_ = time_now;
+			
+			if (delta < DOUBLE_CLICK_THRESHOLD)
+			{
+				client->send_left_double_click();
+			}
+			else 
+			{
+				client->send_left_down();
+			}
+		}
+		
+	private:
+		
+		unsigned int last_click_;
+	};
 
-class RightMouseDraggedClientCommand : public IClientCommand
-{
-	
-public:
-	
-	int Execute(CGEventRef event, Client* client)
+	class LeftMouseDraggedClientCommand : public IClientCommand
 	{
-		int x = CGEventGetIntegerValueField(event, kCGMouseEventDeltaX);
-		int y = CGEventGetIntegerValueField(event, kCGMouseEventDeltaY);
-		return client->send_right_dragged(x, y);
-	}
-};
+		
+	public:
+		
+		void Execute(CGEventRef event, Client* client)
+		{
+			int x = CGEventGetIntegerValueField(event, kCGMouseEventDeltaX);
+			int y = CGEventGetIntegerValueField(event, kCGMouseEventDeltaY);
+			client->send_left_dragged(x, y);
+		}
+	};
 
-class MouseMovedClientCommand : public IClientCommand
-{
-	
-public:
-	
-	int Execute(CGEventRef event, Client* client)
-	{			
-		int x = CGEventGetIntegerValueField(event, kCGMouseEventDeltaX);
-		int y = CGEventGetIntegerValueField(event, kCGMouseEventDeltaY);
-		return client->send_mouse_moved(x, y);
-	}
-};
-
-class ScrollWheelClientCommand : public IClientCommand
-{
-	
-public:
-	
-	int Execute(CGEventRef event, Client* client)
+	class RightMouseUpClientCommand : public IClientCommand
 	{
-		int x = CGEventGetIntegerValueField(event, kCGScrollWheelEventDeltaAxis2);
-		int y = CGEventGetIntegerValueField(event, kCGScrollWheelEventDeltaAxis1);
-		return client->send_scroll_wheel(x, y);
-	}
-};
+		
+	public:
+		
+		void Execute(CGEventRef event, Client* client)
+		{
+			client->send_right_up();
+		}
+	};
+
+	class RightMouseDownClientCommand : public IClientCommand
+	{
+		
+	public:
+		
+		void Execute(CGEventRef event, Client* client)
+		{
+			client->send_right_down();
+		}
+	};
+
+	class RightMouseDraggedClientCommand : public IClientCommand
+	{
+		
+	public:
+		
+		void Execute(CGEventRef event, Client* client)
+		{
+			int x = CGEventGetIntegerValueField(event, kCGMouseEventDeltaX);
+			int y = CGEventGetIntegerValueField(event, kCGMouseEventDeltaY);
+			client->send_right_dragged(x, y);
+		}
+	};
+
+	class MouseMovedClientCommand : public IClientCommand
+	{
+		
+	public:
+		
+		void Execute(CGEventRef event, Client* client)
+		{			
+			int x = CGEventGetIntegerValueField(event, kCGMouseEventDeltaX);
+			int y = CGEventGetIntegerValueField(event, kCGMouseEventDeltaY);
+			client->send_mouse_moved(x, y);
+		}
+	};
+
+	class ScrollWheelClientCommand : public IClientCommand
+	{
+		
+	public:
+		
+		void Execute(CGEventRef event, Client* client)
+		{
+			int x = CGEventGetIntegerValueField(event, kCGScrollWheelEventDeltaAxis2);
+			int y = CGEventGetIntegerValueField(event, kCGScrollWheelEventDeltaAxis1);
+			client->send_scroll_wheel(x, y);
+		}
+	};
+
+#endif

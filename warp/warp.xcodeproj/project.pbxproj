@@ -12,6 +12,7 @@
 		4C12929B123D1ED80080D294 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C12929A123D1ED80080D294 /* Carbon.framework */; };
 		4C131D2D123D6628003B8BB1 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C131D2C123D6628003B8BB1 /* menu.png */; };
 		4C2E715A124893D000A214C8 /* StatusMenu.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4C2E7159124893D000A214C8 /* StatusMenu.mm */; };
+		4C5FB8D012578CE500923183 /* BlackHole.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4C5FB8CF12578CE500923183 /* BlackHole.mm */; };
 		4C98CCE8123B740200F0F544 /* MainView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4C98CCE7123B740200F0F544 /* MainView.mm */; };
 		4C98CD33123B79A000F0F544 /* Client.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C98CD32123B799F00F0F544 /* Client.cpp */; };
 		4CBAFA70124207D300C5C338 /* Server.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CBAFA6F124207D300C5C338 /* Server.cpp */; };
@@ -41,6 +42,8 @@
 		4C131D2C123D6628003B8BB1 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
 		4C2E7158124893D000A214C8 /* StatusMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusMenu.h; sourceTree = "<group>"; };
 		4C2E7159124893D000A214C8 /* StatusMenu.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = StatusMenu.mm; sourceTree = "<group>"; };
+		4C5FB8CF12578CE500923183 /* BlackHole.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BlackHole.mm; sourceTree = "<group>"; };
+		4C5FB97B125793FF00923183 /* Socket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Socket.h; sourceTree = "<group>"; };
 		4C6EADBD123D6C43001DB8F2 /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
 		4C98CCE6123B740200F0F544 /* MainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainView.h; sourceTree = "<group>"; };
 		4C98CCE7123B740200F0F544 /* MainView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MainView.mm; sourceTree = "<group>"; };
@@ -164,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				4CB7DD8D123F5D56009E454C /* BlackHole.h */,
+				4C5FB8CF12578CE500923183 /* BlackHole.mm */,
 				4C98CD31123B799F00F0F544 /* Client.h */,
 				4C98CD32123B799F00F0F544 /* Client.cpp */,
 				4CBAFA1F124203DA00C5C338 /* IClientCommand.h */,
@@ -174,8 +178,8 @@
 		4CB886D41240A54E004FB87E /* Server */ = {
 			isa = PBXGroup;
 			children = (
-				4CFF64261247E97700CBB66C /* Server.h */,
 				4CB8872D1240AC61004FB87E /* IServerCommand.h */,
+				4CFF64261247E97700CBB66C /* Server.h */,
 				4CBAFA6F124207D300C5C338 /* Server.cpp */,
 			);
 			name = Server;
@@ -187,6 +191,7 @@
 				4C6EADBD123D6C43001DB8F2 /* Message.h */,
 				4CA0904F12474A4E00E6A4FD /* Time.h */,
 				4C0581DE12480B3D007B874A /* Constants.hpp */,
+				4C5FB97B125793FF00923183 /* Socket.h */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -288,6 +293,7 @@
 				4CCF956B123CF3C800EE0530 /* BezelWindow.mm in Sources */,
 				4CBAFA70124207D300C5C338 /* Server.cpp in Sources */,
 				4C2E715A124893D000A214C8 /* StatusMenu.mm in Sources */,
+				4C5FB8D012578CE500923183 /* BlackHole.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +328,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
 				SDKROOT = macosx10.6;
+				VALID_ARCHS = i386;
 			};
 			name = Distribution;
 		};

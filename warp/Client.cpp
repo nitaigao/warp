@@ -8,219 +8,160 @@
  */
 
 #include "Client.h"
-
-#include <iostream>
-#include <sstream>
-
-#include <sys/types.h>
-#include <sys/socket.h>
-#include <netinet/in.h>
-#include <netdb.h>
-#include <fcntl.h>
-
 #include "Constants.hpp"
 
-void set_non_blocking(int sock)
+void Client::update(float delta)
 {
-	int flags;  
-	if ((flags = fcntl(sock, F_GETFL, 0)) < 0) 
-	{
-		std::cerr << "ERROR, couldn't get socket flags" << std::endl;
-	}
-	
-	if (fcntl(sock, F_SETFL, flags | O_NONBLOCK) < 0) 
-	{ 
-		std::cerr << "ERROR, couldn't set socket flags" << std::endl;
-	}
+  if (connected_ && timeout_ > 0)
+  {
+    timeout_ -= delta;
+  
+    if (timeout_ <= 0)
+    {
+      disconnect();
+    }
+  }
 }
 
-bool Client::connec(const std::string& host, unsigned int port)
+bool Client::connect_to(const std::string& host, unsigned int port)
 {	
-	struct hostent *server = gethostbyname(host.c_str());
-	
-  if (server == NULL)
-  {
-    std::cerr << "ERROR, no such host" << std::endl;
-		return false;
-  }
-	
-	struct sockaddr_in server_address;
-	bzero((char *) &server_address, sizeof(server_address));
-	server_address.sin_family = AF_INET;
-	bcopy((char *)server->h_addr, (char *)&server_address.sin_addr.s_addr, server->h_length);
-  server_address.sin_port = htons(port);
-
-	sock = socket(AF_INET, SOCK_STREAM, 0);
-	
-	set_non_blocking(sock);
-	
-	if (sock < 0)
-  {
-    std::cerr << "ERROR, unable to create socket" << std::endl;
-		return false;
-  }
-	
-	fd_set outgoing; 
-	FD_ZERO(&outgoing); 
-	FD_SET(sock, &outgoing); 
-
-	setsockopt(sock, SOL_SOCKET, SO_NOSIGPIPE, (void *)&outgoing, sizeof(int));	
-	connect(sock, (struct sockaddr*)&server_address, sizeof(server_address));
-	
-	struct timeval tv; 
-	tv.tv_sec = 3; 
-	tv.tv_usec = 0; 
-	
-	int result = select(sock + 1, NULL, &outgoing, NULL, &tv);
-	
-	if (result > 0)
-	{
-		socklen_t lon = sizeof(int);
-		int valopt;
-		
-		if (getsockopt(sock, SOL_SOCKET, SO_ERROR, (void*)(&valopt), &lon) < 0) 
-		{ 
-			std::cerr << "ERROR, can't get socket options" << std::endl; 
-		} 
-		else if (valopt) 
-		{ 
-			std::cerr << "ERROR, connection refused" << std::endl;
-		}
-		else 
-		{
-			last_host_ = host;
-			connected_ = true;
-		}
-	}
-	
-	return connected_;
+	bool result = socket_->connect_to(host, port);
+	timeout_ = TIME_OUT;
+	connected_ = true;
+	last_host_ = host;
+	return result;
 }
 
 bool Client::reconnect()
 {
-	return this->connec(last_host_, SERVER_PORT);
+	bool result = false;
+	
+	if (can_reconnect())
+	{
+		result = this->connect_to(last_host_, SERVER_PORT);
+	}
+	
+	return result;
 }
 
 void Client::disconnect()
 {
 	connected_ = false;
-	shutdown(sock, 2);
+	socket_->terminate();
 }
 
-int Client::send_message(const Message& message)
-{	
-	if (connected_)
-	{
-		char* data = new char[sizeof(Message)];
-		memcpy(data, &message, sizeof(Message));
-		int result = write(sock, data, sizeof(Message));
+bool Client::can_reconnect()
+{
+	return (last_host_.length() > 0);
+}
 
-		if (result < 0)
-		{
-			std::cerr << "ERROR writing to socket" << std::endl;
-			disconnect();
-		}
-		
-		return result;
+void Client::send_message(const Message& message)
+{	
+	if (!connected_)
+	{
+		reconnect();
 	}
 	
-	return 0;
+	timeout_ = TIME_OUT;
+	char* data = new char[sizeof(Message)];
+	memcpy(data, &message, sizeof(Message));	
+	socket_->send(data);
 }
 
-int Client::send_left_double_click()
+void Client::send_left_double_click()
 {
 	Message message;
 	message.type = LEFT_DOUBLE_CLICK;
-	return send_message(message);
+	send_message(message);
 }
 
-int Client::send_left_down()
+void Client::send_left_down()
 {
 	Message message;
 	message.type = LEFT_DOWN;
-	return send_message(message);
+	send_message(message);
 }
 
-int Client::send_key_down(unsigned int flags, int key_code)
+void Client::send_key_down(unsigned int flags, int key_code)
 {
 	Message message;
 	message.type = KEY_DOWN;
 	message.key_code = key_code;
 	message.flags = flags;
-	return send_message(message);
+	send_message(message);
 }
 
-int Client::send_key_up(unsigned int flags, int key_code)
+void Client::send_key_up(unsigned int flags, int key_code)
 {
 	Message message;
 	message.type = KEY_UP;
 	message.key_code = key_code;
 	message.flags = flags;
-	return send_message(message);
+	send_message(message);
 }
 
-int Client::send_right_down()
+void Client::send_right_down()
 {
 	Message message;
 	message.type = RIGHT_DOWN;
-	return send_message(message);
+	send_message(message);
 }
 
-int Client::send_left_up()
+void Client::send_left_up()
 {
 	Message message;
 	message.type = LEFT_UP;
-	return send_message(message);
+	send_message(message);
 }
 
-int Client::send_right_up()
+void Client::send_right_up()
 {
 	Message message;
 	message.type = RIGHT_UP;
-	return send_message(message);
+	send_message(message);
 }
 
-int Client::send_mouse_moved(int x, int y)
+void Client::send_mouse_moved(int x, int y)
 {
 	Message message;
 	message.type = MOUSE_MOVED;
 	message.x = x;
 	message.y = y;
-	return send_message(message);
+	send_message(message);
 }
 
-int Client::send_left_dragged(int x, int y)
+void Client::send_left_dragged(int x, int y)
 {
 	Message message;
 	message.type = LEFT_DRAGGED;
 	message.x = x;
 	message.y = y;
-	return send_message(message);
+	send_message(message);
 }
 
-int Client::send_right_dragged(int x, int y)
+void Client::send_right_dragged(int x, int y)
 {
 	Message message;
 	message.type = RIGHT_DRAGGED;
 	message.x = x;
 	message.y = y;
-	return send_message(message);
+	send_message(message);
 }
 
-int Client::send_flags(int key_code, unsigned int flags)
+void Client::send_flags(int key_code, unsigned int flags)
 {
 	Message message;
 	message.type = FLAGS_CHANGED;
 	message.key_code = key_code;
 	message.flags = flags;
-	return send_message(message);
+	send_message(message);
 }
 
-int Client::send_scroll_wheel(int x, int y)
+void Client::send_scroll_wheel(int x, int y)
 {
 	Message message;
 	message.type = SCROLL_WHEEL;
 	message.x = x;
 	message.y = y;	
-	return send_message(message);
+	send_message(message);
 }

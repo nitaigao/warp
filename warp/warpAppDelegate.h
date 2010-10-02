@@ -12,7 +12,6 @@
 #import "MainView.h"
 #import "StatusMenu.h"
 
-
 #import "Server.h"
 #import "Client.h"
 #import "BlackHole.h"
@@ -29,6 +28,8 @@
 	BlackHole* black_hole;	
 	Client *client;
 	Server* server;
+	
+	bool quit;
 }
 
 - (IBAction)show_connect:(id)sender;

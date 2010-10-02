@@ -439,8 +439,8 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>4CBB6A23125149AC00EACDA3</string>
-				<string>4CBB6A24125149AC00EACDA3</string>
+				<string>4C38885C1253BB1C005E0405</string>
+				<string>4C38885D1253BB1C005E0405</string>
 				<string>1C9437FD063B20B00039CFAC</string>
 				<string>1C9437FE063B20B00039CFAC</string>
 				<string>1C9437FF063B20B00039CFAC</string>
@@ -477,12 +477,6 @@
 	<integer>0</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>4CBB6B5F125158CA00EACDA3</string>
-		<string>4CBB6B4F1251582300EACDA3</string>
-		<string>4CBB6B341251567400EACDA3</string>
-		<string>4CBB6B1F1251557F00EACDA3</string>
-		<string>1C530D5B069F1CE1000CFCEE</string>
-		<string>1C530D54069F1CE1000CFCEE</string>
 		<string>1C530D52069F1CE1000CFCEE</string>
 		<string>/Users/nk/Development/warp/iwarp/iwarp.xcodeproj</string>
 	</array>
@@ -645,7 +639,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>&lt;No Editor&gt;</string>
+								<string></string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -662,8 +656,6 @@
 							<string>0pt</string>
 						</dict>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -703,7 +695,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C530D52069F1CE1000CFCEE</string>
-				<string>4CBB6A27125149AC00EACDA3</string>
+				<string>4C38885E1253BB1C005E0405</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>

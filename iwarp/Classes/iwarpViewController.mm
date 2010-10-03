@@ -49,7 +49,7 @@
 - (IBAction)connect:(id)sender {
 	[self showView:sessionView];
 	[addressField resignFirstResponder];
-	client->connec([[addressField text] UTF8String], SERVER_PORT);
+	client->connect_to([[addressField text] UTF8String], SERVER_PORT);
 }
 
 bool moved = false;

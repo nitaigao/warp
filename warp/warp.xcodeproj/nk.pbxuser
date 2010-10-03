@@ -26,7 +26,7 @@
 	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
 		activeArchitecturePreference = x86_64;
-		activeBuildConfigurationName = Debug;
+		activeBuildConfigurationName = Distribution;
 		activeExecutable = 4C98CCBB123B727000F0F544 /* warp */;
 		activeTarget = 8D1107260486CEB800E47090 /* warp */;
 		addToTargets = (
@@ -39,22 +39,12 @@
 			4C98CCBB123B727000F0F544 /* warp */,
 		);
 		perUserDictionary = {
-			PBXPerProjectTemplateStateSaveDate = 307830611;
-			PBXWorkspaceStateSaveDate = 307830611;
+			PBXPerProjectTemplateStateSaveDate = 307836595;
+			PBXWorkspaceStateSaveDate = 307836595;
 		};
 		perUserProjectItems = {
-			4CDBE5C212591F6B00322E76 /* XCBuildMessageTextBookmark */ = 4CDBE5C212591F6B00322E76 /* XCBuildMessageTextBookmark */;
-			4CDBE5C312591F6B00322E76 /* PBXTextBookmark */ = 4CDBE5C312591F6B00322E76 /* PBXTextBookmark */;
-			4CDBE5CA12591F6F00322E76 /* PBXTextBookmark */ = 4CDBE5CA12591F6F00322E76 /* PBXTextBookmark */;
-			4CDBE5D71259215B00322E76 /* XCBuildMessageTextBookmark */ = 4CDBE5D71259215B00322E76 /* XCBuildMessageTextBookmark */;
-			4CDBE5D81259215B00322E76 /* PBXTextBookmark */ = 4CDBE5D81259215B00322E76 /* PBXTextBookmark */;
-			4CDBE5E7125921F000322E76 /* XCBuildMessageTextBookmark */ = 4CDBE5E7125921F000322E76 /* XCBuildMessageTextBookmark */;
-			4CDBE5E8125921F000322E76 /* PBXTextBookmark */ = 4CDBE5E8125921F000322E76 /* PBXTextBookmark */;
-			4CDBE60A1259225D00322E76 /* PBXTextBookmark */ = 4CDBE60A1259225D00322E76 /* PBXTextBookmark */;
-			4CDBE60B1259225D00322E76 /* XCBuildMessageTextBookmark */ = 4CDBE60B1259225D00322E76 /* XCBuildMessageTextBookmark */;
-			4CDBE60C1259225D00322E76 /* PBXTextBookmark */ = 4CDBE60C1259225D00322E76 /* PBXTextBookmark */;
-			4CDBE61F1259228D00322E76 /* XCBuildMessageTextBookmark */ = 4CDBE61F1259228D00322E76 /* XCBuildMessageTextBookmark */;
-			4CDBE6201259228D00322E76 /* PBXTextBookmark */ = 4CDBE6201259228D00322E76 /* PBXTextBookmark */;
+			4C6410D6125936BB008CA792 /* PBXTextBookmark */ = 4C6410D6125936BB008CA792 /* PBXTextBookmark */;
+			4CDBE6581259338F00322E76 /* PBXTextBookmark */ = 4CDBE6581259338F00322E76 /* PBXTextBookmark */;
 		};
 		sourceControlManager = 4C98CCD1123B727700F0F544 /* Source Control */;
 		userBuildSettings = {
@@ -102,11 +92,21 @@
 	};
 	4C5FB97B125793FF00923183 /* NixSocket.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {705, 3328}}";
-			sepNavSelRange = "{479, 31}";
-			sepNavVisRange = "{242, 1110}";
+			sepNavIntBoundsRect = "{{0, 0}, {705, 3445}}";
+			sepNavSelRange = "{2212, 0}";
+			sepNavVisRange = "{1821, 1223}";
 			sepNavWindowFrame = "{{229, 0}, {750, 878}}";
 		};
+	};
+	4C6410D6125936BB008CA792 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4C5FB97B125793FF00923183 /* NixSocket.h */;
+		name = "NixSocket.h: 113";
+		rLen = 0;
+		rLoc = 2212;
+		rType = 0;
+		vrLen = 1223;
+		vrLoc = 1821;
 	};
 	4C6EADBD123D6C43001DB8F2 /* Message.h */ = {
 		uiCtxt = {
@@ -228,9 +228,9 @@
 	};
 	4CBAFA6F124207D300C5C338 /* Exit.cpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1152, 858}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1152, 832}}";
 			sepNavSelRange = "{756, 0}";
-			sepNavVisRange = "{0, 1511}";
+			sepNavVisRange = "{0, 1499}";
 			sepNavWindowFrame = "{{78, 0}, {1211, 878}}";
 		};
 	};
@@ -258,128 +258,23 @@
 			sepNavWindowFrame = "{{637, 511}, {1223, 878}}";
 		};
 	};
-	4CDBE5C212591F6B00322E76 /* XCBuildMessageTextBookmark */ = {
-		isa = PBXTextBookmark;
-		comments = "'MOUSE_MOVED' was not declared in this scope";
-		fRef = 4CB8872D1240AC61004FB87E /* IExitCommand.hpp */;
-		fallbackIsa = XCBuildMessageTextBookmark;
-		rLen = 0;
-		rLoc = 12;
-		rType = 1;
-	};
-	4CDBE5C312591F6B00322E76 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 4CB8872D1240AC61004FB87E /* IExitCommand.hpp */;
-		name = "IServerCommand.h: 131";
-		rLen = 0;
-		rLoc = 170;
-		rType = 0;
-		vrLen = 0;
-		vrLoc = 180;
-	};
-	4CDBE5CA12591F6F00322E76 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 4CB8872D1240AC61004FB87E /* IExitCommand.hpp */;
-		name = "IServerCommand.h: 131";
-		rLen = 0;
-		rLoc = 170;
-		rType = 0;
-		vrLen = 0;
-		vrLoc = 180;
-	};
 	4CDBE5D3125920F700322E76 /* OSXExitCommands.hpp */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {849, 3172}}";
-			sepNavSelRange = "{390, 0}";
-			sepNavVisRange = "{0, 1417}";
+			sepNavSelRange = "{762, 1}";
+			sepNavVisRange = "{0, 1412}";
 			sepNavWindowFrame = "{{19, 0}, {908, 877}}";
 		};
 	};
-	4CDBE5D71259215B00322E76 /* XCBuildMessageTextBookmark */ = {
+	4CDBE6581259338F00322E76 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		comments = "Cannot convert 'int*' to 'IServerCommand*' in assignment";
-		fRef = 4CBAFA6F124207D300C5C338 /* Exit.cpp */;
-		fallbackIsa = XCBuildMessageTextBookmark;
-		rLen = 1;
-		rLoc = 24;
-		rType = 1;
-	};
-	4CDBE5D81259215B00322E76 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 4CBAFA6F124207D300C5C338 /* Exit.cpp */;
-		name = "Exit.cpp: 15";
+		fRef = 4C5FB97B125793FF00923183 /* NixSocket.h */;
+		name = "NixSocket.h: 113";
 		rLen = 0;
-		rLoc = 292;
+		rLoc = 2212;
 		rType = 0;
-		vrLen = 473;
-		vrLoc = 107;
-	};
-	4CDBE5E7125921F000322E76 /* XCBuildMessageTextBookmark */ = {
-		isa = PBXTextBookmark;
-		comments = "Expected type-specifier before 'LeftUpCommand'";
-		fRef = 4CBAFA6F124207D300C5C338 /* Exit.cpp */;
-		fallbackIsa = XCBuildMessageTextBookmark;
-		rLen = 1;
-		rLoc = 24;
-		rType = 1;
-	};
-	4CDBE5E8125921F000322E76 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 4CBAFA6F124207D300C5C338 /* Exit.cpp */;
-		name = "Exit.cpp: 21";
-		rLen = 0;
-		rLoc = 292;
-		rType = 0;
-		vrLen = 607;
-		vrLoc = 220;
-	};
-	4CDBE60A1259225D00322E76 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 4CFF64261247E97700CBB66C /* Exit.h */;
-		name = "Exit.h: 6";
-		rLen = 0;
-		rLoc = 54;
-		rType = 0;
-		vrLen = 170;
-		vrLoc = 37;
-	};
-	4CDBE60B1259225D00322E76 /* XCBuildMessageTextBookmark */ = {
-		isa = PBXTextBookmark;
-		comments = "Invalid types 'int[MessageTypes]' for array subscript";
-		fRef = 4CBAFA6F124207D300C5C338 /* Exit.cpp */;
-		fallbackIsa = XCBuildMessageTextBookmark;
-		rLen = 1;
-		rLoc = 26;
-		rType = 1;
-	};
-	4CDBE60C1259225D00322E76 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 4CBAFA6F124207D300C5C338 /* Exit.cpp */;
-		name = "Exit.cpp: 23";
-		rLen = 0;
-		rLoc = 292;
-		rType = 0;
-		vrLen = 607;
-		vrLoc = 220;
-	};
-	4CDBE61F1259228D00322E76 /* XCBuildMessageTextBookmark */ = {
-		isa = PBXTextBookmark;
-		comments = "IServerCommand.h: No such file or directory";
-		fRef = 4CBAFA6F124207D300C5C338 /* Exit.cpp */;
-		fallbackIsa = XCBuildMessageTextBookmark;
-		rLen = 1;
-		rLoc = 3;
-		rType = 1;
-	};
-	4CDBE6201259228D00322E76 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 4CBAFA6F124207D300C5C338 /* Exit.cpp */;
-		name = "Exit.cpp: 4";
-		rLen = 0;
-		rLoc = 40;
-		rType = 0;
-		vrLen = 156;
-		vrLoc = 0;
+		vrLen = 1288;
+		vrLoc = 1821;
 	};
 	4CFF64261247E97700CBB66C /* Exit.h */ = {
 		uiCtxt = {

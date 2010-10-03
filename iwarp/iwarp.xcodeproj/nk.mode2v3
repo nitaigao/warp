@@ -439,8 +439,8 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>4C38885C1253BB1C005E0405</string>
-				<string>4C38885D1253BB1C005E0405</string>
+				<string>4CB169831259352200CC645E</string>
+				<string>4CB169841259352200CC645E</string>
 				<string>1C9437FD063B20B00039CFAC</string>
 				<string>1C9437FE063B20B00039CFAC</string>
 				<string>1C9437FF063B20B00039CFAC</string>
@@ -477,6 +477,10 @@
 	<integer>0</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>4CB16991125935D200CC645E</string>
+		<string>4CB1698E1259352200CC645E</string>
+		<string>1C530D5B069F1CE1000CFCEE</string>
+		<string>1C530D54069F1CE1000CFCEE</string>
 		<string>1C530D52069F1CE1000CFCEE</string>
 		<string>/Users/nk/Development/warp/iwarp/iwarp.xcodeproj</string>
 	</array>
@@ -646,14 +650,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {500, 0}}</string>
+								<string>{{0, 0}, {500, 118}}</string>
 								<key>RubberWindowFrame</key>
 								<string>35 415 500 440 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>0pt</string>
+							<string>118pt</string>
 						</dict>
 						<dict>
 							<key>ContentConfiguration</key>
@@ -670,14 +674,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 5}, {500, 394}}</string>
+								<string>{{0, 123}, {500, 276}}</string>
 								<key>RubberWindowFrame</key>
 								<string>35 415 500 440 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXBuildResultsModule</string>
 							<key>Proportion</key>
-							<string>394pt</string>
+							<string>276pt</string>
 						</dict>
 					</array>
 					<key>Proportion</key>
@@ -695,7 +699,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C530D52069F1CE1000CFCEE</string>
-				<string>4C38885E1253BB1C005E0405</string>
+				<string>4CB169851259352200CC645E</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
@@ -739,8 +743,8 @@
 										<string>yes</string>
 										<key>sizes</key>
 										<array>
-											<string>{{0, 0}, {333, 206}}</string>
-											<string>{{333, 0}, {384, 206}}</string>
+											<string>{{0, 0}, {333, 210}}</string>
+											<string>{{333, 0}, {384, 210}}</string>
 										</array>
 									</dict>
 									<key>VerticalSplitView</key>
@@ -755,8 +759,8 @@
 										<string>yes</string>
 										<key>sizes</key>
 										<array>
-											<string>{{0, 0}, {717, 206}}</string>
-											<string>{{0, 206}, {717, 190}}</string>
+											<string>{{0, 0}, {717, 210}}</string>
+											<string>{{0, 210}, {717, 186}}</string>
 										</array>
 									</dict>
 								</dict>
@@ -789,7 +793,7 @@
 										<real>154</real>
 									</array>
 									<key>Frame</key>
-									<string>{{333, 0}, {384, 206}}</string>
+									<string>{{333, 0}, {384, 210}}</string>
 									<key>RubberWindowFrame</key>
 									<string>45 418 717 437 0 0 1440 878 </string>
 								</dict>
@@ -817,13 +821,13 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C530D54069F1CE1000CFCEE</string>
-				<string>4CBB6A28125149AC00EACDA3</string>
+				<string>4CB169861259352200CC645E</string>
 				<string>1C162984064C10D400B95A72</string>
-				<string>4CBB6A29125149AC00EACDA3</string>
-				<string>4CBB6A2A125149AC00EACDA3</string>
-				<string>4CBB6A2B125149AC00EACDA3</string>
-				<string>4CBB6A2C125149AC00EACDA3</string>
-				<string>4CBB6A2D125149AC00EACDA3</string>
+				<string>4CB169871259352200CC645E</string>
+				<string>4CB169881259352200CC645E</string>
+				<string>4CB169891259352200CC645E</string>
+				<string>4CB1698A1259352200CC645E</string>
+				<string>4CB1698B1259352200CC645E</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.debugV3</string>
@@ -985,7 +989,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C530D5B069F1CE1000CFCEE</string>
-				<string>4CBB6A2E125149AC00EACDA3</string>
+				<string>4CB1698C1259352200CC645E</string>
 				<string>1C78EAAC065D492600B07095</string>
 			</array>
 			<key>ToolbarConfiguration</key>

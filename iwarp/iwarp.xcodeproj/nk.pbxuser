@@ -31,9 +31,9 @@
 	};
 	28D7ACF70DDB3853001CB0EB /* iwarpViewController.mm */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1152, 1586}}";
-			sepNavSelRange = "{1942, 0}";
-			sepNavVisRange = "{1387, 1672}";
+			sepNavIntBoundsRect = "{{0, 0}, {775, 1612}}";
+			sepNavSelRange = "{1320, 0}";
+			sepNavVisRange = "{1219, 172}";
 			sepNavWindowFrame = "{{19, 0}, {1211, 878}}";
 		};
 	};
@@ -52,8 +52,8 @@
 			4C50249D1251482000CD78DA /* iwarp */,
 		);
 		perUserDictionary = {
-			PBXPerProjectTemplateStateSaveDate = 307477275;
-			PBXWorkspaceStateSaveDate = 307477275;
+			PBXPerProjectTemplateStateSaveDate = 307836188;
+			PBXWorkspaceStateSaveDate = 307836188;
 		};
 		sourceControlManager = 4C5024A81251482800CD78DA /* Source Control */;
 		userBuildSettings = {

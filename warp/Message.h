@@ -18,7 +18,7 @@ enum MessageTypes
 	LEFT_UP = 3,
 	RIGHT_UP = 4,
 	KEY_DOWN = 5,
-	MOUSE_MOVED = 6,
+	MOUSE_MOVE = 6,
 	LEFT_DRAGGED = 7,
 	RIGHT_DRAGGED = 8,
 	FLAGS_CHANGED = 9,

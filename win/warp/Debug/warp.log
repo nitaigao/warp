@@ -1,13 +1,22 @@
-﻿Build started 02/10/2010 19:28:42.
+﻿Build started 03/10/2010 21:15:29.
 Project "C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects\wormhole\win\warp\warp.vcxproj" on node 2 (build target(s)).
 InitializeBuildStatus:
-  Creating "Debug\warp.unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Touching "Debug\warp.unsuccessfulbuild".
 ClCompile:
   C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
   main.cpp
-c:\documents and settings\administrator\my documents\visual studio 2010\projects\wormhole\warp\server.h(10): fatal error C1083: Cannot open include file: 'sys/socket.h': No such file or directory
-Done Building Project "C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects\wormhole\win\warp\warp.vcxproj" (build target(s)) -- FAILED.
+c:\documents and settings\administrator\my documents\visual studio 2010\projects\wormhole\win\warp\main.cpp(130): warning C4700: uninitialized local variable 'return_data' used
+Link:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects\wormhole\win\Debug\warp.exe" /NOLOGO ws2_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\warp.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects\wormhole\win\Debug\warp.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects\wormhole\win\Debug\warp.lib" /MACHINE:X86 Debug\main.obj
+  LINK : C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects\wormhole\win\Debug\warp.exe not found or not built by the last incremental link; performing full link
+  warp.vcxproj -> C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects\wormhole\win\Debug\warp.exe
+Manifest:
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects\wormhole\win\Debug\warp.exe;#1" /manifest Debug\warp.exe.intermediate.manifest
+FinalizeBuildStatus:
+  Deleting file "Debug\warp.unsuccessfulbuild".
+  Touching "Debug\warp.lastbuildstate".
+Done Building Project "C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects\wormhole\win\warp\warp.vcxproj" (build target(s)).
 
-Build FAILED.
+Build succeeded.
 
-Time Elapsed 00:00:01.78
+Time Elapsed 00:00:01.67

@@ -3,7 +3,7 @@
 #include "Message.h"
 #include "IExitCommand.hpp"
 
-#ifdef _WINDOWS
+#ifdef _WIN32
 
 	#include "WinExitCommands.hpp"
 	#include "WinSocket.h"
@@ -12,6 +12,11 @@
 		: socket_(new WinSocket())
 	{
 		message_types_[MOUSE_MOVE]				= new MouseMovedCommand();
+		message_types_[LEFT_UP]					= new LeftUpCommand();
+		message_types_[LEFT_DOWN]				= new LeftDownCommand();
+		message_types_[RIGHT_UP]				= new RightUpCommand();
+		message_types_[RIGHT_DOWN]				= new RightDownCommand();
+		message_types_[LEFT_DOUBLE_CLICK]		= new LeftDoubleClickCommand();
 	}
 
 #else

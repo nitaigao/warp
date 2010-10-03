@@ -1,9 +1,13 @@
 #ifndef WINSOCKET_H
 #define WINSOCKET_H
 
-  #include "../../warp/ISocket.hpp"
+	#include <iostream>
+	#include <WinSock.h>
+	#include <vector>
 
-  class WinSocket
+  #include "ISocket.hpp"
+
+  class WinSocket : public ISocket
   {
 
   	int listen_socket_;
@@ -19,7 +23,12 @@
   		FD_ZERO(&read_socks_);
   	}
 
-  	void start_listening(unsigned int port)
+	void dispose(received_data* data)
+	{
+
+	}
+
+  	void listen_(unsigned int port)
   	{
   		int iResult;
 		
@@ -27,7 +36,9 @@
   		iResult = WSAStartup(MAKEWORD(2,2), &wsadata);
 
   		listen_socket_ = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
-  		ioctlsocket(listen_socket_, FIONBIO, 0);
+  		
+		unsigned long block = 1;
+		ioctlsocket(listen_socket_, FIONBIO, &block);
   		active_sockets_.push_back(listen_socket_);
   		FD_SET(listen_socket_, &read_socks_);
 
@@ -60,7 +71,8 @@
 
   	std::vector<char*>* receive()
   	{
-  		std::vector<char*>* return_data;
+		//std::clog << "tick" << std::endl;
+  		std::vector<char*>* return_data = new std::vector<char*>();
 
   		struct timeval timeout;
   		timeout.tv_sec = 1;
@@ -70,7 +82,7 @@
   		FD_ZERO(&working_socks);
   		memcpy(&working_socks, &read_socks_, sizeof(read_socks_));
 
-  		int readsocks = select(max_socket_ + 1, &working_socks, NULL, NULL, &timeout);
+  		int readsocks = select(0, &working_socks, NULL, NULL, &timeout);
 
   		if (readsocks < 0)
   		{
@@ -100,15 +112,18 @@
 
   						std::clog << "Client connected" << std::endl;
 
+						unsigned long block = 1;
+						ioctlsocket(incoming_socket, FIONBIO, &block);
   						FD_SET(incoming_socket, &read_socks_);
   						new_sockets.push_back(incoming_socket);
   					}
   					else
   					{
-  						char buffer[256];
-  						ZeroMemory(buffer, 256);
+						int size = sizeof(Message);
+  						char* buffer = new char[size];
+  						ZeroMemory(buffer, size);
 
-  						int result = recv(sock, buffer, 256, 0);
+  						int result = recv(sock, buffer, size, 0);
 
   						if (result < 0)
   						{

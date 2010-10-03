@@ -12,9 +12,9 @@
 #import "MainView.h"
 #import "StatusMenu.h"
 
-#import "Server.h"
+#import "Exit.h"
 #import "Client.h"
-#import "BlackHole.h"
+#import "Entrance.h"
 
 @interface WarpAppDelegate : NSObject<NSApplicationDelegate> {
 	IBOutlet NSWindow *connected_window;
@@ -25,9 +25,10 @@
 	IBOutlet MainView *input_view;
 	IBOutlet StatusMenu* status_menu; 
 		
-	BlackHole* black_hole;	
+	Entrance* entrance;	
+	Exit* exit_;
+	
 	Client *client;
-	Server* server;
 	
 	bool quit;
 }

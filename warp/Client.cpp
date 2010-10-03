@@ -64,7 +64,8 @@ void Client::send_message(const Message& message)
 	
 	timeout_ = TIME_OUT;
 	char* data = new char[sizeof(Message)];
-	memcpy(data, &message, sizeof(Message));	
+	memcpy(data, &message, sizeof(Message));
+	
 	socket_->send(data);
 }
 

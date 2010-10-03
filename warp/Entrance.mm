@@ -1,6 +1,6 @@
-#include "BlackHole.h"
+#include "Entrance.h"
 
-BlackHole::BlackHole(Client* client, NSWindow* window) : client_(client), window_(window), enabled_(false)
+Entrance::Entrance(Client* client, NSWindow* window) : client_(client), window_(window), enabled_(false)
 {
 	client_commands_[kCGEventKeyDown]						= new KeyDownClientCommand(window);
 	client_commands_[kCGEventKeyUp]							= new KeyUpClientCommand();
@@ -15,7 +15,7 @@ BlackHole::BlackHole(Client* client, NSWindow* window) : client_(client), window
 	client_commands_[kCGEventScrollWheel]				= new ScrollWheelClientCommand();
 };
 
-bool BlackHole::send_to(const std::string& host, unsigned int port)
+bool Entrance::send_to(const std::string& host, unsigned int port)
 {
 	bool result = client_->connect_to(host, port);
 	
@@ -27,7 +27,7 @@ bool BlackHole::send_to(const std::string& host, unsigned int port)
 	return result;
 }
 
-void BlackHole::tap()
+void Entrance::tap()
 {		
 	CGEventType eventType = 
 	(1 << kCGEventMouseMoved) | 
@@ -42,7 +42,7 @@ void BlackHole::tap()
 	(1 << kCGEventRightMouseDragged) |
 	(1 << kCGEventScrollWheel);
 	
-	event_tap_ = CGEventTapCreate(kCGSessionEventTap,  kCGHeadInsertEventTap,  0, eventType, BlackHole::event_tap, this);
+	event_tap_ = CGEventTapCreate(kCGSessionEventTap,  kCGHeadInsertEventTap,  0, eventType, Entrance::event_tap, this);
 	
 	if(!event_tap_)
 	{
@@ -54,7 +54,7 @@ void BlackHole::tap()
 	CGEventTapEnable(event_tap_, true);
 }
 
-void BlackHole::disable()
+void Entrance::disable()
 {
 	CGDisplayShowCursor(kCGDirectMainDisplay);
 	CGAssociateMouseAndMouseCursorPosition(true);
@@ -63,13 +63,13 @@ void BlackHole::disable()
 	enabled_ = false;
 }
 
-CGEventRef BlackHole::event_tap(CGEventTapProxy proxy, CGEventType type, CGEventRef event, void *refcon)
+CGEventRef Entrance::event_tap(CGEventTapProxy proxy, CGEventType type, CGEventRef event, void *refcon)
 {
-	BlackHole* black_hole = (BlackHole*)refcon;
+	Entrance* black_hole = (Entrance*)refcon;
 	return black_hole->on_event(type, event);
 }
 
-void BlackHole::enable() 
+void Entrance::enable() 
 { 
 	CGAssociateMouseAndMouseCursorPosition(false);
 	CGDisplayHideCursor(kCGDirectMainDisplay);
@@ -78,13 +78,13 @@ void BlackHole::enable()
 	enabled_ = true;
 };
 
-CGEventRef BlackHole::on_event(CGEventType type, CGEventRef event)
+CGEventRef Entrance::on_event(CGEventType type, CGEventRef event)
 {			
 	scan_reconnect(type, event);
 	return scan_input(type, event);
 }
 
-void BlackHole::scan_reconnect(CGEventType type, CGEventRef event)
+void Entrance::scan_reconnect(CGEventType type, CGEventRef event)
 {
 	if (type == kCGEventKeyDown) 
 	{
@@ -93,7 +93,7 @@ void BlackHole::scan_reconnect(CGEventType type, CGEventRef event)
 		
 		if ((flags & kCGEventFlagMaskShift) && (flags & kCGEventFlagMaskCommand) && keycode == 14) // cmd-shift-e
 		{
-			if (enabled_ && client_->connected()) 
+			if (enabled_) 
 			{
 				disable();
 			}
@@ -108,17 +108,20 @@ void BlackHole::scan_reconnect(CGEventType type, CGEventRef event)
 	}
 }
 
-CGEventRef BlackHole::scan_input(CGEventType type, CGEventRef event)
+CGEventRef Entrance::scan_input(CGEventType type, CGEventRef event)
 {	
-	if (type == kCGEventTapDisabledByTimeout)
-	{
-		tap();
-	}
+	if (enabled_) 
+	{		
+		if (type == kCGEventTapDisabledByTimeout)
+		{
+			tap();
+		}
 
-	if (enabled_ && client_commands_.find(type) != client_commands_.end())
-	{
-		client_commands_[type]->Execute(event, client_);
-		event = NULL;
+		if (client_commands_.find(type) != client_commands_.end())
+		{
+			client_commands_[type]->Execute(event, client_);
+			event = NULL;
+		}
 	}
 	
 	return event;		

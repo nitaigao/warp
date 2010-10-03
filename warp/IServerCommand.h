@@ -1,14 +1,8 @@
 #ifndef ISERVERCOMMAND_H
 #define ISERVERCOMMAND_H
 
-	/*
-	 *  IServerCommand.h
-	 *  warp
-	 *
-	 *  Created by Nicholas Kostelnik on 15/09/2010.
-	 *  Copyright 2010 __MyCompanyName__. All rights reserved.
-	 *
-	 */
+	#include <ApplicationServices/ApplicationServices.h>
+	#include "Message.h"
 
 	class IServerCommand
 	{

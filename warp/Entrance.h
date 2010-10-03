@@ -1,14 +1,5 @@
-#ifndef BLACKHOLE_H
-#define BLACKHOLE_H
-
-	/*
-	 *  BlackHole.h
-	 *  warp
-	 *
-	 *  Created by Nicholas Kostelnik on 14/09/2010.
-	 *  Copyright 2010 __MyCompanyName__. All rights reserved.
-	 *
-	 */
+#ifndef ENTRANCE_H
+#define ENTRANCE_H
 
 	#include <ApplicationServices/ApplicationServices.h>
 	#include <Carbon/Carbon.h>
@@ -18,14 +9,14 @@
 	#include "IClientCommand.h"
 	#include "Client.h"
 
-	class BlackHole
+	class Entrance
 	{	
 		
 		typedef std::map<int, IClientCommand*> ClientCommandList;
 		
 	public:
 		
-		BlackHole(Client* client, NSWindow* window);
+		Entrance(Client* client, NSWindow* window);
 		
 		void tap();
 		

@@ -1,14 +1,6 @@
 #ifndef CLIENT_H
 #define CLIENT_H
 
-	/*
-	 *  Client.h
-	 *  warp
-	 *
-	 *  Created by Nicholas Kostelnik on 11/09/2010.
-	 *  Copyright 2010 __MyCompanyName__. All rights reserved.
-	 *
-	 */
 	#include "Message.h"
 	#include <string>
 

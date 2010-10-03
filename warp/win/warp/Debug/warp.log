@@ -1,0 +1,13 @@
+﻿Build started 03/10/2010 21:51:59.
+Project "C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects\wormhole\warp\win\warp\warp.vcxproj" on node 2 (build target(s)).
+InitializeBuildStatus:
+  Touching "Debug\warp.unsuccessfulbuild".
+ClCompile:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I../../ /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
+  main.cpp
+c:\documents and settings\administrator\my documents\visual studio 2010\projects\wormhole\warp\exit.h(6): fatal error C1083: Cannot open include file: 'IExitCommand.hpp': No such file or directory
+Done Building Project "C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects\wormhole\warp\win\warp\warp.vcxproj" (build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:01.34

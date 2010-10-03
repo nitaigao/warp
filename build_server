@@ -1,1 +1,0 @@
-g++ -o server server.cpp -lsdl -lsdlmain -framework Foundation -framework Cocoa

@@ -1,0 +1,13 @@
+﻿Build started 02/10/2010 19:28:42.
+Project "C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects\wormhole\win\warp\warp.vcxproj" on node 2 (build target(s)).
+InitializeBuildStatus:
+  Creating "Debug\warp.unsuccessfulbuild" because "AlwaysCreate" was specified.
+ClCompile:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
+  main.cpp
+c:\documents and settings\administrator\my documents\visual studio 2010\projects\wormhole\warp\server.h(10): fatal error C1083: Cannot open include file: 'sys/socket.h': No such file or directory
+Done Building Project "C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects\wormhole\win\warp\warp.vcxproj" (build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:01.78

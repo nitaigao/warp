@@ -3,13 +3,13 @@
 
 	#include <map>
 
-	#include "IServerCommand.h"
+	#include "IExitCommand.hpp"
 
 	#include "ISocket.hpp"
 
 	class Exit
 	{
-		typedef std::map<int, IServerCommand*> MessageTypeList;
+		typedef std::map<int, IExitCommand*> MessageTypeList;
 				
 	public:
 		

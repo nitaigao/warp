@@ -275,8 +275,8 @@
 									<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 									<array>
 										<array>
-											<integer>10</integer>
-											<integer>9</integer>
+											<integer>18</integer>
+											<integer>15</integer>
 											<integer>1</integer>
 											<integer>0</integer>
 										</array>
@@ -483,6 +483,8 @@
 	<integer>0</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>4CDBE6331259238500322E76</string>
+		<string>1C530D54069F1CE1000CFCEE</string>
 		<string>1C530D57069F1CE1000CFCEE</string>
 		<string>1C530D52069F1CE1000CFCEE</string>
 		<string>/Users/nk/Development/warp/warp/warp.xcodeproj</string>
@@ -826,13 +828,13 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C530D54069F1CE1000CFCEE</string>
-				<string>4CBDA3391258B5BC00B50121</string>
+				<string>4CDBE60D1259225D00322E76</string>
 				<string>1C162984064C10D400B95A72</string>
-				<string>4CBDA33A1258B5BC00B50121</string>
-				<string>4CBDA33B1258B5BC00B50121</string>
-				<string>4CBDA33C1258B5BC00B50121</string>
-				<string>4CBDA33D1258B5BC00B50121</string>
-				<string>4CBDA33E1258B5BC00B50121</string>
+				<string>4CDBE60E1259225D00322E76</string>
+				<string>4CDBE60F1259225D00322E76</string>
+				<string>4CDBE6101259225D00322E76</string>
+				<string>4CDBE6111259225D00322E76</string>
+				<string>4CDBE6121259225D00322E76</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.debugV3</string>

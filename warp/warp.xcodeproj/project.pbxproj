@@ -51,13 +51,14 @@
 		4C98CD32123B799F00F0F544 /* Client.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Client.cpp; sourceTree = "<group>"; };
 		4CA0904F12474A4E00E6A4FD /* Time.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Time.h; sourceTree = "<group>"; };
 		4CB7DD8D123F5D56009E454C /* Entrance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Entrance.h; sourceTree = "<group>"; };
-		4CB8872D1240AC61004FB87E /* IServerCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IServerCommand.h; sourceTree = "<group>"; };
+		4CB8872D1240AC61004FB87E /* IExitCommand.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = IExitCommand.hpp; sourceTree = "<group>"; };
 		4CBAFA1F124203DA00C5C338 /* IClientCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IClientCommand.h; sourceTree = "<group>"; };
 		4CBAFA6F124207D300C5C338 /* Exit.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Exit.cpp; sourceTree = "<group>"; };
 		4CBDA3D612591C1800B50121 /* ISocket.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ISocket.hpp; sourceTree = "<group>"; };
 		4CCF953F123CF1DC00EE0530 /* bezel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bezel.png; sourceTree = "<group>"; };
 		4CCF9569123CF3C800EE0530 /* BezelWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BezelWindow.h; sourceTree = "<group>"; };
 		4CCF956A123CF3C800EE0530 /* BezelWindow.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BezelWindow.mm; sourceTree = "<group>"; };
+		4CDBE5D3125920F700322E76 /* OSXExitCommands.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = OSXExitCommands.hpp; sourceTree = "<group>"; };
 		4CF7E5471240F40200F7307C /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		4CF7E56B1240F54000F7307C /* ship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ship.png; sourceTree = "<group>"; };
 		4CF7E59C1240F71500F7307C /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon.icns; sourceTree = "<group>"; };
@@ -84,8 +85,8 @@
 			children = (
 				4CBAFA6B124207AC00C5C338 /* UI */,
 				4CB886D51240A557004FB87E /* Common */,
-				4CB886D41240A54E004FB87E /* Server */,
-				4CB886D31240A542004FB87E /* Client */,
+				4CB886D41240A54E004FB87E /* Exit */,
+				4CB886D31240A542004FB87E /* Entrance */,
 				256AC3D80F4B6AC300CF3369 /* WarpAppDelegate.h */,
 				256AC3D90F4B6AC300CF3369 /* WarpAppDelegate.mm */,
 			);
@@ -164,7 +165,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		4CB886D31240A542004FB87E /* Client */ = {
+		4CB886D31240A542004FB87E /* Entrance */ = {
 			isa = PBXGroup;
 			children = (
 				4CB7DD8D123F5D56009E454C /* Entrance.h */,
@@ -173,17 +174,18 @@
 				4C98CD32123B799F00F0F544 /* Client.cpp */,
 				4CBAFA1F124203DA00C5C338 /* IClientCommand.h */,
 			);
-			name = Client;
+			name = Entrance;
 			sourceTree = "<group>";
 		};
-		4CB886D41240A54E004FB87E /* Server */ = {
+		4CB886D41240A54E004FB87E /* Exit */ = {
 			isa = PBXGroup;
 			children = (
-				4CB8872D1240AC61004FB87E /* IServerCommand.h */,
+				4CB8872D1240AC61004FB87E /* IExitCommand.hpp */,
 				4CFF64261247E97700CBB66C /* Exit.h */,
 				4CBAFA6F124207D300C5C338 /* Exit.cpp */,
+				4CDBE5D3125920F700322E76 /* OSXExitCommands.hpp */,
 			);
-			name = Server;
+			name = Exit;
 			sourceTree = "<group>";
 		};
 		4CB886D51240A557004FB87E /* Common */ = {

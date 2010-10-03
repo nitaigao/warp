@@ -1,31 +1,44 @@
 #include "Exit.h"
 
 #include "Message.h"
-#include "IServerCommand.h"
+#include "IExitCommand.hpp"
 
-#include "NixSocket.h"
-
-Exit::Exit() 
 #ifdef _WINDOWS
-	: socket_(new WinSocket())
+
+	#include "WinExitCommands.hpp"
+	#include "WinSocket.h"
+
+	Exit::Exit() 
+		: socket_(new WinSocket())
+	{
+		message_types_[MOUSE_MOVE]				= new MouseMovedCommand();
+	}
+
 #else
-	: socket_(new NixSocket())	
+
+	#include "OSXExitCommands.hpp"
+	#include "NixSocket.h"
+
+	Exit::Exit() 
+		: socket_(new NixSocket())	
+	{		
+		message_types_[LEFT_UP]						= new LeftUpCommand();
+		message_types_[LEFT_DOWN]					= new LeftDownCommand();
+		message_types_[RIGHT_UP]					= new RightUpCommand();
+		message_types_[RIGHT_DOWN]				= new RightDownCommand();
+		message_types_[KEY_UP]						= new KeyUpCommand();
+		message_types_[KEY_DOWN]					= new KeyDownCommand();
+		message_types_[MOUSE_MOVE]				= new MouseMovedCommand();
+		message_types_[LEFT_DRAGGED]			= new LeftDraggedCommand();
+		message_types_[RIGHT_DRAGGED]			= new RightDraggedCommand();
+		message_types_[FLAGS_CHANGED]			= new FlagsChangedCommand();
+		message_types_[SCROLL_WHEEL]			= new ScrollWheelCommand();
+		message_types_[LEFT_DOUBLE_CLICK]	= new LeftDoubleClickCommand();
+	}
+
 #endif
-{		
-	message_types_[LEFT_UP]						= new LeftUpCommand();
-	message_types_[LEFT_DOWN]					= new LeftDownCommand();
-	message_types_[RIGHT_UP]					= new RightUpCommand();
-	message_types_[RIGHT_DOWN]				= new RightDownCommand();
-	message_types_[KEY_UP]						= new KeyUpCommand();
-	message_types_[KEY_DOWN]					= new KeyDownCommand();
-	message_types_[MOUSE_MOVE]				= new MouseMovedCommand();
-	message_types_[LEFT_DRAGGED]			= new LeftDraggedCommand();
-	message_types_[RIGHT_DRAGGED]			= new RightDraggedCommand();
-	message_types_[FLAGS_CHANGED]			= new FlagsChangedCommand();
-	message_types_[SCROLL_WHEEL]			= new ScrollWheelCommand();
-	message_types_[LEFT_DOUBLE_CLICK]	= new LeftDoubleClickCommand();
-}
-	
+
+
 void Exit::start_listening(unsigned int port)
 {  
 	socket_->listen_(port);

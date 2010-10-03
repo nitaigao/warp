@@ -3,7 +3,14 @@
 #include "Message.h"
 #include "IServerCommand.h"
 
-Exit::Exit() : socket_(new Socket())
+#include "NixSocket.h"
+
+Exit::Exit() 
+#ifdef _WINDOWS
+	: socket_(new WinSocket())
+#else
+	: socket_(new NixSocket())	
+#endif
 {		
 	message_types_[LEFT_UP]						= new LeftUpCommand();
 	message_types_[LEFT_DOWN]					= new LeftDownCommand();
@@ -11,7 +18,7 @@ Exit::Exit() : socket_(new Socket())
 	message_types_[RIGHT_DOWN]				= new RightDownCommand();
 	message_types_[KEY_UP]						= new KeyUpCommand();
 	message_types_[KEY_DOWN]					= new KeyDownCommand();
-	message_types_[MOUSE_MOVED]				= new MouseMovedCommand();
+	message_types_[MOUSE_MOVE]				= new MouseMovedCommand();
 	message_types_[LEFT_DRAGGED]			= new LeftDraggedCommand();
 	message_types_[RIGHT_DRAGGED]			= new RightDraggedCommand();
 	message_types_[FLAGS_CHANGED]			= new FlagsChangedCommand();
@@ -26,11 +33,11 @@ void Exit::start_listening(unsigned int port)
 	
 bool Exit::receive() 
 { 
-	Socket::received_data* datas = socket_->receive();
+	ISocket::received_data* datas = socket_->receive();
 	
 	if (!datas->empty())
 	{		
-		for (Socket::received_data::iterator i = datas->begin(); i != datas->end(); ++i) 
+		for (ISocket::received_data::iterator i = datas->begin(); i != datas->end(); ++i) 
 		{			
 			Message message;
 			memcpy(&message, (*i), sizeof(Message));

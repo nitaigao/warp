@@ -5,7 +5,7 @@
 
 	#include "IServerCommand.h"
 
-	#include "Socket.h"
+	#include "ISocket.hpp"
 
 	class Exit
 	{
@@ -21,7 +21,7 @@
 		
 	private:
 		
-		Socket* socket_;
+		ISocket* socket_;
 		
 		MessageTypeList message_types_;
 

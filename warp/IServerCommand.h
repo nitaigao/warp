@@ -128,7 +128,7 @@
 		
 	public:
 		
-		static int type() { return MOUSE_MOVED; };
+		static int type() { return MOUSE_MOVE; };
 		
 		void Execute(const Message& message)
 		{

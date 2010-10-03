@@ -4,14 +4,14 @@
 	#include "Message.h"
 	#include <string>
 
-	#include "Socket.h"
+	#include "NixSocket.h"
 
 	class Client
 	{
 		
 	public:
 		
-		Client() : connected_(false), timeout_(0), socket_(new Socket()), last_host_("") { };
+		Client() : connected_(false), timeout_(0), socket_(new NixSocket()), last_host_("") { };
 		
 		bool connected() { return connected_; };
 		
@@ -53,7 +53,7 @@
 		
 		void send_message(const Message& message);
 		
-		Socket* socket_;
+		NixSocket* socket_;
 		
 		std::string last_host_;
 		

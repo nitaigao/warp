@@ -125,7 +125,7 @@ void Client::send_right_up()
 void Client::send_mouse_moved(int x, int y)
 {
 	Message message;
-	message.type = MOUSE_MOVED;
+	message.type = MOUSE_MOVE;
 	message.x = x;
 	message.y = y;
 	send_message(message);

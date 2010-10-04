@@ -53,6 +53,7 @@
 }
 
 bool moved = false;
+float acceleration = 1.0f;
 
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {	
 	UITouch *touch = [touches anyObject];
@@ -61,8 +62,12 @@ bool moved = false;
 	
 	float x = currentPosition.x - previousPosition.x;
 	float y = currentPosition.y - previousPosition.y;
+  
+  if (acceleration < 3.0f) {
+    acceleration += 0.1f;
+  }
 	
-	client->send_mouse_moved(x, y);
+	client->send_mouse_moved(x * acceleration, y * acceleration);
 	moved = true;
 }
 
@@ -87,13 +92,19 @@ bool moved = false;
   		}
 		}
 	}
+  acceleration = 1.0f;
 	moved = false;
+}
+
+- (void)clientUpdate {
+  client->update(1000);
 }
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	client = new Client();
+  [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(clientUpdate) userInfo:nil repeats:YES];
 	[self.view addSubview:connectView];
 	[addressField becomeFirstResponder];
 }

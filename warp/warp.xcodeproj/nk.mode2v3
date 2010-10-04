@@ -216,10 +216,10 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>4C6410D6125936BB008CA792</string>
+						<string>4CF09CD3125A7DA400FEEE95</string>
 						<key>history</key>
 						<array>
-							<string>4CDBE6581259338F00322E76</string>
+							<string>4CF09CCC125A7D6500FEEE95</string>
 						</array>
 					</dict>
 					<key>SplitCount</key>
@@ -485,8 +485,8 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>4C6410D2125936BB008CA792</string>
-				<string>4C6410D3125936BB008CA792</string>
+				<string>4CF09CA1125A706F00FEEE95</string>
+				<string>4CF09CA2125A706F00FEEE95</string>
 				<string>1C9437FD063B20B00039CFAC</string>
 				<string>1C9437FE063B20B00039CFAC</string>
 				<string>1C9437FF063B20B00039CFAC</string>
@@ -523,9 +523,13 @@
 	<integer>0</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>4CF09CAC125A706F00FEEE95</string>
+		<string>4CF09CAE125A706F00FEEE95</string>
+		<string>1C530D5B069F1CE1000CFCEE</string>
+		<string>1C530D54069F1CE1000CFCEE</string>
+		<string>/Users/nk/Development/warp/warp/warp.xcodeproj</string>
 		<string>1C530D52069F1CE1000CFCEE</string>
 		<string>4CDBE6501259333100322E76</string>
-		<string>/Users/nk/Development/warp/warp/warp.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>927 116 462 741 0 0 1440 878 </string>
@@ -686,23 +690,25 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string></string>
+								<string>NixSocket.h</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {1076, 0}}</string>
+								<string>{{0, 0}, {1076, 191}}</string>
 								<key>RubberWindowFrame</key>
 								<string>12 28 1076 681 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>0pt</string>
+							<string>191pt</string>
 						</dict>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -717,14 +723,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 5}, {1076, 635}}</string>
+								<string>{{0, 196}, {1076, 445}}</string>
 								<key>RubberWindowFrame</key>
 								<string>12 28 1076 681 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXBuildResultsModule</string>
 							<key>Proportion</key>
-							<string>635pt</string>
+							<string>445pt</string>
 						</dict>
 					</array>
 					<key>Proportion</key>
@@ -742,7 +748,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C530D52069F1CE1000CFCEE</string>
-				<string>4C6410D5125936BB008CA792</string>
+				<string>4CF09CA4125A706F00FEEE95</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
@@ -755,7 +761,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C530D52069F1CE1000CFCEE</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>
@@ -864,13 +870,13 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C530D54069F1CE1000CFCEE</string>
-				<string>4CDBE60D1259225D00322E76</string>
+				<string>4CF09CA5125A706F00FEEE95</string>
 				<string>1C162984064C10D400B95A72</string>
-				<string>4CDBE60E1259225D00322E76</string>
-				<string>4CDBE60F1259225D00322E76</string>
-				<string>4CDBE6101259225D00322E76</string>
-				<string>4CDBE6111259225D00322E76</string>
-				<string>4CDBE6121259225D00322E76</string>
+				<string>4CF09CA6125A706F00FEEE95</string>
+				<string>4CF09CA7125A706F00FEEE95</string>
+				<string>4CF09CA8125A706F00FEEE95</string>
+				<string>4CF09CA9125A706F00FEEE95</string>
+				<string>4CF09CAA125A706F00FEEE95</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.debugV3</string>
@@ -1024,7 +1030,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C530D5B069F1CE1000CFCEE</string>
-				<string>4CDBE6531259333100322E76</string>
+				<string>4CF09CAB125A706F00FEEE95</string>
 				<string>1C78EAAC065D492600B07095</string>
 			</array>
 			<key>ToolbarConfiguration</key>

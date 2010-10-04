@@ -26,7 +26,7 @@
 	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
 		activeArchitecturePreference = x86_64;
-		activeBuildConfigurationName = Distribution;
+		activeBuildConfigurationName = Debug;
 		activeExecutable = 4C98CCBB123B727000F0F544 /* warp */;
 		activeTarget = 8D1107260486CEB800E47090 /* warp */;
 		addToTargets = (
@@ -39,12 +39,12 @@
 			4C98CCBB123B727000F0F544 /* warp */,
 		);
 		perUserDictionary = {
-			PBXPerProjectTemplateStateSaveDate = 307836595;
-			PBXWorkspaceStateSaveDate = 307836595;
+			PBXPerProjectTemplateStateSaveDate = 307916899;
+			PBXWorkspaceStateSaveDate = 307916899;
 		};
 		perUserProjectItems = {
-			4C6410D6125936BB008CA792 /* PBXTextBookmark */ = 4C6410D6125936BB008CA792 /* PBXTextBookmark */;
-			4CDBE6581259338F00322E76 /* PBXTextBookmark */ = 4CDBE6581259338F00322E76 /* PBXTextBookmark */;
+			4CF09CCC125A7D6500FEEE95 /* XCBuildMessageTextBookmark */ = 4CF09CCC125A7D6500FEEE95 /* XCBuildMessageTextBookmark */;
+			4CF09CD3125A7DA400FEEE95 /* PBXTextBookmark */ = 4CF09CD3125A7DA400FEEE95 /* PBXTextBookmark */;
 		};
 		sourceControlManager = 4C98CCD1123B727700F0F544 /* Source Control */;
 		userBuildSettings = {
@@ -92,21 +92,11 @@
 	};
 	4C5FB97B125793FF00923183 /* NixSocket.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {705, 3445}}";
-			sepNavSelRange = "{2212, 0}";
-			sepNavVisRange = "{1821, 1223}";
+			sepNavIntBoundsRect = "{{0, 0}, {705, 3198}}";
+			sepNavSelRange = "{4126, 0}";
+			sepNavVisRange = "{3399, 1504}";
 			sepNavWindowFrame = "{{229, 0}, {750, 878}}";
 		};
-	};
-	4C6410D6125936BB008CA792 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 4C5FB97B125793FF00923183 /* NixSocket.h */;
-		name = "NixSocket.h: 113";
-		rLen = 0;
-		rLoc = 2212;
-		rType = 0;
-		vrLen = 1223;
-		vrLoc = 1821;
 	};
 	4C6EADBD123D6C43001DB8F2 /* Message.h */ = {
 		uiCtxt = {
@@ -266,15 +256,24 @@
 			sepNavWindowFrame = "{{19, 0}, {908, 877}}";
 		};
 	};
-	4CDBE6581259338F00322E76 /* PBXTextBookmark */ = {
+	4CF09CCC125A7D6500FEEE95 /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "Expected `;' before 'set_non_blocking'";
+		fRef = 4C5FB97B125793FF00923183 /* NixSocket.h */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 198;
+		rType = 1;
+	};
+	4CF09CD3125A7DA400FEEE95 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 4C5FB97B125793FF00923183 /* NixSocket.h */;
-		name = "NixSocket.h: 113";
+		name = "NixSocket.h: 201";
 		rLen = 0;
-		rLoc = 2212;
+		rLoc = 4126;
 		rType = 0;
-		vrLen = 1288;
-		vrLoc = 1821;
+		vrLen = 1504;
+		vrLoc = 3399;
 	};
 	4CFF64261247E97700CBB66C /* Exit.h */ = {
 		uiCtxt = {

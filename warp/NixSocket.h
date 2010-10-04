@@ -13,6 +13,7 @@
 #include <iostream>
 #include <sstream>
 
+#include <netinet/tcp.h>
 #include <sys/types.h>
 #include <sys/socket.h>
 #include <netinet/in.h>
@@ -145,6 +146,11 @@ public:
 		return return_data;
 	}
 	
+	void set_no_delay(int sock)
+	{
+		int no_delay = 1;
+		setsockopt(socket_, IPPROTO_TCP, TCP_NODELAY, (char*)&no_delay, sizeof(no_delay));	
+	}
 	
 	void set_non_blocking(int sock)
 	{
@@ -189,7 +195,7 @@ public:
 		server_address.sin_port = htons(port);
 		
 		socket_ = socket(AF_INET, SOCK_STREAM, 0);
-		
+		set_no_delay(socket_);
 		set_non_blocking(socket_);
 		
 		if (socket_ < 0)
@@ -202,7 +208,7 @@ public:
 		FD_ZERO(&outgoing); 
 		FD_SET(socket_, &outgoing); 
 		
-		setsockopt(socket_, SOL_SOCKET, SO_NOSIGPIPE, (void *)&outgoing, sizeof(int));	
+		setsockopt(socket_, SOL_SOCKET, SO_NOSIGPIPE, (void *)&outgoing, sizeof(int));
 		connect(socket_, (struct sockaddr*)&server_address, sizeof(server_address));
 		
 		struct timeval tv; 

@@ -1,0 +1,113 @@
+// !$*UTF8*$!
+{
+	1D3623240D0F684500981E51 /* iwarpAppDelegate.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1152, 806}}";
+			sepNavSelRange = "{334, 0}";
+			sepNavVisRange = "{0, 476}";
+			sepNavWindowFrame = "{{19, 0}, {1211, 878}}";
+		};
+	};
+	1D3623250D0F684500981E51 /* iwarpAppDelegate.mm */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1965, 1053}}";
+			sepNavSelRange = "{432, 0}";
+			sepNavVisRange = "{0, 2149}";
+		};
+	};
+	1D6058900D05DD3D006BFB54 /* iwarp */ = {
+		activeExec = 0;
+		executables = (
+			4C50249D1251482000CD78DA /* iwarp */,
+		);
+	};
+	28D7ACF60DDB3853001CB0EB /* iwarpViewController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1152, 806}}";
+			sepNavSelRange = "{198, 0}";
+			sepNavVisRange = "{0, 490}";
+			sepNavWindowFrame = "{{19, 0}, {1211, 878}}";
+		};
+	};
+	28D7ACF70DDB3853001CB0EB /* iwarpViewController.mm */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {775, 1612}}";
+			sepNavSelRange = "{1320, 0}";
+			sepNavVisRange = "{1219, 172}";
+			sepNavWindowFrame = "{{19, 0}, {1211, 878}}";
+		};
+	};
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Release;
+		activeExecutable = 4C50249D1251482000CD78DA /* iwarp */;
+		activeSDKPreference = iphoneos4.0;
+		activeTarget = 1D6058900D05DD3D006BFB54 /* iwarp */;
+		addToTargets = (
+			1D6058900D05DD3D006BFB54 /* iwarp */,
+		);
+		breakpoints = (
+		);
+		codeSenseManager = 4C5024A91251482800CD78DA /* Code sense */;
+		executables = (
+			4C50249D1251482000CD78DA /* iwarp */,
+		);
+		perUserDictionary = {
+			PBXPerProjectTemplateStateSaveDate = 307921106;
+			PBXWorkspaceStateSaveDate = 307921106;
+		};
+		sourceControlManager = 4C5024A81251482800CD78DA /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	4C50249D1251482000CD78DA /* iwarp */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 1;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = iwarp;
+		savedGlobals = {
+		};
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+		variableFormatDictionary = {
+		};
+	};
+	4C5024A81251482800CD78DA /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	4C5024A91251482800CD78DA /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	8D1107310486CEB800E47090 /* iwarp-Info.plist */ = {
+		uiCtxt = {
+			sepNavWindowFrame = "{{19, 0}, {1211, 878}}";
+		};
+	};
+}

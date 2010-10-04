@@ -1,0 +1,194 @@
+// !$*UTF8*$!
+{
+	089C165DFE840E0CC02AAC07 /* English */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1164, 840}}";
+			sepNavSelRange = "{45, 0}";
+			sepNavVisRange = "{0, 45}";
+			sepNavWindowFrame = "{{19, 661}, {1223, 912}}";
+		};
+	};
+	256AC3D80F4B6AC300CF3369 /* WarpAppDelegate.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1015, 494}}";
+			sepNavSelRange = "{272, 17}";
+			sepNavVisRange = "{272, 301}";
+			sepNavWindowFrame = "{{165, 0}, {1056, 878}}";
+		};
+	};
+	256AC3D90F4B6AC300CF3369 /* WarpAppDelegate.mm */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {997, 936}}";
+			sepNavSelRange = "{252, 0}";
+			sepNavVisRange = "{0, 1309}";
+			sepNavWindowFrame = "{{165, 0}, {1056, 878}}";
+		};
+	};
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeArchitecturePreference = x86_64;
+		activeBuildConfigurationName = Debug;
+		activeExecutable = 4C98CCBB123B727000F0F544 /* warp */;
+		activeTarget = 8D1107260486CEB800E47090 /* warp */;
+		addToTargets = (
+			8D1107260486CEB800E47090 /* warp */,
+		);
+		breakpoints = (
+		);
+		codeSenseManager = 4C98CCD2123B727700F0F544 /* Code sense */;
+		executables = (
+			4C98CCBB123B727000F0F544 /* warp */,
+		);
+		perUserDictionary = {
+			PBXPerProjectTemplateStateSaveDate = 307920824;
+			PBXWorkspaceStateSaveDate = 307920824;
+		};
+		sourceControlManager = 4C98CCD1123B727700F0F544 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	29B97316FDCFA39411CA2CEA /* main.mm */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1164, 806}}";
+			sepNavSelRange = "{259, 0}";
+			sepNavVisRange = "{0, 259}";
+			sepNavWindowFrame = "{{341, 514}, {1223, 878}}";
+		};
+	};
+	4C2E7158124893D000A214C8 /* StatusMenu.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1152, 1466}}";
+			sepNavSelRange = "{330, 0}";
+			sepNavVisRange = "{0, 330}";
+			sepNavWindowFrame = "{{19, 0}, {1211, 1578}}";
+		};
+	};
+	4C2E7159124893D000A214C8 /* StatusMenu.mm */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1453, 910}}";
+			sepNavSelRange = "{1332, 0}";
+			sepNavVisRange = "{150, 525}";
+			sepNavWindowFrame = "{{542, 162}, {1207, 1334}}";
+		};
+	};
+	4C5FB8CF12578CE500923183 /* Entrance.mm */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {838, 1664}}";
+			sepNavSelRange = "{3123, 0}";
+			sepNavVisRange = "{1383, 1761}";
+			sepNavWindowFrame = "{{4, 0}, {750, 878}}";
+		};
+	};
+	4C98CCBB123B727000F0F544 /* warp */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 1;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = warp;
+		savedGlobals = {
+		};
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+		variableFormatDictionary = {
+		};
+	};
+	4C98CCD1123B727700F0F544 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	4C98CCD2123B727700F0F544 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	4C98CCE6123B740200F0F544 /* MainView.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1164, 774}}";
+			sepNavSelRange = "{141, 0}";
+			sepNavVisRange = "{0, 345}";
+			sepNavWindowFrame = "{{217, 0}, {1223, 878}}";
+		};
+	};
+	4C98CCE7123B740200F0F544 /* MainView.mm */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1164, 1573}}";
+			sepNavSelRange = "{1443, 0}";
+			sepNavVisRange = "{0, 1090}";
+			sepNavWindowFrame = "{{185, 0}, {1223, 878}}";
+		};
+	};
+	4CA0904F12474A4E00E6A4FD /* Time.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1377, 774}}";
+			sepNavSelRange = "{152, 0}";
+			sepNavVisRange = "{0, 318}";
+			sepNavWindowFrame = "{{4, 0}, {1436, 878}}";
+		};
+	};
+	4CB7DD8D123F5D56009E454C /* Entrance.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1015, 559}}";
+			sepNavSelRange = "{308, 0}";
+			sepNavVisRange = "{308, 343}";
+			sepNavWindowFrame = "{{4, 0}, {750, 878}}";
+		};
+	};
+	4CCF9569123CF3C800EE0530 /* BezelWindow.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1164, 840}}";
+			sepNavSelRange = "{256, 0}";
+			sepNavVisRange = "{0, 265}";
+			sepNavWindowFrame = "{{770, 470}, {1223, 912}}";
+		};
+	};
+	4CCF956A123CF3C800EE0530 /* BezelWindow.mm */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1164, 858}}";
+			sepNavSelRange = "{603, 0}";
+			sepNavVisRange = "{144, 1549}";
+			sepNavWindowFrame = "{{637, 511}, {1223, 878}}";
+		};
+	};
+	4CDBE5D3125920F700322E76 /* OSXExitCommands.hpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {849, 3172}}";
+			sepNavSelRange = "{762, 1}";
+			sepNavVisRange = "{0, 1412}";
+			sepNavWindowFrame = "{{19, 0}, {908, 877}}";
+		};
+	};
+	8D1107260486CEB800E47090 /* warp */ = {
+		activeExec = 0;
+		executables = (
+			4C98CCBB123B727000F0F544 /* warp */,
+		);
+	};
+	8D1107310486CEB800E47090 /* warp-Info.plist */ = {
+		uiCtxt = {
+			sepNavWindowFrame = "{{42, 0}, {1223, 878}}";
+		};
+	};
+}

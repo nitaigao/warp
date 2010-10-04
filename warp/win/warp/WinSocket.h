@@ -39,6 +39,8 @@
   		
 		unsigned long block = 1;
 		ioctlsocket(listen_socket_, FIONBIO, &block);
+		int no_delay = 1;
+		setsockopt(listen_socket_, IPPROTO_TCP, TCP_NODELAY, (char*)&no_delay, sizeof(char));
   		active_sockets_.push_back(listen_socket_);
   		FD_SET(listen_socket_, &read_socks_);
 
@@ -61,9 +63,7 @@
   		{
   			std::cerr << "ERROR on listen" << std::endl;
   		}
-
-  		//client_socket_ = accept(listen_socket_, NULL, NULL);
-  	}
+ 	}
 
   	typedef std::vector<int> SocketList;
 	
@@ -114,6 +114,8 @@
 
 						unsigned long block = 1;
 						ioctlsocket(incoming_socket, FIONBIO, &block);
+						int no_delay = 1;
+						setsockopt(incoming_socket, IPPROTO_TCP, TCP_NODELAY, (char*)&no_delay, sizeof(char));
   						FD_SET(incoming_socket, &read_socks_);
   						new_sockets.push_back(incoming_socket);
   					}
@@ -123,7 +125,7 @@
   						char* buffer = new char[size];
   						ZeroMemory(buffer, size);
 
-  						int result = recv(sock, buffer, size, 0);
+						int result = recv(sock, buffer, size, 0);
 
   						if (result < 0)
   						{

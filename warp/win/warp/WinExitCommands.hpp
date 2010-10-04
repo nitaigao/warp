@@ -18,10 +18,7 @@
 			buffer.type = INPUT_MOUSE;
 			buffer.mi.dx = message.x;
 			buffer.mi.dy = message.y;
-			buffer.mi.mouseData = 0;
 			buffer.mi.dwFlags = MOUSEEVENTF_MOVE;
-			buffer.mi.time = 0;
-			buffer.mi.dwExtraInfo = 0;
 
 			SendInput(1, &buffer, sizeof(INPUT));
 		};

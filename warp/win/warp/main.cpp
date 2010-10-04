@@ -3,6 +3,8 @@
 #include "Exit.h"
 
 #include <vector>
+#include <Windows.h>
+#include <iostream>
 
 int main()
 {

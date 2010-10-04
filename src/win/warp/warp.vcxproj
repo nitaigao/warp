@@ -41,7 +41,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>../../;.;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../shared;.;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -54,7 +54,7 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <AdditionalIncludeDirectories>../../;.;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../shared;.;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -64,11 +64,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\Exit.cpp" />
+    <ClCompile Include="..\..\shared\Exit.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\warp\Constants.hpp" />
+    <ClInclude Include="..\..\shared\Constants.hpp" />
     <ClInclude Include="WinExitCommands.hpp" />
     <ClInclude Include="WinSocket.h" />
   </ItemGroup>

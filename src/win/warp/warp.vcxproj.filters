@@ -18,18 +18,18 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Exit.cpp">
+    <ClCompile Include="..\..\shared\Exit.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\warp\Constants.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="WinExitCommands.hpp">
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="WinSocket.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\shared\Constants.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

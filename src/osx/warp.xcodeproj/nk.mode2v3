@@ -197,48 +197,7 @@
 	<key>Notifications</key>
 	<array/>
 	<key>OpenEditors</key>
-	<array>
-		<dict>
-			<key>Content</key>
-			<dict>
-				<key>PBXProjectModuleGUID</key>
-				<string>4C0DBD79125BDAA000FA66E4</string>
-				<key>PBXProjectModuleLabel</key>
-				<string>IClientCommand.h</string>
-				<key>PBXSplitModuleInNavigatorKey</key>
-				<dict>
-					<key>Split0</key>
-					<dict>
-						<key>PBXProjectModuleGUID</key>
-						<string>4C0DBD7A125BDAA000FA66E4</string>
-						<key>PBXProjectModuleLabel</key>
-						<string>IClientCommand.h</string>
-						<key>_historyCapacity</key>
-						<integer>0</integer>
-						<key>bookmark</key>
-						<string>4C652984125BE01700C445B7</string>
-						<key>history</key>
-						<array>
-							<string>4CF201A9125BDFEF0079EBA4</string>
-						</array>
-					</dict>
-					<key>SplitCount</key>
-					<string>1</string>
-				</dict>
-				<key>StatusBarVisibility</key>
-				<true/>
-			</dict>
-			<key>Geometry</key>
-			<dict>
-				<key>Frame</key>
-				<string>{{0, 20}, {908, 796}}</string>
-				<key>PBXModuleWindowStatusBarHidden2</key>
-				<false/>
-				<key>RubberWindowFrame</key>
-				<string>19 40 908 837 0 0 1440 878 </string>
-			</dict>
-		</dict>
-	</array>
+	<array/>
 	<key>PerspectiveWidths</key>
 	<array>
 		<integer>-1</integer>
@@ -316,6 +275,7 @@
 									<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 									<array>
 										<array>
+											<integer>15</integer>
 											<integer>9</integer>
 											<integer>1</integer>
 											<integer>0</integer>
@@ -485,8 +445,8 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>4C65297D125BE00500C445B7</string>
-				<string>4C65297E125BE00500C445B7</string>
+				<string>4CB4F75B125BE0B300B738F3</string>
+				<string>4CB4F75C125BE0B300B738F3</string>
 				<string>1C9437FD063B20B00039CFAC</string>
 				<string>1C9437FE063B20B00039CFAC</string>
 				<string>1C9437FF063B20B00039CFAC</string>
@@ -523,8 +483,11 @@
 	<integer>0</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>4CB4F767125BE0B300B738F3</string>
+		<string>4CB4F768125BE0B300B738F3</string>
+		<string>1C530D5B069F1CE1000CFCEE</string>
+		<string>1C530D54069F1CE1000CFCEE</string>
 		<string>1C530D52069F1CE1000CFCEE</string>
-		<string>4C0DBD79125BDAA000FA66E4</string>
 		<string>/Users/nk/Development/wormhole/src/osx/warp.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
@@ -742,7 +705,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C530D52069F1CE1000CFCEE</string>
-				<string>4C652980125BE00500C445B7</string>
+				<string>4CB4F75E125BE0B300B738F3</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
@@ -864,13 +827,13 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C530D54069F1CE1000CFCEE</string>
-				<string>4CF2017B125BDAF00079EBA4</string>
+				<string>4CB4F75F125BE0B300B738F3</string>
 				<string>1C162984064C10D400B95A72</string>
-				<string>4CF2017C125BDAF00079EBA4</string>
-				<string>4CF2017D125BDAF00079EBA4</string>
-				<string>4CF2017E125BDAF00079EBA4</string>
-				<string>4CF2017F125BDAF00079EBA4</string>
-				<string>4CF20180125BDAF00079EBA4</string>
+				<string>4CB4F760125BE0B300B738F3</string>
+				<string>4CB4F761125BE0B300B738F3</string>
+				<string>4CB4F762125BE0B300B738F3</string>
+				<string>4CB4F763125BE0B300B738F3</string>
+				<string>4CB4F764125BE0B300B738F3</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.debugV3</string>
@@ -989,8 +952,6 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -1026,7 +987,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C530D5B069F1CE1000CFCEE</string>
-				<string>4CF20181125BDAF00079EBA4</string>
+				<string>4CB4F765125BE0B300B738F3</string>
 				<string>1C78EAAC065D492600B07095</string>
 			</array>
 			<key>ToolbarConfiguration</key>
@@ -1036,7 +997,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C530D5B069F1CE1000CFCEE</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>Identifier</key>

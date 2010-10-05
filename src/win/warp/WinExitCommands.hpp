@@ -3,6 +3,7 @@
 
 	#include <iostream>
 	#include <Windows.h>
+	#include "KeyCodes.hpp"	
 
 	char* tohex(int value)
 	{
@@ -20,12 +21,10 @@
 
 		void Execute(const Message& message)
 		{
-			tohex(message.key_code);
+			int kc = KeyCodes().generic_to_windows(message.key_code);
 			INPUT buffer;
 			buffer.type = INPUT_KEYBOARD;
-			buffer.ki.wVk = VkKeyScan('a');
-
-			//VK_CANCEL
+			buffer.ki.wVk = kc;
 
 			buffer.ki.dwExtraInfo = 0;
 			buffer.ki.dwFlags = 0;

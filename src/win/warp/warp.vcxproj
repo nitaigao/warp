@@ -68,8 +68,8 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\osx\KeyCodes.hpp" />
     <ClInclude Include="..\..\shared\Constants.hpp" />
+    <ClInclude Include="..\..\shared\KeyCodes.hpp" />
     <ClInclude Include="WinExitCommands.hpp" />
     <ClInclude Include="WinSocket.h" />
   </ItemGroup>

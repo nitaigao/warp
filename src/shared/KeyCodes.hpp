@@ -43,8 +43,8 @@ public:
 		key_codes_[18] = KeyCode(18, 20, 51);
 		key_codes_[19] = KeyCode(19, 21, 52);
 		
-		key_codes_[20] = KeyCode(20, 22, 53);
-		key_codes_[21] = KeyCode(21, 23, 54);
+		key_codes_[20] = KeyCode(20, 22, 54);
+		key_codes_[21] = KeyCode(21, 23, 53);
 		key_codes_[22] = KeyCode(22, 25, 57);
 		key_codes_[23] = KeyCode(23, 26, 55);
 		key_codes_[24] = KeyCode(24, 28, 56);
@@ -66,7 +66,7 @@ public:
 		key_codes_[39] = KeyCode(39, 48, 9);
 		key_codes_[40] = KeyCode(40, 49, 32);
 		
-		key_codes_[41] = KeyCode(41, 51, 46);
+		key_codes_[41] = KeyCode(41, 51, 8);
 		key_codes_[42] = KeyCode(42, 53, 27);
 		key_codes_[43] = KeyCode(43, 56, 10);
 		key_codes_[44] = KeyCode(44, 57, 20);
@@ -102,7 +102,7 @@ public:
 		key_codes_[71] = KeyCode(71, 114, 47);
 		key_codes_[72] = KeyCode(72, 115, 36);
 		key_codes_[73] = KeyCode(73, 116, 33);
-		key_codes_[74] = KeyCode(74, 117, 8);
+		key_codes_[74] = KeyCode(74, 117, 46);
 		key_codes_[75] = KeyCode(75, 118, 115);
 		key_codes_[76] = KeyCode(76, 119, 35);
 		key_codes_[77] = KeyCode(77, 120, 113);
@@ -131,7 +131,7 @@ public:
 	};
 	
 	int generic_to_windows(int keycode)
-	{
+	{	
 		return key_codes_[keycode].windows_;
 	}
 	

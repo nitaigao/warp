@@ -32,7 +32,7 @@
     <ClInclude Include="..\..\shared\Constants.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\osx\KeyCodes.hpp">
+    <ClInclude Include="..\..\shared\KeyCodes.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

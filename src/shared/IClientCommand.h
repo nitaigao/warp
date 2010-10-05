@@ -39,7 +39,6 @@
 		{
 			CGEventFlags flags = CGEventGetFlags(event);
 			CGKeyCode keycode = (CGKeyCode)CGEventGetIntegerValueField(event, kCGKeyboardEventKeycode);
-			
 			client->send_key_down(flags, KeyCodes().osx_to_generic(keycode));
 		}
 		
@@ -56,7 +55,7 @@
 		void Execute(CGEventRef event, Client* client)
 		{
 			CGEventFlags flags = CGEventGetFlags(event);
-			CGKeyCode keycode = (CGKeyCode)CGEventGetIntegerValueField(event, kCGKeyboardEventKeycode);
+			CGKeyCode keycode = (CGKeyCode)CGEventGetIntegerValueField(event, kCGKeyboardEventKeycode);			
 			client->send_key_up(flags, KeyCodes().osx_to_generic(keycode));
 		}
 	};

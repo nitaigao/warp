@@ -202,46 +202,6 @@
 			<key>Content</key>
 			<dict>
 				<key>PBXProjectModuleGUID</key>
-				<string>4C0DBD76125BDAA000FA66E4</string>
-				<key>PBXProjectModuleLabel</key>
-				<string>KeyCodes.hpp</string>
-				<key>PBXSplitModuleInNavigatorKey</key>
-				<dict>
-					<key>Split0</key>
-					<dict>
-						<key>PBXProjectModuleGUID</key>
-						<string>4C0DBD77125BDAA000FA66E4</string>
-						<key>PBXProjectModuleLabel</key>
-						<string>KeyCodes.hpp</string>
-						<key>_historyCapacity</key>
-						<integer>0</integer>
-						<key>bookmark</key>
-						<string>4CF201A1125BDDB80079EBA4</string>
-						<key>history</key>
-						<array>
-							<string>4C0DBD78125BDAA000FA66E4</string>
-						</array>
-					</dict>
-					<key>SplitCount</key>
-					<string>1</string>
-				</dict>
-				<key>StatusBarVisibility</key>
-				<true/>
-			</dict>
-			<key>Geometry</key>
-			<dict>
-				<key>Frame</key>
-				<string>{{0, 20}, {908, 796}}</string>
-				<key>PBXModuleWindowStatusBarHidden2</key>
-				<false/>
-				<key>RubberWindowFrame</key>
-				<string>19 40 908 837 0 0 1440 878 </string>
-			</dict>
-		</dict>
-		<dict>
-			<key>Content</key>
-			<dict>
-				<key>PBXProjectModuleGUID</key>
 				<string>4C0DBD79125BDAA000FA66E4</string>
 				<key>PBXProjectModuleLabel</key>
 				<string>IClientCommand.h</string>
@@ -256,10 +216,10 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>4CF201A2125BDDB80079EBA4</string>
+						<string>4C652984125BE01700C445B7</string>
 						<key>history</key>
 						<array>
-							<string>4C0DBD7B125BDAA000FA66E4</string>
+							<string>4CF201A9125BDFEF0079EBA4</string>
 						</array>
 					</dict>
 					<key>SplitCount</key>
@@ -311,6 +271,8 @@
 					<key>Tabs</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXBottomSmartGroupGIDs</key>
@@ -354,7 +316,6 @@
 									<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 									<array>
 										<array>
-											<integer>15</integer>
 											<integer>9</integer>
 											<integer>1</integer>
 											<integer>0</integer>
@@ -524,8 +485,8 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>4CF20176125BDAF00079EBA4</string>
-				<string>4CF20177125BDAF00079EBA4</string>
+				<string>4C65297D125BE00500C445B7</string>
+				<string>4C65297E125BE00500C445B7</string>
 				<string>1C9437FD063B20B00039CFAC</string>
 				<string>1C9437FE063B20B00039CFAC</string>
 				<string>1C9437FF063B20B00039CFAC</string>
@@ -562,15 +523,9 @@
 	<integer>0</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>4CF201A3125BDDB80079EBA4</string>
-		<string>4CF20183125BDAF00079EBA4</string>
-		<string>4CF20184125BDAF00079EBA4</string>
-		<string>1C530D5B069F1CE1000CFCEE</string>
-		<string>1C530D54069F1CE1000CFCEE</string>
 		<string>1C530D52069F1CE1000CFCEE</string>
 		<string>4C0DBD79125BDAA000FA66E4</string>
 		<string>/Users/nk/Development/wormhole/src/osx/warp.xcodeproj</string>
-		<string>4C0DBD76125BDAA000FA66E4</string>
 	</array>
 	<key>WindowString</key>
 	<string>927 116 462 741 0 0 1440 878 </string>
@@ -787,7 +742,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C530D52069F1CE1000CFCEE</string>
-				<string>4CF2017A125BDAF00079EBA4</string>
+				<string>4C652980125BE00500C445B7</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
@@ -1034,6 +989,8 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -1079,7 +1036,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C530D5B069F1CE1000CFCEE</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>Identifier</key>

@@ -439,8 +439,8 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>4C0C1B84125A80D500339361</string>
-				<string>4C0C1B85125A80D500339361</string>
+				<string>4CB5308B125A88C60031F93B</string>
+				<string>4CB5308C125A88C60031F93B</string>
 				<string>1C9437FD063B20B00039CFAC</string>
 				<string>1C9437FE063B20B00039CFAC</string>
 				<string>1C9437FF063B20B00039CFAC</string>
@@ -477,9 +477,8 @@
 	<integer>0</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>1C530D54069F1CE1000CFCEE</string>
 		<string>1C530D52069F1CE1000CFCEE</string>
-		<string>/Users/nk/Development/warp/warp/src/ios/iwarp.xcodeproj</string>
+		<string>/Users/nk/Development/wormhole/src/ios/iwarp.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>994 459 446 419 0 0 1440 878 </string>
@@ -696,7 +695,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C530D52069F1CE1000CFCEE</string>
-				<string>4C0C1B86125A80D500339361</string>
+				<string>4CB5308D125A88C60031F93B</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>

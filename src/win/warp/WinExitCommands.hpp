@@ -4,6 +4,63 @@
 	#include <iostream>
 	#include <Windows.h>
 
+	char* tohex(int value)
+	{
+		char str[256];
+		sprintf(str, "%x", value);
+		std::clog << str << std::endl;
+		return str;
+	}
+
+	class KeyDownCommand : public IExitCommand
+	{
+	public:
+
+		static int type() { return KEY_DOWN; };
+
+		void Execute(const Message& message)
+		{
+			tohex(message.key_code);
+			INPUT buffer;
+			buffer.type = INPUT_KEYBOARD;
+			buffer.ki.wVk = VkKeyScan('a');
+
+			//VK_CANCEL
+
+			buffer.ki.dwExtraInfo = 0;
+			buffer.ki.dwFlags = 0;
+			buffer.ki.time = 0;
+			buffer.ki.wScan = 0;
+
+			SendInput(1, &buffer, sizeof(INPUT));
+		};
+
+	};
+
+	class KeyUpCommand : public IExitCommand
+	{
+	public:
+
+		static int type() { return KEY_UP; };
+
+		void Execute(const Message& message)
+		{
+			/*INPUT buffer;
+			buffer.type = INPUT_KEYBOARD;
+			buffer.ki.wVk = VkKeyScan(message.key_code);
+			buffer.ki.dwFlags = KEYEVENTF_KEYUP;
+
+			
+			buffer.ki.dwExtraInfo = 0;
+			buffer.ki.dwFlags = 0;
+			buffer.ki.time = 0;
+			buffer.ki.wScan = 0;
+
+			SendInput(1, &buffer, sizeof(INPUT));*/
+		};
+
+	};
+
 	class MouseMovedCommand : public IExitCommand
 	{
 

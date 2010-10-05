@@ -17,6 +17,8 @@
 		message_types_[RIGHT_UP]				= new RightUpCommand();
 		message_types_[RIGHT_DOWN]				= new RightDownCommand();
 		message_types_[LEFT_DOUBLE_CLICK]		= new LeftDoubleClickCommand();
+		message_types_[KEY_UP]					= new KeyUpCommand();
+		message_types_[KEY_DOWN]				= new KeyDownCommand();
 	}
 
 #else

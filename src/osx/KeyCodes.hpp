@@ -21,7 +21,6 @@ public:
 	
 	KeyCodes()
 	{
-		
 		key_codes_[0] = KeyCode(0, 0, 65);
 		key_codes_[1] = KeyCode(1, 1, 83);
 		key_codes_[2] = KeyCode(2, 2, 68);
@@ -30,9 +29,10 @@ public:
 		key_codes_[5] = KeyCode(5, 5, 71);
 		key_codes_[6] = KeyCode(6, 6, 90);
 		key_codes_[7] = KeyCode(7, 7, 88);
+		key_codes_[7] = KeyCode(7, 8, 67);
 		key_codes_[8] = KeyCode(8, 9, 86);
-
 		key_codes_[9] = KeyCode(9, 11, 66);
+		
 		key_codes_[10] = KeyCode(10, 12, 81);
 		key_codes_[11] = KeyCode(11, 13, 87);
 		key_codes_[12] = KeyCode(12, 14, 69);
@@ -43,35 +43,77 @@ public:
 		key_codes_[17] = KeyCode(17, 19, 50);
 		key_codes_[18] = KeyCode(18, 20, 51);
 		key_codes_[19] = KeyCode(19, 21, 52);
+		
 		key_codes_[20] = KeyCode(20, 22, 53);
 		key_codes_[21] = KeyCode(21, 23, 54);
-		
 		key_codes_[22] = KeyCode(22, 25, 57);
 		key_codes_[23] = KeyCode(23, 26, 55);
-		
 		key_codes_[24] = KeyCode(24, 28, 56);
 		key_codes_[25] = KeyCode(25, 29, 48);
-
 		key_codes_[26] = KeyCode(26, 31, 79);
 		key_codes_[27] = KeyCode(27, 32, 85);
-
 		key_codes_[28] = KeyCode(28, 34, 73);
 		key_codes_[29] = KeyCode(29, 35, 80);
 		
 		key_codes_[30] = KeyCode(30, 36, 13);
-		
 		key_codes_[31] = KeyCode(31, 37, 76);
 		key_codes_[32] = KeyCode(32, 38, 74);
-
 		key_codes_[33] = KeyCode(33, 40, 75);
-		
 		key_codes_[34] = KeyCode(34, 43, 188);
 		key_codes_[35] = KeyCode(35, 44, 191);
 		key_codes_[36] = KeyCode(36, 45, 78);
 		key_codes_[37] = KeyCode(37, 46, 77);
 		key_codes_[38] = KeyCode(38, 47, 190);
 		key_codes_[39] = KeyCode(39, 48, 9);
-		key_codes_[40] = KeyCode(40, 49, 9);
+		key_codes_[40] = KeyCode(40, 49, 20);
+		
+		key_codes_[41] = KeyCode(42, 51, 46);
+		key_codes_[42] = KeyCode(43, 53, 27);
+		key_codes_[43] = KeyCode(41, 56, 10);
+		key_codes_[44] = KeyCode(41, 57, 20);
+		key_codes_[45] = KeyCode(41, 58, 18);
+		key_codes_[46] = KeyCode(41, 59, 11);
+		key_codes_[47] = KeyCode(41, 65, 110);
+		key_codes_[48] = KeyCode(41, 67, 106);
+		key_codes_[49] = KeyCode(41, 69, 107);
+
+		key_codes_[50] = KeyCode(41, 75, 111);
+		key_codes_[51] = KeyCode(41, 78, 109);
+		key_codes_[52] = KeyCode(41, 82, 96);
+		key_codes_[53] = KeyCode(41, 83, 97);
+		key_codes_[54] = KeyCode(41, 84, 98);
+		key_codes_[55] = KeyCode(41, 85, 99);
+		key_codes_[56] = KeyCode(41, 86, 100);
+		key_codes_[57] = KeyCode(41, 87, 101);
+		key_codes_[58] = KeyCode(41, 88, 102);
+		key_codes_[59] = KeyCode(41, 89, 103);
+		
+		key_codes_[60] = KeyCode(41, 91, 104);
+		key_codes_[61] = KeyCode(41, 92, 105);
+		key_codes_[62] = KeyCode(41, 96, 116);
+		key_codes_[63] = KeyCode(41, 97, 117);
+		key_codes_[64] = KeyCode(41, 98, 118);
+		key_codes_[65] = KeyCode(41, 100, 119);
+		key_codes_[66] = KeyCode(41, 101, 120);
+		key_codes_[67] = KeyCode(41, 103, 122);
+		key_codes_[68] = KeyCode(41, 109, 121);
+		key_codes_[69] = KeyCode(41, 110, 93);
+		
+		key_codes_[70] = KeyCode(41, 111, 123);
+		key_codes_[71] = KeyCode(41, 114, 47);
+		key_codes_[72] = KeyCode(41, 115, 36);
+		key_codes_[73] = KeyCode(41, 116, 33);
+		key_codes_[74] = KeyCode(41, 117, 8);
+		key_codes_[75] = KeyCode(41, 118, 115);
+		key_codes_[76] = KeyCode(41, 119, 35);
+		key_codes_[77] = KeyCode(41, 120, 113);
+		key_codes_[78] = KeyCode(41, 121, 34);
+		key_codes_[79] = KeyCode(41, 122, 112);
+		
+		key_codes_[80] = KeyCode(41, 123, 25);
+		key_codes_[81] = KeyCode(41, 124, 27);
+		key_codes_[82] = KeyCode(41, 125, 28);
+		key_codes_[83] = KeyCode(41, 126, 26);
 
 	};
 	

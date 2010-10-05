@@ -42,6 +42,12 @@
 			PBXPerProjectTemplateStateSaveDate = 308006667;
 			PBXWorkspaceStateSaveDate = 308006667;
 		};
+		perUserProjectItems = {
+			4C0DBD62125BD22F00FA66E4 /* PBXBookmark */ = 4C0DBD62125BD22F00FA66E4 /* PBXBookmark */;
+			4C0DBD71125BD6CE00FA66E4 /* PBXBookmark */ = 4C0DBD71125BD6CE00FA66E4 /* PBXBookmark */;
+			4C0DBD78125BDAA000FA66E4 /* PBXTextBookmark */ = 4C0DBD78125BDAA000FA66E4 /* PBXTextBookmark */;
+			4C0DBD7B125BDAA000FA66E4 /* PBXTextBookmark */ = 4C0DBD7B125BDAA000FA66E4 /* PBXTextBookmark */;
+		};
 		sourceControlManager = 4C98CCD1123B727700F0F544 /* Source Control */;
 		userBuildSettings = {
 		};
@@ -53,6 +59,34 @@
 			sepNavVisRange = "{0, 259}";
 			sepNavWindowFrame = "{{341, 514}, {1223, 878}}";
 		};
+	};
+	4C0DBD62125BD22F00FA66E4 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 4C3C8FBD125A803F009A11CB /* IClientCommand.h */;
+	};
+	4C0DBD71125BD6CE00FA66E4 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 4CE06A26125BB9AB000D29A3 /* KeyCodes.hpp */;
+	};
+	4C0DBD78125BDAA000FA66E4 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4CE06A26125BB9AB000D29A3 /* KeyCodes.hpp */;
+		name = "KeyCodes.hpp: 33";
+		rLen = 0;
+		rLoc = 651;
+		rType = 0;
+		vrLen = 1761;
+		vrLoc = 2266;
+	};
+	4C0DBD7B125BDAA000FA66E4 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4C3C8FBD125A803F009A11CB /* IClientCommand.h */;
+		name = "IClientCommand.h: 66";
+		rLen = 0;
+		rLoc = 1364;
+		rType = 0;
+		vrLen = 1346;
+		vrLoc = 502;
 	};
 	4C2E7158124893D000A214C8 /* StatusMenu.h */ = {
 		uiCtxt = {
@@ -72,9 +106,9 @@
 	};
 	4C3C8FBD125A803F009A11CB /* IClientCommand.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1015, 2587}}";
-			sepNavSelRange = "{365, 0}";
-			sepNavVisRange = "{269, 162}";
+			sepNavIntBoundsRect = "{{0, 0}, {849, 2509}}";
+			sepNavSelRange = "{1364, 0}";
+			sepNavVisRange = "{502, 1346}";
 			sepNavWindowFrame = "{{19, 0}, {908, 877}}";
 		};
 	};
@@ -198,9 +232,9 @@
 	};
 	4CE06A26125BB9AB000D29A3 /* KeyCodes.hpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {849, 765}}";
-			sepNavSelRange = "{642, 0}";
-			sepNavVisRange = "{0, 673}";
+			sepNavIntBoundsRect = "{{0, 0}, {849, 1833}}";
+			sepNavSelRange = "{651, 0}";
+			sepNavVisRange = "{2266, 1761}";
 			sepNavWindowFrame = "{{19, 0}, {908, 877}}";
 		};
 	};

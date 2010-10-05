@@ -109,10 +109,10 @@ public:
 		key_codes_[78] = KeyCode(78, 121, 34);
 		key_codes_[79] = KeyCode(79, 122, 112);
 		
-		key_codes_[80] = KeyCode(80, 123, 25);
-		key_codes_[81] = KeyCode(81, 124, 27);
-		key_codes_[82] = KeyCode(82, 125, 28);
-		key_codes_[83] = KeyCode(83, 126, 26);
+		key_codes_[80] = KeyCode(80, 123, 37);
+		key_codes_[81] = KeyCode(81, 124, 39);
+		key_codes_[82] = KeyCode(82, 125, 40);
+		key_codes_[83] = KeyCode(83, 126, 38);
 		
 		key_codes_[84] = KeyCode(84, 11, 66);
 	};
@@ -132,6 +132,7 @@ public:
 	
 	int generic_to_windows(int keycode)
 	{	
+		//std::clog << key_codes_[keycode].osx_ << std::endl;
 		return key_codes_[keycode].windows_;
 	}
 	

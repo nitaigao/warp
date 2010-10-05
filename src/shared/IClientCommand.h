@@ -17,6 +17,8 @@
 	#include "Constants.hpp"
 	#include "Client.h"
 
+	#include "KeyCodes.hpp"
+
 	class IClientCommand
 	{
 		
@@ -37,7 +39,8 @@
 		{
 			CGEventFlags flags = CGEventGetFlags(event);
 			CGKeyCode keycode = (CGKeyCode)CGEventGetIntegerValueField(event, kCGKeyboardEventKeycode);
-			client->send_key_down(flags, keycode);
+			
+			client->send_key_down(flags, KeyCodes().osx_to_generic(keycode));
 		}
 		
 	private:
@@ -54,7 +57,7 @@
 		{
 			CGEventFlags flags = CGEventGetFlags(event);
 			CGKeyCode keycode = (CGKeyCode)CGEventGetIntegerValueField(event, kCGKeyboardEventKeycode);
-			client->send_key_up(flags, keycode);
+			client->send_key_up(flags, KeyCodes().osx_to_generic(keycode));
 		}
 	};
 

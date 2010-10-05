@@ -39,8 +39,8 @@
 			4C98CCBB123B727000F0F544 /* warp */,
 		);
 		perUserDictionary = {
-			PBXPerProjectTemplateStateSaveDate = 307920824;
-			PBXWorkspaceStateSaveDate = 307920824;
+			PBXPerProjectTemplateStateSaveDate = 307998649;
+			PBXWorkspaceStateSaveDate = 307998649;
 		};
 		sourceControlManager = 4C98CCD1123B727700F0F544 /* Source Control */;
 		userBuildSettings = {
@@ -70,11 +70,27 @@
 			sepNavWindowFrame = "{{542, 162}, {1207, 1334}}";
 		};
 	};
+	4C3C8FBD125A803F009A11CB /* IClientCommand.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1015, 2587}}";
+			sepNavSelRange = "{365, 0}";
+			sepNavVisRange = "{269, 162}";
+			sepNavWindowFrame = "{{19, 0}, {908, 877}}";
+		};
+	};
+	4C3C8FC0125A803F009A11CB /* Message.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {849, 765}}";
+			sepNavSelRange = "{537, 0}";
+			sepNavVisRange = "{0, 579}";
+			sepNavWindowFrame = "{{19, 0}, {908, 877}}";
+		};
+	};
 	4C5FB8CF12578CE500923183 /* Entrance.mm */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {838, 1664}}";
-			sepNavSelRange = "{3123, 0}";
-			sepNavVisRange = "{1383, 1761}";
+			sepNavSelRange = "{2518, 0}";
+			sepNavVisRange = "{0, 2049}";
 			sepNavWindowFrame = "{{4, 0}, {750, 878}}";
 		};
 	};
@@ -177,6 +193,14 @@
 			sepNavIntBoundsRect = "{{0, 0}, {849, 3172}}";
 			sepNavSelRange = "{762, 1}";
 			sepNavVisRange = "{0, 1412}";
+			sepNavWindowFrame = "{{19, 0}, {908, 877}}";
+		};
+	};
+	4CE06A26125BB9AB000D29A3 /* KeyCodes.hpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {849, 765}}";
+			sepNavSelRange = "{642, 0}";
+			sepNavVisRange = "{0, 673}";
 			sepNavWindowFrame = "{{19, 0}, {908, 877}}";
 		};
 	};

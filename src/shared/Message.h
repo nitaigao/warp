@@ -34,6 +34,7 @@ struct Message
 	int x;
 	int y;
 	int key_code;
+	char key_text;
 	unsigned int flags;
 };
 

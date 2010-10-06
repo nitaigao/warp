@@ -1,3 +1,6 @@
+#define _WIN32_IE 0x0501
+#define _WIN32_WINDOWS 0x0501
+
 #include <windows.h>
 #include <shellapi.h>
 #include <stdio.h>
@@ -5,8 +8,6 @@
 #include "Constants.hpp"
 #include "Message.h"
 #include "Exit.h"
-
-#pragma comment(lib, "wsock32.lib")
 
 #ifdef UNICODE
 #define stringcopy wcscpy
@@ -38,7 +39,7 @@ void InitNotifyIconData()
   g_notifyIconData.uID = ID_TRAY_APP_ICON;
   g_notifyIconData.uFlags = NIF_ICON | NIF_MESSAGE | NIF_TIP;
   g_notifyIconData.uCallbackMessage = WM_TRAYICON;
-  g_notifyIconData.hIcon = (HICON)LoadImage( NULL, TEXT("green_man.ico"), IMAGE_ICON, 0, 0, LR_LOADFROMFILE  );
+  g_notifyIconData.hIcon = (HICON)LoadImage( NULL, TEXT("icon.ico"), IMAGE_ICON, 0, 0, LR_LOADFROMFILE  );
   stringcopy(g_notifyIconData.szTip, TEXT("Wormhole"));
 }
 
@@ -82,6 +83,7 @@ int WINAPI WinMain (HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR args, in
   }
 
   Shell_NotifyIcon(NIM_DELETE, &g_notifyIconData);
+ 
   return msg.wParam;
 }
 

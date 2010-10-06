@@ -35,7 +35,8 @@
 		32CA4F630368D1EE00C91783 /* iwarp_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iwarp_Prefix.pch; sourceTree = "<group>"; };
 		4C0C1B87125A80DF00339361 /* Client.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Client.cpp; path = ../shared/Client.cpp; sourceTree = SOURCE_ROOT; };
 		4C0C1B88125A80DF00339361 /* Client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Client.h; path = ../shared/Client.h; sourceTree = SOURCE_ROOT; };
-		4C0C1B89125A80DF00339361 /* Constants.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Constants.hpp; path = ../shared/Constants.hpp; sourceTree = SOURCE_ROOT; };
+		4C194645125BE43A00B360C9 /* KeyCodes.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = KeyCodes.hpp; path = /Users/nk/Development/wormhole/src/shared/KeyCodes.hpp; sourceTree = "<absolute>"; };
+		4C194647125BE46100B360C9 /* Constants.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Constants.hpp; path = /Users/nk/Development/wormhole/src/shared/Constants.hpp; sourceTree = "<absolute>"; };
 		4C5024AB125148B800CD78DA /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		4CBB6A6812514D2A00EACDA3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		8D1107310486CEB800E47090 /* iwarp-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "iwarp-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
@@ -61,7 +62,6 @@
 			children = (
 				4C0C1B87125A80DF00339361 /* Client.cpp */,
 				4C0C1B88125A80DF00339361 /* Client.h */,
-				4C0C1B89125A80DF00339361 /* Constants.hpp */,
 				1D3623240D0F684500981E51 /* iwarpAppDelegate.h */,
 				1D3623250D0F684500981E51 /* iwarpAppDelegate.mm */,
 				28D7ACF60DDB3853001CB0EB /* iwarpViewController.h */,
@@ -81,6 +81,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				4C194646125BE44500B360C9 /* shared */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
@@ -121,6 +122,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		4C194646125BE44500B360C9 /* shared */ = {
+			isa = PBXGroup;
+			children = (
+				4C194647125BE46100B360C9 /* Constants.hpp */,
+				4C194645125BE43A00B360C9 /* KeyCodes.hpp */,
+			);
+			name = shared;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -148,6 +158,7 @@
 			isa = PBXProject;
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "iwarp" */;
 			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
 				en,

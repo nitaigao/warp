@@ -28,6 +28,8 @@ HMENU g_menu ;
 NOTIFYICONDATA g_notifyIconData ;
 #pragma endregion
 
+bool quit = false;
+
 LRESULT CALLBACK WndProc (HWND, UINT, WPARAM, LPARAM);
 
 void InitNotifyIconData()
@@ -75,8 +77,9 @@ int WINAPI WinMain (HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR args, in
   exit.start_listening(SERVER_PORT);
  
   MSG msg ;
-  while (GetMessage (&msg, NULL, 0, 0))
+  while (!quit)
   {
+	PeekMessage(&msg, 0, 0, 0, PM_REMOVE);
 	exit.receive();
     TranslateMessage(&msg);
     DispatchMessage(&msg);
@@ -114,7 +117,7 @@ LRESULT CALLBACK WndProc (HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)
         {
           // quit the application.
           printf("I have posted the quit message, biatch\n");
-          PostQuitMessage( 0 ) ;
+          quit = true;
         }
       }
     }
@@ -126,7 +129,7 @@ LRESULT CALLBACK WndProc (HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)
     break;
 
   case WM_DESTROY:
-    printf( "DESTROY!!\n" ) ;
+    printf( "DESTROY!!\n" );
     PostQuitMessage (0);
     break;
 

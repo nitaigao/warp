@@ -9,6 +9,8 @@
 #include "Message.h"
 #include "Exit.h"
 
+#include "resource.h"
+
 #ifdef UNICODE
 #define stringcopy wcscpy
 #else
@@ -41,7 +43,7 @@ void InitNotifyIconData()
   g_notifyIconData.uID = ID_TRAY_APP_ICON;
   g_notifyIconData.uFlags = NIF_ICON | NIF_MESSAGE | NIF_TIP;
   g_notifyIconData.uCallbackMessage = WM_TRAYICON;
-  g_notifyIconData.hIcon = (HICON)LoadImage( NULL, TEXT("icon.ico"), IMAGE_ICON, 0, 0, LR_LOADFROMFILE  );
+  g_notifyIconData.hIcon = (HICON)LoadImage(GetModuleHandle(NULL), MAKEINTRESOURCE(IDI_ICON1), IMAGE_ICON, 0, 0, LR_SHARED);
   stringcopy(g_notifyIconData.szTip, TEXT("Wormhole"));
 }
 

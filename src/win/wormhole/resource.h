@@ -1,3 +1,5 @@
+#define IDI_ICON1 101
+
 //{{NO_DEPENDENCIES}}
 // Microsoft Visual C++ generated include file.
 // Used by resources.rc
@@ -12,3 +14,4 @@
 #define _APS_NEXT_SYMED_VALUE           101
 #endif
 #endif
+

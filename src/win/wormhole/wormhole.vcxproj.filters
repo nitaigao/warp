@@ -23,16 +23,10 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="WinExitCommands.hpp">
-      <Filter>Source Files</Filter>
-    </ClInclude>
     <ClInclude Include="WinSocket.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\shared\Constants.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\shared\KeyCodes.hpp">
+    <ClInclude Include="WinExitCommands.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

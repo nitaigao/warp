@@ -39,8 +39,8 @@
 			4C98CCBB123B727000F0F544 /* warp */,
 		);
 		perUserDictionary = {
-			PBXPerProjectTemplateStateSaveDate = 308011184;
-			PBXWorkspaceStateSaveDate = 308011184;
+			PBXPerProjectTemplateStateSaveDate = 310170442;
+			PBXWorkspaceStateSaveDate = 310170442;
 		};
 		sourceControlManager = 4C98CCD1123B727700F0F544 /* Source Control */;
 		userBuildSettings = {
@@ -70,6 +70,14 @@
 			sepNavWindowFrame = "{{542, 162}, {1207, 1334}}";
 		};
 	};
+	4C3C8FBA125A803F009A11CB /* Constants.hpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1217, 666}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 191}";
+			sepNavWindowFrame = "{{4, 0}, {1276, 778}}";
+		};
+	};
 	4C3C8FBD125A803F009A11CB /* IClientCommand.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {849, 2496}}";
@@ -86,12 +94,28 @@
 			sepNavWindowFrame = "{{19, 0}, {908, 877}}";
 		};
 	};
+	4C3C8FC1125A803F009A11CB /* NixSocket.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1217, 3510}}";
+			sepNavSelRange = "{390, 0}";
+			sepNavVisRange = "{3399, 1257}";
+			sepNavWindowFrame = "{{4, 0}, {1276, 778}}";
+		};
+	};
 	4C5FB8CF12578CE500923183 /* Entrance.mm */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {838, 1664}}";
 			sepNavSelRange = "{2518, 0}";
 			sepNavVisRange = "{0, 2049}";
 			sepNavWindowFrame = "{{4, 0}, {750, 878}}";
+		};
+	};
+	4C652981125BE01300C445B7 /* KeyCodes.hpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1217, 1859}}";
+			sepNavSelRange = "{187, 0}";
+			sepNavVisRange = "{2760, 1369}";
+			sepNavWindowFrame = "{{4, 0}, {1276, 778}}";
 		};
 	};
 	4C98CCBB123B727000F0F544 /* warp */ = {
@@ -158,10 +182,10 @@
 	};
 	4CA0904F12474A4E00E6A4FD /* Time.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1377, 774}}";
-			sepNavSelRange = "{152, 0}";
+			sepNavIntBoundsRect = "{{0, 0}, {1217, 666}}";
+			sepNavSelRange = "{191, 0}";
 			sepNavVisRange = "{0, 318}";
-			sepNavWindowFrame = "{{4, 0}, {1436, 878}}";
+			sepNavWindowFrame = "{{4, 0}, {1276, 778}}";
 		};
 	};
 	4CB7DD8D123F5D56009E454C /* Entrance.h */ = {

@@ -13,6 +13,8 @@
 	
 	IBOutlet NSMenu* main_menu;
 	IBOutlet NSMenu* recent_menu;
+  
+  NSStatusItem* statusItem;
 
 }
 

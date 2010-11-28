@@ -24,12 +24,17 @@
 	}
 }
 
+- (IBAction)menuClick:(id)sender {
+  [statusItem popUpStatusItemMenu:main_menu];
+}
+
 - (void)init_main_menu {
-	NSStatusItem* statusItem = [[[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength] retain];
-	[statusItem setImage:[NSImage imageNamed:@"menu"]];
-	[statusItem setHighlightMode:YES];
+	statusItem = [[[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength] retain];
+  [statusItem setImage:[NSImage imageNamed:@"menu"]];
+  [statusItem setHighlightMode:YES];
 	[statusItem setEnabled:YES];
-	[statusItem setMenu:main_menu];
+  [statusItem setAction:@selector(menuClick:)];
+  [statusItem setTarget:self];
 }
 
 - (void)awakeFromNib {

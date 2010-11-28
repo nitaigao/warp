@@ -16,7 +16,7 @@
 - (void)server_update {
 	while (!quit) {
     exit_->receive();
-    client->update(1000);
+    entrance->update(1000);
 	}
 }
 
@@ -53,8 +53,8 @@
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {		
-	exit_ = new Exit();
-	exit_->start_listening(SERVER_PORT);
+	exit_ = new Exit(SERVER_PORT);
+	exit_->start_listening();
 	
 	client = new Client();
 	[input_view set_client:client];

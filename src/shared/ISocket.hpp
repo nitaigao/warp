@@ -12,9 +12,11 @@
 		
 		virtual received_data* receive() = 0;
 		
-		virtual void listen_(unsigned int port) = 0;
+		virtual void listen_on() = 0;
 		
 		virtual void dispose(received_data* data) = 0;
+
+      virtual void send(const char* data, unsigned int size) = 0;
 		
 	};
 

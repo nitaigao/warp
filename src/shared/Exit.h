@@ -13,15 +13,16 @@
 				
 	public:
 		
-		Exit();
+		Exit(unsigned int port);
 
-		void start_listening(unsigned int port);
+		void start_listening();
 		
 		bool receive();
 		
 	private:
 		
-		ISocket* socket_;
+		ISocket* send_socket_;
+    ISocket* listen_socket_;
 		
 		MessageTypeList message_types_;
 

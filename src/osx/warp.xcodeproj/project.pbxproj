@@ -50,9 +50,10 @@
 		4C3C8FBE125A803F009A11CB /* IExitCommand.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = IExitCommand.hpp; path = ../shared/IExitCommand.hpp; sourceTree = SOURCE_ROOT; };
 		4C3C8FBF125A803F009A11CB /* ISocket.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ISocket.hpp; path = ../shared/ISocket.hpp; sourceTree = SOURCE_ROOT; };
 		4C3C8FC0125A803F009A11CB /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Message.h; path = ../shared/Message.h; sourceTree = SOURCE_ROOT; };
-		4C3C8FC1125A803F009A11CB /* NixSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NixSocket.h; path = ../shared/NixSocket.h; sourceTree = SOURCE_ROOT; };
 		4C5FB8CF12578CE500923183 /* Entrance.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Entrance.mm; sourceTree = "<group>"; };
 		4C652981125BE01300C445B7 /* KeyCodes.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = KeyCodes.hpp; path = ../shared/KeyCodes.hpp; sourceTree = SOURCE_ROOT; };
+		4C90934812A2D20F004F1906 /* SocketUtils.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = SocketUtils.hpp; path = ../shared/SocketUtils.hpp; sourceTree = SOURCE_ROOT; };
+		4C90934912A2D20F004F1906 /* TCPSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TCPSocket.h; path = ../shared/TCPSocket.h; sourceTree = SOURCE_ROOT; };
 		4C98CCE6123B740200F0F544 /* MainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainView.h; sourceTree = "<group>"; };
 		4C98CCE7123B740200F0F544 /* MainView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MainView.mm; sourceTree = "<group>"; };
 		4CA0904F12474A4E00E6A4FD /* Time.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Time.h; sourceTree = "<group>"; };
@@ -61,6 +62,7 @@
 		4CCF9569123CF3C800EE0530 /* BezelWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BezelWindow.h; sourceTree = "<group>"; };
 		4CCF956A123CF3C800EE0530 /* BezelWindow.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BezelWindow.mm; sourceTree = "<group>"; };
 		4CDBE5D3125920F700322E76 /* OSXExitCommands.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = OSXExitCommands.hpp; sourceTree = "<group>"; };
+		4CE19FDE12A2BD8E0074B973 /* MultiCastSocket.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = MultiCastSocket.hpp; path = ../shared/MultiCastSocket.hpp; sourceTree = SOURCE_ROOT; };
 		4CF7E5471240F40200F7307C /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		4CF7E56B1240F54000F7307C /* ship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ship.png; sourceTree = "<group>"; };
 		4CF7E59C1240F71500F7307C /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon.icns; sourceTree = "<group>"; };
@@ -192,11 +194,13 @@
 		4CB886D51240A557004FB87E /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				4C90934812A2D20F004F1906 /* SocketUtils.hpp */,
+				4C90934912A2D20F004F1906 /* TCPSocket.h */,
+				4CE19FDE12A2BD8E0074B973 /* MultiCastSocket.hpp */,
 				4C652981125BE01300C445B7 /* KeyCodes.hpp */,
 				4C3C8FBA125A803F009A11CB /* Constants.hpp */,
 				4C3C8FBF125A803F009A11CB /* ISocket.hpp */,
 				4C3C8FC0125A803F009A11CB /* Message.h */,
-				4C3C8FC1125A803F009A11CB /* NixSocket.h */,
 				4CA0904F12474A4E00E6A4FD /* Time.h */,
 			);
 			name = Common;

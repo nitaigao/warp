@@ -66,7 +66,7 @@ void Client::send_message(const Message& message)
 	char* data = new char[sizeof(Message)];
 	memcpy(data, &message, sizeof(Message));
 	
-	socket_->send(data);
+	socket_->send(data, sizeof(Message));
 }
 
 void Client::send_left_double_click()

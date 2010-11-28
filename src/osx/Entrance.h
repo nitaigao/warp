@@ -24,6 +24,7 @@
 		void enable();
 		
 		bool send_to(const std::string& host, unsigned int port);
+    void update(float delta);
 		
 	private:
 		

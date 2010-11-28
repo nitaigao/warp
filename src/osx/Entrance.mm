@@ -27,6 +27,12 @@ bool Entrance::send_to(const std::string& host, unsigned int port)
 	return result;
 }
 
+void Entrance::update(float delta)
+{
+  client_->update(delta);
+}
+
+
 void Entrance::tap()
 {		
 	CGEventType eventType = 
@@ -119,7 +125,14 @@ CGEventRef Entrance::scan_input(CGEventType type, CGEventRef event)
 
 		if (client_commands_.find(type) != client_commands_.end())
 		{
-			client_commands_[type]->Execute(event, client_);
+      try
+      {
+          client_commands_[type]->Execute(event, client_);
+      }
+      catch(std::exception e)
+      {
+          std::cerr << e.what() << std::endl;
+      }
 			event = NULL;
 		}
 	}

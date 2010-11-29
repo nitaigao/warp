@@ -24,7 +24,7 @@
 	}
 }
 
-- (IBAction)menuClick:(id)sender {
+- (void)show_menu {
   [statusItem popUpStatusItemMenu:main_menu];
 }
 
@@ -33,8 +33,7 @@
   [statusItem setImage:[NSImage imageNamed:@"menu"]];
   [statusItem setHighlightMode:YES];
 	[statusItem setEnabled:YES];
-  [statusItem setAction:@selector(menuClick:)];
-  [statusItem setTarget:self];
+  [statusItem setAction:@selector(refresh:)];
 }
 
 - (void)awakeFromNib {
@@ -50,6 +49,24 @@
 	}
 	
 	[recent_list writeToFile:[self recent_path] atomically:YES];
+}
+
+- (void)add_network_item:(NSString*)item_address {
+  NSMenuItem *empty_item = [main_menu itemWithTitle:@"Searching..."];
+	
+	if (empty_item)
+	{
+		[main_menu removeItem:empty_item];
+	}
+  
+  NSMenuItem *old_item = [main_menu itemWithTitle:item_address];
+	
+	if (old_item)
+	{
+		[main_menu removeItem:old_item];
+	}
+  
+  [main_menu insertItemWithTitle:item_address action:@selector(recent:) keyEquivalent:@"" atIndex:[main_menu indexOfItemWithTitle:@"Network"] + 1];
 }
 
 - (void)add_recent_item:(NSString*)item_address {

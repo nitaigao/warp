@@ -20,8 +20,8 @@ class MultiSocket : public ISocket
         received_data* return_data = new received_data();
 
         char* buffer = new char[256];
-      
-        if (recvfrom(multicast_sock_, buffer, sizeof(buffer), 0, (struct sockaddr *) &addr, &addrlen) < 0)
+            
+        if (recvfrom(multicast_sock_, buffer, 256, 0, (struct sockaddr *) &addr, &addrlen) < 0)
         {  
             if (errno != EWOULDBLOCK)
             {
@@ -29,8 +29,8 @@ class MultiSocket : public ISocket
             }                   
         }
         else 
-        {            
-            return_data->push_back(buffer);
+        {    
+          return_data->push_back(buffer);
         }
 
         return return_data; 
@@ -44,7 +44,10 @@ class MultiSocket : public ISocket
         addr.sin_addr.s_addr = inet_addr(WORMHOLE_GROUP);
         addr.sin_port = htons(port_);
 
-        sendto(multicast_sock_, data, size, 0, (struct sockaddr *) &addr, sizeof(addr));
+        if (sendto(multicast_sock_, data, size, 0, (struct sockaddr *) &addr, sizeof(addr)) < 0)
+        {
+          std::cerr << "ERROR sending multicast" << std::endl; 
+        }
     }
 		
     void listen_on()

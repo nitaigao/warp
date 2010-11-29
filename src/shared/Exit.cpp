@@ -26,9 +26,10 @@ Exit::Exit(unsigned int port)
 #include "OSXExitCommands.hpp"
 #include "TCPSocket.h"
 
-Exit::Exit(unsigned int port) 
-: send_socket_(new TCPSocket(port)) 
-, listen_socket_(new MultiSocket(port))
+Exit::Exit(ISocket* send_socket, ISocket* m_recv_socket, ISocket* m_send_socket) 
+  : send_socket_(send_socket) 
+  , m_send_socket_(m_send_socket)
+  , m_recv_socket_(m_recv_socket)
 {		
 		message_types_[LEFT_UP]						= new LeftUpCommand();
 		message_types_[LEFT_DOWN]					= new LeftDownCommand();
@@ -50,20 +51,19 @@ Exit::Exit(unsigned int port)
 void Exit::start_listening()
 {  
     send_socket_->listen_on();
-    listen_socket_->listen_on();
 };
 	
 bool Exit::receive() 
 { 
-    ISocket::received_data* listen_datas = listen_socket_->receive();
+    ISocket::received_data* listen_datas = m_recv_socket_->receive();
 
     if (!listen_datas->empty())
     {
       std::string hostname = SocketUtils::hostname();
-      listen_socket_->send(hostname.c_str(), hostname.length());
+      m_send_socket_->send(hostname.c_str(), hostname.size());
     }
 
-    listen_socket_->dispose(listen_datas);
+    m_recv_socket_->dispose(listen_datas);
 
     ISocket::received_data* datas = send_socket_->receive();
 	

@@ -17,6 +17,11 @@
 	while (!quit) {
     exit_->receive();
     entrance->update(1000);
+    
+    StringList host_list = entrance->network_hosts();
+    for(StringList::iterator i = host_list.begin(); i != host_list.end(); ++i) {
+      [status_menu add_network_item:[[NSString alloc] initWithCString:(*i).c_str()]];
+    }
 	}
 }
 
@@ -29,6 +34,11 @@
 	NSMenuItem* menu_item = sender;
 	[status_menu add_recent_item:[menu_item title]];	
 	entrance->send_to([[menu_item title] cStringUsingEncoding:NSASCIIStringEncoding], SERVER_PORT);
+}
+
+- (void)refresh:(id)sender {
+  [status_menu show_menu];
+  entrance->search_for_exits();
 }
 
 - (IBAction)connect:(id)sender {
@@ -53,10 +63,19 @@
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {		
-	exit_ = new Exit(SERVER_PORT);
+
+  ISocket* tcp_socket = new TCPSocket(SERVER_PORT);
+  
+  ISocket* m_send_socket = new MultiSocket(1724);
+  m_send_socket->listen_on();
+  
+  ISocket* m_recv_socket = new MultiSocket(1725);
+  m_recv_socket->listen_on();
+	
+  exit_ = new Exit(tcp_socket, m_send_socket, m_recv_socket);
 	exit_->start_listening();
 	
-	client = new Client();
+	client = new Client(tcp_socket, m_send_socket, m_recv_socket);
 	[input_view set_client:client];
 	
 	entrance = new Entrance(client, connected_window);

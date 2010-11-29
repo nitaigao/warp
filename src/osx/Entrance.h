@@ -9,6 +9,8 @@
 	#include "IClientCommand.h"
 	#include "Client.h"
 
+  typedef std::vector<std::string> StringList; 
+
 	class Entrance
 	{	
 		
@@ -25,7 +27,9 @@
 		
 		bool send_to(const std::string& host, unsigned int port);
     void update(float delta);
-		
+		void search_for_exits();
+    StringList network_hosts();
+    
 	private:
 		
 		static CGEventRef event_tap(CGEventTapProxy proxy, CGEventType type, CGEventRef event, void *refcon);

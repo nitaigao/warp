@@ -69,6 +69,16 @@ void Entrance::disable()
 	enabled_ = false;
 }
 
+void Entrance::search_for_exits()
+{
+  client_->search_for_hosts();
+}
+
+StringList Entrance::network_hosts()
+{
+  return client_->known_hosts();
+}
+
 CGEventRef Entrance::event_tap(CGEventTapProxy proxy, CGEventType type, CGEventRef event, void *refcon)
 {
 	Entrance* black_hole = (Entrance*)refcon;

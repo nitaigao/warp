@@ -13,7 +13,7 @@
 				
 	public:
 		
-		Exit(unsigned int port);
+		Exit(ISocket* send_socket, ISocket* m_recv_socket, ISocket* m_send_socket);
 
 		void start_listening();
 		
@@ -23,6 +23,9 @@
 		
 		ISocket* send_socket_;
     ISocket* listen_socket_;
+    
+    ISocket* m_send_socket_;
+    ISocket* m_recv_socket_;
 		
 		MessageTypeList message_types_;
 

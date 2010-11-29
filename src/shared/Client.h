@@ -6,13 +6,22 @@
 
 	#include "TCPSocket.h"
 
+  typedef std::vector<std::string> StringList;  
+
 	class Client
 	{
 		
 	public:
 		
-		Client() : connected_(false), timeout_(0), socket_(new TCPSocket(0)), last_host_("") { };
-		
+		Client(ISocket* send_socket, ISocket* m_send_socket, ISocket* m_recv_socket)
+      : connected_(false)
+      , timeout_(0)
+      , socket_(send_socket)
+      , m_send_socket_(m_send_socket)
+      , m_recv_socket_(m_recv_socket)
+      , last_host_("") 
+    { };
+    
 		bool connected() { return connected_; };
 		
 		bool connect_to(const std::string& host, unsigned int port);
@@ -46,6 +55,10 @@
 		void send_scroll_wheel(int x, int y);
 		
 		void send_left_double_click();
+    
+    void search_for_hosts();
+    
+    StringList known_hosts();
 		
 	private:
 		
@@ -53,9 +66,12 @@
 		
 		void send_message(const Message& message);
 		
-		TCPSocket* socket_;
+		ISocket* socket_;
+    ISocket* m_send_socket_;
+    ISocket* m_recv_socket_;
 		
 		std::string last_host_;
+    StringList new_known_hosts_;
 		
 		float timeout_;
 		

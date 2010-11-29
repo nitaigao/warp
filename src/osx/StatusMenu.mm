@@ -52,6 +52,7 @@
 }
 
 - (void)add_network_item:(NSString*)item_address {
+  NSLog(@"%@", item_address);
   NSMenuItem *empty_item = [main_menu itemWithTitle:@"Searching..."];
 	
 	if (empty_item)

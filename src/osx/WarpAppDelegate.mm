@@ -13,9 +13,9 @@
 
 @implementation WarpAppDelegate
 
-- (void)server_update {
+- (void)entrance_update {
+  NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
 	while (!quit) {
-    exit_->receive();
     entrance->update(1000);
     
     StringList host_list = entrance->network_hosts();
@@ -23,6 +23,16 @@
       [status_menu add_network_item:[[NSString alloc] initWithCString:(*i).c_str()]];
     }
 	}
+  [pool release]; 
+}
+
+- (void)exit_update {
+  NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+	while (1) {
+    [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]];
+    exit_->receive();
+	}
+  [pool release];
 }
 
 - (IBAction)show_connect:(id)sender {
@@ -80,8 +90,9 @@
 	
 	entrance = new Entrance(client, connected_window);
 	entrance->tap();
-	
-	[NSThread detachNewThreadSelector:@selector(server_update) toTarget:self withObject:nil];
+  
+  [NSThread detachNewThreadSelector:@selector(entrance_update) toTarget:self withObject:nil];
+  [NSThread detachNewThreadSelector:@selector(exit_update) toTarget:self withObject:nil];
 	
 	NSDistributedNotificationCenter * center = [NSDistributedNotificationCenter defaultCenter];	
 	[center addObserver:self selector:@selector(screen_locked) name:@"com.apple.screenIsLocked" object:nil];

@@ -19,9 +19,10 @@ class MultiSocket : public ISocket
         
         received_data* return_data = new received_data();
 
-        char* buffer = new char[256];
-            
-        if (recvfrom(multicast_sock_, buffer, 256, 0, (struct sockaddr *) &addr, &addrlen) < 0)
+        const int BUFFER_SIZE = 256;
+        char* buffer = new char[BUFFER_SIZE];
+
+        if (recvfrom(multicast_sock_, buffer, BUFFER_SIZE, 0, (struct sockaddr *) &addr, &addrlen) < 0)
         {  
             if (errno != EWOULDBLOCK)
             {
@@ -53,7 +54,7 @@ class MultiSocket : public ISocket
     void listen_on()
     {
         multicast_sock_ = SocketUtils::open_socket(SOCK_DGRAM);
-        SocketUtils::set_non_blocking(multicast_sock_);
+        //SocketUtils::set_non_blocking(multicast_sock_);
         SocketUtils::set_reuse_port(multicast_sock_);
         SocketUtils::bind_socket(multicast_sock_, port_);    
         SocketUtils::set_multicast(multicast_sock_, WORMHOLE_GROUP);

@@ -15,11 +15,13 @@
 	IBOutlet NSMenu* recent_menu;
   
   NSStatusItem* statusItem;
+  bool is_open;
 
 }
 
 - (void)add_recent_item:(NSString*)item_address;
 - (void)add_network_item:(NSString*)item_address;
 - (void)show_menu;
+- (bool)isOpen;
 
 @end

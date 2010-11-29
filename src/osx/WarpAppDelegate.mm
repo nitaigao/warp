@@ -20,7 +20,8 @@
     
     StringList host_list = entrance->network_hosts();
     for(StringList::iterator i = host_list.begin(); i != host_list.end(); ++i) {
-      [status_menu add_network_item:[[NSString alloc] initWithCString:(*i).c_str()]];
+      
+      [status_menu add_network_item:[[[NSString alloc] initWithCString:(*i).c_str()] autorelease]]; ;
     }
 	}
   [pool release]; 
@@ -28,11 +29,18 @@
 
 - (void)exit_update {
   NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
-	while (1) {
-    [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]];
+	while (!quit) {
     exit_->receive();
 	}
   [pool release];
+}
+
+- (void)search_for_exits {
+  entrance->search_for_exits();
+  if ([status_menu isOpen]) {
+    [NSThread sleepForTimeInterval:1];
+    [NSThread detachNewThreadSelector:@selector(search_for_exits) toTarget:self withObject:nil];
+  }
 }
 
 - (IBAction)show_connect:(id)sender {
@@ -47,8 +55,8 @@
 }
 
 - (void)refresh:(id)sender {
+  [NSThread detachNewThreadSelector:@selector(search_for_exits) toTarget:self withObject:nil];
   [status_menu show_menu];
-  entrance->search_for_exits();
 }
 
 - (IBAction)connect:(id)sender {

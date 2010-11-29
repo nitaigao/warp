@@ -21,6 +21,7 @@ class MultiSocket : public ISocket
 
         const int BUFFER_SIZE = 256;
         char* buffer = new char[BUFFER_SIZE];
+        memset(buffer, 0, BUFFER_SIZE);
 
         if (recvfrom(multicast_sock_, buffer, BUFFER_SIZE, 0, (struct sockaddr *) &addr, &addrlen) < 0)
         {  

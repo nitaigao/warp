@@ -25,7 +25,9 @@
 }
 
 - (void)show_menu {
+  is_open = true;
   [statusItem popUpStatusItemMenu:main_menu];
+  is_open = false;
 }
 
 - (void)init_main_menu {
@@ -34,6 +36,10 @@
   [statusItem setHighlightMode:YES];
 	[statusItem setEnabled:YES];
   [statusItem setAction:@selector(refresh:)];
+}
+
+- (bool)isOpen {
+  return is_open;
 }
 
 - (void)awakeFromNib {
@@ -52,7 +58,6 @@
 }
 
 - (void)add_network_item:(NSString*)item_address {
-  NSLog(@"%@", item_address);
   NSMenuItem *empty_item = [main_menu itemWithTitle:@"Searching..."];
 	
 	if (empty_item)
@@ -91,8 +96,6 @@
 	{
 		[recent_menu removeItemAtIndex:0];
 	}
-	
-	[self store_recent_list];
 }
 
 @end

@@ -13,24 +13,41 @@
 
 @implementation WarpAppDelegate
 
-- (void)entrance_update {
+- (void)entrance_input_update {
   NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
 	while (!quit) {
-    entrance->update(1000);
+    entrance->update_input(1000);
     
     StringList host_list = entrance->network_hosts();
     for(StringList::iterator i = host_list.begin(); i != host_list.end(); ++i) {
-      
       [status_menu add_network_item:[[[NSString alloc] initWithCString:(*i).c_str()] autorelease]]; ;
     }
+    
+    [NSThread sleepForTimeInterval:1];
 	}
   [pool release]; 
 }
 
-- (void)exit_update {
+- (void)entrance_search_update {
   NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
 	while (!quit) {
-    exit_->receive();
+    entrance->update_search();
+  }
+  [pool release]; 
+}
+
+- (void)exit_input_update {
+  NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+	while (!quit) {
+    exit_->receive_input();
+	}
+  [pool release];
+}
+
+- (void)exit_search_update {
+  NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+	while (!quit) {
+    exit_->receive_search();
 	}
   [pool release];
 }
@@ -83,6 +100,7 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {		
 
   ISocket* tcp_socket = new TCPSocket(SERVER_PORT);
+  tcp_socket->listen_on();
   
   ISocket* m_send_socket = new MultiSocket(1724);
   m_send_socket->listen_on();
@@ -91,7 +109,6 @@
   m_recv_socket->listen_on();
 	
   exit_ = new Exit(tcp_socket, m_send_socket, m_recv_socket);
-	exit_->start_listening();
 	
 	client = new Client(tcp_socket, m_send_socket, m_recv_socket);
 	[input_view set_client:client];
@@ -99,8 +116,12 @@
 	entrance = new Entrance(client, connected_window);
 	entrance->tap();
   
-  [NSThread detachNewThreadSelector:@selector(entrance_update) toTarget:self withObject:nil];
-  [NSThread detachNewThreadSelector:@selector(exit_update) toTarget:self withObject:nil];
+    [NSThread detachNewThreadSelector:@selector(entrance_input_update) toTarget:self withObject:nil];
+    [NSThread detachNewThreadSelector:@selector(entrance_search_update) toTarget:self withObject:nil];
+  
+    [NSThread detachNewThreadSelector:@selector(exit_input_update) toTarget:self withObject:nil];
+    [NSThread detachNewThreadSelector:@selector(exit_search_update) toTarget:self withObject:nil];
+
 	
 	NSDistributedNotificationCenter * center = [NSDistributedNotificationCenter defaultCenter];	
 	[center addObserver:self selector:@selector(screen_locked) name:@"com.apple.screenIsLocked" object:nil];

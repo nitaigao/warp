@@ -10,7 +10,7 @@
 #include "Client.h"
 #include "Constants.hpp"
 
-void Client::update(float delta)
+void Client::update_input(float delta)
 {
   if (connected_ && timeout_ > 0)
   {
@@ -21,7 +21,10 @@ void Client::update(float delta)
       disconnect();
     }
   }
-  
+}
+
+void Client::update_search()
+{
   ISocket::received_data* datas = m_recv_socket_->receive();
   
   for (ISocket::received_data::iterator data = datas->begin(); data != datas->end(); ++data) 

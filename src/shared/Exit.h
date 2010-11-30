@@ -15,9 +15,8 @@
 		
 		Exit(ISocket* send_socket, ISocket* m_recv_socket, ISocket* m_send_socket);
 
-		void start_listening();
-		
-		bool receive();
+		void receive_input();
+    void receive_search();
 		
 	private:
 		

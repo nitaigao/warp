@@ -3,6 +3,7 @@
 
 	#include "IExitCommand.hpp"
 	#include <ApplicationServices/ApplicationServices.h>
+#include <iostream>
 
 	void PostMouseEvent(CGMouseButton button, CGEventType type, const CGPoint point, int click_count = 1) 
 	{

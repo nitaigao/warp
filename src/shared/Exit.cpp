@@ -47,24 +47,21 @@ Exit::Exit(ISocket* send_socket, ISocket* m_recv_socket, ISocket* m_send_socket)
 
 #endif
 
-
-void Exit::start_listening()
-{  
-    send_socket_->listen_on();
-};
+void Exit::receive_search() 
+{
+  ISocket::received_data* listen_datas = m_recv_socket_->receive();
+  
+  if (!listen_datas->empty())
+  {
+    std::string hostname = SocketUtils::hostname();
+    m_send_socket_->send(hostname.c_str(), hostname.size());
+  }
+  
+  m_recv_socket_->dispose(listen_datas);  
+}
 	
-bool Exit::receive() 
+void Exit::receive_input() 
 { 
-    ISocket::received_data* listen_datas = m_recv_socket_->receive();
-
-    if (!listen_datas->empty())
-    {
-      std::string hostname = SocketUtils::hostname();
-      m_send_socket_->send(hostname.c_str(), hostname.size());
-    }
-
-    m_recv_socket_->dispose(listen_datas);
-
     ISocket::received_data* datas = send_socket_->receive();
 	
     if (!datas->empty())
@@ -82,6 +79,4 @@ bool Exit::receive()
 		
         send_socket_->dispose(datas);
     }
-	
-    return true;
 };

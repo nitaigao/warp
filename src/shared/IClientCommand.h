@@ -171,7 +171,7 @@
 		
 		void Execute(CGEventRef event, Client* client)
 		{			
-			int x = CGEventGetIntegerValueField(event, kCGMouseEventDeltaX);
+      int x = CGEventGetIntegerValueField(event, kCGMouseEventDeltaX);
 			int y = CGEventGetIntegerValueField(event, kCGMouseEventDeltaY);
 			client->send_mouse_moved(x, y);
 		}

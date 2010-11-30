@@ -26,7 +26,8 @@
 		
 		bool connect_to(const std::string& host, unsigned int port);
 		
-		void update(float delta);
+		void update_input(float delta);
+    void update_search();
 		
 		bool reconnect();
 		

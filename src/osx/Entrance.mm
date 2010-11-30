@@ -27,11 +27,15 @@ bool Entrance::send_to(const std::string& host, unsigned int port)
 	return result;
 }
 
-void Entrance::update(float delta)
+void Entrance::update_input(float delta)
 {
-  client_->update(delta);
+  client_->update_input(delta);
 }
 
+void Entrance::update_search() 
+{
+  client_->update_search();
+}
 
 void Entrance::tap()
 {		

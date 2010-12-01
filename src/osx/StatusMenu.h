@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 
 
-@interface StatusMenu : NSStatusItem {
+@interface StatusMenu : NSObject {
 	
 	IBOutlet NSMenu* main_menu;
 	IBOutlet NSMenu* recent_menu;
@@ -23,5 +23,8 @@
 - (void)add_network_item:(NSString*)item_address;
 - (void)show_menu;
 - (bool)isOpen;
+
+- (void)start_searching;
+- (void)stop_searching;
 
 @end

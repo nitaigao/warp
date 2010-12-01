@@ -20,12 +20,18 @@
     
     StringList host_list = entrance->network_hosts();
     for(StringList::iterator i = host_list.begin(); i != host_list.end(); ++i) {
-      [status_menu add_network_item:[[[NSString alloc] initWithCString:(*i).c_str()] autorelease]]; ;
+      NSString* host = [[NSString alloc] initWithCString:(*i).c_str()];
+      [self performSelectorOnMainThread:@selector(add_network_item:) withObject:host waitUntilDone:FALSE];
+      [host release];
     }
     
     [NSThread sleepForTimeInterval:1];
 	}
   [pool release]; 
+}
+
+- (void)add_network_item:(NSString*)host {
+  [status_menu add_network_item:host];
 }
 
 - (void)entrance_search_update {
@@ -52,12 +58,32 @@
   [pool release];
 }
 
-- (void)search_for_exits {
-  entrance->search_for_exits();
+- (void)continue_search {
   if ([status_menu isOpen]) {
-    [NSThread sleepForTimeInterval:1];
     [NSThread detachNewThreadSelector:@selector(search_for_exits) toTarget:self withObject:nil];
   }
+}
+
+int search_count = 0;
+
+- (void)search_for_exits {
+  if (search_count++ < 5) {
+    [status_menu start_searching];
+    [NSThread sleepForTimeInterval:1];
+    entrance->search_for_exits();
+    [self performSelectorOnMainThread:@selector(continue_search) withObject:nil waitUntilDone:FALSE];
+  } 
+  else {
+    [status_menu stop_searching];
+    [NSThread sleepForTimeInterval:5];
+    [self performSelectorOnMainThread:@selector(continue_search) withObject:nil waitUntilDone:FALSE];
+    search_count = 0;
+  }
+}
+
+- (void)refresh:(id)sender {
+  [NSThread detachNewThreadSelector:@selector(search_for_exits) toTarget:self withObject:nil];
+  [status_menu show_menu];
 }
 
 - (IBAction)show_connect:(id)sender {
@@ -69,11 +95,6 @@
 	NSMenuItem* menu_item = sender;
 	[status_menu add_recent_item:[menu_item title]];	
 	entrance->send_to([[menu_item title] cStringUsingEncoding:NSASCIIStringEncoding], SERVER_PORT);
-}
-
-- (void)refresh:(id)sender {
-  [NSThread detachNewThreadSelector:@selector(search_for_exits) toTarget:self withObject:nil];
-  [status_menu show_menu];
 }
 
 - (IBAction)connect:(id)sender {

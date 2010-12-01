@@ -64,19 +64,16 @@ void Exit::receive_input()
 { 
     ISocket::received_data* datas = send_socket_->receive();
 	
-    if (!datas->empty())
-    {		
-        for (ISocket::received_data::iterator i = datas->begin(); i != datas->end(); ++i) 
-        {			
-            Message message;
-            memcpy(&message, (*i), sizeof(Message));
-			
-            if (message_types_.find(message.type) != message_types_.end())
-            {							
-                message_types_[message.type]->Execute(message);
-            }
+    for (ISocket::received_data::iterator i = datas->begin(); i != datas->end(); ++i) 
+    {			
+        Message message;
+        memcpy(&message, (*i), sizeof(Message));
+  
+        if (message_types_.find(message.type) != message_types_.end())
+        {							
+            message_types_[message.type]->Execute(message);
         }
-		
-        send_socket_->dispose(datas);
     }
+  
+  send_socket_->dispose(datas);
 };

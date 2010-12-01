@@ -1,5 +1,5 @@
-#ifndef SOCKET_H
-#define SOCKET_H
+#ifndef TCP_SOCKET_H
+#define TCP_SOCKET_H
 
 /*
  *  Socket.h

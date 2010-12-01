@@ -1,5 +1,5 @@
-#ifndef SERVER_H_
-#define SERVER_H_
+#ifndef EXIT_H_
+#define EXIT_H_
 
 	#include <map>
 

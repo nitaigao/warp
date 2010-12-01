@@ -18,9 +18,9 @@
 	};
 	256AC3D90F4B6AC300CF3369 /* WarpAppDelegate.mm */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {976, 2464}}";
-			sepNavSelRange = "{425, 0}";
-			sepNavVisRange = "{0, 1283}";
+			sepNavIntBoundsRect = "{{0, 0}, {976, 2310}}";
+			sepNavSelRange = "{3888, 0}";
+			sepNavVisRange = "{3072, 1661}";
 			sepNavWindowFrame = "{{124, 0}, {1035, 778}}";
 		};
 	};
@@ -103,17 +103,17 @@
 	};
 	4C3C8FB9125A803F009A11CB /* Client.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {914, 1092}}";
-			sepNavSelRange = "{602, 24}";
-			sepNavVisRange = "{495, 701}";
+			sepNavIntBoundsRect = "{{0, 0}, {914, 1106}}";
+			sepNavSelRange = "{165, 0}";
+			sepNavVisRange = "{0, 700}";
 			sepNavWindowFrame = "{{200, 70}, {973, 577}}";
 		};
 	};
 	4C3C8FBA125A803F009A11CB /* Constants.hpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1217, 666}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 191}";
+			sepNavIntBoundsRect = "{{0, 0}, {1217, 706}}";
+			sepNavSelRange = "{306, 0}";
+			sepNavVisRange = "{0, 306}";
 			sepNavWindowFrame = "{{4, 0}, {1276, 778}}";
 		};
 	};
@@ -128,22 +128,22 @@
 	4C3C8FBC125A803F009A11CB /* Exit.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {914, 505}}";
-			sepNavSelRange = "{120, 0}";
-			sepNavVisRange = "{0, 536}";
+			sepNavSelRange = "{28, 0}";
+			sepNavVisRange = "{0, 532}";
 			sepNavWindowFrame = "{{21, 11}, {973, 577}}";
 		};
 	};
 	4C3C8FBD125A803F009A11CB /* IClientCommand.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {849, 2744}}";
-			sepNavSelRange = "{3388, 0}";
-			sepNavVisRange = "{2768, 1125}";
+			sepNavIntBoundsRect = "{{0, 0}, {849, 2702}}";
+			sepNavSelRange = "{3325, 0}";
+			sepNavVisRange = "{317, 1100}";
 			sepNavWindowFrame = "{{19, 0}, {908, 778}}";
 		};
 	};
 	4C3C8FBE125A803F009A11CB /* IExitCommand.hpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {774, 625}}";
+			sepNavIntBoundsRect = "{{0, 0}, {774, 657}}";
 			sepNavSelRange = "{0, 0}";
 			sepNavVisRange = "{0, 178}";
 			sepNavWindowFrame = "{{19, 44}, {833, 729}}";
@@ -151,18 +151,18 @@
 	};
 	4C3C8FBF125A803F009A11CB /* ISocket.hpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {747, 364}}";
-			sepNavSelRange = "{124, 13}";
-			sepNavVisRange = "{80, 105}";
+			sepNavIntBoundsRect = "{{0, 0}, {976, 661}}";
+			sepNavSelRange = "{333, 0}";
+			sepNavVisRange = "{0, 388}";
 			sepNavWindowFrame = "{{19, 40}, {1035, 733}}";
 		};
 	};
 	4C3C8FC0125A803F009A11CB /* Message.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {849, 765}}";
-			sepNavSelRange = "{537, 0}";
-			sepNavVisRange = "{0, 579}";
-			sepNavWindowFrame = "{{19, 0}, {908, 877}}";
+			sepNavIntBoundsRect = "{{0, 0}, {849, 706}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 434}";
+			sepNavWindowFrame = "{{19, 0}, {908, 778}}";
 		};
 	};
 	4C5FB8CF12578CE500923183 /* Entrance.mm */ = {
@@ -175,17 +175,17 @@
 	};
 	4C652981125BE01300C445B7 /* KeyCodes.hpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1217, 1859}}";
-			sepNavSelRange = "{187, 0}";
-			sepNavVisRange = "{2760, 1369}";
+			sepNavIntBoundsRect = "{{0, 0}, {1217, 2016}}";
+			sepNavSelRange = "{4696, 0}";
+			sepNavVisRange = "{3261, 1435}";
 			sepNavWindowFrame = "{{4, 0}, {1276, 778}}";
 		};
 	};
 	4C90934812A2D20F004F1906 /* SocketUtils.hpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {663, 1624}}";
-			sepNavSelRange = "{1765, 0}";
-			sepNavVisRange = "{1854, 107}";
+			sepNavIntBoundsRect = "{{0, 0}, {729, 1624}}";
+			sepNavSelRange = "{2633, 0}";
+			sepNavVisRange = "{2359, 1067}";
 			sepNavWindowFrame = "{{19, 230}, {788, 543}}";
 		};
 	};
@@ -277,8 +277,8 @@
 	};
 	4CA0904F12474A4E00E6A4FD /* Time.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1217, 666}}";
-			sepNavSelRange = "{191, 0}";
+			sepNavIntBoundsRect = "{{0, 0}, {1217, 706}}";
+			sepNavSelRange = "{310, 0}";
 			sepNavVisRange = "{0, 318}";
 			sepNavWindowFrame = "{{4, 0}, {1276, 778}}";
 		};
@@ -286,8 +286,8 @@
 	4CB7DD8D123F5D56009E454C /* Entrance.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {747, 714}}";
-			sepNavSelRange = "{557, 26}";
-			sepNavVisRange = "{0, 1078}";
+			sepNavSelRange = "{422, 0}";
+			sepNavVisRange = "{0, 1085}";
 			sepNavWindowFrame = "{{4, 0}, {750, 778}}";
 		};
 	};
@@ -302,8 +302,8 @@
 	4CCE99B512A6E90900BD1505 /* TCPSocket.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {729, 706}}";
-			sepNavSelRange = "{393, 0}";
-			sepNavVisRange = "{0, 666}";
+			sepNavSelRange = "{18, 2}";
+			sepNavVisRange = "{0, 674}";
 			sepNavWindowFrame = "{{19, 0}, {788, 778}}";
 		};
 	};
@@ -318,7 +318,7 @@
 		rLen = 0;
 		rLoc = 0;
 		rType = 0;
-		vrLen = 883;
+		vrLen = 606;
 		vrLoc = 60;
 	};
 	4CCE99D612A6E95300BD1505 /* PBXTextBookmark */ = {
@@ -356,8 +356,8 @@
 	4CCE99EA12A6EA2500BD1505 /* MultiCastSocket.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {729, 706}}";
-			sepNavSelRange = "{260, 0}";
-			sepNavVisRange = "{0, 410}";
+			sepNavSelRange = "{53, 0}";
+			sepNavVisRange = "{0, 528}";
 			sepNavWindowFrame = "{{19, 0}, {788, 778}}";
 		};
 	};
@@ -404,7 +404,7 @@
 		fRef = 4CCE99EA12A6EA2500BD1505 /* MultiCastSocket.h */;
 		name = "MultiCastSocket.h: 17";
 		rLen = 0;
-		rLoc = 260;
+		rLoc = 55;
 		rType = 0;
 		vrLen = 410;
 		vrLoc = 0;
@@ -414,7 +414,7 @@
 		fRef = 4CCE99EA12A6EA2500BD1505 /* MultiCastSocket.h */;
 		name = "MultiCastSocket.h: 4";
 		rLen = 0;
-		rLoc = 59;
+		rLoc = 55;
 		rType = 0;
 		vrLen = 16;
 		vrLoc = 59;
@@ -424,7 +424,7 @@
 		fRef = 4CCE99B512A6E90900BD1505 /* TCPSocket.h */;
 		name = "TCPSocket.h: 31";
 		rLen = 0;
-		rLoc = 202;
+		rLoc = 210;
 		rType = 0;
 		vrLen = 92;
 		vrLoc = 457;
@@ -484,7 +484,7 @@
 		fRef = 4C90934812A2D20F004F1906 /* SocketUtils.hpp */;
 		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 0;
-		rLoc = 2;
+		rLoc = 1;
 		rType = 1;
 	};
 	4CCE9AA812A6ECCD00BD1505 /* PBXTextBookmark */ = {
@@ -492,7 +492,7 @@
 		fRef = 4C90934812A2D20F004F1906 /* SocketUtils.hpp */;
 		name = "SocketUtils.hpp: 72";
 		rLen = 0;
-		rLoc = 1765;
+		rLoc = 47;
 		rType = 0;
 		vrLen = 107;
 		vrLoc = 1854;
@@ -515,9 +515,9 @@
 	};
 	4CDBE5D3125920F700322E76 /* OSXExitCommands.hpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {849, 3682}}";
-			sepNavSelRange = "{3050, 0}";
-			sepNavVisRange = "{2342, 1295}";
+			sepNavIntBoundsRect = "{{0, 0}, {849, 3542}}";
+			sepNavSelRange = "{2831, 0}";
+			sepNavVisRange = "{0, 1285}";
 			sepNavWindowFrame = "{{19, 0}, {908, 778}}";
 		};
 	};

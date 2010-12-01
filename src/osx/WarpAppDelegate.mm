@@ -137,10 +137,10 @@
   ISocket* tcp_socket = new TCPSocket(SERVER_PORT);
   tcp_socket->listen_on();
   
-  ISocket* m_send_socket = new MultiSocket(1724);
+  ISocket* m_send_socket = new MultiSocket(CLIENT_LISTEN_PORT);
   m_send_socket->listen_on();
   
-  ISocket* m_recv_socket = new MultiSocket(1725);
+  ISocket* m_recv_socket = new MultiSocket(CLIENT_SEND_PORT);
   m_recv_socket->listen_on();
 	
   exit_ = new Exit(tcp_socket, m_send_socket, m_recv_socket);

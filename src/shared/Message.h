@@ -1,12 +1,3 @@
-/*
- *  Message.h
- *  warp
- *
- *  Created by Nicholas Kostelnik on 12/09/2010.
- *  Copyright 2010 __MyCompanyName__. All rights reserved.
- *
- */
-
 #ifndef MESSAGE_TYPES_
 #define MESSAGE_TYPES_
 

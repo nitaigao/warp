@@ -7,6 +7,11 @@ class MultiSocket : public ISocket
 
   MultiSocket(unsigned int port)
       : port_(port) { };
+  
+    void terminate() 
+    {
+      close(multicast_sock_);
+    }
 
     received_data* receive()
     {
@@ -55,7 +60,6 @@ class MultiSocket : public ISocket
     void listen_on()
     {
         multicast_sock_ = SocketUtils::open_socket(SOCK_DGRAM);
-        //SocketUtils::set_non_blocking(multicast_sock_);
         SocketUtils::set_reuse_port(multicast_sock_);
         SocketUtils::bind_socket(multicast_sock_, port_);    
         SocketUtils::set_multicast(multicast_sock_, WORMHOLE_GROUP);

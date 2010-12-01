@@ -27,6 +27,7 @@
     
     [NSThread sleepForTimeInterval:1];
 	}
+  entrance->disable();
   [pool release]; 
 }
 
@@ -39,6 +40,7 @@
 	while (!quit) {
     entrance->update_search();
   }
+  entrance->disable();
   [pool release]; 
 }
 
@@ -47,6 +49,7 @@
 	while (!quit) {
     exit_->receive_input();
 	}
+  exit_->shutdown();
   [pool release];
 }
 
@@ -55,6 +58,7 @@
 	while (!quit) {
     exit_->receive_search();
 	}
+  exit_->shutdown();
   [pool release];
 }
 
@@ -118,9 +122,8 @@
 }
 
 - (IBAction)quit:(id)sender {
-  entrance->disable();
-	quit = true;
-	exit(0);
+  quit = true;
+  [NSApp performSelector:@selector(terminate:) withObject:nil afterDelay:0.0];
 }
 
 - (void)screen_locked {
@@ -146,11 +149,11 @@
 	entrance = new Entrance(client, connected_window);
 	entrance->tap();
   
-    [NSThread detachNewThreadSelector:@selector(entrance_input_update) toTarget:self withObject:nil];
-    [NSThread detachNewThreadSelector:@selector(entrance_search_update) toTarget:self withObject:nil];
-  
-		[NSThread detachNewThreadSelector:@selector(exit_input_update) toTarget:self withObject:nil];
-    [NSThread detachNewThreadSelector:@selector(exit_search_update) toTarget:self withObject:nil];
+  [NSThread detachNewThreadSelector:@selector(entrance_input_update) toTarget:self withObject:nil];
+  [NSThread detachNewThreadSelector:@selector(entrance_search_update) toTarget:self withObject:nil];
+
+  [NSThread detachNewThreadSelector:@selector(exit_input_update) toTarget:self withObject:nil];
+  [NSThread detachNewThreadSelector:@selector(exit_search_update) toTarget:self withObject:nil];
 
 	
 	NSDistributedNotificationCenter * center = [NSDistributedNotificationCenter defaultCenter];	

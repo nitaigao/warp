@@ -77,3 +77,8 @@ void Exit::receive_input()
   
   send_socket_->dispose(datas);
 };
+
+void Exit::shutdown()
+{
+  send_socket_->terminate();
+}

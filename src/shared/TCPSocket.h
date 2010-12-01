@@ -122,8 +122,6 @@ class TCPSocket  : public ISocket
 		
         int readsocks = select(max_socket_ + 1, &working_socks, NULL, NULL, &timeout);
       
-        //std::clog << "hello" << std::endl; - fixes the timeout issue, wtf
-					
         if (readsocks < 0)
         { 
             std::cerr << "ERROR on accept" << std::endl;
@@ -197,10 +195,9 @@ class TCPSocket  : public ISocket
         SocketUtils::bind_socket(listen_sock_, port_);
         
         max_socket_ = listen_sock_;
+        FD_ZERO(&read_sockets_);  
         FD_SET(listen_sock_, &read_sockets_);
-        listen(listen_sock_, 5);
-    
-        std::clog << "listening on port: " << port_ << std::endl;
+        listen(listen_sock_, 32);
     }
 				
     void dispose(received_data* data)

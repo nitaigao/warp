@@ -17,6 +17,8 @@
 
 		void receive_input();
     void receive_search();
+    
+    void shutdown();
 		
 	private:
 		

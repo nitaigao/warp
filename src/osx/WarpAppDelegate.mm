@@ -10,6 +10,8 @@
 #import <Carbon/Carbon.h>
 
 #include "Constants.hpp"
+#include "MultiCastSocket.h"
+#include "TCPSocket.h"
 
 @implementation WarpAppDelegate
 

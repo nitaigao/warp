@@ -2,6 +2,7 @@
 
 #include "Message.h"
 #include "IExitCommand.hpp"
+#include "SocketUtils.hpp"
 
 #ifdef _WIN32
 

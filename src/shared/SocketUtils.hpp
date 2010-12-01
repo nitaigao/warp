@@ -1,3 +1,13 @@
+#include <string>
+#include <iostream>
+
+#include <netinet/tcp.h>
+#include <arpa/inet.h>
+#include <netdb.h>
+#include <fcntl.h>
+
+#include <errno.h>
+
 class SocketUtils
 {
   public:

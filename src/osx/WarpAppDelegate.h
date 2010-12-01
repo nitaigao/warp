@@ -31,6 +31,7 @@
 	Client *client;
 	
 	bool quit;
+	int search_count;
 }
 
 - (IBAction)show_connect:(id)sender;

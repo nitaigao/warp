@@ -58,11 +58,11 @@
 }
 
 - (void)start_searching {
-  [[[main_menu itemWithTitle:@"Exit: Active"] autorelease] setTitle:@"Searching..."];
+  [[main_menu itemWithTitle:@"Exit: Active"] setTitle:@"Searching..."];
 }
 
 - (void)stop_searching {
-  [[[main_menu itemWithTitle:@"Searching..."] autorelease] setTitle:@"Exit: Active"];
+  [[main_menu itemWithTitle:@"Searching..."] setTitle:@"Exit: Active"];
 }
 
 

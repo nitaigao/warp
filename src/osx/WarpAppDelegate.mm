@@ -64,24 +64,33 @@
   }
 }
 
-int search_count = 0;
+- (void) show_start_searching {
+	[status_menu start_searching];
+}
+
+- (void) show_stop_searching {
+	[status_menu stop_searching];
+}
 
 - (void)search_for_exits {
+	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
   if (search_count++ < 5) {
-    [status_menu start_searching];
+		[self performSelectorOnMainThread:@selector(show_start_searching) withObject:nil waitUntilDone:FALSE];
     [NSThread sleepForTimeInterval:1];
     entrance->search_for_exits();
     [self performSelectorOnMainThread:@selector(continue_search) withObject:nil waitUntilDone:FALSE];
   } 
   else {
-    [status_menu stop_searching];
+		[self performSelectorOnMainThread:@selector(show_stop_searching) withObject:nil waitUntilDone:FALSE];
     [NSThread sleepForTimeInterval:5];
     [self performSelectorOnMainThread:@selector(continue_search) withObject:nil waitUntilDone:FALSE];
     search_count = 0;
   }
+	[pool release];
 }
 
 - (void)refresh:(id)sender {
+	search_count = 0;
   [NSThread detachNewThreadSelector:@selector(search_for_exits) toTarget:self withObject:nil];
   [status_menu show_menu];
 }
@@ -140,7 +149,7 @@ int search_count = 0;
     [NSThread detachNewThreadSelector:@selector(entrance_input_update) toTarget:self withObject:nil];
     [NSThread detachNewThreadSelector:@selector(entrance_search_update) toTarget:self withObject:nil];
   
-    [NSThread detachNewThreadSelector:@selector(exit_input_update) toTarget:self withObject:nil];
+		[NSThread detachNewThreadSelector:@selector(exit_input_update) toTarget:self withObject:nil];
     [NSThread detachNewThreadSelector:@selector(exit_search_update) toTarget:self withObject:nil];
 
 	

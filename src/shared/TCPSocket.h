@@ -114,14 +114,16 @@ class TCPSocket  : public ISocket
     {
         struct timeval timeout;
         timeout.tv_sec = 1;
-        timeout.tv_usec = 0;
+        timeout.tv_usec = 1;
 		
         fd_set working_socks;
         FD_ZERO(&working_socks);
         memcpy(&working_socks, &read_sockets_, sizeof(read_sockets_));
 		
         int readsocks = select(max_socket_ + 1, &working_socks, NULL, NULL, &timeout);
-		
+      
+        //std::clog << "hello" << std::endl; - fixes the timeout issue, wtf
+					
         if (readsocks < 0)
         { 
             std::cerr << "ERROR on accept" << std::endl;

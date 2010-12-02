@@ -23,24 +23,11 @@
 
       static std::string hostname()
       {
-          struct addrinfo hints, *info;
-          int gai_result;
-      
           char hostname[1024];
           hostname[1023] = '\0';
           gethostname(hostname, 1023);
-      
-          memset(&hints, 0, sizeof hints);
-          hints.ai_family = AF_UNSPEC; /*either IPV4 or IPV6*/
-          hints.ai_socktype = SOCK_STREAM;
-          hints.ai_flags = AI_CANONNAME;
-      
-          if ((gai_result = getaddrinfo(hostname, "http", &hints, &info)) != 0) {
-              fprintf(stderr, "getaddrinfo: %s\n", gai_strerror(gai_result));
-              exit(1);
-          }
-      
-          return info->ai_next->ai_canonname;
+        
+          return hostname;
       }
 
       static void set_no_sigpipe(int sock)
@@ -91,7 +78,7 @@
           mreq.imr_multiaddr.s_addr = inet_addr(address.c_str());
           mreq.imr_interface.s_addr = htonl(INADDR_ANY);
           if (setsockopt(sock, IPPROTO_IP, IP_ADD_MEMBERSHIP, &mreq, sizeof(mreq)) < 0) {
-              std::cerr << "ERROR setting up multicast" << std::endl;
+              std::cerr << "ERROR setting up multicast: " << strerror(errno) << std::endl;
           }
       }
 

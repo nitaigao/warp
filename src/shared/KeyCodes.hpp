@@ -133,6 +133,19 @@
       return 0;
     };
     
+    int generic_to_osx(int keycode)
+    {
+      for(KeyCodeMap::iterator i = key_codes_.begin(); i != key_codes_.end(); ++i)
+      {
+        if ((*i).second.generic_ == keycode)
+        {
+          return (*i).second.osx_;
+        }
+      }
+      
+      return 0;
+    };
+    
     int generic_to_windows(int keycode)
     {	
       //std::clog << key_codes_[keycode].osx_ << std::endl;

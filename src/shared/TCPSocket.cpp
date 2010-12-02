@@ -24,7 +24,7 @@ bool TCPSocket::connect_to(const std::string& host, unsigned int port)
     return false;
   }
   
-  SocketUtils::set_no_delay(socket_);
+  //SocketUtils::set_no_delay(socket_);
   SocketUtils::set_non_blocking(socket_);
   
   fd_set outgoing; 

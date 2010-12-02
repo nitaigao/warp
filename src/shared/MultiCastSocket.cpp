@@ -11,7 +11,7 @@
 #include "SocketUtils.hpp"
 
 const static int BUFFER_SIZE = 256;
-#define WORMHOLE_GROUP "255.0.0.37"
+#define WORMHOLE_GROUP "225.0.0.87"
 
 void MultiSocket::terminate() 
 {
@@ -94,9 +94,9 @@ void MultiSocket::listen_on()
   SocketUtils::set_non_blocking(listen_sock_);
   SocketUtils::set_reuse_port(listen_sock_);
   
+  SocketUtils::bind_socket(listen_sock_, port_);
   SocketUtils::set_multicast(listen_sock_, WORMHOLE_GROUP);
   SocketUtils::set_multicast_loopback(listen_sock_, false);
-  SocketUtils::bind_socket(listen_sock_, port_);
   
   max_socket_ = listen_sock_;
   FD_ZERO(&read_sockets_);  

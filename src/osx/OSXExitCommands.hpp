@@ -4,6 +4,7 @@
 	#include "IExitCommand.hpp"
 	#include <ApplicationServices/ApplicationServices.h>
 #include <iostream>
+#include "KeyCodes.hpp"
 
 	void PostMouseEvent(CGMouseButton button, CGEventType type, const CGPoint point, int click_count = 1) 
 	{
@@ -89,7 +90,7 @@
 		
 		void Execute(const Message& message)
 		{
-			CGEventRef e = CGEventCreateKeyboardEvent (NULL, message.key_code, false);
+			CGEventRef e = CGEventCreateKeyboardEvent (NULL, KeyCodes().generic_to_osx(message.key_code), false);
 			CGEventSetFlags(e, (CGEventFlags)message.flags);
 			CGEventPost(kCGSessionEventTap, e);
 			CFRelease(e);
@@ -107,7 +108,7 @@
 		
 		void Execute(const Message& message)
 		{
-			CGEventRef e = CGEventCreateKeyboardEvent (NULL, message.key_code, true);
+			CGEventRef e = CGEventCreateKeyboardEvent (NULL, KeyCodes().generic_to_osx(message.key_code), true);
 			CGEventSetFlags(e, (CGEventFlags)message.flags);
 			CGEventPost(kCGSessionEventTap, e);
 			CFRelease(e);

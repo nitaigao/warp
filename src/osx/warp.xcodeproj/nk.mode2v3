@@ -265,10 +265,6 @@
 									<array>
 										<string>29B97314FDCFA39411CA2CEA</string>
 										<string>080E96DDFE201D6D7F000001</string>
-										<string>4CBAFA6B124207AC00C5C338</string>
-										<string>4CB886D51240A557004FB87E</string>
-										<string>4CB886D41240A54E004FB87E</string>
-										<string>4CB886D31240A542004FB87E</string>
 										<string>29B97317FDCFA39411CA2CEA</string>
 										<string>29B97323FDCFA39411CA2CEA</string>
 										<string>1058C7A0FEA54F0111CA2CBB</string>
@@ -277,8 +273,8 @@
 									<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 									<array>
 										<array>
-											<integer>31</integer>
-											<integer>1</integer>
+											<integer>10</integer>
+											<integer>9</integer>
 											<integer>0</integer>
 										</array>
 									</array>
@@ -484,9 +480,13 @@
 	<integer>0</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>4C41A44012AD6360004DF3D8</string>
+		<string>4C41A44112AD6360004DF3D8</string>
+		<string>4C41A44212AD6360004DF3D8</string>
+		<string>1C530D5B069F1CE1000CFCEE</string>
 		<string>1C530D54069F1CE1000CFCEE</string>
-		<string>/Users/nk/Development/wormhole/src/osx/warp.xcodeproj</string>
 		<string>1C530D52069F1CE1000CFCEE</string>
+		<string>/Users/nk/Development/wormhole/src/osx/warp.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>819 92 425 635 0 0 1280 778 </string>
@@ -718,7 +718,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C530D52069F1CE1000CFCEE</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>
@@ -952,8 +952,6 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -989,7 +987,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C530D5B069F1CE1000CFCEE</string>
-				<string>4CC67CA012A91E9600EFE3E4</string>
+				<string>4C41A43F12AD6360004DF3D8</string>
 				<string>1C78EAAC065D492600B07095</string>
 			</array>
 			<key>ToolbarConfiguration</key>
@@ -999,7 +997,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C530D5B069F1CE1000CFCEE</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>Identifier</key>

@@ -18,7 +18,7 @@
 	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
 		activeArchitecturePreference = x86_64;
-		activeBuildConfigurationName = Distribution;
+		activeBuildConfigurationName = Debug;
 		activeExecutable = 4C98CCBB123B727000F0F544 /* warp */;
 		activeTarget = 8D1107260486CEB800E47090 /* Warp */;
 		addToTargets = (
@@ -172,9 +172,9 @@
 		hitCount = 0;
 		ignoreCount = 0;
 		lineNumber = 41;
-		modificationTime = 313074289.127339;
+		modificationTime = 313353053.775049;
 		originalNumberOfMultipleMatches = 1;
-		state = 1;
+		state = 0;
 	};
 	4C95D29612A436D900E20393 /* listener.c */ = {
 		isa = PBXFileReference;
@@ -330,9 +330,9 @@
 	};
 	A7404FCA12AD60270062BF6E /* appcast.xml */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1951, 706}}";
-			sepNavSelRange = "{805, 0}";
-			sepNavVisRange = "{0, 983}";
+			sepNavIntBoundsRect = "{{0, 0}, {1944, 706}}";
+			sepNavSelRange = "{908, 0}";
+			sepNavVisRange = "{0, 982}";
 			sepNavWindowFrame = "{{19, 0}, {788, 778}}";
 		};
 	};

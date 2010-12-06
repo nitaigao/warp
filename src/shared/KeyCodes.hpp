@@ -118,6 +118,20 @@
       key_codes_[83] = KeyCode(83, 126, 38);
       
       key_codes_[84] = KeyCode(84, 11, 66);
+      
+      key_codes_[85] = KeyCode(85, 24, 53); // =+
+      key_codes_[86] = KeyCode(86, 41, 75); // ;:
+      key_codes_[87] = KeyCode(87, 50, 75); // `~
+      key_codes_[88] = KeyCode(88, 27, 75); // -_
+      key_codes_[89] = KeyCode(89, 30, 75); // }]
+      key_codes_[90] = KeyCode(90, 33, 75); // {[
+      key_codes_[91] = KeyCode(91, 42, 75); // \|
+      key_codes_[92] = KeyCode(92, 39, 75); // '"
+      key_codes_[93] = KeyCode(93, 41, 75); // ;:
+      key_codes_[94] = KeyCode(94, 44, 75); // /?
+      key_codes_[95] = KeyCode(95, 47, 75); // .>
+      key_codes_[96] = KeyCode(96, 43, 75); // ,<
+      key_codes_[97] = KeyCode(97, 10, 75); // §±
     };
     
     int osx_to_generic(int keycode)

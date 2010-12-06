@@ -37,8 +37,10 @@
 		
 		void Execute(CGEventRef event, Client* client)
 		{
+      
 			CGEventFlags flags = CGEventGetFlags(event);
 			CGKeyCode keycode = (CGKeyCode)CGEventGetIntegerValueField(event, kCGKeyboardEventKeycode);
+      //std::clog << keycode << std::endl;
 			client->send_key_down(flags, KeyCodes().osx_to_generic(keycode));
 		}
 		
@@ -56,6 +58,7 @@
 		{
 			CGEventFlags flags = CGEventGetFlags(event);
 			CGKeyCode keycode = (CGKeyCode)CGEventGetIntegerValueField(event, kCGKeyboardEventKeycode);			
+      //std::clog << keycode << std::endl;
 			client->send_key_up(flags, KeyCodes().osx_to_generic(keycode));
 		}
 	};

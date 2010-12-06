@@ -1,13 +1,5 @@
 // !$*UTF8*$!
 {
-	089C165DFE840E0CC02AAC07 /* English */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1164, 840}}";
-			sepNavSelRange = "{45, 0}";
-			sepNavVisRange = "{0, 45}";
-			sepNavWindowFrame = "{{19, 661}, {1223, 912}}";
-		};
-	};
 	256AC3D80F4B6AC300CF3369 /* WarpAppDelegate.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {976, 706}}";
@@ -26,11 +18,11 @@
 	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
 		activeArchitecturePreference = x86_64;
-		activeBuildConfigurationName = Debug;
+		activeBuildConfigurationName = Distribution;
 		activeExecutable = 4C98CCBB123B727000F0F544 /* warp */;
-		activeTarget = 8D1107260486CEB800E47090 /* warp */;
+		activeTarget = 8D1107260486CEB800E47090 /* Warp */;
 		addToTargets = (
-			8D1107260486CEB800E47090 /* warp */,
+			8D1107260486CEB800E47090 /* Warp */,
 		);
 		breakpoints = (
 			4C95D29512A436D900E20393 /* listener.c:41 */,
@@ -40,8 +32,8 @@
 			4C98CCBB123B727000F0F544 /* warp */,
 		);
 		perUserDictionary = {
-			PBXPerProjectTemplateStateSaveDate = 313346208;
-			PBXWorkspaceStateSaveDate = 313346208;
+			PBXPerProjectTemplateStateSaveDate = 313352566;
+			PBXWorkspaceStateSaveDate = 313352566;
 		};
 		sourceControlManager = 4C98CCD1123B727700F0F544 /* Source Control */;
 		userBuildSettings = {
@@ -325,7 +317,7 @@
 			sepNavWindowFrame = "{{19, 0}, {908, 778}}";
 		};
 	};
-	8D1107260486CEB800E47090 /* warp */ = {
+	8D1107260486CEB800E47090 /* Warp */ = {
 		activeExec = 0;
 		executables = (
 			4C98CCBB123B727000F0F544 /* warp */,
@@ -333,7 +325,15 @@
 	};
 	8D1107310486CEB800E47090 /* warp-Info.plist */ = {
 		uiCtxt = {
-			sepNavWindowFrame = "{{42, 0}, {1223, 878}}";
+			sepNavWindowFrame = "{{42, 0}, {1223, 778}}";
+		};
+	};
+	A7404FCA12AD60270062BF6E /* appcast.xml */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1951, 706}}";
+			sepNavSelRange = "{805, 0}";
+			sepNavVisRange = "{0, 983}";
+			sepNavWindowFrame = "{{19, 0}, {788, 778}}";
 		};
 	};
 }

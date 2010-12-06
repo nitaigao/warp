@@ -283,7 +283,7 @@
 										</array>
 									</array>
 									<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-									<string>{{0, 330}, {408, 549}}</string>
+									<string>{{0, 0}, {408, 549}}</string>
 								</dict>
 								<key>PBXTopSmartGroupGIDs</key>
 								<array/>
@@ -446,8 +446,8 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>4CB9549E12AD48A400C4F875</string>
-				<string>4CB9549F12AD48A400C4F875</string>
+				<string>4C41A41D12AD6199004DF3D8</string>
+				<string>4C41A41E12AD6199004DF3D8</string>
 				<string>1C9437FD063B20B00039CFAC</string>
 				<string>1C9437FE063B20B00039CFAC</string>
 				<string>1C9437FF063B20B00039CFAC</string>
@@ -485,8 +485,8 @@
 	<key>WindowOrderList</key>
 	<array>
 		<string>1C530D54069F1CE1000CFCEE</string>
-		<string>1C530D52069F1CE1000CFCEE</string>
 		<string>/Users/nk/Development/wormhole/src/osx/warp.xcodeproj</string>
+		<string>1C530D52069F1CE1000CFCEE</string>
 	</array>
 	<key>WindowString</key>
 	<string>819 92 425 635 0 0 1280 778 </string>
@@ -656,7 +656,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {615, 83}}</string>
 								<key>RubberWindowFrame</key>
-								<string>190 43 615 322 0 0 1280 778 </string>
+								<string>92 243 615 322 0 0 1280 778 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -682,7 +682,7 @@
 								<key>Frame</key>
 								<string>{{0, 88}, {615, 193}}</string>
 								<key>RubberWindowFrame</key>
-								<string>190 43 615 322 0 0 1280 778 </string>
+								<string>92 243 615 322 0 0 1280 778 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXBuildResultsModule</string>
@@ -705,7 +705,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C530D52069F1CE1000CFCEE</string>
-				<string>4CB954A012AD48A400C4F875</string>
+				<string>4C41A41F12AD6199004DF3D8</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
@@ -714,7 +714,7 @@
 			<key>WindowContentMinSize</key>
 			<string>486 300</string>
 			<key>WindowString</key>
-			<string>190 43 615 322 0 0 1280 778 </string>
+			<string>92 243 615 322 0 0 1280 778 </string>
 			<key>WindowToolGUID</key>
 			<string>1C530D52069F1CE1000CFCEE</string>
 			<key>WindowToolIsVisible</key>
@@ -827,13 +827,13 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C530D54069F1CE1000CFCEE</string>
-				<string>4CB954AE12AD490F00C4F875</string>
+				<string>4C41A42012AD6199004DF3D8</string>
 				<string>1C162984064C10D400B95A72</string>
-				<string>4CB954AF12AD490F00C4F875</string>
-				<string>4CB954B012AD490F00C4F875</string>
-				<string>4CB954B112AD490F00C4F875</string>
-				<string>4CB954B212AD490F00C4F875</string>
-				<string>4CB954B312AD490F00C4F875</string>
+				<string>4C41A42112AD6199004DF3D8</string>
+				<string>4C41A42212AD6199004DF3D8</string>
+				<string>4C41A42312AD6199004DF3D8</string>
+				<string>4C41A42412AD6199004DF3D8</string>
+				<string>4C41A42512AD6199004DF3D8</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.debugV3</string>

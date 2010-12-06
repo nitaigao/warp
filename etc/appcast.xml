@@ -11,7 +11,9 @@
 							http://github.com/nkostelnik/wormhole/raw/master/etc/releasenotes.html
 						</sparkle:releaseNotesLink>
            <pubDate>Wed, 6 Dec 2010 12:20:11 +0000</pubDate>
-           <enclosure url="https://github.com/downloads/nkostelnik/wormhole/warp.tgz" sparkle:version="241" sparkle:shortVersionString="0.1" sparkle:dsaSignature="MC0CFQCDPXsbsdjvooK1vZPHfACPAWYWVwIUM+Z8jMyMZ38zeANmNe4Q+jVqD8o=" length="61626" type="application/octet-stream" />
+           <enclosure url="https://github.com/downloads/nkostelnik/wormhole/warp.tgz" sparkle:version="241" sparkle:shortVersionString="0.1" sparkle:dsaSignature="MCwCFC80cvfBoKDRJPXDu2F5uFXOudnXAhQ+t2ccVMvna496N95VY/f0pTybCA==" length="376358" type="application/octet-stream" />
         </item>
    </channel>
 </rss>
+
+

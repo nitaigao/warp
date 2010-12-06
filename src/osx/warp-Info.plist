@@ -7,7 +7,7 @@
 	<key>SUPublicDSAKeyFile</key>
 	<string>dsa_pub.pem</string>
 	<key>SUFeedURL</key>
-	<string>http://nkostelnik.github.com/wormhole/appcast.xml</string>
+	<string>https://github.com/nkostelnik/wormhole/raw/master/etc/appcast.xml</string>
 	<key>CFBundleExecutable</key>
 	<string>Warp</string>
 	<key>CFBundleIconFile</key>

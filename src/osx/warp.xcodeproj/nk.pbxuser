@@ -171,8 +171,8 @@
 		isa = PBXTextBookmark;
 		fRef = A7404FCA12AD60270062BF6E /* appcast.xml */;
 		name = "appcast.xml: 14";
-		rLen = 57;
-		rLoc = 687;
+		rLen = 53;
+		rLoc = 683;
 		rType = 0;
 		vrLen = 974;
 		vrLoc = 0;
@@ -356,9 +356,9 @@
 	};
 	A7404FCA12AD60270062BF6E /* appcast.xml */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1944, 706}}";
-			sepNavSelRange = "{538, 0}";
-			sepNavVisRange = "{0, 974}";
+			sepNavIntBoundsRect = "{{0, 0}, {1916, 706}}";
+			sepNavSelRange = "{656, 0}";
+			sepNavVisRange = "{0, 966}";
 			sepNavWindowFrame = "{{19, 0}, {788, 778}}";
 		};
 	};

@@ -87,7 +87,7 @@
 		4CF7E56B1240F54000F7307C /* ship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ship.png; sourceTree = "<group>"; };
 		4CF7E59C1240F71500F7307C /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon.icns; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* warp-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "warp-Info.plist"; sourceTree = "<group>"; };
-		8D1107320486CEB800E47090 /* warp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = warp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D1107320486CEB800E47090 /* Warp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Warp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7404FCA12AD60270062BF6E /* appcast.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = appcast.xml; path = ../../etc/appcast.xml; sourceTree = SOURCE_ROOT; };
 		A76E066D12AD585400E92513 /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
 		A78FEF8612AD4BE500580503 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = sparkle/Sparkle.framework; sourceTree = "<group>"; };
@@ -143,7 +143,7 @@
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8D1107320486CEB800E47090 /* warp.app */,
+				8D1107320486CEB800E47090 /* Warp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -276,7 +276,7 @@
 			name = Warp;
 			productInstallPath = "$(HOME)/Applications";
 			productName = warp;
-			productReference = 8D1107320486CEB800E47090 /* warp.app */;
+			productReference = 8D1107320486CEB800E47090 /* Warp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -333,7 +333,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "cd build/$CONFIGURATION \ntar -cvzf warp.tgz warp.app\nruby \"../../sparkle/Extras/Signing Tools/sign_update.rb\" warp.tgz ~/.keys/warp.pem\nls -al warp.tgz";
+			shellScript = "cd build/$CONFIGURATION \nrm -rf Warp.tgz\ntar -cvzf Warp.tgz Warp.app";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -396,7 +396,7 @@
 				GCC_PREFIX_HEADER = warp_Prefix.pch;
 				INFOPLIST_FILE = "warp-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
-				PRODUCT_NAME = warp;
+				PRODUCT_NAME = Warp;
 			};
 			name = Distribution;
 		};

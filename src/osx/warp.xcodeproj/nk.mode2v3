@@ -230,6 +230,8 @@
 					<key>Tabs</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXBottomSmartGroupGIDs</key>
@@ -273,9 +275,8 @@
 									<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 									<array>
 										<array>
-											<integer>13</integer>
-											<integer>12</integer>
-											<integer>4</integer>
+											<integer>2</integer>
+											<integer>1</integer>
 											<integer>0</integer>
 										</array>
 									</array>
@@ -302,13 +303,13 @@
 									<string>WarningsColumn</string>
 									<real>43</real>
 								</array>
+								<key>RubberWindowFrame</key>
+								<string>819 92 425 635 0 0 1280 778 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXSmartGroupTreeModule</string>
 						</dict>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXBottomSmartGroupGIDs</key>
@@ -338,13 +339,13 @@
 									<key>PBXSmartGroupTreeModuleOutlineStateExpansionKey</key>
 									<array>
 										<string>1C37FBAC04509CD000000102</string>
-										<string>4C76D50512AD6B9B004B0836</string>
+										<string>4CC7660612AD8415008AA450</string>
 										<string>1C37FAAC04509CD000000102</string>
 									</array>
 									<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 									<array>
 										<array>
-											<integer>2</integer>
+											<integer>6</integer>
 											<integer>1</integer>
 											<integer>0</integer>
 										</array>
@@ -366,8 +367,6 @@
 									<string>MainColumn</string>
 									<real>408</real>
 								</array>
-								<key>RubberWindowFrame</key>
-								<string>819 92 425 635 0 0 1280 778 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXSmartGroupTreeModule</string>
@@ -447,8 +446,8 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>4C76D4BD12AD66DE004B0836</string>
-				<string>4C76D4BE12AD66DE004B0836</string>
+				<string>4CC7661112AD8446008AA450</string>
+				<string>4CC7661212AD8446008AA450</string>
 				<string>1C9437FD063B20B00039CFAC</string>
 				<string>1C9437FE063B20B00039CFAC</string>
 				<string>1C9437FF063B20B00039CFAC</string>
@@ -485,9 +484,8 @@
 	<integer>0</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>4C76D4C812AD66DE004B0836</string>
-		<string>4C76D4C912AD66DE004B0836</string>
-		<string>1C530D5B069F1CE1000CFCEE</string>
+		<string>4CC7662012AD847F008AA450</string>
+		<string>4CC7662112AD847F008AA450</string>
 		<string>1C530D54069F1CE1000CFCEE</string>
 		<string>1C530D52069F1CE1000CFCEE</string>
 		<string>/Users/nk/Development/wormhole/src/osx/warp.xcodeproj</string>
@@ -668,8 +666,6 @@
 							<string>83pt</string>
 						</dict>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -709,7 +705,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C530D52069F1CE1000CFCEE</string>
-				<string>4C76D4BF12AD66DE004B0836</string>
+				<string>4CC7661312AD8446008AA450</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
@@ -831,13 +827,13 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C530D54069F1CE1000CFCEE</string>
-				<string>4C76D4C012AD66DE004B0836</string>
+				<string>4CC7661412AD8446008AA450</string>
 				<string>1C162984064C10D400B95A72</string>
-				<string>4C76D4C112AD66DE004B0836</string>
-				<string>4C76D4C212AD66DE004B0836</string>
-				<string>4C76D4C312AD66DE004B0836</string>
-				<string>4C76D4C412AD66DE004B0836</string>
-				<string>4C76D4C512AD66DE004B0836</string>
+				<string>4CC7661512AD8446008AA450</string>
+				<string>4CC7661612AD8446008AA450</string>
+				<string>4CC7661712AD8446008AA450</string>
+				<string>4CC7661812AD8446008AA450</string>
+				<string>4CC7661912AD8446008AA450</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.debugV3</string>

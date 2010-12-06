@@ -19,7 +19,7 @@
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
 		activeArchitecturePreference = x86_64;
 		activeBuildConfigurationName = Distribution;
-		activeExecutable = 4C98CCBB123B727000F0F544 /* warp */;
+		activeExecutable = 4C98CCBB123B727000F0F544 /* Warp */;
 		activeTarget = 8D1107260486CEB800E47090 /* Warp */;
 		addToTargets = (
 			8D1107260486CEB800E47090 /* Warp */,
@@ -29,11 +29,11 @@
 		);
 		codeSenseManager = 4C98CCD2123B727700F0F544 /* Code sense */;
 		executables = (
-			4C98CCBB123B727000F0F544 /* warp */,
+			4C98CCBB123B727000F0F544 /* Warp */,
 		);
 		perUserDictionary = {
-			PBXPerProjectTemplateStateSaveDate = 313353945;
-			PBXWorkspaceStateSaveDate = 313353945;
+			PBXPerProjectTemplateStateSaveDate = 313361429;
+			PBXWorkspaceStateSaveDate = 313361429;
 		};
 		sourceControlManager = 4C98CCD1123B727700F0F544 /* Source Control */;
 		userBuildSettings = {
@@ -191,7 +191,7 @@
 		path = /Users/nk/Development/multicast/listener.c;
 		sourceTree = "<absolute>";
 	};
-	4C98CCBB123B727000F0F544 /* warp */ = {
+	4C98CCBB123B727000F0F544 /* Warp */ = {
 		isa = PBXExecutable;
 		activeArgIndices = (
 		);
@@ -214,7 +214,7 @@
 		executableSystemSymbolLevel = 0;
 		executableUserSymbolLevel = 0;
 		libgmallocEnabled = 0;
-		name = warp;
+		name = Warp;
 		savedGlobals = {
 		};
 		showTypeColumn = 0;
@@ -328,7 +328,7 @@
 	8D1107260486CEB800E47090 /* Warp */ = {
 		activeExec = 0;
 		executables = (
-			4C98CCBB123B727000F0F544 /* warp */,
+			4C98CCBB123B727000F0F544 /* Warp */,
 		);
 	};
 	8D1107310486CEB800E47090 /* warp-Info.plist */ = {
@@ -339,8 +339,8 @@
 	A7404FCA12AD60270062BF6E /* appcast.xml */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1944, 706}}";
-			sepNavSelRange = "{693, 0}";
-			sepNavVisRange = "{0, 975}";
+			sepNavSelRange = "{737, 0}";
+			sepNavVisRange = "{0, 974}";
 			sepNavWindowFrame = "{{19, 0}, {788, 778}}";
 		};
 	};

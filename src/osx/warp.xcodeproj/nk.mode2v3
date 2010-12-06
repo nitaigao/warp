@@ -270,8 +270,8 @@
 									<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 									<array>
 										<array>
-											<integer>13</integer>
-											<integer>6</integer>
+											<integer>3</integer>
+											<integer>1</integer>
 											<integer>0</integer>
 										</array>
 									</array>
@@ -476,7 +476,7 @@
 	<integer>0</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>4CBE1E2A12AD866E00B55532</string>
+		<string>4CBE1E2C12AD878B00B55532</string>
 		<string>1C530D52069F1CE1000CFCEE</string>
 		<string>/Users/nk/Development/wormhole/src/osx/warp.xcodeproj</string>
 	</array>

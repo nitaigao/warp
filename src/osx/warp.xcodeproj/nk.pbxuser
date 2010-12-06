@@ -39,6 +39,8 @@
 			4C69837412AD861600C7FB56 = 4C69837412AD861600C7FB56 /* PBXTextBookmark */;
 			4C8128DA12AD860B00EAF651 = 4C8128DA12AD860B00EAF651 /* PBXTextBookmark */;
 			4CBE1E2412AD862C00B55532 /* PBXTextBookmark */ = 4CBE1E2412AD862C00B55532 /* PBXTextBookmark */;
+			4CBE1E2B12AD86A500B55532 /* PBXBookmark */ = 4CBE1E2B12AD86A500B55532 /* PBXBookmark */;
+			4CBE1E2E12AD878B00B55532 /* PBXTextBookmark */ = 4CBE1E2E12AD878B00B55532 /* PBXTextBookmark */;
 		};
 		sourceControlManager = 4C98CCD1123B727700F0F544 /* Source Control */;
 		userBuildSettings = {
@@ -304,6 +306,20 @@
 		vrLen = 962;
 		vrLoc = 0;
 	};
+	4CBE1E2B12AD86A500B55532 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = A7404FCA12AD60270062BF6E /* appcast.xml */;
+	};
+	4CBE1E2E12AD878B00B55532 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = A7404FCA12AD60270062BF6E /* appcast.xml */;
+		name = "appcast.xml: 11";
+		rLen = 0;
+		rLoc = 504;
+		rType = 0;
+		vrLen = 964;
+		vrLoc = 0;
+	};
 	4CCE99B412A6E90900BD1505 /* TCPSocket.cpp */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {729, 2492}}";
@@ -373,9 +389,9 @@
 	};
 	A7404FCA12AD60270062BF6E /* appcast.xml */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1916, 706}}";
-			sepNavSelRange = "{457, 0}";
-			sepNavVisRange = "{0, 963}";
+			sepNavIntBoundsRect = "{{0, 0}, {1195, 706}}";
+			sepNavSelRange = "{861, 0}";
+			sepNavVisRange = "{0, 861}";
 			sepNavWindowFrame = "{{19, 0}, {788, 778}}";
 		};
 	};

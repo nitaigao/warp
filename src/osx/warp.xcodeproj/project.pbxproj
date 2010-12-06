@@ -333,7 +333,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "cd build/$CONFIGURATION \nrm -rf Warp.tgz\ntar -cvzf Warp.tgz Warp.app";
+			shellScript = "cd build/$CONFIGURATION \nrm -rf warp.tgz\ntar -cvzf warp.tgz Warp.app";
 		};
 /* End PBXShellScriptBuildPhase section */
 

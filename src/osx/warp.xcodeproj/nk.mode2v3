@@ -438,8 +438,8 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>4C2BA4C712AD893E00838C2B</string>
-				<string>4C2BA4C812AD893E00838C2B</string>
+				<string>4C0CADC712AD8BA5009DE00C</string>
+				<string>4C0CADC812AD8BA5009DE00C</string>
 				<string>1C9437FD063B20B00039CFAC</string>
 				<string>1C9437FE063B20B00039CFAC</string>
 				<string>1C9437FF063B20B00039CFAC</string>
@@ -476,6 +476,7 @@
 	<integer>0</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>1C530D54069F1CE1000CFCEE</string>
 		<string>1C530D52069F1CE1000CFCEE</string>
 		<string>/Users/nk/Development/warp/src/osx/warp.xcodeproj</string>
 	</array>
@@ -694,7 +695,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C530D52069F1CE1000CFCEE</string>
-				<string>4C2BA4C912AD893E00838C2B</string>
+				<string>4C0CADC912AD8BA5009DE00C</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
@@ -816,13 +817,13 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C530D54069F1CE1000CFCEE</string>
-				<string>4CC7661412AD8446008AA450</string>
+				<string>4C0CADCA12AD8BA5009DE00C</string>
 				<string>1C162984064C10D400B95A72</string>
-				<string>4CC7661512AD8446008AA450</string>
-				<string>4CC7661612AD8446008AA450</string>
-				<string>4CC7661712AD8446008AA450</string>
-				<string>4CC7661812AD8446008AA450</string>
-				<string>4CC7661912AD8446008AA450</string>
+				<string>4C0CADCB12AD8BA5009DE00C</string>
+				<string>4C0CADCC12AD8BA5009DE00C</string>
+				<string>4C0CADCD12AD8BA5009DE00C</string>
+				<string>4C0CADCE12AD8BA5009DE00C</string>
+				<string>4C0CADCF12AD8BA5009DE00C</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.debugV3</string>
@@ -976,7 +977,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C530D5B069F1CE1000CFCEE</string>
-				<string>4C76D4C612AD66DE004B0836</string>
+				<string>4C0CADB412AD8AF6009DE00C</string>
 				<string>1C78EAAC065D492600B07095</string>
 			</array>
 			<key>ToolbarConfiguration</key>

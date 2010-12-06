@@ -2,9 +2,9 @@
 <archive type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="7.10">
 	<data>
 		<int key="IBDocument.SystemTarget">1060</int>
-		<string key="IBDocument.SystemVersion">10F569</string>
+		<string key="IBDocument.SystemVersion">10H574</string>
 		<string key="IBDocument.InterfaceBuilderVersion">804</string>
-		<string key="IBDocument.AppKitVersion">1038.29</string>
+		<string key="IBDocument.AppKitVersion">1038.35</string>
 		<string key="IBDocument.HIToolboxVersion">461.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -68,27 +68,15 @@
 				<string key="NSTitle"/>
 				<object class="NSMutableArray" key="NSMenuItems">
 					<bool key="EncodedWithXMLCoder">YES</bool>
-					<object class="NSMenuItem" id="795877504">
-						<reference key="NSMenu" ref="702560472"/>
-						<bool key="NSIsDisabled">YES</bool>
-						<string key="NSTitle">Exit: Active</string>
-						<string key="NSKeyEquiv"/>
-						<int key="NSMnemonicLoc">2147483647</int>
-						<object class="NSCustomResource" key="NSOnImage" id="959398959">
-							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">NSMenuCheckmark</string>
-						</object>
-						<object class="NSCustomResource" key="NSMixedImage">
-							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">bezel</string>
-						</object>
-					</object>
 					<object class="NSMenuItem" id="248616318">
 						<reference key="NSMenu" ref="702560472"/>
 						<string key="NSTitle">Recent</string>
 						<string key="NSKeyEquiv"/>
 						<int key="NSMnemonicLoc">2147483647</int>
-						<reference key="NSOnImage" ref="959398959"/>
+						<object class="NSCustomResource" key="NSOnImage" id="753253301">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">NSMenuCheckmark</string>
+						</object>
 						<object class="NSCustomResource" key="NSMixedImage" id="12674992">
 							<string key="NSClassName">NSImage</string>
 							<string key="NSResourceName">NSMenuMixedState</string>
@@ -103,7 +91,7 @@
 									<string key="NSTitle">Empty</string>
 									<string key="NSKeyEquiv"/>
 									<int key="NSMnemonicLoc">2147483647</int>
-									<reference key="NSOnImage" ref="959398959"/>
+									<reference key="NSOnImage" ref="753253301"/>
 									<reference key="NSMixedImage" ref="12674992"/>
 								</object>
 							</object>
@@ -114,7 +102,7 @@
 						<string key="NSTitle">Other...</string>
 						<string key="NSKeyEquiv"/>
 						<int key="NSMnemonicLoc">2147483647</int>
-						<reference key="NSOnImage" ref="959398959"/>
+						<reference key="NSOnImage" ref="753253301"/>
 						<reference key="NSMixedImage" ref="12674992"/>
 					</object>
 					<object class="NSMenuItem" id="865382969">
@@ -124,8 +112,20 @@
 						<string key="NSTitle">Network</string>
 						<string key="NSKeyEquiv"/>
 						<int key="NSMnemonicLoc">2147483647</int>
-						<reference key="NSOnImage" ref="959398959"/>
+						<reference key="NSOnImage" ref="753253301"/>
 						<reference key="NSMixedImage" ref="12674992"/>
+					</object>
+					<object class="NSMenuItem" id="795877504">
+						<reference key="NSMenu" ref="702560472"/>
+						<bool key="NSIsDisabled">YES</bool>
+						<string key="NSTitle">Exit: Active</string>
+						<string key="NSKeyEquiv"/>
+						<int key="NSMnemonicLoc">2147483647</int>
+						<reference key="NSOnImage" ref="753253301"/>
+						<object class="NSCustomResource" key="NSMixedImage">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">bezel</string>
+						</object>
 					</object>
 					<object class="NSMenuItem" id="827825285">
 						<reference key="NSMenu" ref="702560472"/>
@@ -134,7 +134,7 @@
 						<string key="NSTitle"/>
 						<string key="NSKeyEquiv"/>
 						<int key="NSMnemonicLoc">2147483647</int>
-						<reference key="NSOnImage" ref="959398959"/>
+						<reference key="NSOnImage" ref="753253301"/>
 						<reference key="NSMixedImage" ref="12674992"/>
 					</object>
 					<object class="NSMenuItem" id="203349959">
@@ -142,7 +142,7 @@
 						<string key="NSTitle">Check for updates...</string>
 						<string key="NSKeyEquiv"/>
 						<int key="NSMnemonicLoc">2147483647</int>
-						<reference key="NSOnImage" ref="959398959"/>
+						<reference key="NSOnImage" ref="753253301"/>
 						<reference key="NSMixedImage" ref="12674992"/>
 					</object>
 					<object class="NSMenuItem" id="945141686">
@@ -150,7 +150,7 @@
 						<string key="NSTitle">Quit Warp</string>
 						<string key="NSKeyEquiv"/>
 						<int key="NSMnemonicLoc">2147483647</int>
-						<reference key="NSOnImage" ref="959398959"/>
+						<reference key="NSOnImage" ref="753253301"/>
 						<reference key="NSMixedImage" ref="12674992"/>
 					</object>
 				</object>
@@ -446,8 +446,8 @@
 							<reference ref="827825285"/>
 							<reference ref="548113798"/>
 							<reference ref="865382969"/>
-							<reference ref="795877504"/>
 							<reference ref="203349959"/>
+							<reference ref="795877504"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -633,7 +633,7 @@
 					<string>{3.40282e+38, 3.40282e+38}</string>
 					<string>MainView</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>{{819, 583}, {190, 123}}</string>
+					<string>{{778, 583}, {190, 123}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>{{540, 473}, {354, 75}}</string>

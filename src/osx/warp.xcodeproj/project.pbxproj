@@ -26,7 +26,6 @@
 		4CF7E59D1240F71500F7307C /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 4CF7E59C1240F71500F7307C /* icon.icns */; };
 		8D11072D0486CEB800E47090 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.mm */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
-		A76E066E12AD585400E92513 /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = A76E066D12AD585400E92513 /* dsa_pub.pem */; };
 		A786A48F12AD54C300D606DD /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A78FEF8612AD4BE500580503 /* Sparkle.framework */; };
 		A78FEF8712AD4BE500580503 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A78FEF8612AD4BE500580503 /* Sparkle.framework */; };
 /* End PBXBuildFile section */
@@ -89,7 +88,6 @@
 		8D1107310486CEB800E47090 /* warp-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "warp-Info.plist"; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* Warp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Warp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7404FCA12AD60270062BF6E /* appcast.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = appcast.xml; path = ../../etc/appcast.xml; sourceTree = SOURCE_ROOT; };
-		A76E066D12AD585400E92513 /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
 		A78FEF8612AD4BE500580503 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = sparkle/Sparkle.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -173,7 +171,6 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				A76E066D12AD585400E92513 /* dsa_pub.pem */,
 				4CF7E59C1240F71500F7307C /* icon.icns */,
 				4CF7E56B1240F54000F7307C /* ship.png */,
 				4CF7E5471240F40200F7307C /* icon.png */,
@@ -314,7 +311,6 @@
 				4CF7E5481240F40200F7307C /* icon.png in Resources */,
 				4CF7E56C1240F54000F7307C /* ship.png in Resources */,
 				4CF7E59D1240F71500F7307C /* icon.icns in Resources */,
-				A76E066E12AD585400E92513 /* dsa_pub.pem in Resources */,
 				4C41A46B12AD6640004DF3D8 /* rnotes.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -270,8 +270,8 @@
 									<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 									<array>
 										<array>
-											<integer>3</integer>
-											<integer>1</integer>
+											<integer>8</integer>
+											<integer>6</integer>
 											<integer>0</integer>
 										</array>
 									</array>
@@ -438,8 +438,8 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>4CBE1E2212AD862C00B55532</string>
-				<string>4CBE1E2312AD862C00B55532</string>
+				<string>4CE3659F12AD891A004A311F</string>
+				<string>4CE365A012AD891A004A311F</string>
 				<string>1C9437FD063B20B00039CFAC</string>
 				<string>1C9437FE063B20B00039CFAC</string>
 				<string>1C9437FF063B20B00039CFAC</string>
@@ -476,9 +476,8 @@
 	<integer>0</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>4CBE1E2C12AD878B00B55532</string>
 		<string>1C530D52069F1CE1000CFCEE</string>
-		<string>/Users/nk/Development/wormhole/src/osx/warp.xcodeproj</string>
+		<string>/Users/nk/Development/warp/src/osx/warp.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>819 92 425 635 0 0 1280 778 </string>
@@ -695,7 +694,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C530D52069F1CE1000CFCEE</string>
-				<string>4CBE1E2512AD862C00B55532</string>
+				<string>4CE365A112AD891A004A311F</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>

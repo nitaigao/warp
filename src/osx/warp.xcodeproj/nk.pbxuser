@@ -32,15 +32,8 @@
 			4C98CCBB123B727000F0F544 /* Warp */,
 		);
 		perUserDictionary = {
-			PBXPerProjectTemplateStateSaveDate = 313361960;
-			PBXWorkspaceStateSaveDate = 313361960;
-		};
-		perUserProjectItems = {
-			4C69837412AD861600C7FB56 = 4C69837412AD861600C7FB56 /* PBXTextBookmark */;
-			4C8128DA12AD860B00EAF651 = 4C8128DA12AD860B00EAF651 /* PBXTextBookmark */;
-			4CBE1E2412AD862C00B55532 /* PBXTextBookmark */ = 4CBE1E2412AD862C00B55532 /* PBXTextBookmark */;
-			4CBE1E2B12AD86A500B55532 /* PBXBookmark */ = 4CBE1E2B12AD86A500B55532 /* PBXBookmark */;
-			4CBE1E2E12AD878B00B55532 /* PBXTextBookmark */ = 4CBE1E2E12AD878B00B55532 /* PBXTextBookmark */;
+			PBXPerProjectTemplateStateSaveDate = 313362692;
+			PBXWorkspaceStateSaveDate = 313362692;
 		};
 		sourceControlManager = 4C98CCD1123B727700F0F544 /* Source Control */;
 		userBuildSettings = {
@@ -166,26 +159,6 @@
 			sepNavWindowFrame = "{{4, 0}, {1276, 778}}";
 		};
 	};
-	4C69837412AD861600C7FB56 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = A7404FCA12AD60270062BF6E /* appcast.xml */;
-		name = "appcast.xml: 5";
-		rLen = 0;
-		rLoc = 269;
-		rType = 0;
-		vrLen = 962;
-		vrLoc = 0;
-	};
-	4C8128DA12AD860B00EAF651 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = A7404FCA12AD60270062BF6E /* appcast.xml */;
-		name = "appcast.xml: 5";
-		rLen = 0;
-		rLoc = 269;
-		rType = 0;
-		vrLen = 962;
-		vrLoc = 0;
-	};
 	4C90934812A2D20F004F1906 /* SocketUtils.hpp */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {729, 1680}}";
@@ -295,30 +268,6 @@
 			sepNavVisRange = "{0, 1085}";
 			sepNavWindowFrame = "{{4, 0}, {750, 778}}";
 		};
-	};
-	4CBE1E2412AD862C00B55532 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = A7404FCA12AD60270062BF6E /* appcast.xml */;
-		name = "appcast.xml: 5";
-		rLen = 0;
-		rLoc = 269;
-		rType = 0;
-		vrLen = 962;
-		vrLoc = 0;
-	};
-	4CBE1E2B12AD86A500B55532 /* PBXBookmark */ = {
-		isa = PBXBookmark;
-		fRef = A7404FCA12AD60270062BF6E /* appcast.xml */;
-	};
-	4CBE1E2E12AD878B00B55532 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = A7404FCA12AD60270062BF6E /* appcast.xml */;
-		name = "appcast.xml: 11";
-		rLen = 0;
-		rLoc = 504;
-		rType = 0;
-		vrLen = 964;
-		vrLoc = 0;
 	};
 	4CCE99B412A6E90900BD1505 /* TCPSocket.cpp */ = {
 		uiCtxt = {

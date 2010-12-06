@@ -1,8 +1,8 @@
 #ifndef OSX_EXIT_COMMANDS_HPP
 #define OSX_EXIT_COMMANDS_HPP
 
-	#include "IExitCommand.hpp"
-	#include <ApplicationServices/ApplicationServices.h>
+#include "IExitCommand.hpp"
+#include <ApplicationServices/ApplicationServices.h>
 #include <iostream>
 #include "KeyCodes.hpp"
 

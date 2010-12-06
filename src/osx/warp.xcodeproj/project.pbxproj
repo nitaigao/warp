@@ -263,11 +263,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "Warp" */;
 			buildPhases = (
-				8D1107290486CEB800E47090 /* Resources */,
 				8D11072C0486CEB800E47090 /* Sources */,
 				8D11072E0486CEB800E47090 /* Frameworks */,
-				4CA0906612474ADF00E6A4FD /* ShellScript */,
+				8D1107290486CEB800E47090 /* Resources */,
 				A78FEF9312AD4C2100580503 /* CopyFiles */,
+				4CA0906612474ADF00E6A4FD /* ShellScript */,
 			);
 			buildRules = (
 			);

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle"  xmlns:dc="http://purl.org/dc/elements/1.1/">
+   <channel>
+      <title>Warp's Changelog</title>
+      <link>http://nkostelnik.github.com/osx-appcast.xml</link>
+      <description>Most recent changes with links to updates.</description>
+      <language>en</language>
+				<item>
+           <title>Version 0.1</title>
+						<sparkle:releaseNotesLink>
+							http://nkostelnik.github.com/releasenotes.html
+						</sparkle:releaseNotesLink>
+           <pubDate>Wed, 6 Dec 2010 12:20:11 +0000</pubDate>
+           <enclosure url="https://github.com/downloads/nkostelnik/wormhole/warp.tgz" sparkle:version="241" sparkle:shortVersionString="0.1" sparkle:dsaSignature="MC0CFBfeCa1JyW30nbkBwainOzrN6EQuAh=" length="1472349" type="application/octet-stream" />
+        </item>
+   </channel>
+</rss>

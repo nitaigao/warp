@@ -4,6 +4,8 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
+	<key>SUFeedURL</key>
+	<string>http://nkostelnik.github.com/wormhole/appcast.xml</string>
 	<key>CFBundleExecutable</key>
 	<string>Warp</string>
 	<key>CFBundleIconFile</key>

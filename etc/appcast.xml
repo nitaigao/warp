@@ -8,7 +8,7 @@
 				<item>
            <title>Version 1.0</title>
 						<sparkle:releaseNotesLink>
-							http://github.com/nkostelnik/wormhole/raw/master/etc/rnotes.html
+							http://github.com/nkostelnik/wormhole/raw/master/etc/rnotes.md
 						</sparkle:releaseNotesLink>
            <pubDate>Wed, 6 Dec 2010 12:20:11 +0000</pubDate>
            <enclosure url="https://github.com/downloads/nkostelnik/wormhole/warp.tgz" sparkle:version="1" sparkle:shortVersionString="1.0" sparkle:dsaSignature="MC0CFDq4gvpnEe+F1oFUSZyFtP/37eYjAhUAi3jDzmbDJjMIgZ5QA4vC7N8LYHg=" length="61568" type="application/octet-stream" />

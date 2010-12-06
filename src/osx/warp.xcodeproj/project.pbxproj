@@ -14,6 +14,7 @@
 		4C2E715A124893D000A214C8 /* StatusMenu.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4C2E7159124893D000A214C8 /* StatusMenu.mm */; };
 		4C3C8FC2125A803F009A11CB /* Client.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C3C8FB8125A803F009A11CB /* Client.cpp */; };
 		4C3C8FC3125A803F009A11CB /* Exit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C3C8FBB125A803F009A11CB /* Exit.cpp */; };
+		4C41A46B12AD6640004DF3D8 /* rnotes.md in Resources */ = {isa = PBXBuildFile; fileRef = 4C41A46912AD6640004DF3D8 /* rnotes.md */; };
 		4C5FB8D012578CE500923183 /* Entrance.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4C5FB8CF12578CE500923183 /* Entrance.mm */; };
 		4C98CCE8123B740200F0F544 /* MainView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4C98CCE7123B740200F0F544 /* MainView.mm */; };
 		4CCE99B612A6E90900BD1505 /* TCPSocket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CCE99B412A6E90900BD1505 /* TCPSocket.cpp */; };
@@ -66,6 +67,7 @@
 		4C3C8FBE125A803F009A11CB /* IExitCommand.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = IExitCommand.hpp; path = ../shared/IExitCommand.hpp; sourceTree = SOURCE_ROOT; };
 		4C3C8FBF125A803F009A11CB /* ISocket.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ISocket.hpp; path = ../shared/ISocket.hpp; sourceTree = SOURCE_ROOT; };
 		4C3C8FC0125A803F009A11CB /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Message.h; path = ../shared/Message.h; sourceTree = SOURCE_ROOT; };
+		4C41A46912AD6640004DF3D8 /* rnotes.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = rnotes.md; path = ../../etc/rnotes.md; sourceTree = SOURCE_ROOT; };
 		4C5FB8CF12578CE500923183 /* Entrance.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Entrance.mm; sourceTree = "<group>"; };
 		4C652981125BE01300C445B7 /* KeyCodes.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = KeyCodes.hpp; path = ../shared/KeyCodes.hpp; sourceTree = SOURCE_ROOT; };
 		4C90934812A2D20F004F1906 /* SocketUtils.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = SocketUtils.hpp; path = ../shared/SocketUtils.hpp; sourceTree = SOURCE_ROOT; };
@@ -149,6 +151,7 @@
 		29B97314FDCFA39411CA2CEA /* warp */ = {
 			isa = PBXGroup;
 			children = (
+				4C41A46612AD662D004DF3D8 /* Sparkle */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
@@ -170,7 +173,6 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				A7404FCA12AD60270062BF6E /* appcast.xml */,
 				A76E066D12AD585400E92513 /* dsa_pub.pem */,
 				4CF7E59C1240F71500F7307C /* icon.icns */,
 				4CF7E56B1240F54000F7307C /* ship.png */,
@@ -190,6 +192,15 @@
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4C41A46612AD662D004DF3D8 /* Sparkle */ = {
+			isa = PBXGroup;
+			children = (
+				4C41A46912AD6640004DF3D8 /* rnotes.md */,
+				A7404FCA12AD60270062BF6E /* appcast.xml */,
+			);
+			name = Sparkle;
 			sourceTree = "<group>";
 		};
 		4CB886D31240A542004FB87E /* Entrance */ = {
@@ -304,6 +315,7 @@
 				4CF7E56C1240F54000F7307C /* ship.png in Resources */,
 				4CF7E59D1240F71500F7307C /* icon.icns in Resources */,
 				A76E066E12AD585400E92513 /* dsa_pub.pem in Resources */,
+				4C41A46B12AD6640004DF3D8 /* rnotes.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

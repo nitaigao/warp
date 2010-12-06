@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle"  xmlns:dc="http://purl.org/dc/elements/1.1/">
    <channel>
       <title>Warp's Changelog</title>
-      <link>http://github.com/nkostelnik/wormhole/raw/master/etc/appcast.xml</link>
+      <link>http://github.com/nkostelnik/warp/raw/master/etc/appcast.xml</link>
       <description>Most recent changes with links to updates.</description>
       <language>en</language>
 				<item>

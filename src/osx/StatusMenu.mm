@@ -58,16 +58,20 @@
 }
 
 - (void)start_searching {
-  [[main_menu itemWithTitle:@"Exit: Active"] setTitle:@"Searching..."];
+  [network_item setTitle:@"Searching..."];
 }
 
 - (void)stop_searching {
-  [[main_menu itemWithTitle:@"Searching..."] setTitle:@"Exit: Active"];
+  [network_item setTitle:@"Exit Active"];
 }
-
 
 - (void)updateTheMenu:(NSString*)item_address
 {  
+  if ([network_seperator_item isHidden])
+  {
+    [network_seperator_item setHidden:FALSE];
+  }
+  
   NSMenuItem *old_item = [main_menu itemWithTitle:item_address];
 	
 	if (!old_item)
@@ -75,7 +79,7 @@
     [main_menu insertItemWithTitle:item_address
                             action:@selector(recent:)
                      keyEquivalent:@"" 
-                           atIndex:[main_menu indexOfItemWithTitle:@"Network"] + 1];
+                           atIndex:[main_menu indexOfItem:network_seperator_item] + 1];
     
     [main_menu update];
 	}

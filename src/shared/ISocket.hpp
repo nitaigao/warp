@@ -16,7 +16,7 @@
 		
 		virtual void dispose(received_data* data) = 0;
 
-    virtual void send(const char* data, unsigned int size) = 0;
+    virtual bool send(const char* data, unsigned int size) = 0;
 		
     virtual void terminate() = 0;
     

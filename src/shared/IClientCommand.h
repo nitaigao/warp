@@ -24,7 +24,7 @@
 		
 	public:
 		
-		virtual void Execute(CGEventRef event, Client* client) = 0;
+		virtual bool Execute(CGEventRef event, Client* client) = 0;
 			
 	};
 
@@ -35,13 +35,13 @@
 		
 		KeyDownClientCommand(NSWindow* window) : window_(window) { };
 		
-		void Execute(CGEventRef event, Client* client)
+		bool Execute(CGEventRef event, Client* client)
 		{
       
 			CGEventFlags flags = CGEventGetFlags(event);
 			CGKeyCode keycode = (CGKeyCode)CGEventGetIntegerValueField(event, kCGKeyboardEventKeycode);
       //std::clog << keycode << std::endl;
-			client->send_key_down(flags, KeyCodes().osx_to_generic(keycode));
+			return client->send_key_down(flags, KeyCodes().osx_to_generic(keycode));
 		}
 		
 	private:
@@ -54,12 +54,12 @@
 		
 	public:
 		
-		void Execute(CGEventRef event, Client* client)
+		bool Execute(CGEventRef event, Client* client)
 		{
 			CGEventFlags flags = CGEventGetFlags(event);
 			CGKeyCode keycode = (CGKeyCode)CGEventGetIntegerValueField(event, kCGKeyboardEventKeycode);			
       //std::clog << keycode << std::endl;
-			client->send_key_up(flags, KeyCodes().osx_to_generic(keycode));
+			return client->send_key_up(flags, KeyCodes().osx_to_generic(keycode));
 		}
 	};
 
@@ -68,11 +68,11 @@
 		
 	public:
 		
-		void Execute(CGEventRef event, Client* client)
+		bool Execute(CGEventRef event, Client* client)
 		{
 			CGEventFlags flags = CGEventGetFlags(event);
 			CGKeyCode keycode = (CGKeyCode)CGEventGetIntegerValueField(event, kCGKeyboardEventKeycode);
-			client->send_flags(keycode, flags);
+			return client->send_flags(keycode, flags);
 		}
 	};
 
@@ -81,9 +81,9 @@
 		
 	public:
 		
-		void Execute(CGEventRef event, Client* client)
+		bool Execute(CGEventRef event, Client* client)
 		{
-			client->send_left_up();
+			return client->send_left_up();
 		}
 	};
 
@@ -97,7 +97,7 @@
 			last_click_ = Time::get();
 		}
 		
-		void Execute(CGEventRef event, Client* client)
+		bool Execute(CGEventRef event, Client* client)
 		{	
 			unsigned int time_now = Time::get();
 			unsigned int delta = time_now - last_click_;
@@ -106,11 +106,11 @@
 			
 			if (delta < DOUBLE_CLICK_THRESHOLD)
 			{
-				client->send_left_double_click();
+				return client->send_left_double_click();
 			}
 			else 
 			{
-				client->send_left_down();
+				return client->send_left_down();
 			}
 		}
 		
@@ -124,11 +124,11 @@
 		
 	public:
 		
-		void Execute(CGEventRef event, Client* client)
+		bool Execute(CGEventRef event, Client* client)
 		{
 			int x = CGEventGetIntegerValueField(event, kCGMouseEventDeltaX);
 			int y = CGEventGetIntegerValueField(event, kCGMouseEventDeltaY);
-			client->send_left_dragged(x, y);
+			return client->send_left_dragged(x, y);
 		}
 	};
 
@@ -137,9 +137,9 @@
 		
 	public:
 		
-		void Execute(CGEventRef event, Client* client)
+		bool Execute(CGEventRef event, Client* client)
 		{
-			client->send_right_up();
+			return client->send_right_up();
 		}
 	};
 
@@ -148,9 +148,9 @@
 		
 	public:
 		
-		void Execute(CGEventRef event, Client* client)
+		bool Execute(CGEventRef event, Client* client)
 		{
-			client->send_right_down();
+			return client->send_right_down();
 		}
 	};
 
@@ -159,11 +159,11 @@
 		
 	public:
 		
-		void Execute(CGEventRef event, Client* client)
+		bool Execute(CGEventRef event, Client* client)
 		{
 			int x = CGEventGetIntegerValueField(event, kCGMouseEventDeltaX);
 			int y = CGEventGetIntegerValueField(event, kCGMouseEventDeltaY);
-			client->send_right_dragged(x, y);
+			return client->send_right_dragged(x, y);
 		}
 	};
 
@@ -172,11 +172,11 @@
 		
 	public:
 		
-		void Execute(CGEventRef event, Client* client)
+		bool Execute(CGEventRef event, Client* client)
 		{			
       int x = CGEventGetIntegerValueField(event, kCGMouseEventDeltaX);
 			int y = CGEventGetIntegerValueField(event, kCGMouseEventDeltaY);
-			client->send_mouse_moved(x, y);
+			return client->send_mouse_moved(x, y);
 		}
 	};
 
@@ -185,11 +185,11 @@
 		
 	public:
 		
-		void Execute(CGEventRef event, Client* client)
+		bool Execute(CGEventRef event, Client* client)
 		{
 			int x = CGEventGetIntegerValueField(event, kCGScrollWheelEventDeltaAxis2);
 			int y = CGEventGetIntegerValueField(event, kCGScrollWheelEventDeltaAxis1);
-			client->send_scroll_wheel(x, y);
+			return client->send_scroll_wheel(x, y);
 		}
 	};
 

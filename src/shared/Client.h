@@ -27,35 +27,36 @@
 		bool connect_to(const std::string& host, unsigned int port);
 		
 		void update_input(float delta);
+    
     void update_search();
 		
 		bool reconnect();
 		
 		void disconnect();
 		
-		void send_left_up();
+		bool send_left_up();
 		
-		void send_right_up();
+		bool send_right_up();
 		
-		void send_left_down();
+		bool send_left_down();
 		
-		void send_left_dragged(int x, int y);
+		bool send_left_dragged(int x, int y);
 		
-		void send_right_dragged(int x, int y);
+		bool send_right_dragged(int x, int y);
 		
-		void send_right_down();	
+		bool send_right_down();	
 		
-		void send_mouse_moved(int x, int y);
+		bool send_mouse_moved(int x, int y);
 		
-		void send_key_down(unsigned int flags, int key_code);
+		bool send_key_down(unsigned int flags, int key_code);
 		
-		void send_key_up(unsigned int flags, int key_code);
+		bool send_key_up(unsigned int flags, int key_code);
 		
-		void send_flags(int key_code, unsigned int flags);
+		bool send_flags(int key_code, unsigned int flags);
 		
-		void send_scroll_wheel(int x, int y);
+		bool send_scroll_wheel(int x, int y);
 		
-		void send_left_double_click();
+		bool send_left_double_click();
     
     void search_for_hosts();
     
@@ -65,7 +66,7 @@
 		
 		bool can_reconnect();
 		
-		void send_message(const Message& message);
+		bool send_message(const Message& message);
 		
 		ISocket* socket_;
     ISocket* m_send_socket_;

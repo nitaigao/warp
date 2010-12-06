@@ -13,6 +13,8 @@
 	
 	IBOutlet NSMenu* main_menu;
 	IBOutlet NSMenu* recent_menu;
+  IBOutlet NSMenuItem* network_item;
+  IBOutlet NSMenuItem* network_seperator_item;
   
   NSStatusItem* statusItem;
   bool is_open;

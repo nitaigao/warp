@@ -13,8 +13,8 @@
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
 			<integer value="371"/>
-			<integer value="542"/>
 			<integer value="558"/>
+			<integer value="542"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -105,16 +105,6 @@
 						<reference key="NSOnImage" ref="753253301"/>
 						<reference key="NSMixedImage" ref="12674992"/>
 					</object>
-					<object class="NSMenuItem" id="865382969">
-						<reference key="NSMenu" ref="702560472"/>
-						<bool key="NSIsDisabled">YES</bool>
-						<bool key="NSIsSeparator">YES</bool>
-						<string key="NSTitle">Network</string>
-						<string key="NSKeyEquiv"/>
-						<int key="NSMnemonicLoc">2147483647</int>
-						<reference key="NSOnImage" ref="753253301"/>
-						<reference key="NSMixedImage" ref="12674992"/>
-					</object>
 					<object class="NSMenuItem" id="795877504">
 						<reference key="NSMenu" ref="702560472"/>
 						<bool key="NSIsDisabled">YES</bool>
@@ -126,6 +116,17 @@
 							<string key="NSClassName">NSImage</string>
 							<string key="NSResourceName">bezel</string>
 						</object>
+					</object>
+					<object class="NSMenuItem" id="747818965">
+						<reference key="NSMenu" ref="702560472"/>
+						<bool key="NSIsDisabled">YES</bool>
+						<bool key="NSIsSeparator">YES</bool>
+						<bool key="NSIsHidden">YES</bool>
+						<string key="NSTitle"/>
+						<string key="NSKeyEquiv"/>
+						<int key="NSMnemonicLoc">2147483647</int>
+						<reference key="NSOnImage" ref="753253301"/>
+						<reference key="NSMixedImage" ref="12674992"/>
 					</object>
 					<object class="NSMenuItem" id="827825285">
 						<reference key="NSMenu" ref="702560472"/>
@@ -381,6 +382,22 @@
 					</object>
 					<int key="connectionID">599</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">network_item</string>
+						<reference key="source" ref="761539651"/>
+						<reference key="destination" ref="795877504"/>
+					</object>
+					<int key="connectionID">600</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">network_seperator_item</string>
+						<reference key="source" ref="761539651"/>
+						<reference key="destination" ref="747818965"/>
+					</object>
+					<int key="connectionID">603</int>
+				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<object class="NSArray" key="orderedObjects">
@@ -445,8 +462,8 @@
 							<reference ref="248616318"/>
 							<reference ref="827825285"/>
 							<reference ref="548113798"/>
-							<reference ref="865382969"/>
 							<reference ref="203349959"/>
+							<reference ref="747818965"/>
 							<reference ref="795877504"/>
 						</object>
 						<reference key="parent" ref="0"/>
@@ -557,11 +574,6 @@
 						<reference key="parent" ref="702560472"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">594</int>
-						<reference key="object" ref="865382969"/>
-						<reference key="parent" ref="702560472"/>
-					</object>
-					<object class="IBObjectRecord">
 						<int key="objectID">595</int>
 						<reference key="object" ref="795877504"/>
 						<reference key="parent" ref="702560472"/>
@@ -575,6 +587,11 @@
 					<object class="IBObjectRecord">
 						<int key="objectID">598</int>
 						<reference key="object" ref="203349959"/>
+						<reference key="parent" ref="702560472"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">602</int>
+						<reference key="object" ref="747818965"/>
 						<reference key="parent" ref="702560472"/>
 					</object>
 				</object>
@@ -617,10 +634,10 @@
 					<string>577.IBPluginDependency</string>
 					<string>580.IBPluginDependency</string>
 					<string>593.IBPluginDependency</string>
-					<string>594.IBPluginDependency</string>
 					<string>595.IBPluginDependency</string>
 					<string>597.IBPluginDependency</string>
 					<string>598.IBPluginDependency</string>
+					<string>602.IBPluginDependency</string>
 				</object>
 				<object class="NSMutableArray" key="dict.values">
 					<bool key="EncodedWithXMLCoder">YES</bool>
@@ -680,7 +697,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">599</int>
+			<int key="maxID">603</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -720,11 +737,15 @@
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>main_menu</string>
+							<string>network_item</string>
+							<string>network_seperator_item</string>
 							<string>recent_menu</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>NSMenu</string>
+							<string>NSMenuItem</string>
+							<string>NSMenuItem</string>
 							<string>NSMenu</string>
 						</object>
 					</object>
@@ -733,6 +754,8 @@
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>main_menu</string>
+							<string>network_item</string>
+							<string>network_seperator_item</string>
 							<string>recent_menu</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
@@ -740,6 +763,14 @@
 							<object class="IBToOneOutletInfo">
 								<string key="name">main_menu</string>
 								<string key="candidateClassName">NSMenu</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">network_item</string>
+								<string key="candidateClassName">NSMenuItem</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">network_seperator_item</string>
+								<string key="candidateClassName">NSMenuItem</string>
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">recent_menu</string>

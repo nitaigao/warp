@@ -74,7 +74,7 @@ ISocket::received_data* MultiSocket::receive()
   return return_data;
 }
 
-void MultiSocket::send(const char* data, unsigned int size) 
+bool MultiSocket::send(const char* data, unsigned int size) 
 {
   struct sockaddr_in addr;
   memset(&addr, 0, sizeof(addr));
@@ -82,10 +82,15 @@ void MultiSocket::send(const char* data, unsigned int size)
   addr.sin_addr.s_addr = inet_addr(WORMHOLE_GROUP);
   addr.sin_port = htons(port_);
   
+  //std::clog << "sending: " << data << std::endl;
+  
   if (sendto(listen_sock_, data, size, 0, (struct sockaddr *) &addr, sizeof(addr)) < 0)
   {
     std::cerr << "ERROR sending multicast" << std::endl; 
+    return false;
   }
+  
+  return true;
 }
 
 void MultiSocket::listen_on()

@@ -15,7 +15,7 @@
     
     received_data* receive();
     
-    void send(const char* data, unsigned int size);
+    bool send(const char* data, unsigned int size);
     
     void listen_on();
     

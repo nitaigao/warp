@@ -141,13 +141,16 @@ CGEventRef Entrance::scan_input(CGEventType type, CGEventRef event)
 		{
       try
       {
-          client_commands_[type]->Execute(event, client_);
+        if (!client_commands_[type]->Execute(event, client_))
+        {
+          disable();
+        }
+        event = NULL;
       }
       catch(std::exception e)
       {
-          std::cerr << e.what() << std::endl;
+        std::cerr << e.what() << std::endl;
       }
-			event = NULL;
 		}
 	}
 	

@@ -81,7 +81,7 @@ bool Client::can_reconnect()
 	return (last_host_.length() > 0);
 }
 
-void Client::send_message(const Message& message)
+bool Client::send_message(const Message& message)
 {	
 	if (!connected_)
 	{
@@ -92,103 +92,103 @@ void Client::send_message(const Message& message)
 	char* data = new char[sizeof(Message)];
 	memcpy(data, &message, sizeof(Message));
 	
-	socket_->send(data, sizeof(Message));
+	return socket_->send(data, sizeof(Message));
 }
 
-void Client::send_left_double_click()
+bool Client::send_left_double_click()
 {
 	Message message;
 	message.type = LEFT_DOUBLE_CLICK;
-	send_message(message);
+	return send_message(message);
 }
 
-void Client::send_left_down()
+bool Client::send_left_down()
 {
 	Message message;
 	message.type = LEFT_DOWN;
-	send_message(message);
+	return send_message(message);
 }
 
-void Client::send_key_down(unsigned int flags, int key_code)
+bool Client::send_key_down(unsigned int flags, int key_code)
 {
 	Message message;
 	message.type = KEY_DOWN;
 	message.key_code = key_code;
 	message.flags = flags;
-	send_message(message);
+	return send_message(message);
 }
 
-void Client::send_key_up(unsigned int flags, int key_code)
+bool Client::send_key_up(unsigned int flags, int key_code)
 {
 	Message message;
 	message.type = KEY_UP;
 	message.key_code = key_code;
 	message.flags = flags;
-	send_message(message);
+	return send_message(message);
 }
 
-void Client::send_right_down()
+bool Client::send_right_down()
 {
 	Message message;
 	message.type = RIGHT_DOWN;
-	send_message(message);
+	return send_message(message);
 }
 
-void Client::send_left_up()
+bool Client::send_left_up()
 {
 	Message message;
 	message.type = LEFT_UP;
-	send_message(message);
+	return send_message(message);
 }
 
-void Client::send_right_up()
+bool Client::send_right_up()
 {
 	Message message;
 	message.type = RIGHT_UP;
-	send_message(message);
+	return send_message(message);
 }
 
-void Client::send_mouse_moved(int x, int y)
+bool Client::send_mouse_moved(int x, int y)
 {
 	Message message;
 	message.type = MOUSE_MOVE;
 	message.x = x;
 	message.y = y;
-	send_message(message);
+	return send_message(message);
 }
 
-void Client::send_left_dragged(int x, int y)
+bool Client::send_left_dragged(int x, int y)
 {
 	Message message;
 	message.type = LEFT_DRAGGED;
 	message.x = x;
 	message.y = y;
-	send_message(message);
+	return send_message(message);
 }
 
-void Client::send_right_dragged(int x, int y)
+bool Client::send_right_dragged(int x, int y)
 {
 	Message message;
 	message.type = RIGHT_DRAGGED;
 	message.x = x;
 	message.y = y;
-	send_message(message);
+	return send_message(message);
 }
 
-void Client::send_flags(int key_code, unsigned int flags)
+bool Client::send_flags(int key_code, unsigned int flags)
 {
 	Message message;
 	message.type = FLAGS_CHANGED;
 	message.key_code = key_code;
 	message.flags = flags;
-	send_message(message);
+	return send_message(message);
 }
 
-void Client::send_scroll_wheel(int x, int y)
+bool Client::send_scroll_wheel(int x, int y)
 {
 	Message message;
 	message.type = SCROLL_WHEEL;
 	message.x = x;
 	message.y = y;	
-	send_message(message);
+	return send_message(message);
 }

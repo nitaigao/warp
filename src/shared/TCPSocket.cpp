@@ -144,14 +144,17 @@ ISocket::received_data* TCPSocket::receive()
   return return_data;
 }
 
-void TCPSocket::send(const char* data, unsigned int size)
+bool TCPSocket::send(const char* data, unsigned int size)
 {		
   int result = write(socket_, data, size);
   
   if (result < 0)
   {
     std::cerr << "ERROR writing to socket" << std::endl;
+    return false;
   }
+  
+  return true;
 }
 
 void TCPSocket::listen_on()

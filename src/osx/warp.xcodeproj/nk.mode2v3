@@ -267,13 +267,14 @@
 										<string>4C41A46612AD662D004DF3D8</string>
 										<string>080E96DDFE201D6D7F000001</string>
 										<string>4CBAFA6B124207AC00C5C338</string>
+										<string>4CB886D51240A557004FB87E</string>
 										<string>29B97317FDCFA39411CA2CEA</string>
 									</array>
 									<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 									<array>
 										<array>
-											<integer>16</integer>
-											<integer>4</integer>
+											<integer>3</integer>
+											<integer>1</integer>
 											<integer>0</integer>
 										</array>
 									</array>
@@ -440,8 +441,8 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>4C7C643612AE4690005A83E1</string>
-				<string>4C7C643712AE4690005A83E1</string>
+				<string>4C0FE89412AE4B460084FA30</string>
+				<string>4C0FE89512AE4B460084FA30</string>
 				<string>1C9437FD063B20B00039CFAC</string>
 				<string>1C9437FE063B20B00039CFAC</string>
 				<string>1C9437FF063B20B00039CFAC</string>
@@ -478,6 +479,9 @@
 	<integer>0</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>4C0FE89E12AE4B460084FA30</string>
+		<string>4C0FE89F12AE4B460084FA30</string>
+		<string>1C530D5B069F1CE1000CFCEE</string>
 		<string>1C530D54069F1CE1000CFCEE</string>
 		<string>1C530D52069F1CE1000CFCEE</string>
 		<string>/Users/nk/Development/warp/src/osx/warp.xcodeproj</string>
@@ -697,7 +701,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C530D52069F1CE1000CFCEE</string>
-				<string>4C7C643812AE4690005A83E1</string>
+				<string>4C0FE89612AE4B460084FA30</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
@@ -819,13 +823,13 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C530D54069F1CE1000CFCEE</string>
-				<string>4C7C643912AE4690005A83E1</string>
+				<string>4C0FE89712AE4B460084FA30</string>
 				<string>1C162984064C10D400B95A72</string>
-				<string>4C7C643A12AE4690005A83E1</string>
-				<string>4C7C643B12AE4690005A83E1</string>
-				<string>4C7C643C12AE4690005A83E1</string>
-				<string>4C7C643D12AE4690005A83E1</string>
-				<string>4C7C643E12AE4690005A83E1</string>
+				<string>4C0FE89812AE4B460084FA30</string>
+				<string>4C0FE89912AE4B460084FA30</string>
+				<string>4C0FE89A12AE4B460084FA30</string>
+				<string>4C0FE89B12AE4B460084FA30</string>
+				<string>4C0FE89C12AE4B460084FA30</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.debugV3</string>
@@ -944,8 +948,6 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -981,7 +983,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C530D5B069F1CE1000CFCEE</string>
-				<string>4CEF586A12AE42E200D62844</string>
+				<string>4C0FE89D12AE4B460084FA30</string>
 				<string>1C78EAAC065D492600B07095</string>
 			</array>
 			<key>ToolbarConfiguration</key>

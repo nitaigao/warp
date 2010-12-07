@@ -10,9 +10,9 @@
 	};
 	256AC3D90F4B6AC300CF3369 /* WarpAppDelegate.mm */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {976, 2268}}";
+			sepNavIntBoundsRect = "{{0, 0}, {976, 2324}}";
 			sepNavSelRange = "{3831, 0}";
-			sepNavVisRange = "{3105, 1623}";
+			sepNavVisRange = "{0, 1204}";
 			sepNavWindowFrame = "{{124, 0}, {1035, 778}}";
 		};
 	};
@@ -32,8 +32,8 @@
 			4C98CCBB123B727000F0F544 /* Warp */,
 		);
 		perUserDictionary = {
-			PBXPerProjectTemplateStateSaveDate = 313411202;
-			PBXWorkspaceStateSaveDate = 313411202;
+			PBXPerProjectTemplateStateSaveDate = 313411659;
+			PBXWorkspaceStateSaveDate = 313411659;
 		};
 		sourceControlManager = 4C98CCD1123B727700F0F544 /* Source Control */;
 		userBuildSettings = {
@@ -81,9 +81,9 @@
 	};
 	4C3C8FBA125A803F009A11CB /* Constants.hpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1217, 706}}";
-			sepNavSelRange = "{306, 0}";
-			sepNavVisRange = "{0, 306}";
+			sepNavIntBoundsRect = "{{0, 0}, {1217, 674}}";
+			sepNavSelRange = "{309, 0}";
+			sepNavVisRange = "{0, 309}";
 			sepNavWindowFrame = "{{4, 0}, {1276, 778}}";
 		};
 	};
@@ -180,9 +180,9 @@
 		hitCount = 0;
 		ignoreCount = 0;
 		lineNumber = 41;
-		modificationTime = 313411054.726982;
+		modificationTime = 313412399.000393;
 		originalNumberOfMultipleMatches = 1;
-		state = 0;
+		state = 1;
 	};
 	4C95D29612A436D900E20393 /* listener.c */ = {
 		isa = PBXFileReference;
@@ -279,8 +279,8 @@
 	};
 	4CCE99B512A6E90900BD1505 /* TCPSocket.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {729, 706}}";
-			sepNavSelRange = "{442, 0}";
+			sepNavIntBoundsRect = "{{0, 0}, {729, 674}}";
+			sepNavSelRange = "{248, 0}";
 			sepNavVisRange = "{0, 674}";
 			sepNavWindowFrame = "{{19, 0}, {788, 778}}";
 		};
@@ -339,7 +339,7 @@
 	A7404FCA12AD60270062BF6E /* appcast.xml */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1195, 674}}";
-			sepNavSelRange = "{800, 0}";
+			sepNavSelRange = "{754, 0}";
 			sepNavVisRange = "{0, 861}";
 			sepNavWindowFrame = "{{19, 0}, {788, 778}}";
 		};

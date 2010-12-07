@@ -441,8 +441,8 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>4C0FE89412AE4B460084FA30</string>
-				<string>4C0FE89512AE4B460084FA30</string>
+				<string>4C901E9A12AE4C2C0007EE90</string>
+				<string>4C901E9B12AE4C2C0007EE90</string>
 				<string>1C9437FD063B20B00039CFAC</string>
 				<string>1C9437FE063B20B00039CFAC</string>
 				<string>1C9437FF063B20B00039CFAC</string>
@@ -479,8 +479,9 @@
 	<integer>0</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>4C0FE89E12AE4B460084FA30</string>
-		<string>4C0FE89F12AE4B460084FA30</string>
+		<string>4C901EA412AE4C2C0007EE90</string>
+		<string>4C901EA512AE4C2C0007EE90</string>
+		<string>4C901EA612AE4C2C0007EE90</string>
 		<string>1C530D5B069F1CE1000CFCEE</string>
 		<string>1C530D54069F1CE1000CFCEE</string>
 		<string>1C530D52069F1CE1000CFCEE</string>
@@ -701,7 +702,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C530D52069F1CE1000CFCEE</string>
-				<string>4C0FE89612AE4B460084FA30</string>
+				<string>4C901E9C12AE4C2C0007EE90</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
@@ -823,13 +824,13 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C530D54069F1CE1000CFCEE</string>
-				<string>4C0FE89712AE4B460084FA30</string>
+				<string>4C901E9D12AE4C2C0007EE90</string>
 				<string>1C162984064C10D400B95A72</string>
-				<string>4C0FE89812AE4B460084FA30</string>
-				<string>4C0FE89912AE4B460084FA30</string>
-				<string>4C0FE89A12AE4B460084FA30</string>
-				<string>4C0FE89B12AE4B460084FA30</string>
-				<string>4C0FE89C12AE4B460084FA30</string>
+				<string>4C901E9E12AE4C2C0007EE90</string>
+				<string>4C901E9F12AE4C2C0007EE90</string>
+				<string>4C901EA012AE4C2C0007EE90</string>
+				<string>4C901EA112AE4C2C0007EE90</string>
+				<string>4C901EA212AE4C2C0007EE90</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.debugV3</string>
@@ -983,7 +984,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C530D5B069F1CE1000CFCEE</string>
-				<string>4C0FE89D12AE4B460084FA30</string>
+				<string>4C901EA312AE4C2C0007EE90</string>
 				<string>1C78EAAC065D492600B07095</string>
 			</array>
 			<key>ToolbarConfiguration</key>

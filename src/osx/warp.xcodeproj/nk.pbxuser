@@ -32,12 +32,8 @@
 			4C98CCBB123B727000F0F544 /* Warp */,
 		);
 		perUserDictionary = {
-			PBXPerProjectTemplateStateSaveDate = 313365282;
-			PBXWorkspaceStateSaveDate = 313365282;
-		};
-		perUserProjectItems = {
-			4C190A4A12AD932E00C0604D /* PBXBookmark */ = 4C190A4A12AD932E00C0604D /* PBXBookmark */;
-			4C190A5112AD933E00C0604D /* PBXTextBookmark */ = 4C190A5112AD933E00C0604D /* PBXTextBookmark */;
+			PBXPerProjectTemplateStateSaveDate = 313411202;
+			PBXWorkspaceStateSaveDate = 313411202;
 		};
 		sourceControlManager = 4C98CCD1123B727700F0F544 /* Source Control */;
 		userBuildSettings = {
@@ -51,20 +47,6 @@
 			sepNavWindowFrame = "{{341, 514}, {1223, 878}}";
 		};
 	};
-	4C190A4A12AD932E00C0604D /* PBXBookmark */ = {
-		isa = PBXBookmark;
-		fRef = A7404FCA12AD60270062BF6E /* appcast.xml */;
-	};
-	4C190A5112AD933E00C0604D /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = A7404FCA12AD60270062BF6E /* appcast.xml */;
-		name = "appcast.xml: 9";
-		rLen = 0;
-		rLoc = 458;
-		rType = 0;
-		vrLen = 861;
-		vrLoc = 0;
-	};
 	4C2E7158124893D000A214C8 /* StatusMenu.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1152, 650}}";
@@ -75,10 +57,10 @@
 	};
 	4C2E7159124893D000A214C8 /* StatusMenu.mm */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1152, 1596}}";
-			sepNavSelRange = "{1535, 0}";
-			sepNavVisRange = "{1257, 1359}";
-			sepNavWindowFrame = "{{69, 56}, {1211, 722}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1152, 1862}}";
+			sepNavSelRange = "{2681, 0}";
+			sepNavVisRange = "{1960, 1365}";
+			sepNavWindowFrame = "{{69, 24}, {1211, 754}}";
 		};
 	};
 	4C3C8FB8125A803F009A11CB /* Client.cpp */ = {
@@ -155,7 +137,7 @@
 	};
 	4C41A46912AD6640004DF3D8 /* rnotes.md */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {729, 706}}";
+			sepNavIntBoundsRect = "{{0, 0}, {729, 674}}";
 			sepNavSelRange = "{132, 0}";
 			sepNavVisRange = "{0, 132}";
 			sepNavWindowFrame = "{{19, 0}, {788, 778}}";
@@ -198,9 +180,9 @@
 		hitCount = 0;
 		ignoreCount = 0;
 		lineNumber = 41;
-		modificationTime = 313365263.432257;
+		modificationTime = 313411054.726982;
 		originalNumberOfMultipleMatches = 1;
-		state = 1;
+		state = 0;
 	};
 	4C95D29612A436D900E20393 /* listener.c */ = {
 		isa = PBXFileReference;
@@ -291,7 +273,7 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {729, 2618}}";
 			sepNavSelRange = "{3582, 0}";
-			sepNavVisRange = "{3141, 1049}";
+			sepNavVisRange = "{3141, 1045}";
 			sepNavWindowFrame = "{{19, 0}, {788, 778}}";
 		};
 	};
@@ -356,8 +338,8 @@
 	};
 	A7404FCA12AD60270062BF6E /* appcast.xml */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1195, 706}}";
-			sepNavSelRange = "{458, 0}";
+			sepNavIntBoundsRect = "{{0, 0}, {1195, 674}}";
+			sepNavSelRange = "{800, 0}";
 			sepNavVisRange = "{0, 861}";
 			sepNavWindowFrame = "{{19, 0}, {788, 778}}";
 		};

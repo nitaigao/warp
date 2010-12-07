@@ -108,12 +108,19 @@
 		[recent_menu removeItem:old_item];
 	}	
 	
-	[recent_menu addItemWithTitle:item_address action:@selector(recent:) keyEquivalent:@""];
+  [recent_menu insertItemWithTitle:item_address action:@selector(recent:) keyEquivalent:@"" atIndex:0];
 	
 	if ([recent_menu numberOfItems] > 5)
 	{
 		[recent_menu removeItemAtIndex:0];
 	}
+  
+  NSMutableArray* recent_list = [[[NSMutableArray alloc] init] autorelease];
+  for (NSMenuItem *menu_item in [recent_menu itemArray])
+  {
+    [recent_list addObject:[menu_item title]];
+  }
+  [recent_list writeToFile:[self recent_path] atomically:YES];
 }
 
 @end

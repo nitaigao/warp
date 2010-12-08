@@ -32,8 +32,8 @@
 			4C98CCBB123B727000F0F544 /* Warp */,
 		);
 		perUserDictionary = {
-			PBXPerProjectTemplateStateSaveDate = 313412648;
-			PBXWorkspaceStateSaveDate = 313412648;
+			PBXPerProjectTemplateStateSaveDate = 313523736;
+			PBXWorkspaceStateSaveDate = 313523736;
 		};
 		sourceControlManager = 4C98CCD1123B727700F0F544 /* Source Control */;
 		userBuildSettings = {
@@ -57,9 +57,9 @@
 	};
 	4C2E7159124893D000A214C8 /* StatusMenu.mm */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1152, 1862}}";
-			sepNavSelRange = "{2681, 0}";
-			sepNavVisRange = "{1960, 1365}";
+			sepNavIntBoundsRect = "{{0, 0}, {1152, 1764}}";
+			sepNavSelRange = "{1683, 0}";
+			sepNavVisRange = "{1469, 1240}";
 			sepNavWindowFrame = "{{69, 24}, {1211, 754}}";
 		};
 	};
@@ -145,9 +145,9 @@
 	};
 	4C5FB8CF12578CE500923183 /* Entrance.mm */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {838, 2506}}";
+			sepNavIntBoundsRect = "{{0, 0}, {838, 2226}}";
 			sepNavSelRange = "{3715, 0}";
-			sepNavVisRange = "{3035, 1001}";
+			sepNavVisRange = "{2965, 964}";
 			sepNavWindowFrame = "{{4, 0}, {750, 778}}";
 		};
 	};
@@ -180,9 +180,9 @@
 		hitCount = 0;
 		ignoreCount = 0;
 		lineNumber = 41;
-		modificationTime = 313412650.728297;
+		modificationTime = 313523867.376291;
 		originalNumberOfMultipleMatches = 1;
-		state = 0;
+		state = 1;
 	};
 	4C95D29612A436D900E20393 /* listener.c */ = {
 		isa = PBXFileReference;
@@ -338,7 +338,7 @@
 	};
 	A7404FCA12AD60270062BF6E /* appcast.xml */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1195, 674}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1195, 651}}";
 			sepNavSelRange = "{754, 0}";
 			sepNavVisRange = "{0, 861}";
 			sepNavWindowFrame = "{{19, 0}, {788, 778}}";

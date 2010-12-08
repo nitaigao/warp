@@ -58,11 +58,11 @@
 }
 
 - (void)start_searching {
-  [network_item setTitle:@"Searching..."];
+  [network_item setTitle:@"Warp: Searching..."];
 }
 
 - (void)stop_searching {
-  [network_item setTitle:@"Exit Active"];
+  [network_item setTitle:@"Warp: Active"];
 }
 
 - (void)updateTheMenu:(NSString*)item_address

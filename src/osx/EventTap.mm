@@ -1,17 +1,6 @@
-//
-//  EventTap.m
-//  warp
-//
-//  Created by Nicholas Kostelnik on 20/12/2010.
-//  Copyright 2010 __MyCompanyName__. All rights reserved.
-//
-
 #import "EventTap.h"
-#import "TapEvent.h"
 
 @implementation EventTap
-
-@synthesize network;
 
 - (id)init {
   self = [super init];
@@ -19,7 +8,7 @@
   return self;
 }
 
-- (void) enable_tap {
+- (void)enable_tap {
   CGEventType eventType = 
     (1 << kCGEventMouseMoved) | 
     (1 << kCGEventKeyDown) | 
@@ -45,6 +34,35 @@
 	CGEventTapEnable(event_tap_, true);
 }
 
+- (bool)toggle:(CGEventType)type withEvent:(CGEventRef)event {
+  if (type == kCGEventKeyDown) 
+  {
+    CGEventFlags flags = CGEventGetFlags(event);
+    CGKeyCode keycode = (CGKeyCode)CGEventGetIntegerValueField(event, kCGKeyboardEventKeycode);
+    
+    if ((flags & kCGEventFlagMaskShift) && (flags & kCGEventFlagMaskCommand) && keycode == 14) // cmd-shift-e
+    {
+      [network toggle];
+      return true;
+    }
+  }
+  return false;
+}
+
+- (CGEventRef)on_event:(CGEventType)type withEvent:(CGEventRef)event {
+  if ([self toggle:type withEvent:event]) {
+    return NULL; 
+  }
+
+  if ([network understands:type])
+  {
+    [network on_event:type withEvent:event];
+    return NULL;
+  }
+  
+	return event;  
+}
+
 CGEventRef on_tap_event(CGEventTapProxy proxy, CGEventType type, CGEventRef event, void *refcon)
 {
   EventTap* event_tap = (EventTap*)refcon;
@@ -55,14 +73,8 @@ CGEventRef on_tap_event(CGEventTapProxy proxy, CGEventType type, CGEventRef even
     return event;
   }
   
-  if ([event_tap.network understands:type])
-  {
-    TapEvent* tap_event = [[TapEvent alloc] initWithType:type andEvent:event];
-    [event_tap.network on_event:tap_event.type withEvent:tap_event.event];
-    return NULL;
-  }
-  
-	return event;
+  return [event_tap on_event:type withEvent: event];
 };
+
 
 @end

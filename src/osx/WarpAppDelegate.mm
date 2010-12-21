@@ -11,7 +11,6 @@
 @implementation WarpAppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-  [network init];
 }
 
 @end

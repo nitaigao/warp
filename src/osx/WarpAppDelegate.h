@@ -14,7 +14,6 @@
 #import "StatusMenu.h"
 
 @interface WarpAppDelegate : NSObject<NSApplicationDelegate> {
-  
   IBOutlet Network *network;
   IBOutlet EventTap *event_tap;
   IBOutlet StatusMenu *status_menu;

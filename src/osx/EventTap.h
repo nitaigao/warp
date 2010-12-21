@@ -17,9 +17,7 @@
   CFMachPortRef event_tap_;
 }
 
-- (void) enable_tap;
-
-@property (nonatomic, assign) Network* network;
+- (void)enable_tap;
 
 CGEventRef on_tap_event(CGEventTapProxy proxy, CGEventType type, CGEventRef event, void *refcon);
 

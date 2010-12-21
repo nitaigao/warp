@@ -20,6 +20,12 @@
   [statusItem setAction:@selector(show_menu)];
 }
 
+- (IBAction)recent:(id)sender {
+  NSMenuItem* menu_item = sender;
+	[self add_recent_item:[menu_item title]];	
+  [network connect_to:[menu_item title] withPort:SERVER_PORT];
+}
+
 - (void)init_recent_list {
 	NSMutableArray* recent_list = [[[NSMutableArray alloc] initWithContentsOfFile:[self recent_path]] autorelease];
 	
@@ -28,8 +34,8 @@
 		[recent_menu removeItemAtIndex:0];
 	}
 	
-	for(NSString* item in recent_list) {
-		[recent_menu addItemWithTitle:item action:@selector(recent:) keyEquivalent:@""];
+	for(NSString* item in recent_list) { 
+    [[recent_menu addItemWithTitle:item action:@selector(recent:) keyEquivalent:@""] setTarget:self];
 	}
 }
 
@@ -108,7 +114,7 @@
 		[recent_menu removeItem:old_item];
 	}	
 	
-  [recent_menu insertItemWithTitle:item_address action:@selector(recent:) keyEquivalent:@"" atIndex:0];
+  [[recent_menu insertItemWithTitle:item_address action:@selector(recent:) keyEquivalent:@"" atIndex:0] setTarget:self];
 	
 	if ([recent_menu numberOfItems] > 5)
 	{

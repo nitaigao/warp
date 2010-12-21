@@ -39,8 +39,6 @@
 	CGWarpMouseCursorPosition(center_screen);
   CGAssociateMouseAndMouseCursorPosition(false);
   CGDisplayHideCursor(kCGDirectMainDisplay);
-	
-	[view allow_input:YES];
 }
 
 - (void)ensureFocus {	
@@ -55,11 +53,19 @@
 }
 
 - (void)orderFront:(id)sender {
-	[view allow_input:YES];
 	[super orderFront:sender];
 	[self setAcceptsMouseMovedEvents:YES];	
 	[self lockMouse];
 	[self ensureFocus];
+}
+
+- (void)show_bezel:(bool)show {
+  if (show) {
+    [super orderFront:self];
+  }
+  else {
+    [super orderOut:self];
+  }
 }
 
 @end

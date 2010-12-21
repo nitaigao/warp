@@ -1,30 +1,22 @@
-//
-//  Network.h
-//  warp
-//
-//  Created by Nicholas Kostelnik on 20/12/2010.
-//  Copyright 2010 __MyCompanyName__. All rights reserved.
-//
-
 #import <Cocoa/Cocoa.h>
 
-#import "ZeroMQContext.hpp"
 #import "Entrance.h"
-#import "Exit.h"
+#import "BezelWindow.h"
 
 @interface Network : NSObject {
-
-  bool quit;
-  
   IBOutlet Entrance* entrance;
-  Exit *exit;
+  IBOutlet BezelWindow* bezel_window;
+  
+  bool quit;
 }
 
 - (void)on_event:(CGEventType)eventType withEvent:(CGEventRef)event;
 - (void)connect_to:(NSString*)address withPort:(unsigned int)port;
+- (void)toggle;
+- (bool)is_connected;
 - (bool)understands:(CGEventType)eventType;
 
 - (void)stop;
-- (void)exit_input_update;
+- (void)exit_thread;
 
 @end

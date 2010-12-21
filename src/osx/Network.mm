@@ -1,13 +1,6 @@
-//
-//  Network.m
-//  warp
-//
-//  Created by Nicholas Kostelnik on 20/12/2010.
-//  Copyright 2010 __MyCompanyName__. All rights reserved.
-//
-
 #import "Network.h"
-
+#import "Exit.h"
+#import "ZeroMQContext.hpp"
 
 @implementation Network
 
@@ -17,9 +10,8 @@
   
   ZeroMQContext::init();
   entrance = new Entrance();
-  exit = new Exit();  
     
-  [NSThread detachNewThreadSelector:@selector(exit_input_update) toTarget:self withObject:nil];
+  [NSThread detachNewThreadSelector:@selector(exit_thread) toTarget:self withObject:nil];
   return self;
 }
 
@@ -27,8 +19,32 @@
   entrance->on_event(eventType, event);
 }
 
+- (void)connected_test {
+  if (![self is_connected]) {
+    [[NSApplication sharedApplication] activateIgnoringOtherApps : YES];
+    CGAssociateMouseAndMouseCursorPosition(false);
+    CGDisplayHideCursor(kCGDirectMainDisplay);
+    [bezel_window show_bezel:true];
+  }
+  else {
+    [bezel_window show_bezel:false];
+    CGDisplayShowCursor(kCGDirectMainDisplay);
+    CGAssociateMouseAndMouseCursorPosition(true);
+  }  
+}
+
 - (void)connect_to:(NSString*)address withPort:(unsigned int)port {
+  [self connected_test];
   entrance->connect_to([address cStringUsingEncoding:NSASCIIStringEncoding], port);
+}
+
+- (void)toggle {
+  [self connected_test];
+  entrance->toggle();
+}
+
+- (bool)is_connected {
+  return entrance->is_enabled();
 }
 
 - (bool)understands:(CGEventType)eventType {
@@ -39,12 +55,13 @@
   quit = true; 
 }
 
-- (void)exit_input_update {
+- (void)exit_thread {
   NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+  Exit exit;
 	while (!quit) {
-    exit->receive_input();
+    exit.receive_input();
 	}
-  exit->shutdown();
+  exit.shutdown();
   [pool release];
 }
 

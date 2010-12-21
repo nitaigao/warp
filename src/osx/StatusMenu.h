@@ -8,11 +8,12 @@
 
 #import <Cocoa/Cocoa.h>
 #import "Network.h"
-
+#import "BezelWindow.h"
 
 @interface StatusMenu : NSObject {
   
   IBOutlet Network* network;
+  IBOutlet BezelWindow* bezel_window;
 	
 	IBOutlet NSMenu* main_menu;
 	IBOutlet NSMenu* recent_menu;
@@ -25,6 +26,7 @@
 }
 
 - (IBAction)quit:(id)sender;
+- (IBAction)recent:(id)sender;
 
 - (void)add_recent_item:(NSString*)item_address;
 - (void)add_network_item:(NSString*)item_address;

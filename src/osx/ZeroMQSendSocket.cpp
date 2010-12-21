@@ -17,6 +17,7 @@ std::string ZeroMQSendSocket::final_host(const std::string& host, unsigned int p
 ZeroMQSendSocket::ZeroMQSendSocket() 
   : socket_(0) 
 { 
+
 };
 
 
@@ -27,8 +28,9 @@ ZeroMQSendSocket::~ZeroMQSendSocket()
 
 bool ZeroMQSendSocket::connect_to(const std::string& host, unsigned int port)
 {
+  
 //  terminate();
-  socket_ = ZeroMQContext::instance()->create_socket(ZMQ_PUB); 
+  socket_ = ZeroMQContext::instance()->create_socket(ZMQ_PUSH); 
 
   try {
     socket_->connect(final_host(host, port).c_str());

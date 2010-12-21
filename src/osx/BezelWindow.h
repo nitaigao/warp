@@ -16,4 +16,6 @@
 	
 }
 
+- (void)show_bezel:(bool)show;
+
 @end

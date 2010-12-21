@@ -23,9 +23,12 @@
     bool understands(const CGEventType& event_type);
     void on_event(CGEventType type, CGEventRef event);
 		bool connect_to(const std::string& host, unsigned int port);
+    void toggle();
+    
     
 		void disable();
 		void enable();
+    inline bool is_enabled() { return enabled_; };
 		
 	private:		
 		

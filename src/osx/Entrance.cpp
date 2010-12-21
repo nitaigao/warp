@@ -40,36 +40,10 @@ bool Entrance::understands(const CGEventType& event_type)
 }
 
 void Entrance::on_event(CGEventType type, CGEventRef event)
-{			
-  scan_reconnect(type, event);
-  
+{			  
   if (enabled_) 
   {
     scan_input(type, event);
-  }
-}
-
-void Entrance::scan_reconnect(CGEventType type, CGEventRef event)
-{
-  if (type == kCGEventKeyDown) 
-  {
-    CGEventFlags flags = CGEventGetFlags(event);
-    CGKeyCode keycode = (CGKeyCode)CGEventGetIntegerValueField(event, kCGKeyboardEventKeycode);
-    
-    if ((flags & kCGEventFlagMaskShift) && (flags & kCGEventFlagMaskCommand) && keycode == 14) // cmd-shift-e
-    {
-      if (enabled_) 
-      {
-        disable();
-      }
-      else if (!enabled_ && !client_->connected())
-      {				
-        if (client_->reconnect())
-        {
-          enable();
-        }
-      }
-    }
   }
 }
 
@@ -94,17 +68,28 @@ CGEventRef Entrance::scan_input(CGEventType type, CGEventRef event)
 	return event;		
 }
 
+void Entrance::toggle()
+{
+  if (enabled_) 
+  {
+    disable();
+  }
+  else if (!enabled_ && !client_->connected())
+  {				
+    if (client_->reconnect())
+    {
+      enable();
+    }
+  }  
+}
+
 void Entrance::disable()
 {
-	CGDisplayShowCursor(kCGDirectMainDisplay);
-	CGAssociateMouseAndMouseCursorPosition(true);
-	client_->disconnect();
+  client_->disconnect();
 	enabled_ = false;
 }
 
 void Entrance::enable() 
 { 
-	CGAssociateMouseAndMouseCursorPosition(false);
-	CGDisplayHideCursor(kCGDirectMainDisplay);
-	enabled_ = true;
+  enabled_ = true;
 };

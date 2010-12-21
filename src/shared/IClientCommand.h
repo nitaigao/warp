@@ -1,15 +1,6 @@
 #ifndef ICLIENTCOMMAND_HPP
 #define ICLIENTCOMMAND_HPP
 
-	/*
-	 *  IClientCommand.h
-	 *  warp
-	 *
-	 *  Created by Nicholas Kostelnik on 16/09/2010.
-	 *  Copyright 2010 __MyCompanyName__. All rights reserved.
-	 *
-	 */
-
 	#include <ApplicationServices/ApplicationServices.h>
 	#include <Carbon/Carbon.h>
 
@@ -33,20 +24,16 @@
 		
 	public:
 		
-		KeyDownClientCommand(NSWindow* window) : window_(window) { };
+		KeyDownClientCommand() { };
 		
 		bool Execute(CGEventRef event, Client* client)
 		{
       
 			CGEventFlags flags = CGEventGetFlags(event);
 			CGKeyCode keycode = (CGKeyCode)CGEventGetIntegerValueField(event, kCGKeyboardEventKeycode);
-      //std::clog << keycode << std::endl;
 			return client->send_key_down(flags, KeyCodes().osx_to_generic(keycode));
 		}
-		
-	private:
-		
-		NSWindow* window_;
+  
 	};
 
 	class KeyUpClientCommand : public IClientCommand
@@ -58,7 +45,6 @@
 		{
 			CGEventFlags flags = CGEventGetFlags(event);
 			CGKeyCode keycode = (CGKeyCode)CGEventGetIntegerValueField(event, kCGKeyboardEventKeycode);			
-      //std::clog << keycode << std::endl;
 			return client->send_key_up(flags, KeyCodes().osx_to_generic(keycode));
 		}
 	};

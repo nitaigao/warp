@@ -25,24 +25,23 @@ void Client::update_input(float delta)
 
 void Client::update_search()
 {
-  ISocket::received_data* datas = m_recv_socket_->receive();
-  
-  for (ISocket::received_data::iterator data = datas->begin(); data != datas->end(); ++data) 
-  {	
-    std::string host = (*data);
-    new_known_hosts_.push_back(host);
-  }
-  
-  m_recv_socket_->dispose(datas);
+//  ISocket::received_data* datas = m_recv_socket_->receive();
+//  
+//  for (ISocket::received_data::iterator data = datas->begin(); data != datas->end(); ++data) 
+//  {	
+//    std::string host = (*data);
+//    new_known_hosts_.push_back(host);
+//  }
+//  
+//  m_recv_socket_->dispose(datas);
 }
 
 bool Client::connect_to(const std::string& host, unsigned int port)
 {	
-	bool result = static_cast<TCPSocket*>(socket_)->connect_to(host, port);
+  connected_ = socket_->connect_to(host, port);
 	timeout_ = TIME_OUT;
-	connected_ = true;
 	last_host_ = host;
-	return result;
+  return connected_;
 }
 
 bool Client::reconnect()
@@ -66,14 +65,14 @@ StringList Client::known_hosts()
 
 void Client::search_for_hosts()
 {
-  std::string message = "advertise";
-  m_send_socket_->send(message.c_str(), message.length()); //1724
+//  std::string message = "advertise";
+//  m_send_socket_->send(message.c_str(), message.length()); //1724
 }
 
 void Client::disconnect()
 {
 	connected_ = false;
-  static_cast<TCPSocket*>(socket_)->terminate();
+  socket_->terminate();
 }
 
 bool Client::can_reconnect()
@@ -89,10 +88,10 @@ bool Client::send_message(const Message& message)
 	}
 	
 	timeout_ = TIME_OUT;
-	char* data = new char[sizeof(Message)];
-	memcpy(data, &message, sizeof(Message));
-	
-	return socket_->send(data, sizeof(Message));
+  int message_size = sizeof(Message);
+	char* data = new char[message_size];
+	memcpy(data, &message, message_size);
+  return socket_->send(data, message_size);
 }
 
 bool Client::send_left_double_click()

@@ -20,7 +20,7 @@ enum MessageTypes
 };
 
 struct Message 
-{
+{  
 	int type;
 	int x;
 	int y;

@@ -3,8 +3,9 @@
 
 	#include "Message.h"
 	#include <string>
+  #include <vector>
 
-	#include "TCPSocket.h"
+  #include "ZeroMQSendSocket.h"
 
   typedef std::vector<std::string> StringList;  
 
@@ -13,14 +14,13 @@
 		
 	public:
 		
-		Client(ISocket* send_socket, ISocket* m_send_socket, ISocket* m_recv_socket)
+    Client()
       : connected_(false)
       , timeout_(0)
-      , socket_(send_socket)
-      , m_send_socket_(m_send_socket)
-      , m_recv_socket_(m_recv_socket)
       , last_host_("") 
-    { };
+    { 
+      socket_ = new ZeroMQSendSocket();      
+    };
     
 		bool connected() { return connected_; };
 		
@@ -67,16 +67,13 @@
 		bool can_reconnect();
 		
 		bool send_message(const Message& message);
-		
-		ISocket* socket_;
-    ISocket* m_send_socket_;
-    ISocket* m_recv_socket_;
+    
+    ISendSocket* socket_;
 		
 		std::string last_host_;
     StringList new_known_hosts_;
 		
 		float timeout_;
-		
 		bool connected_;
 	};
 

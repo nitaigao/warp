@@ -11,6 +11,15 @@
 	return path;
 }
 
+- (void)init_main_menu {
+	statusItem = [[[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength] retain];
+  [statusItem setImage:[NSImage imageNamed:@"menu"]];
+  [statusItem setHighlightMode:YES];
+	[statusItem setEnabled:YES];
+  [statusItem setTarget:self];
+  [statusItem setAction:@selector(show_menu)];
+}
+
 - (void)init_recent_list {
 	NSMutableArray* recent_list = [[[NSMutableArray alloc] initWithContentsOfFile:[self recent_path]] autorelease];
 	
@@ -24,27 +33,13 @@
 	}
 }
 
-- (void)show_menu {
-  is_open = true;
-  [statusItem popUpStatusItemMenu:main_menu];
-  is_open = false;
-}
-
-- (void)init_main_menu {
-	statusItem = [[[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength] retain];
-  [statusItem setImage:[NSImage imageNamed:@"menu"]];
-  [statusItem setHighlightMode:YES];
-	[statusItem setEnabled:YES];
-  [statusItem setAction:@selector(refresh:)];
-}
-
-- (bool)isOpen {
-  return is_open;
-}
-
 - (void)awakeFromNib {
 	[self init_main_menu];
 	[self init_recent_list];
+}
+
+- (void)show_menu {
+  [statusItem popUpStatusItemMenu:main_menu];
 }
 
 - (void)store_recent_list {
@@ -91,6 +86,11 @@
                                      argument:item_address 
                                         order:0 
                                         modes:[NSArray arrayWithObject:NSEventTrackingRunLoopMode]];
+}
+
+- (IBAction)quit:(id)sender {
+  [network stop];
+  [NSApp performSelector:@selector(terminate:) withObject:nil afterDelay:0.0];
 }
 
 - (void)add_recent_item:(NSString*)item_address {

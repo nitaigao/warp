@@ -3,22 +3,22 @@
 	256AC3D80F4B6AC300CF3369 /* WarpAppDelegate.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {976, 706}}";
-			sepNavSelRange = "{307, 0}";
-			sepNavVisRange = "{0, 768}";
-			sepNavWindowFrame = "{{124, 0}, {1035, 789}}";
+			sepNavSelRange = "{599, 72}";
+			sepNavVisRange = "{0, 709}";
+			sepNavWindowFrame = "{{94, 0}, {1035, 778}}";
 		};
 	};
 	256AC3D90F4B6AC300CF3369 /* WarpAppDelegate.mm */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {976, 2324}}";
-			sepNavSelRange = "{3831, 0}";
-			sepNavVisRange = "{0, 1204}";
-			sepNavWindowFrame = "{{124, 0}, {1035, 778}}";
+			sepNavIntBoundsRect = "{{0, 0}, {976, 674}}";
+			sepNavSelRange = "{309, 0}";
+			sepNavVisRange = "{0, 309}";
+			sepNavWindowFrame = "{{94, 0}, {1035, 778}}";
 		};
 	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
 		activeArchitecturePreference = x86_64;
-		activeBuildConfigurationName = Distribution;
+		activeBuildConfigurationName = Debug;
 		activeExecutable = 4C98CCBB123B727000F0F544 /* Warp */;
 		activeTarget = 8D1107260486CEB800E47090 /* Warp */;
 		addToTargets = (
@@ -32,8 +32,59 @@
 			4C98CCBB123B727000F0F544 /* Warp */,
 		);
 		perUserDictionary = {
-			PBXPerProjectTemplateStateSaveDate = 313523736;
-			PBXWorkspaceStateSaveDate = 313523736;
+			"PBXConfiguration.PBXBreakpointsDataSource.v1:1CA1AED706398EBD00589147" = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXBreakpointsDataSource_BreakpointID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					20,
+					198,
+					20,
+					99,
+					99,
+					29,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXBreakpointsDataSource_ActionID,
+					PBXBreakpointsDataSource_TypeID,
+					PBXBreakpointsDataSource_BreakpointID,
+					PBXBreakpointsDataSource_UseID,
+					PBXBreakpointsDataSource_LocationID,
+					PBXBreakpointsDataSource_ConditionID,
+					PBXBreakpointsDataSource_IgnoreCountID,
+					PBXBreakpointsDataSource_ContinueID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					315,
+					20,
+					48.16259765625,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 314584887;
+			PBXWorkspaceStateSaveDate = 314584887;
+		};
+		perUserProjectItems = {
+			4C9D15CC12C033A800FB1E53 /* PBXTextBookmark */ = 4C9D15CC12C033A800FB1E53 /* PBXTextBookmark */;
+			4C9D15CD12C033A800FB1E53 /* PBXTextBookmark */ = 4C9D15CD12C033A800FB1E53 /* PBXTextBookmark */;
+			4C9D15CF12C033A800FB1E53 /* PBXTextBookmark */ = 4C9D15CF12C033A800FB1E53 /* PBXTextBookmark */;
 		};
 		sourceControlManager = 4C98CCD1123B727700F0F544 /* Source Control */;
 		userBuildSettings = {
@@ -41,97 +92,89 @@
 	};
 	29B97316FDCFA39411CA2CEA /* main.mm */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1164, 806}}";
-			sepNavSelRange = "{259, 0}";
+			sepNavIntBoundsRect = "{{0, 0}, {873, 211}}";
+			sepNavSelRange = "{198, 0}";
 			sepNavVisRange = "{0, 259}";
 			sepNavWindowFrame = "{{341, 514}, {1223, 878}}";
 		};
 	};
 	4C2E7158124893D000A214C8 /* StatusMenu.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1152, 650}}";
-			sepNavSelRange = "{397, 0}";
-			sepNavVisRange = "{0, 592}";
-			sepNavWindowFrame = "{{69, 56}, {1211, 722}}";
+			sepNavIntBoundsRect = "{{0, 0}, {666, 680}}";
+			sepNavSelRange = "{453, 0}";
+			sepNavVisRange = "{0, 659}";
+			sepNavWindowFrame = "{{33, 1}, {725, 775}}";
 		};
 	};
 	4C2E7159124893D000A214C8 /* StatusMenu.mm */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1152, 1764}}";
-			sepNavSelRange = "{1683, 0}";
-			sepNavVisRange = "{1469, 1240}";
-			sepNavWindowFrame = "{{69, 24}, {1211, 754}}";
+			sepNavIntBoundsRect = "{{0, 0}, {554, 1820}}";
+			sepNavSelRange = "{3414, 0}";
+			sepNavVisRange = "{3297, 116}";
+			sepNavWindowFrame = "{{33, 1}, {725, 775}}";
 		};
 	};
 	4C3C8FB8125A803F009A11CB /* Client.cpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {914, 2758}}";
-			sepNavSelRange = "{1304, 0}";
-			sepNavVisRange = "{943, 605}";
-			sepNavWindowFrame = "{{200, 70}, {973, 577}}";
+			sepNavIntBoundsRect = "{{0, 0}, {677, 2730}}";
+			sepNavSelRange = "{825, 0}";
+			sepNavVisRange = "{320, 703}";
+			sepNavWindowFrame = "{{65, 63}, {706, 634}}";
 		};
 	};
 	4C3C8FB9125A803F009A11CB /* Client.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {914, 1120}}";
-			sepNavSelRange = "{728, 0}";
-			sepNavVisRange = "{655, 692}";
-			sepNavWindowFrame = "{{200, 70}, {973, 577}}";
+			sepNavIntBoundsRect = "{{0, 0}, {647, 1120}}";
+			sepNavSelRange = "{1186, 0}";
+			sepNavVisRange = "{225, 817}";
+			sepNavWindowFrame = "{{65, 63}, {706, 634}}";
 		};
 	};
 	4C3C8FBA125A803F009A11CB /* Constants.hpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1217, 674}}";
-			sepNavSelRange = "{309, 0}";
-			sepNavVisRange = "{0, 309}";
+			sepNavIntBoundsRect = "{{0, 0}, {1217, 683}}";
+			sepNavSelRange = "{90, 0}";
+			sepNavVisRange = "{0, 199}";
 			sepNavWindowFrame = "{{4, 0}, {1276, 778}}";
 		};
 	};
 	4C3C8FBB125A803F009A11CB /* Exit.cpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {914, 1204}}";
-			sepNavSelRange = "{1786, 0}";
-			sepNavVisRange = "{1636, 808}";
-			sepNavWindowFrame = "{{21, 11}, {973, 577}}";
+			sepNavIntBoundsRect = "{{0, 0}, {960, 742}}";
+			sepNavSelRange = "{891, 0}";
+			sepNavVisRange = "{114, 1227}";
+			sepNavWindowFrame = "{{13, 57}, {1019, 697}}";
 		};
 	};
 	4C3C8FBC125A803F009A11CB /* Exit.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {914, 505}}";
-			sepNavSelRange = "{28, 0}";
-			sepNavVisRange = "{0, 532}";
-			sepNavWindowFrame = "{{21, 11}, {973, 577}}";
+			sepNavIntBoundsRect = "{{0, 0}, {960, 625}}";
+			sepNavSelRange = "{239, 0}";
+			sepNavVisRange = "{0, 383}";
+			sepNavWindowFrame = "{{13, 57}, {1019, 697}}";
 		};
 	};
 	4C3C8FBD125A803F009A11CB /* IClientCommand.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {849, 2814}}";
-			sepNavSelRange = "{938, 0}";
-			sepNavVisRange = "{390, 1073}";
+			sepNavIntBoundsRect = "{{0, 0}, {849, 2548}}";
+			sepNavSelRange = "{3230, 0}";
+			sepNavVisRange = "{2666, 1096}";
 			sepNavWindowFrame = "{{19, 0}, {908, 778}}";
 		};
 	};
 	4C3C8FBE125A803F009A11CB /* IExitCommand.hpp */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {774, 657}}";
-			sepNavSelRange = "{0, 0}";
+			sepNavSelRange = "{178, 0}";
 			sepNavVisRange = "{0, 178}";
 			sepNavWindowFrame = "{{19, 44}, {833, 729}}";
 		};
 	};
-	4C3C8FBF125A803F009A11CB /* ISocket.hpp */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {976, 661}}";
-			sepNavSelRange = "{286, 0}";
-			sepNavVisRange = "{0, 388}";
-			sepNavWindowFrame = "{{19, 40}, {1035, 733}}";
-		};
-	};
 	4C3C8FC0125A803F009A11CB /* Message.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {849, 706}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 434}";
+			sepNavIntBoundsRect = "{{0, 0}, {849, 683}}";
+			sepNavSelRange = "{404, 0}";
+			sepNavVisRange = "{0, 436}";
 			sepNavWindowFrame = "{{19, 0}, {908, 778}}";
 		};
 	};
@@ -145,26 +188,18 @@
 	};
 	4C5FB8CF12578CE500923183 /* Entrance.mm */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {838, 2226}}";
-			sepNavSelRange = "{3715, 0}";
-			sepNavVisRange = "{2965, 964}";
-			sepNavWindowFrame = "{{4, 0}, {750, 778}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1090, 1358}}";
+			sepNavSelRange = "{1394, 0}";
+			sepNavVisRange = "{814, 1039}";
+			sepNavWindowFrame = "{{4, 0}, {1149, 778}}";
 		};
 	};
 	4C652981125BE01300C445B7 /* KeyCodes.hpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1217, 2184}}";
-			sepNavSelRange = "{4845, 0}";
-			sepNavVisRange = "{2939, 1962}";
+			sepNavIntBoundsRect = "{{0, 0}, {1217, 2450}}";
+			sepNavSelRange = "{5081, 0}";
+			sepNavVisRange = "{544, 1993}";
 			sepNavWindowFrame = "{{4, 0}, {1276, 778}}";
-		};
-	};
-	4C90934812A2D20F004F1906 /* SocketUtils.hpp */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {729, 1680}}";
-			sepNavSelRange = "{759, 0}";
-			sepNavVisRange = "{243, 867}";
-			sepNavWindowFrame = "{{19, 230}, {788, 543}}";
 		};
 	};
 	4C95D29512A436D900E20393 /* listener.c:41 */ = {
@@ -180,7 +215,7 @@
 		hitCount = 0;
 		ignoreCount = 0;
 		lineNumber = 41;
-		modificationTime = 313523867.376291;
+		modificationTime = 314585706.472156;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -190,6 +225,38 @@
 		name = listener.c;
 		path = /Users/nk/Development/multicast/listener.c;
 		sourceTree = "<absolute>";
+	};
+	4C96E58412BFE296000FF25E /* EventTap.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {704, 629}}";
+			sepNavSelRange = "{454, 0}";
+			sepNavVisRange = "{0, 460}";
+			sepNavWindowFrame = "{{49, 13}, {763, 733}}";
+		};
+	};
+	4C96E58512BFE296000FF25E /* EventTap.mm */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {789, 966}}";
+			sepNavSelRange = "{389, 0}";
+			sepNavVisRange = "{79, 1203}";
+			sepNavWindowFrame = "{{49, 13}, {763, 733}}";
+		};
+	};
+	4C96E60512BFE960000FF25E /* TapEvent.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {942, 590}}";
+			sepNavSelRange = "{403, 0}";
+			sepNavVisRange = "{0, 404}";
+			sepNavWindowFrame = "{{88, 48}, {1001, 662}}";
+		};
+	};
+	4C96E60612BFE960000FF25E /* TapEvent.mm */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {942, 558}}";
+			sepNavSelRange = "{388, 0}";
+			sepNavVisRange = "{0, 395}";
+			sepNavWindowFrame = "{{88, 48}, {1001, 662}}";
+		};
 	};
 	4C98CCBB123B727000F0F544 /* Warp */ = {
 		isa = PBXExecutable;
@@ -247,58 +314,120 @@
 	};
 	4C98CCE7123B740200F0F544 /* MainView.mm */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {747, 1610}}";
-			sepNavSelRange = "{2277, 7}";
-			sepNavVisRange = "{2174, 148}";
+			sepNavIntBoundsRect = "{{0, 0}, {1164, 1694}}";
+			sepNavSelRange = "{485, 0}";
+			sepNavVisRange = "{0, 922}";
 			sepNavWindowFrame = "{{57, 0}, {1223, 778}}";
+		};
+	};
+	4C9B00D812BFA6E9004AFC94 /* ZeroMQSendSocket.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {647, 562}}";
+			sepNavSelRange = "{225, 0}";
+			sepNavVisRange = "{0, 541}";
+			sepNavWindowFrame = "{{134, 34}, {706, 634}}";
+		};
+	};
+	4C9B010812BFA93A004AFC94 /* ZeroMQContext.hpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {647, 562}}";
+			sepNavSelRange = "{218, 0}";
+			sepNavVisRange = "{0, 339}";
+			sepNavWindowFrame = "{{257, 43}, {706, 634}}";
+		};
+	};
+	4C9B013D12BFABCD004AFC94 /* ZeroMQContext.cpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {647, 539}}";
+			sepNavSelRange = "{273, 0}";
+			sepNavVisRange = "{0, 443}";
+			sepNavWindowFrame = "{{352, 16}, {706, 634}}";
+		};
+	};
+	4C9C062512BB936800186F59 /* ZeroMQRecvSocket.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {960, 657}}";
+			sepNavSelRange = "{295, 0}";
+			sepNavVisRange = "{0, 385}";
+			sepNavWindowFrame = "{{19, 44}, {1019, 729}}";
+		};
+	};
+	4C9D15CC12C033A800FB1E53 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4CB7DD8D123F5D56009E454C /* Entrance.h */;
+		name = "Entrance.h: 5";
+		rLen = 0;
+		rLoc = 110;
+		rType = 0;
+		vrLen = 824;
+		vrLoc = 0;
+	};
+	4C9D15CD12C033A800FB1E53 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4C5FB8CF12578CE500923183 /* Entrance.mm */;
+		name = "Entrance.mm: 110";
+		rLen = 0;
+		rLoc = 2682;
+		rType = 0;
+		vrLen = 893;
+		vrLoc = 1874;
+	};
+	4C9D15CF12C033A800FB1E53 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4C5FB8CF12578CE500923183 /* Entrance.mm */;
+		name = "Entrance.mm: 46";
+		rLen = 0;
+		rLoc = 1394;
+		rType = 0;
+		vrLen = 1039;
+		vrLoc = 814;
+	};
+	4C9FDC6512C009CA0006CAAF /* ConnectWindow.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {666, 703}}";
+			sepNavSelRange = "{352, 0}";
+			sepNavVisRange = "{0, 393}";
+			sepNavWindowFrame = "{{19, 0}, {725, 775}}";
+		};
+	};
+	4C9FDC6612C009CA0006CAAF /* ConnectWindow.mm */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {666, 648}}";
+			sepNavSelRange = "{478, 0}";
+			sepNavVisRange = "{0, 588}";
+			sepNavWindowFrame = "{{19, 0}, {725, 775}}";
 		};
 	};
 	4CA0904F12474A4E00E6A4FD /* Time.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1217, 706}}";
-			sepNavSelRange = "{310, 0}";
-			sepNavVisRange = "{0, 318}";
+			sepNavIntBoundsRect = "{{0, 0}, {1217, 683}}";
+			sepNavSelRange = "{365, 0}";
+			sepNavVisRange = "{0, 365}";
 			sepNavWindowFrame = "{{4, 0}, {1276, 778}}";
+		};
+	};
+	4CA7381212BFDD5700510484 /* Network.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {647, 530}}";
+			sepNavSelRange = "{278, 0}";
+			sepNavVisRange = "{0, 558}";
+			sepNavWindowFrame = "{{65, 97}, {706, 634}}";
+		};
+	};
+	4CA7381312BFDD5700510484 /* Network.mm */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {677, 728}}";
+			sepNavSelRange = "{706, 0}";
+			sepNavVisRange = "{163, 847}";
+			sepNavWindowFrame = "{{65, 97}, {706, 634}}";
 		};
 	};
 	4CB7DD8D123F5D56009E454C /* Entrance.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {747, 714}}";
-			sepNavSelRange = "{422, 0}";
-			sepNavVisRange = "{0, 1085}";
-			sepNavWindowFrame = "{{4, 0}, {750, 778}}";
-		};
-	};
-	4CCE99B412A6E90900BD1505 /* TCPSocket.cpp */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {729, 2618}}";
-			sepNavSelRange = "{3582, 0}";
-			sepNavVisRange = "{3141, 1045}";
-			sepNavWindowFrame = "{{19, 0}, {788, 778}}";
-		};
-	};
-	4CCE99B512A6E90900BD1505 /* TCPSocket.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {729, 674}}";
-			sepNavSelRange = "{248, 0}";
-			sepNavVisRange = "{0, 674}";
-			sepNavWindowFrame = "{{19, 0}, {788, 778}}";
-		};
-	};
-	4CCE99E912A6EA2500BD1505 /* MultiCastSocket.cpp */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {729, 1694}}";
-			sepNavSelRange = "{2045, 0}";
-			sepNavVisRange = "{801, 1252}";
-			sepNavWindowFrame = "{{19, 0}, {788, 778}}";
-		};
-	};
-	4CCE99EA12A6EA2500BD1505 /* MultiCastSocket.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {729, 706}}";
-			sepNavSelRange = "{277, 0}";
-			sepNavVisRange = "{0, 528}";
-			sepNavWindowFrame = "{{19, 0}, {788, 778}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1090, 674}}";
+			sepNavSelRange = "{110, 0}";
+			sepNavVisRange = "{0, 824}";
+			sepNavWindowFrame = "{{4, 0}, {1149, 778}}";
 		};
 	};
 	4CCF9569123CF3C800EE0530 /* BezelWindow.h */ = {
@@ -311,18 +440,50 @@
 	};
 	4CCF956A123CF3C800EE0530 /* BezelWindow.mm */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1164, 858}}";
-			sepNavSelRange = "{603, 0}";
-			sepNavVisRange = "{144, 1549}";
-			sepNavWindowFrame = "{{637, 511}, {1223, 878}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1164, 924}}";
+			sepNavSelRange = "{619, 0}";
+			sepNavVisRange = "{0, 1382}";
+			sepNavWindowFrame = "{{57, 0}, {1223, 778}}";
 		};
 	};
 	4CDBE5D3125920F700322E76 /* OSXExitCommands.hpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {849, 3514}}";
-			sepNavSelRange = "{717, 0}";
-			sepNavVisRange = "{0, 1306}";
+			sepNavIntBoundsRect = "{{0, 0}, {849, 3528}}";
+			sepNavSelRange = "{3148, 0}";
+			sepNavVisRange = "{2586, 1215}";
 			sepNavWindowFrame = "{{19, 0}, {908, 778}}";
+		};
+	};
+	4CED391E12BFC7FF003B0567 /* IRecvSocket.hpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {647, 562}}";
+			sepNavSelRange = "{263, 0}";
+			sepNavVisRange = "{0, 263}";
+			sepNavWindowFrame = "{{88, 76}, {706, 634}}";
+		};
+	};
+	4CED392212BFC836003B0567 /* ISendSocket.hpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {647, 562}}";
+			sepNavSelRange = "{196, 0}";
+			sepNavVisRange = "{0, 310}";
+			sepNavWindowFrame = "{{111, 55}, {706, 634}}";
+		};
+	};
+	4CED392612BFC866003B0567 /* ZeroMQSendSocket.cpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {647, 938}}";
+			sepNavSelRange = "{751, 0}";
+			sepNavVisRange = "{397, 716}";
+			sepNavWindowFrame = "{{237, 59}, {706, 634}}";
+		};
+	};
+	4CED397212BFCAF5003B0567 /* ZeroMQRecvSocket.cpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {960, 686}}";
+			sepNavSelRange = "{554, 0}";
+			sepNavVisRange = "{0, 839}";
+			sepNavWindowFrame = "{{261, 0}, {1019, 729}}";
 		};
 	};
 	8D1107260486CEB800E47090 /* Warp */ = {

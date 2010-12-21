@@ -7,24 +7,29 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "Network.h"
 
 
 @interface StatusMenu : NSObject {
+  
+  IBOutlet Network* network;
 	
 	IBOutlet NSMenu* main_menu;
 	IBOutlet NSMenu* recent_menu;
+
   IBOutlet NSMenuItem* network_item;
   IBOutlet NSMenuItem* network_seperator_item;
   
   NSStatusItem* statusItem;
   bool is_open;
-
 }
+
+- (IBAction)quit:(id)sender;
 
 - (void)add_recent_item:(NSString*)item_address;
 - (void)add_network_item:(NSString*)item_address;
+
 - (void)show_menu;
-- (bool)isOpen;
 
 - (void)start_searching;
 - (void)stop_searching;

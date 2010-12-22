@@ -11,9 +11,7 @@
 #import "Network.h"
 
 @interface EventTap : NSObject {
-
   IBOutlet Network* network;
-  
   CFMachPortRef event_tap_;
 }
 

@@ -7,13 +7,9 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "Network.h"
 #import "BezelWindow.h"
 
 @interface StatusMenu : NSObject {
-  
-  IBOutlet Network* network;
-  IBOutlet BezelWindow* bezel_window;
 	
 	IBOutlet NSMenu* main_menu;
 	IBOutlet NSMenu* recent_menu;
@@ -23,7 +19,10 @@
   
   NSStatusItem* statusItem;
   bool is_open;
+  id delegate;
 }
+
+- (void)set_delegate:(id)theDelegate;
 
 - (IBAction)quit:(id)sender;
 - (IBAction)recent:(id)sender;

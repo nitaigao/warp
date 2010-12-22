@@ -1,5 +1,7 @@
 #import "Network.h"
 #import "Exit.h"
+#import "Broadcast.h"
+#import "Subscriber.h"
 #import "ZeroMQContext.hpp"
 
 @implementation Network
@@ -12,7 +14,24 @@
   entrance = new Entrance();
     
   [NSThread detachNewThreadSelector:@selector(exit_thread) toTarget:self withObject:nil];
+  [NSThread detachNewThreadSelector:@selector(broadcast_thread) toTarget:self withObject:nil];
+  [NSThread detachNewThreadSelector:@selector(subscriber_thread) toTarget:self withObject:nil];
+
   return self;
+}
+
+- (void)quit {
+  quit = true;
+  sleep(1);
+  [NSApp performSelector:@selector(terminate:) withObject:nil afterDelay:0.0]; 
+}
+
+- (void)recent:(NSString*)address {
+  [self connect_to:address withPort:SERVER_PORT]; 
+}
+
+- (void)awakeFromNib {
+  [status_menu set_delegate:self]; 
 }
 
 - (void)on_event:(CGEventType)eventType withEvent:(CGEventRef)event {
@@ -35,6 +54,7 @@
 
 - (void)connect_to:(NSString*)address withPort:(unsigned int)port {
   [self connected_test];
+  [status_menu add_recent_item:address];
   entrance->connect_to([address cStringUsingEncoding:NSASCIIStringEncoding], port);
 }
 
@@ -51,8 +71,27 @@
   return entrance->understands(eventType);
 }
 
-- (void)stop {
-  quit = true; 
+- (void)add_network_item:(NSString*)address {
+  [status_menu add_network_item:address];
+}
+
+- (void)subscriber_thread {
+  NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+  Subscriber subscriber;
+	while (!quit) {
+    std::string host = subscriber.receive();
+    [self performSelectorOnMainThread:@selector(add_network_item:) withObject:[NSString stringWithUTF8String:host.c_str()] waitUntilDone:false];
+	}
+  [pool release];  
+}
+
+- (void)broadcast_thread {
+  NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+  Broadcast broadcast;
+	while (!quit) {
+    broadcast.send();
+	}
+  [pool release];  
 }
 
 - (void)exit_thread {

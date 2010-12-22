@@ -3,6 +3,20 @@
 
 @implementation StatusMenu
 
+- (void)set_delegate:(id)theDelegate {
+  delegate = theDelegate; 
+}
+
+- (IBAction)quit:(id)sender {
+  [delegate performSelector:@selector(quit)];
+}
+
+- (IBAction)recent:(id)sender {
+  NSMenuItem* menu_item = sender;
+	[self add_recent_item:[menu_item title]];	
+  [delegate performSelector:@selector(recent:) withObject:[menu_item title]];
+}
+
 - (NSString*)recent_path {
 	NSString* path = [[[NSString alloc] initWithFormat:@"%@/Contents/Resources/recent.plist", [[NSBundle mainBundle] bundlePath]] autorelease];
 	if (![[[[NSFileManager alloc] init] autorelease] fileExistsAtPath:path isDirectory:FALSE]) {
@@ -18,12 +32,6 @@
 	[statusItem setEnabled:YES];
   [statusItem setTarget:self];
   [statusItem setAction:@selector(show_menu)];
-}
-
-- (IBAction)recent:(id)sender {
-  NSMenuItem* menu_item = sender;
-	[self add_recent_item:[menu_item title]];	
-  [network connect_to:[menu_item title] withPort:SERVER_PORT];
 }
 
 - (void)init_recent_list {
@@ -66,8 +74,7 @@
   [network_item setTitle:@"Warp: Active"];
 }
 
-- (void)updateTheMenu:(NSString*)item_address
-{  
+- (void)updateTheMenu:(NSString*)item_address { 
   if ([network_seperator_item isHidden])
   {
     [network_seperator_item setHidden:FALSE];
@@ -92,11 +99,6 @@
                                      argument:item_address 
                                         order:0 
                                         modes:[NSArray arrayWithObject:NSEventTrackingRunLoopMode]];
-}
-
-- (IBAction)quit:(id)sender {
-  [network stop];
-  [NSApp performSelector:@selector(terminate:) withObject:nil afterDelay:0.0];
 }
 
 - (void)add_recent_item:(NSString*)item_address {

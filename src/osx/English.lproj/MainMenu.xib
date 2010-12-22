@@ -12,7 +12,6 @@
 		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="558"/>
 			<integer value="542"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
@@ -179,7 +178,7 @@
 				<nil key="NSViewClass"/>
 				<string key="NSWindowContentMaxSize">{1.79769e+308, 1.79769e+308}</string>
 				<object class="NSView" key="NSWindowView" id="319845938">
-					<reference key="NSNextResponder"/>
+					<nil key="NSNextResponder"/>
 					<int key="NSvFlags">256</int>
 					<object class="NSMutableArray" key="NSSubviews">
 						<bool key="EncodedWithXMLCoder">YES</bool>
@@ -276,7 +275,6 @@
 						</object>
 					</object>
 					<string key="NSFrameSize">{354, 75}</string>
-					<reference key="NSSuperview"/>
 				</object>
 				<string key="NSScreenRect">{{0, 0}, {2560, 1578}}</string>
 				<string key="NSMaxSize">{1.79769e+308, 1.79769e+308}</string>
@@ -358,14 +356,6 @@
 					<int key="connectionID">607</int>
 				</object>
 				<object class="IBConnectionRecord">
-					<object class="IBOutletConnection" key="connection">
-						<string key="label">network</string>
-						<reference key="source" ref="761539651"/>
-						<reference key="destination" ref="247490131"/>
-					</object>
-					<int key="connectionID">608</int>
-				</object>
-				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
 						<string key="label">quit:</string>
 						<reference key="source" ref="761539651"/>
@@ -404,14 +394,6 @@
 						<reference key="destination" ref="922339375"/>
 					</object>
 					<int key="connectionID">621</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBOutletConnection" key="connection">
-						<string key="label">bezel_window</string>
-						<reference key="source" ref="790150710"/>
-						<reference key="destination" ref="545699262"/>
-					</object>
-					<int key="connectionID">622</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
@@ -455,19 +437,19 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
-						<string key="label">status_menu</string>
-						<reference key="source" ref="790150710"/>
-						<reference key="destination" ref="761539651"/>
-					</object>
-					<int key="connectionID">631</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBOutletConnection" key="connection">
 						<string key="label">bezel_window</string>
 						<reference key="source" ref="247490131"/>
 						<reference key="destination" ref="972006081"/>
 					</object>
 					<int key="connectionID">633</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">status_menu</string>
+						<reference key="source" ref="247490131"/>
+						<reference key="destination" ref="761539651"/>
+					</object>
+					<int key="connectionID">634</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -791,7 +773,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">633</int>
+			<int key="maxID">634</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -834,16 +816,12 @@
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>address</string>
-							<string>bezel_window</string>
 							<string>network</string>
-							<string>status_menu</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>NSTextField</string>
-							<string>NSWindowController</string>
 							<string>Network</string>
-							<string>StatusMenu</string>
 						</object>
 					</object>
 					<object class="NSMutableDictionary" key="toOneOutletInfosByName">
@@ -851,9 +829,7 @@
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>address</string>
-							<string>bezel_window</string>
 							<string>network</string>
-							<string>status_menu</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
@@ -862,16 +838,8 @@
 								<string key="candidateClassName">NSTextField</string>
 							</object>
 							<object class="IBToOneOutletInfo">
-								<string key="name">bezel_window</string>
-								<string key="candidateClassName">NSWindowController</string>
-							</object>
-							<object class="IBToOneOutletInfo">
 								<string key="name">network</string>
 								<string key="candidateClassName">Network</string>
-							</object>
-							<object class="IBToOneOutletInfo">
-								<string key="name">status_menu</string>
-								<string key="candidateClassName">StatusMenu</string>
 							</object>
 						</object>
 					</object>
@@ -916,11 +884,13 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>bezel_window</string>
 							<string>entrance</string>
+							<string>status_menu</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>BezelWindow</string>
 							<string>Entrance</string>
+							<string>StatusMenu</string>
 						</object>
 					</object>
 					<object class="NSMutableDictionary" key="toOneOutletInfosByName">
@@ -929,6 +899,7 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>bezel_window</string>
 							<string>entrance</string>
+							<string>status_menu</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
@@ -939,6 +910,10 @@
 							<object class="IBToOneOutletInfo">
 								<string key="name">entrance</string>
 								<string key="candidateClassName">Entrance</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">status_menu</string>
+								<string key="candidateClassName">StatusMenu</string>
 							</object>
 						</object>
 					</object>
@@ -986,18 +961,16 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>bezel_window</string>
+							<string>delegate</string>
 							<string>main_menu</string>
-							<string>network</string>
 							<string>network_item</string>
 							<string>network_seperator_item</string>
 							<string>recent_menu</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>BezelWindow</string>
+							<string>id</string>
 							<string>NSMenu</string>
-							<string>Network</string>
 							<string>NSMenuItem</string>
 							<string>NSMenuItem</string>
 							<string>NSMenu</string>
@@ -1007,9 +980,8 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>bezel_window</string>
+							<string>delegate</string>
 							<string>main_menu</string>
-							<string>network</string>
 							<string>network_item</string>
 							<string>network_seperator_item</string>
 							<string>recent_menu</string>
@@ -1017,16 +989,12 @@
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<object class="IBToOneOutletInfo">
-								<string key="name">bezel_window</string>
-								<string key="candidateClassName">BezelWindow</string>
+								<string key="name">delegate</string>
+								<string key="candidateClassName">id</string>
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">main_menu</string>
 								<string key="candidateClassName">NSMenu</string>
-							</object>
-							<object class="IBToOneOutletInfo">
-								<string key="name">network</string>
-								<string key="candidateClassName">Network</string>
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">network_item</string>

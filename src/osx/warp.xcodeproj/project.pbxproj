@@ -15,6 +15,8 @@
 		4C3C8FC2125A803F009A11CB /* Client.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C3C8FB8125A803F009A11CB /* Client.cpp */; };
 		4C3C8FC3125A803F009A11CB /* Exit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C3C8FBB125A803F009A11CB /* Exit.cpp */; };
 		4C41A46B12AD6640004DF3D8 /* rnotes.md in Resources */ = {isa = PBXBuildFile; fileRef = 4C41A46912AD6640004DF3D8 /* rnotes.md */; };
+		4C4F489F12C204A8005DB289 /* Broadcast.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C4F489E12C204A8005DB289 /* Broadcast.cpp */; };
+		4C4F49D412C21441005DB289 /* Subscriber.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C4F49D312C21441005DB289 /* Subscriber.cpp */; };
 		4C5FB8D012578CE500923183 /* Entrance.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C5FB8CF12578CE500923183 /* Entrance.cpp */; };
 		4C96E58612BFE296000FF25E /* EventTap.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4C96E58512BFE296000FF25E /* EventTap.mm */; };
 		4C98BFFA12C0E7CF008E743F /* MainView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4C98BFF912C0E7CF008E743F /* MainView.mm */; };
@@ -70,6 +72,10 @@
 		4C3C8FBE125A803F009A11CB /* IExitCommand.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = IExitCommand.hpp; path = ../shared/IExitCommand.hpp; sourceTree = SOURCE_ROOT; };
 		4C3C8FC0125A803F009A11CB /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Message.h; path = ../shared/Message.h; sourceTree = SOURCE_ROOT; };
 		4C41A46912AD6640004DF3D8 /* rnotes.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = rnotes.md; path = ../../etc/rnotes.md; sourceTree = SOURCE_ROOT; };
+		4C4F489D12C204A8005DB289 /* Broadcast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Broadcast.h; sourceTree = "<group>"; };
+		4C4F489E12C204A8005DB289 /* Broadcast.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Broadcast.cpp; sourceTree = "<group>"; };
+		4C4F49D212C21441005DB289 /* Subscriber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Subscriber.h; sourceTree = "<group>"; };
+		4C4F49D312C21441005DB289 /* Subscriber.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Subscriber.cpp; sourceTree = "<group>"; };
 		4C5FB8CF12578CE500923183 /* Entrance.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Entrance.cpp; sourceTree = "<group>"; };
 		4C652981125BE01300C445B7 /* KeyCodes.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = KeyCodes.hpp; path = ../shared/KeyCodes.hpp; sourceTree = SOURCE_ROOT; };
 		4C96E58412BFE296000FF25E /* EventTap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventTap.h; sourceTree = "<group>"; };
@@ -214,8 +220,6 @@
 		4C9A372012BFEFE80073EE96 /* OSX */ = {
 			isa = PBXGroup;
 			children = (
-				4CA7381212BFDD5700510484 /* Network.h */,
-				4CA7381312BFDD5700510484 /* Network.mm */,
 				4C96E58412BFE296000FF25E /* EventTap.h */,
 				4C96E58512BFE296000FF25E /* EventTap.mm */,
 			);
@@ -240,6 +244,8 @@
 				4C3C8FBD125A803F009A11CB /* IClientCommand.h */,
 				4CB7DD8D123F5D56009E454C /* Entrance.h */,
 				4C5FB8CF12578CE500923183 /* Entrance.cpp */,
+				4C4F49D212C21441005DB289 /* Subscriber.h */,
+				4C4F49D312C21441005DB289 /* Subscriber.cpp */,
 			);
 			name = Entrance;
 			sourceTree = "<group>";
@@ -251,6 +257,8 @@
 				4C3C8FBB125A803F009A11CB /* Exit.cpp */,
 				4C3C8FBE125A803F009A11CB /* IExitCommand.hpp */,
 				4CDBE5D3125920F700322E76 /* OSXExitCommands.hpp */,
+				4C4F489D12C204A8005DB289 /* Broadcast.h */,
+				4C4F489E12C204A8005DB289 /* Broadcast.cpp */,
 			);
 			name = Exit;
 			sourceTree = "<group>";
@@ -277,6 +285,8 @@
 		4CBAFA6B124207AC00C5C338 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				4CA7381212BFDD5700510484 /* Network.h */,
+				4CA7381312BFDD5700510484 /* Network.mm */,
 				4C98BFF812C0E7CF008E743F /* MainView.h */,
 				4C98BFF912C0E7CF008E743F /* MainView.mm */,
 				4CCF9569123CF3C800EE0530 /* BezelWindow.h */,
@@ -388,6 +398,8 @@
 				4C96E58612BFE296000FF25E /* EventTap.mm in Sources */,
 				4C9FDC6712C009CA0006CAAF /* ConnectWindow.mm in Sources */,
 				4C98BFFA12C0E7CF008E743F /* MainView.mm in Sources */,
+				4C4F489F12C204A8005DB289 /* Broadcast.cpp in Sources */,
+				4C4F49D412C21441005DB289 /* Subscriber.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

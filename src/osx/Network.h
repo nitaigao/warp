@@ -2,10 +2,12 @@
 
 #import "Entrance.h"
 #import "BezelWindow.h"
+#import "StatusMenu.h"
 
 @interface Network : NSObject {
   IBOutlet Entrance* entrance;
   IBOutlet BezelWindow* bezel_window;
+  IBOutlet StatusMenu* status_menu;
   
   bool quit;
 }
@@ -16,7 +18,10 @@
 - (bool)is_connected;
 - (bool)understands:(CGEventType)eventType;
 
-- (void)stop;
-- (void)exit_thread;
+- (void)quit;
+- (void)recent:(NSString*)address;
 
+- (void)exit_thread;
+- (void)broadcast_thread;
+- (void)subscriber_thread;
 @end

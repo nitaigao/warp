@@ -84,10 +84,10 @@
 	
 	if (!old_item)
 	{
-    [main_menu insertItemWithTitle:item_address
+    [[main_menu insertItemWithTitle:item_address
                             action:@selector(recent:)
                      keyEquivalent:@"" 
-                           atIndex:[main_menu indexOfItem:network_seperator_item] + 1];
+                            atIndex:[main_menu indexOfItem:network_seperator_item] + 1]setTarget:self];
     
     [main_menu update];
 	}

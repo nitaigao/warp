@@ -276,7 +276,7 @@
 									<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 									<array>
 										<array>
-											<integer>14</integer>
+											<integer>18</integer>
 											<integer>10</integer>
 											<integer>2</integer>
 											<integer>0</integer>
@@ -483,6 +483,7 @@
 	<integer>0</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>4C98FC2012C21A3700661417</string>
 		<string>1C530D57069F1CE1000CFCEE</string>
 		<string>4C98FBC812C2156100661417</string>
 		<string>4C98FBC912C2156100661417</string>

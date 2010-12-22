@@ -180,6 +180,8 @@
 			4C98FC0912C217D600661417 /* PBXTextBookmark */ = 4C98FC0912C217D600661417 /* PBXTextBookmark */;
 			4C98FC0A12C217D600661417 /* PBXTextBookmark */ = 4C98FC0A12C217D600661417 /* PBXTextBookmark */;
 			4C98FC1112C219A500661417 /* PBXTextBookmark */ = 4C98FC1112C219A500661417 /* PBXTextBookmark */;
+			4C98FC1B12C21A0400661417 /* PBXBookmark */ = 4C98FC1B12C21A0400661417 /* PBXBookmark */;
+			4C98FC2212C21A3700661417 /* PBXTextBookmark */ = 4C98FC2212C21A3700661417 /* PBXTextBookmark */;
 		};
 		sourceControlManager = 4C98CCD1123B727700F0F544 /* Source Control */;
 		userBuildSettings = {
@@ -203,9 +205,9 @@
 	};
 	4C2E7159124893D000A214C8 /* StatusMenu.mm */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {803, 1890}}";
-			sepNavSelRange = "{1048, 9}";
-			sepNavVisRange = "{1061, 175}";
+			sepNavIntBoundsRect = "{{0, 0}, {999, 1890}}";
+			sepNavSelRange = "{2336, 0}";
+			sepNavVisRange = "{1787, 1381}";
 			sepNavWindowFrame = "{{33, 1}, {725, 775}}";
 		};
 	};
@@ -1056,7 +1058,7 @@
 		fRef = 4C2E7159124893D000A214C8 /* StatusMenu.mm */;
 		name = "StatusMenu.mm: 116";
 		rLen = 0;
-		rLoc = 3195;
+		rLoc = 3212;
 		rType = 0;
 		vrLen = 1441;
 		vrLoc = 2120;
@@ -1247,7 +1249,7 @@
 		fRef = 4C2E7159124893D000A214C8 /* StatusMenu.mm */;
 		name = "StatusMenu.mm: 97";
 		rLen = 0;
-		rLoc = 2578;
+		rLoc = 2595;
 		rType = 0;
 		vrLen = 1300;
 		vrLoc = 1851;
@@ -1267,7 +1269,7 @@
 		fRef = 4C2E7159124893D000A214C8 /* StatusMenu.mm */;
 		name = "StatusMenu.mm: 97";
 		rLen = 14;
-		rLoc = 2564;
+		rLoc = 2581;
 		rType = 0;
 		vrLen = 1340;
 		vrLoc = 1851;
@@ -1287,7 +1289,7 @@
 		fRef = 4C2E7159124893D000A214C8 /* StatusMenu.mm */;
 		name = "StatusMenu.mm: 89";
 		rLen = 0;
-		rLoc = 2375;
+		rLoc = 2376;
 		rType = 0;
 		vrLen = 1447;
 		vrLoc = 2091;
@@ -1311,6 +1313,20 @@
 		rType = 0;
 		vrLen = 855;
 		vrLoc = 1580;
+	};
+	4C98FC1B12C21A0400661417 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 4C2E7159124893D000A214C8 /* StatusMenu.mm */;
+	};
+	4C98FC2212C21A3700661417 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4C2E7159124893D000A214C8 /* StatusMenu.mm */;
+		name = "StatusMenu.mm: 90";
+		rLen = 0;
+		rLoc = 2480;
+		rType = 0;
+		vrLen = 1364;
+		vrLoc = 1787;
 	};
 	4C9B00D812BFA6E9004AFC94 /* ZeroMQSendSocket.h */ = {
 		uiCtxt = {
@@ -1378,8 +1394,8 @@
 	};
 	4CA7381312BFDD5700510484 /* Network.mm */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1020, 1456}}";
-			sepNavSelRange = "{2106, 0}";
+			sepNavIntBoundsRect = "{{0, 0}, {1020, 1512}}";
+			sepNavSelRange = "{2064, 0}";
 			sepNavVisRange = "{1580, 930}";
 			sepNavWindowFrame = "{{65, 97}, {706, 634}}";
 		};

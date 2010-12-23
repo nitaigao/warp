@@ -1,5 +1,6 @@
 
 #import "StatusMenu.h"
+#import "Pair.h"
 
 @implementation StatusMenu
 
@@ -47,6 +48,12 @@
 	}
 }
 
+- (id)init {
+  self = [super init];
+  network_items = [[NSMutableArray alloc] init];
+  return self;
+}
+
 - (void)awakeFromNib {
 	[self init_main_menu];
 	[self init_recent_list];
@@ -56,8 +63,19 @@
   [statusItem popUpStatusItemMenu:main_menu];
 }
 
+- (void)update:(int)delta_milliseconds {
+  for (Pair* pair in network_items) {
+    pair.time = pair.time - delta_milliseconds;    
+    if (pair.time <= 0)
+    {
+      [self remove_network_item:pair.value];
+      [network_items removeObject:pair];
+    }
+  }
+}
+
 - (void)store_recent_list {
-	NSMutableArray* recent_list = [[[NSMutableArray alloc] init] autorelease];
+	NSMutableArray* recent_list = [[NSMutableArray alloc] init];
 	
 	for (NSMenuItem* menu_item in [recent_menu itemArray]) {
 		[recent_list addObject:[menu_item title]];
@@ -74,29 +92,57 @@
   [network_item setTitle:@"Warp: Active"];
 }
 
-- (void)updateTheMenu:(NSString*)item_address { 
+- (void)updateTheMenu:(Pair*)pair {
   if ([network_seperator_item isHidden])
   {
     [network_seperator_item setHidden:FALSE];
   }
   
-  NSMenuItem *old_item = [main_menu itemWithTitle:item_address];
+  for(Pair* old_pair in network_items)
+  {
+    if ([old_pair.value isEqualToString:pair.value])
+    {
+      old_pair.time = pair.time; 
+    }
+  }
+  
+  NSMenuItem *old_item = [main_menu itemWithTitle:pair.value];
 	
 	if (!old_item)
 	{
-    [[main_menu insertItemWithTitle:item_address
+    [[main_menu insertItemWithTitle:pair.value
                             action:@selector(recent:)
                      keyEquivalent:@"" 
                             atIndex:[main_menu indexOfItem:network_seperator_item] + 1]setTarget:self];
     
+    [network_items addObject:pair];
     [main_menu update];
 	}
 }
 
-- (void)add_network_item:(NSString*)item_address {
-  [[NSRunLoop currentRunLoop] performSelector:@selector(updateTheMenu:) 
+- (void)remove_item:(NSString*)item_address {
+  NSMenuItem* item = [main_menu itemWithTitle:item_address];
+  [main_menu removeItem:item];
+  
+  if (![network_items count]) {
+    [network_seperator_item setHidden:true];
+  }
+}
+
+- (void)remove_network_item:(NSString*)item_address {
+  [[NSRunLoop currentRunLoop] performSelector:@selector(remove_item:) 
                                        target:self 
                                      argument:item_address 
+                                        order:0 
+                                        modes:[NSArray arrayWithObject:NSEventTrackingRunLoopMode]];
+}
+
+- (void)add_network_item:(NSString*)item_address time:(int)time {
+  Pair *pair = [[Pair alloc] initWithTime:time andValue:item_address];
+  
+  [[NSRunLoop currentRunLoop] performSelector:@selector(updateTheMenu:) 
+                                       target:self 
+                                     argument:pair 
                                         order:0 
                                         modes:[NSArray arrayWithObject:NSEventTrackingRunLoopMode]];
 }

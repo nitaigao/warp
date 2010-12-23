@@ -17,6 +17,8 @@
   IBOutlet NSMenuItem* network_item;
   IBOutlet NSMenuItem* network_seperator_item;
   
+  NSMutableArray* network_items;
+  
   NSStatusItem* statusItem;
   bool is_open;
   id delegate;
@@ -28,7 +30,11 @@
 - (IBAction)recent:(id)sender;
 
 - (void)add_recent_item:(NSString*)item_address;
-- (void)add_network_item:(NSString*)item_address;
+- (void)add_network_item:(NSString*)item_address time:(int)time;
+- (void)remove_network_item:(NSString*)item_address;
+
+
+- (void)update:(int)delta_milliseconds;
 
 - (void)show_menu;
 

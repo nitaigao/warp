@@ -1,7 +1,5 @@
 #import "Network.h"
 #import "Exit.h"
-#import "Broadcast.h"
-#import "Subscriber.h"
 #import "ZeroMQContext.hpp"
 
 @implementation Network
@@ -16,6 +14,7 @@
   [NSThread detachNewThreadSelector:@selector(exit_thread) toTarget:self withObject:nil];
   [NSThread detachNewThreadSelector:@selector(broadcast_thread) toTarget:self withObject:nil];
   [NSThread detachNewThreadSelector:@selector(subscriber_thread) toTarget:self withObject:nil];
+  [NSThread detachNewThreadSelector:@selector(update_thread) toTarget:self withObject:nil];
 
   return self;
 }
@@ -72,24 +71,26 @@
 }
 
 - (void)add_network_item:(NSString*)address {
-  [status_menu add_network_item:address];
+  [status_menu add_network_item:address time:4000];
 }
 
 - (void)subscriber_thread {
   NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
-  Subscriber subscriber;
 	while (!quit) {
-    std::string host = subscriber.receive();
-    [self performSelectorOnMainThread:@selector(add_network_item:) withObject:[NSString stringWithUTF8String:host.c_str()] waitUntilDone:false];
+    std::string host = multicast.receive();
+    if (host.length() > 0)
+    {
+      [self performSelectorOnMainThread:@selector(add_network_item:) withObject:[NSString stringWithUTF8String:host.c_str()] waitUntilDone:false];
+    }
 	}
   [pool release];  
 }
 
 - (void)broadcast_thread {
   NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
-  Broadcast broadcast;
 	while (!quit) {
-    broadcast.send();
+    multicast.broadcast();
+    sleep(1);
 	}
   [pool release];  
 }
@@ -103,5 +104,19 @@
   exit.shutdown();
   [pool release];
 }
+
+- (void)update {
+  [status_menu update:1000];
+}
+
+- (void)update_thread {
+  NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+	while (!quit) {
+    int sleep_time = 1;
+    [self performSelectorOnMainThread:@selector(update) withObject:nil waitUntilDone:false];
+    sleep(sleep_time);
+	}
+  [pool release];
+};
 
 @end

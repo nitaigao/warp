@@ -15,16 +15,16 @@
 		4C3C8FC2125A803F009A11CB /* Client.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C3C8FB8125A803F009A11CB /* Client.cpp */; };
 		4C3C8FC3125A803F009A11CB /* Exit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C3C8FBB125A803F009A11CB /* Exit.cpp */; };
 		4C41A46B12AD6640004DF3D8 /* rnotes.md in Resources */ = {isa = PBXBuildFile; fileRef = 4C41A46912AD6640004DF3D8 /* rnotes.md */; };
-		4C4F489F12C204A8005DB289 /* Broadcast.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C4F489E12C204A8005DB289 /* Broadcast.cpp */; };
-		4C4F49D412C21441005DB289 /* Subscriber.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C4F49D312C21441005DB289 /* Subscriber.cpp */; };
 		4C5FB8D012578CE500923183 /* Entrance.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C5FB8CF12578CE500923183 /* Entrance.cpp */; };
 		4C96E58612BFE296000FF25E /* EventTap.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4C96E58512BFE296000FF25E /* EventTap.mm */; };
 		4C98BFFA12C0E7CF008E743F /* MainView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4C98BFF912C0E7CF008E743F /* MainView.mm */; };
 		4C9B013E12BFABCD004AFC94 /* ZeroMQContext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C9B013D12BFABCD004AFC94 /* ZeroMQContext.cpp */; };
 		4C9FDC6712C009CA0006CAAF /* ConnectWindow.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4C9FDC6612C009CA0006CAAF /* ConnectWindow.mm */; };
 		4CA7381412BFDD5700510484 /* Network.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4CA7381312BFDD5700510484 /* Network.mm */; };
+		4CA8A77C12C35595007D0079 /* Multicast.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CA8A77B12C35595007D0079 /* Multicast.cpp */; };
 		4CCF9540123CF1DC00EE0530 /* bezel.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CCF953F123CF1DC00EE0530 /* bezel.png */; };
 		4CCF956B123CF3C800EE0530 /* BezelWindow.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4CCF956A123CF3C800EE0530 /* BezelWindow.mm */; };
+		4CE547DC12C3937C00FD9DF4 /* Pair.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4CE547DB12C3937C00FD9DF4 /* Pair.mm */; };
 		4CED392712BFC866003B0567 /* ZeroMQSendSocket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CED392612BFC866003B0567 /* ZeroMQSendSocket.cpp */; };
 		4CED397312BFCAF5003B0567 /* ZeroMQRecvSocket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CED397212BFCAF5003B0567 /* ZeroMQRecvSocket.cpp */; };
 		4CF7E5481240F40200F7307C /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CF7E5471240F40200F7307C /* icon.png */; };
@@ -72,10 +72,6 @@
 		4C3C8FBE125A803F009A11CB /* IExitCommand.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = IExitCommand.hpp; path = ../shared/IExitCommand.hpp; sourceTree = SOURCE_ROOT; };
 		4C3C8FC0125A803F009A11CB /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Message.h; path = ../shared/Message.h; sourceTree = SOURCE_ROOT; };
 		4C41A46912AD6640004DF3D8 /* rnotes.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = rnotes.md; path = ../../etc/rnotes.md; sourceTree = SOURCE_ROOT; };
-		4C4F489D12C204A8005DB289 /* Broadcast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Broadcast.h; sourceTree = "<group>"; };
-		4C4F489E12C204A8005DB289 /* Broadcast.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Broadcast.cpp; sourceTree = "<group>"; };
-		4C4F49D212C21441005DB289 /* Subscriber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Subscriber.h; sourceTree = "<group>"; };
-		4C4F49D312C21441005DB289 /* Subscriber.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Subscriber.cpp; sourceTree = "<group>"; };
 		4C5FB8CF12578CE500923183 /* Entrance.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Entrance.cpp; sourceTree = "<group>"; };
 		4C652981125BE01300C445B7 /* KeyCodes.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = KeyCodes.hpp; path = ../shared/KeyCodes.hpp; sourceTree = SOURCE_ROOT; };
 		4C96E58412BFE296000FF25E /* EventTap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventTap.h; sourceTree = "<group>"; };
@@ -91,11 +87,15 @@
 		4CA0904F12474A4E00E6A4FD /* Time.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Time.h; sourceTree = "<group>"; };
 		4CA7381212BFDD5700510484 /* Network.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Network.h; sourceTree = "<group>"; };
 		4CA7381312BFDD5700510484 /* Network.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Network.mm; sourceTree = "<group>"; };
+		4CA8A77A12C3556E007D0079 /* Multicast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Multicast.h; sourceTree = "<group>"; };
+		4CA8A77B12C35595007D0079 /* Multicast.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Multicast.cpp; sourceTree = "<group>"; };
 		4CB7DD8D123F5D56009E454C /* Entrance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Entrance.h; sourceTree = "<group>"; };
 		4CCF953F123CF1DC00EE0530 /* bezel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bezel.png; sourceTree = "<group>"; };
 		4CCF9569123CF3C800EE0530 /* BezelWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BezelWindow.h; sourceTree = "<group>"; };
 		4CCF956A123CF3C800EE0530 /* BezelWindow.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BezelWindow.mm; sourceTree = "<group>"; };
 		4CDBE5D3125920F700322E76 /* OSXExitCommands.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = OSXExitCommands.hpp; sourceTree = "<group>"; };
+		4CE547DA12C3937C00FD9DF4 /* Pair.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pair.h; sourceTree = "<group>"; };
+		4CE547DB12C3937C00FD9DF4 /* Pair.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Pair.mm; sourceTree = "<group>"; };
 		4CED391E12BFC7FF003B0567 /* IRecvSocket.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = IRecvSocket.hpp; sourceTree = "<group>"; };
 		4CED392212BFC836003B0567 /* ISendSocket.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ISendSocket.hpp; sourceTree = "<group>"; };
 		4CED392612BFC866003B0567 /* ZeroMQSendSocket.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ZeroMQSendSocket.cpp; sourceTree = "<group>"; };
@@ -104,7 +104,7 @@
 		4CF7E56B1240F54000F7307C /* ship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ship.png; sourceTree = "<group>"; };
 		4CF7E59C1240F71500F7307C /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon.icns; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* warp-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "warp-Info.plist"; sourceTree = "<group>"; };
-		8D1107320486CEB800E47090 /* warp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = warp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D1107320486CEB800E47090 /* Warp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Warp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7404FCA12AD60270062BF6E /* appcast.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = appcast.xml; path = ../../etc/appcast.xml; sourceTree = SOURCE_ROOT; };
 		A78FEF8612AD4BE500580503 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = sparkle/Sparkle.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -158,7 +158,7 @@
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8D1107320486CEB800E47090 /* warp.app */,
+				8D1107320486CEB800E47090 /* Warp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -244,8 +244,6 @@
 				4C3C8FBD125A803F009A11CB /* IClientCommand.h */,
 				4CB7DD8D123F5D56009E454C /* Entrance.h */,
 				4C5FB8CF12578CE500923183 /* Entrance.cpp */,
-				4C4F49D212C21441005DB289 /* Subscriber.h */,
-				4C4F49D312C21441005DB289 /* Subscriber.cpp */,
 			);
 			name = Entrance;
 			sourceTree = "<group>";
@@ -257,8 +255,6 @@
 				4C3C8FBB125A803F009A11CB /* Exit.cpp */,
 				4C3C8FBE125A803F009A11CB /* IExitCommand.hpp */,
 				4CDBE5D3125920F700322E76 /* OSXExitCommands.hpp */,
-				4C4F489D12C204A8005DB289 /* Broadcast.h */,
-				4C4F489E12C204A8005DB289 /* Broadcast.cpp */,
 			);
 			name = Exit;
 			sourceTree = "<group>";
@@ -278,6 +274,8 @@
 				4CED392212BFC836003B0567 /* ISendSocket.hpp */,
 				4CED392612BFC866003B0567 /* ZeroMQSendSocket.cpp */,
 				4CED397212BFCAF5003B0567 /* ZeroMQRecvSocket.cpp */,
+				4CA8A77A12C3556E007D0079 /* Multicast.h */,
+				4CA8A77B12C35595007D0079 /* Multicast.cpp */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -295,6 +293,8 @@
 				4C2E7159124893D000A214C8 /* StatusMenu.mm */,
 				4C9FDC6512C009CA0006CAAF /* ConnectWindow.h */,
 				4C9FDC6612C009CA0006CAAF /* ConnectWindow.mm */,
+				4CE547DA12C3937C00FD9DF4 /* Pair.h */,
+				4CE547DB12C3937C00FD9DF4 /* Pair.mm */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -319,7 +319,7 @@
 			name = Warp;
 			productInstallPath = "$(HOME)/Applications";
 			productName = warp;
-			productReference = 8D1107320486CEB800E47090 /* warp.app */;
+			productReference = 8D1107320486CEB800E47090 /* Warp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -398,8 +398,8 @@
 				4C96E58612BFE296000FF25E /* EventTap.mm in Sources */,
 				4C9FDC6712C009CA0006CAAF /* ConnectWindow.mm in Sources */,
 				4C98BFFA12C0E7CF008E743F /* MainView.mm in Sources */,
-				4C4F489F12C204A8005DB289 /* Broadcast.cpp in Sources */,
-				4C4F49D412C21441005DB289 /* Subscriber.cpp in Sources */,
+				4CA8A77C12C35595007D0079 /* Multicast.cpp in Sources */,
+				4CE547DC12C3937C00FD9DF4 /* Pair.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,7 +426,11 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = /usr/local/include;
 				LIBRARY_SEARCH_PATHS = /usr/local/lib;
-				OTHER_LDFLAGS = "-lzmq";
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-lpgm",
+					"-lzmq",
+				);
 				PREBINDING = NO;
 				SDKROOT = macosx10.6;
 			};
@@ -515,7 +519,10 @@
 				HEADER_SEARCH_PATHS = /usr/local/include;
 				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_LDFLAGS = "-lzmq";
+				OTHER_LDFLAGS = (
+					"-lpgm",
+					"-lzmq",
+				);
 				PREBINDING = NO;
 				SDKROOT = macosx10.6;
 			};
@@ -530,7 +537,11 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = /usr/local/include;
 				LIBRARY_SEARCH_PATHS = /usr/local/lib;
-				OTHER_LDFLAGS = "-lzmq";
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-lpgm",
+					"-lzmq",
+				);
 				PREBINDING = NO;
 				SDKROOT = macosx10.6;
 			};

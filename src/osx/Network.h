@@ -3,11 +3,14 @@
 #import "Entrance.h"
 #import "BezelWindow.h"
 #import "StatusMenu.h"
+#import "Multicast.h"
 
 @interface Network : NSObject {
   IBOutlet Entrance* entrance;
   IBOutlet BezelWindow* bezel_window;
   IBOutlet StatusMenu* status_menu;
+  
+  Multicast multicast;
   
   bool quit;
 }
@@ -24,4 +27,5 @@
 - (void)exit_thread;
 - (void)broadcast_thread;
 - (void)subscriber_thread;
+- (void)update_thread;
 @end

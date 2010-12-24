@@ -14,6 +14,7 @@ Entrance::Entrance()
 	client_commands_[kCGEventMouseMoved]				= new MouseMovedClientCommand();
 	client_commands_[kCGEventScrollWheel]				= new ScrollWheelClientCommand();
   
+  enabled_ = false;
   client_ = new Client();
 };
 

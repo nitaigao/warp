@@ -11,7 +11,7 @@
 							https://github.com/nkostelnik/warp/raw/master/etc/rnotes.md
 						</sparkle:releaseNotesLink>
            <pubDate>Wed, 6 Dec 2010 12:20:11 +0000</pubDate>
-           <enclosure url="https://github.com/downloads/nkostelnik/warp/warp.tgz" sparkle:version="7" sparkle:shortVersionString="1.0" type="application/octet-stream" />
+           <enclosure url="https://github.com/downloads/nkostelnik/warp/warp.tgz" sparkle:version="8" sparkle:shortVersionString="1.0" type="application/octet-stream" />
         </item>
    </channel>
 </rss>

@@ -1,0 +1,131 @@
+﻿Build started 23/12/2010 16:03:01.
+     1>Project "C:\Users\nick.kostelnik\Desktop\zeromq-2.0.10\builds\msvc\libzmq\libzmq.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Debug\libzmq.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       PreBuildEvent:
+         copy ..\platform.hpp ..\..\..\src
+         :VCEnd
+                 1 file(s) copied.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _WINDLL /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\..\src\app_thread.cpp ..\..\..\src\command.cpp ..\..\..\src\ctx.cpp ..\..\..\src\devpoll.cpp ..\..\..\src\push.cpp ..\..\..\src\epoll.cpp ..\..\..\src\err.cpp ..\..\..\src\forwarder.cpp ..\..\..\src\fq.cpp ..\..\..\src\io_object.cpp ..\..\..\src\io_thread.cpp ..\..\..\src\ip.cpp ..\..\..\src\kqueue.cpp ..\..\..\src\lb.cpp ..\..\..\src\msg_store.cpp ..\..\..\src\object.cpp ..\..\..\src\options.cpp ..\..\..\src\owned.cpp ..\..\..\src\pair.cpp ..\..\..\src\pgm_receiver.cpp ..\..\..\src\pgm_sender.cpp ..\..\..\src\pgm_socket.cpp ..\..\..\src\pipe.cpp ..\..\..\src\poll.cpp ..\..\..\src\prefix_tree.cpp ..\..\..\src\pub.cpp ..\..\..\src\queue.cpp ..\..\..\src\rep.cpp ..\..\..\src\req.cpp ..\..\..\src\select.cpp ..\..\..\src\session.cpp ..\..\..\src\signaler.cpp ..\..\..\src\socket_base.cpp ..\..\..\src\streamer.cpp ..\..\..\src\sub.cpp ..\..\..\src\tcp_connecter.cpp ..\..\..\src\tcp_listener.cpp ..\..\..\src\tcp_socket.cpp ..\..\..\src\thread.cpp ..\..\..\src\pull.cpp ..\..\..\src\uuid.cpp ..\..\..\src\xrep.cpp ..\..\..\src\xreq.cpp ..\..\..\src\zmq.cpp ..\..\..\src\zmq_connecter.cpp ..\..\..\src\zmq_decoder.cpp ..\..\..\src\zmq_encoder.cpp ..\..\..\src\zmq_engine.cpp ..\..\..\src\zmq_init.cpp ..\..\..\src\zmq_listener.cpp -DDLL_EXPORT 
+         zmq_listener.cpp
+         zmq_init.cpp
+         zmq_engine.cpp
+         zmq_encoder.cpp
+         zmq_decoder.cpp
+         zmq_connecter.cpp
+         zmq.cpp
+         xreq.cpp
+         xrep.cpp
+         uuid.cpp
+         pull.cpp
+         thread.cpp
+         tcp_socket.cpp
+         tcp_listener.cpp
+         tcp_connecter.cpp
+         sub.cpp
+         streamer.cpp
+         socket_base.cpp
+         signaler.cpp
+         session.cpp
+         Generating Code...
+         Compiling...
+         select.cpp
+         req.cpp
+         rep.cpp
+         queue.cpp
+         pub.cpp
+         prefix_tree.cpp
+         poll.cpp
+         pipe.cpp
+         pgm_socket.cpp
+         pgm_sender.cpp
+         pgm_receiver.cpp
+         pair.cpp
+         owned.cpp
+         options.cpp
+         object.cpp
+         msg_store.cpp
+         lb.cpp
+         kqueue.cpp
+         ip.cpp
+         io_thread.cpp
+         Generating Code...
+         Compiling...
+         io_object.cpp
+         fq.cpp
+         forwarder.cpp
+         err.cpp
+         epoll.cpp
+         push.cpp
+         devpoll.cpp
+         ctx.cpp
+         command.cpp
+         app_thread.cpp
+         Generating Code...
+       MakeDirsForLink:
+         Creating directory "C:\Users\nick.kostelnik\Desktop\zeromq-2.0.10\builds\msvc\libzmq\..\..\..\lib".
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(990,5): warning MSB8012: TargetPath(C:\Users\nick.kostelnik\Desktop\zeromq-2.0.10\builds\msvc\Debug\libzmq.dll) does not match the Linker's OutputFile property value (C:\Users\nick.kostelnik\Desktop\zeromq-2.0.10\lib\libzmq.dll). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"../../../lib/libzmq.dll" /NOLOGO Ws2_32.lib Rpcrt4.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\libzmq.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\nick.kostelnik\Desktop\zeromq-2.0.10\builds\msvc\Debug\libzmq.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\nick.kostelnik\Desktop\zeromq-2.0.10\builds\msvc\Debug\libzmq.lib" /MACHINE:X86 /DLL Debug\app_thread.obj
+         Debug\command.obj
+         Debug\ctx.obj
+         Debug\devpoll.obj
+         Debug\push.obj
+         Debug\epoll.obj
+         Debug\err.obj
+         Debug\forwarder.obj
+         Debug\fq.obj
+         Debug\io_object.obj
+         Debug\io_thread.obj
+         Debug\ip.obj
+         Debug\kqueue.obj
+         Debug\lb.obj
+         Debug\msg_store.obj
+         Debug\object.obj
+         Debug\options.obj
+         Debug\owned.obj
+         Debug\pair.obj
+         Debug\pgm_receiver.obj
+         Debug\pgm_sender.obj
+         Debug\pgm_socket.obj
+         Debug\pipe.obj
+         Debug\poll.obj
+         Debug\prefix_tree.obj
+         Debug\pub.obj
+         Debug\queue.obj
+         Debug\rep.obj
+         Debug\req.obj
+         Debug\select.obj
+         Debug\session.obj
+         Debug\signaler.obj
+         Debug\socket_base.obj
+         Debug\streamer.obj
+         Debug\sub.obj
+         Debug\tcp_connecter.obj
+         Debug\tcp_listener.obj
+         Debug\tcp_socket.obj
+         Debug\thread.obj
+         Debug\pull.obj
+         Debug\uuid.obj
+         Debug\xrep.obj
+         Debug\xreq.obj
+         Debug\zmq.obj
+         Debug\zmq_connecter.obj
+         Debug\zmq_decoder.obj
+         Debug\zmq_encoder.obj
+         Debug\zmq_engine.obj
+         Debug\zmq_init.obj
+         Debug\zmq_listener.obj
+            Creating library C:\Users\nick.kostelnik\Desktop\zeromq-2.0.10\builds\msvc\Debug\libzmq.lib and object C:\Users\nick.kostelnik\Desktop\zeromq-2.0.10\builds\msvc\Debug\libzmq.exp
+         libzmq.vcxproj -> C:\Users\nick.kostelnik\Desktop\zeromq-2.0.10\builds\msvc\Debug\libzmq.dll
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"../../../lib/libzmq.dll;#2" /manifest Debug\libzmq.dll.intermediate.manifest
+       FinalizeBuildStatus:
+         Deleting file "Debug\libzmq.unsuccessfulbuild".
+         Touching "Debug\libzmq.lastbuildstate".
+     1>Done Building Project "C:\Users\nick.kostelnik\Desktop\zeromq-2.0.10\builds\msvc\libzmq\libzmq.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:01:02.70

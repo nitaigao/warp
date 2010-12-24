@@ -33,11 +33,13 @@ void Exit::receive_search()
 {
   
 }
+
+#include <sstream>
 	
 void Exit::receive_input() 
 { 
   Message* message = exit_socket_->receive();
-            
+
   if (message_types_.find(message->type) != message_types_.end())
   {							
     message_types_[message->type]->Execute(*message);

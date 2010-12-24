@@ -1,0 +1,30 @@
+﻿Build started 23/12/2010 16:59:21.
+     1>Project "C:\warp\src\win\ext\zeromq-2.0.10\builds\msvc\c_local_thr\c_local_thr.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Touching "Release\local_thr.unsuccessfulbuild".
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I../../../bindings/c /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D _MBCS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\..\perf\local_thr.cpp
+         local_thr.cpp
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(990,5): warning MSB8012: TargetPath(C:\warp\src\win\ext\zeromq-2.0.10\builds\msvc\Release\local_thr.exe) does not match the Linker's OutputFile property value (C:\warp\src\win\ext\zeromq-2.0.10\bin\local_thr.exe). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"../../../bin/local_thr.exe" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Release\local_thr.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\warp\src\win\ext\zeromq-2.0.10\builds\msvc\Release\local_thr.pdb" /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\warp\src\win\ext\zeromq-2.0.10\builds\msvc\Release\local_thr.lib" /MACHINE:X86 Release\local_thr.obj
+         "C:\warp\src\win\ext\zeromq-2.0.10\builds\msvc\Release\libzmq.lib"
+     1>local_thr.obj : error LNK2001: unresolved external symbol __imp__zmq_bind
+     1>local_thr.obj : error LNK2001: unresolved external symbol __imp__zmq_close
+     1>local_thr.obj : error LNK2001: unresolved external symbol __imp__zmq_stopwatch_stop
+     1>local_thr.obj : error LNK2001: unresolved external symbol __imp__zmq_msg_size
+     1>local_thr.obj : error LNK2001: unresolved external symbol __imp__zmq_init
+     1>local_thr.obj : error LNK2001: unresolved external symbol __imp__zmq_strerror
+     1>local_thr.obj : error LNK2001: unresolved external symbol __imp__zmq_socket
+     1>local_thr.obj : error LNK2001: unresolved external symbol __imp__zmq_recv
+     1>local_thr.obj : error LNK2001: unresolved external symbol __imp__zmq_setsockopt
+     1>local_thr.obj : error LNK2001: unresolved external symbol __imp__zmq_term
+     1>local_thr.obj : error LNK2001: unresolved external symbol __imp__zmq_msg_close
+     1>local_thr.obj : error LNK2001: unresolved external symbol __imp__zmq_msg_init
+     1>local_thr.obj : error LNK2001: unresolved external symbol __imp__zmq_stopwatch_start
+     1>../../../bin/local_thr.exe : fatal error LNK1120: 13 unresolved externals
+     1>Done Building Project "C:\warp\src\win\ext\zeromq-2.0.10\builds\msvc\c_local_thr\c_local_thr.vcxproj" (build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:01.36

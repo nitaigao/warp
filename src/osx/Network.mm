@@ -82,6 +82,7 @@
     {
       [self performSelectorOnMainThread:@selector(add_network_item:) withObject:[NSString stringWithUTF8String:host.c_str()] waitUntilDone:false];
     }
+    sleep(1);
 	}
   [pool release];  
 }
@@ -112,9 +113,8 @@
 - (void)update_thread {
   NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
 	while (!quit) {
-    int sleep_time = 1;
     [self performSelectorOnMainThread:@selector(update) withObject:nil waitUntilDone:false];
-    sleep(sleep_time);
+    sleep(1);
 	}
   [pool release];
 };

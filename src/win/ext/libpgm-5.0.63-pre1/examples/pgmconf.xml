@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pgm version="1.0"
+	xmlns="http://miru.hk/standards/pgm">
+	<entry name="sndbuf" type="int" value="1048576"/>
+	<entry name="rcvbuf" type="int" value="1048576"/>
+	<entry name="can_send_only" type="bool" value="false"/>
+	<entry name="can_recv_only" type="bool" value="false"/>
+	<entry name="close_on_failure" type="bool" value="false"/>
+	<entry name="use_multicast_loop" type="bool" value="false"/>
+	<entry name="use_proactive_parity" type="bool" value="false"/>
+	<entry name="use_ondemand_parity" type="bool" value="false"/>
+	<entry name="default_n" type="int" value="255"/>
+	<entry name="default_k" type="int" value="16"/>
+	<entry name="max_tpdu" type="int" value="1500"/>
+	<entry name="txw_sqns" type="int" value="200"/>
+	<entry name="txw_max_rte" type="int" value="16000000"/>
+	<entry name="rxw_sqns" type="int" value="200"/>
+	<entry name="hops" type="int" value="16"/>
+	<entry name="ambient_spm" type="int" value="30000000"/>
+	<entry name="heartbeat_spm" type="int">
+		<intvalue>100000</intvalue>
+		<intvalue>100000</intvalue>
+		<intvalue>100000</intvalue>
+		<intvalue>100000</intvalue>
+		<intvalue>1300000</intvalue>
+		<intvalue>7000000</intvalue>
+		<intvalue>16000000</intvalue>
+		<intvalue>25000000</intvalue>
+		<intvalue>30000000</intvalue>
+	</entry>
+	<entry name="peer_expiry" type="int" value="300000000"/>
+	<entry name="spmr_expiry" type="int" value="250000"/>
+	<entry name="nak_bo_ivl" type="int" value="50000"/>
+	<entry name="nak_rpt_ivl" type="int" value="2000000"/>
+	<entry name="nak_rdata_ivl" type="int" value="2000000"/>
+	<entry name="nak_data_retries" type="int" value="50"/>
+	<entry name="nak_ncf_retries" type="int" value="50"/>
+</pgm>

@@ -1,0 +1,126 @@
+﻿Build started 23/12/2010 17:37:18.
+     1>Project "C:\warp\src\win\ext\zeromq-2.0.10\builds\msvc\libzmq\libzmq.vcxproj" on node 2 (rebuild target(s)).
+     1>_PrepareForClean:
+         Deleting file "Release\libzmq.lastbuildstate".
+       InitializeBuildStatus:
+         Creating "Release\libzmq.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       PreBuildEvent:
+         copy ..\platform.hpp ..\..\..\src
+         :VCEnd
+                 1 file(s) copied.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D ZMQ_STATIC /D _MBCS /D _MBCS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\..\src\app_thread.cpp ..\..\..\src\command.cpp ..\..\..\src\ctx.cpp ..\..\..\src\devpoll.cpp ..\..\..\src\push.cpp ..\..\..\src\epoll.cpp ..\..\..\src\err.cpp ..\..\..\src\forwarder.cpp ..\..\..\src\fq.cpp ..\..\..\src\io_object.cpp ..\..\..\src\io_thread.cpp ..\..\..\src\ip.cpp ..\..\..\src\kqueue.cpp ..\..\..\src\lb.cpp ..\..\..\src\msg_store.cpp ..\..\..\src\object.cpp ..\..\..\src\options.cpp ..\..\..\src\owned.cpp ..\..\..\src\pair.cpp ..\..\..\src\pgm_receiver.cpp ..\..\..\src\pgm_sender.cpp ..\..\..\src\pgm_socket.cpp ..\..\..\src\pipe.cpp ..\..\..\src\poll.cpp ..\..\..\src\prefix_tree.cpp ..\..\..\src\pub.cpp ..\..\..\src\queue.cpp ..\..\..\src\rep.cpp ..\..\..\src\req.cpp ..\..\..\src\select.cpp ..\..\..\src\session.cpp ..\..\..\src\signaler.cpp ..\..\..\src\socket_base.cpp ..\..\..\src\streamer.cpp ..\..\..\src\sub.cpp ..\..\..\src\tcp_connecter.cpp ..\..\..\src\tcp_listener.cpp ..\..\..\src\tcp_socket.cpp ..\..\..\src\thread.cpp ..\..\..\src\pull.cpp ..\..\..\src\uuid.cpp ..\..\..\src\xrep.cpp ..\..\..\src\xreq.cpp ..\..\..\src\zmq.cpp ..\..\..\src\zmq_connecter.cpp ..\..\..\src\zmq_decoder.cpp ..\..\..\src\zmq_encoder.cpp ..\..\..\src\zmq_engine.cpp ..\..\..\src\zmq_init.cpp ..\..\..\src\zmq_listener.cpp -DDLL_EXPORT 
+         app_thread.cpp
+         command.cpp
+         ctx.cpp
+         devpoll.cpp
+         push.cpp
+         epoll.cpp
+         err.cpp
+         forwarder.cpp
+         fq.cpp
+         io_object.cpp
+         io_thread.cpp
+         ip.cpp
+         kqueue.cpp
+         lb.cpp
+         msg_store.cpp
+         object.cpp
+         options.cpp
+         owned.cpp
+         pair.cpp
+         pgm_receiver.cpp
+         Compiling...
+         pgm_sender.cpp
+         pgm_socket.cpp
+         pipe.cpp
+         poll.cpp
+         prefix_tree.cpp
+         pub.cpp
+         queue.cpp
+         rep.cpp
+         req.cpp
+         select.cpp
+         session.cpp
+         signaler.cpp
+         socket_base.cpp
+         streamer.cpp
+         sub.cpp
+         tcp_connecter.cpp
+         tcp_listener.cpp
+         tcp_socket.cpp
+         thread.cpp
+         pull.cpp
+         Compiling...
+         uuid.cpp
+         xrep.cpp
+         xreq.cpp
+         zmq.cpp
+     1>c:\warp\src\win\ext\zeromq-2.0.10\src\../include/zmq_utils.h(30): warning C4005: 'DLL_EXPORT' : macro redefinition
+                 command-line arguments :  see previous definition of 'DLL_EXPORT'
+         zmq_connecter.cpp
+         zmq_decoder.cpp
+         zmq_encoder.cpp
+         zmq_engine.cpp
+         zmq_init.cpp
+         zmq_listener.cpp
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\Lib.exe /OUT:"C:\warp\src\win\ext\zeromq-2.0.10\builds\msvc\Release\libzmq.lib" /NOLOGO /LTCG Release\app_thread.obj
+         Release\command.obj
+         Release\ctx.obj
+         Release\devpoll.obj
+         Release\push.obj
+         Release\epoll.obj
+         Release\err.obj
+         Release\forwarder.obj
+         Release\fq.obj
+         Release\io_object.obj
+         Release\io_thread.obj
+         Release\ip.obj
+         Release\kqueue.obj
+         Release\lb.obj
+         Release\msg_store.obj
+         Release\object.obj
+         Release\options.obj
+         Release\owned.obj
+         Release\pair.obj
+         Release\pgm_receiver.obj
+         Release\pgm_sender.obj
+         Release\pgm_socket.obj
+         Release\pipe.obj
+         Release\poll.obj
+         Release\prefix_tree.obj
+         Release\pub.obj
+         Release\queue.obj
+         Release\rep.obj
+         Release\req.obj
+         Release\select.obj
+         Release\session.obj
+         Release\signaler.obj
+         Release\socket_base.obj
+         Release\streamer.obj
+         Release\sub.obj
+         Release\tcp_connecter.obj
+         Release\tcp_listener.obj
+         Release\tcp_socket.obj
+         Release\thread.obj
+         Release\pull.obj
+         Release\uuid.obj
+         Release\xrep.obj
+         Release\xreq.obj
+         Release\zmq.obj
+         Release\zmq_connecter.obj
+         Release\zmq_decoder.obj
+         Release\zmq_encoder.obj
+         Release\zmq_engine.obj
+         Release\zmq_init.obj
+         Release\zmq_listener.obj
+         libzmq.vcxproj -> C:\warp\src\win\ext\zeromq-2.0.10\builds\msvc\Release\libzmq.lib
+       FinalizeBuildStatus:
+         Deleting file "Release\libzmq.unsuccessfulbuild".
+         Touching "Release\libzmq.lastbuildstate".
+     1>Done Building Project "C:\warp\src\win\ext\zeromq-2.0.10\builds\msvc\libzmq\libzmq.vcxproj" (rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:34.36

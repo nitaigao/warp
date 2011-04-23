@@ -1,6 +1,8 @@
 #define _WIN32_IE 0x0501
 #define _WIN32_WINDOWS 0x0501
 
+#include "ZeroMQContext.hpp"
+
 #include <windows.h>
 #include <shellapi.h>
 #include <stdio.h>
@@ -75,14 +77,14 @@ int WINAPI WinMain (HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR args, in
   InitNotifyIconData();
   Shell_NotifyIcon(NIM_ADD, &g_notifyIconData);
 
+  ZeroMQContext::init();
   Exit exit;
-  exit.start_listening(SERVER_PORT);
  
   MSG msg ;
   while (!quit)
   {
 	PeekMessage(&msg, 0, 0, 0, PM_REMOVE);
-	exit.receive();
+	exit.receive_input();
     TranslateMessage(&msg);
     DispatchMessage(&msg);
   }
